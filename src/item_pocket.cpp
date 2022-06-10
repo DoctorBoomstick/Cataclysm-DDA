@@ -434,7 +434,7 @@ bool item_pocket::is_funnel_container( units::volume &bigger_than ) const
 
 bool item_pocket::is_restricted() const
 {
-    return !data->get_flag_restrictions().empty();
+    return !data->get_flag_restrictions().empty() || !data->ammo_restriction.empty();
 }
 
 std::list<item *> item_pocket::all_items_top()
@@ -1843,7 +1843,8 @@ item_pocket *item_pocket::best_pocket_in_contents(
     // try the nested pocket regardless of whether it's soft or rigid.
     const bool ignore_rigidity =
         !settings.accepts_item( it ) ||
-        !get_pocket_data()->get_flag_restrictions().empty();
+        !get_pocket_data()->get_flag_restrictions().empty() ||
+        settings.priority() > 0;
 
     for( item &contained_item : contents ) {
         if( &contained_item == &it || &contained_item == avoid ) {

@@ -1,0 +1,53 @@
+[
+  {
+    "type": "palette",
+    "id": "bio_experiment_station_helipad_palette",
+    "terrain": {
+      "/": "t_sand",
+      "r": "t_sand",
+      ".": "t_water_sh",
+      "~": "t_water_dp",
+      "#": "t_wall_rammed_earth",
+      "|": "t_strconc_wall",
+      "!": "t_embrasure_strconcrete",
+      "u": "t_ladder_up",
+      "l": "t_ramp_up_low",
+      "m": "t_door_metal_c",
+      "*": "t_thconc_floor",
+      "s": "t_reinforced_glass_shutter_open",
+      "M": "t_door_metal_locked",
+      "o": "t_sidewalk",
+      "b": "t_bulk_tank"
+    },
+    "furniture": { "/": [ [ "f_boulder_medium", 2 ], [ "f_boulder_small", 1 ], [ "f_boulder_large", 3 ] ], "r": "f_boulder_small" }
+  },
+  {
+    "type": "palette",
+    "id": "helipad_palette_roof",
+    "terrain": {
+      "!": "t_guardrail",
+      "w": "t_strconc_floor_no_roof_w",
+      "+": "t_door_c",
+      "t": "t_tempered_glass_window",
+      "g": "t_grate",
+      "=": "t_strconc_floor_no_roof",
+      "%": "t_gates_mech_control",
+      "a": "t_avgas_pump",
+      "o": "t_open_air",
+      "d": "t_ladder_down",
+      "h": "t_ramp_up_high",
+      "*": "t_strconc_floor",
+      "D": "t_flat_roof",
+      ">": "t_stairs_down"
+    },
+    "furniture": {
+      "L": "f_locker",
+      "b": "f_bed",
+      "h": "f_shower",
+      "S": "f_sink",
+      "j": "f_bench",
+      "t": "f_table",
+      "D": "f_small_satelitte_dish"
+    }
+  }
+]

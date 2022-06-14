@@ -738,13 +738,33 @@
     ]
   },
   {
+    "id": "mounted_atgm",
+    "type": "vehicle",
+    "name": "emplaced anti tank launcher",
+    "parts": [
+      { "x": 0, "y": 0, "part": "hdframe" },
+      { "x": 0, "y": 0, "part": "turret_mount" },
+      { "x": 0, "y": 0, "part": "mounted BGM-71F TOW", "ammo": 60, "ammo_qty": [ 0, 1 ] }
+    ]
+  },
+  {
     "id": "mounted_m2",
     "type": "vehicle",
     "name": "emplaced .50 calibre machinegun",
     "parts": [
-      { "x": 0, "y": 0, "parts": [ "frame_wood", "turret_mount", "plugged_3in_ordnance_rifle" ] },
-      { "x": 0, "y": -1, "parts": [ "frame_wood", "wheel_mount_wood", "wheel_wood" ] },
-      { "x": 0, "y": 1, "parts": [ "frame_wood", "wheel_mount_wood", "wheel_wood" ] }
+      { "x": 0, "y": 0, "part": "hdframe" },
+      { "x": 0, "y": 0, "part": "turret_mount" },
+      { "x": 0, "y": 0, "part": "mounted_browning", "ammo": 60, "ammo_qty": [ 10, 100 ] }
+    ]
+  },
+  {
+    "id": "mounted_mk19_gl",
+    "type": "vehicle",
+    "name": "emplaced Mk19 grenade launcher",
+    "parts": [
+      { "x": 0, "y": 0, "part": "hdframe" },
+      { "x": 0, "y": 0, "part": "turret_mount" },
+      { "x": 0, "y": 0, "part": "mounted_mk19", "ammo": 60, "ammo_qty": [ 1, 25 ] }
     ]
   }
 ]

@@ -112,5 +112,15 @@
       { "id": "shelter_graffiti_34", "text": "FUCK THE COMMUNISTS" },
       { "id": "shelter_graffiti_35", "text": "Remember <given_name>" }
     ]
+  },
+  {
+    "type": "snippet",
+    "category": "magazine_suicide_graffiti_snippets",
+    "text": [
+      {
+        "id": "suicide_graffiti_1",
+        "text": "I’m sorry for what we did.\n\nI’m sorry for the monsters we made.\n\nI’m sorry for the crimes we did.\n\nIf there’s a God, I put my sole in your hands with no fear.\n\nNo hell’s worse than here.\n\nPrivate <full_name>, United States Navy."
+      }
+    ]
   }
 ]

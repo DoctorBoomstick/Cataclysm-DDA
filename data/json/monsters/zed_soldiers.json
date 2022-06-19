@@ -502,5 +502,32 @@
     "armor_cut": 27,
     "harvest": "zombie",
     "special_attacks": [ [ "BIO_OP_BIOJUTSU", 15 ] ]
+  },
+  {
+    "id": "mon_zombie_soldier_suicide",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_soldier",
+    "name": { "str": "weeping soldier" },
+    "description": "Streams of black fluid drip from the blown out remnants of what used to be this person’s right eye socket, their tattered uniform identifying them as having been serving within the Navy. Helmetless and with most of their lower jaw blown off, all that’s left is a barely attached collection of rotting muscle tissue, fractured teeth, and shattered bone. Still clumsily stumbling about, it’s obvious to see that the final, desperate measure that this person had taken in life was futile in freeing their body from the horrors of the Cataclysm, and the pitiful groans and tear-like flow of black ooze emanating from their ruined face sends shivers down your spine.",
+    "hp": 70,
+    "speed": 70,
+    "weakpoint_sets": [ "wps_humanoid_body", "wps_humanoid_body_armor" ],
+    "vision_day": 12,
+    "special_attacks": [ [ "GRAB", 7 ], [ "scratch", 15 ] ],
+    "death_drops": "mon_zombie_swat_death_drops",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
   }
 ]

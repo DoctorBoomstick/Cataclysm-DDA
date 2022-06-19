@@ -1,0 +1,32 @@
+[
+  {
+    "type": "overmap_special",
+    "id": "Naval-Research Station",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "lake_surface" },
+      { "point": [ 1, 0, 0 ], "overmap": "lake_surface" },
+      { "point": [ 2, 0, 0 ], "overmap": "lake_surface" },
+      { "point": [ 3, 0, 0 ], "overmap": "lake_surface" },
+      { "point": [ 0, 1, 0 ], "overmap": "lake_surface" },
+      { "point": [ 1, 1, 0 ], "overmap": "helipad_guard_post1_north" },
+      { "point": [ 2, 1, 0 ], "overmap": "helipad_foundation1_north" },
+      { "point": [ 3, 1, 0 ], "overmap": "helipad_foundation2_north" },
+      { "point": [ 4, 1, 0 ], "overmap": "lake_surface" },
+      { "point": [ 0, 2, 0 ], "overmap": "lake_surface" },
+      { "point": [ 1, 2, 0 ], "overmap": "helipad_guard_post2_north" },
+      { "point": [ 1, 2, -1 ], "overmap": "helipad_guard_post_magazine_north" },
+      { "point": [ 2, 2, 0 ], "overmap": "helipad_foundation3_north" },
+      { "point": [ 3, 2, 0 ], "overmap": "helipad_foundation4_north" },
+      { "point": [ 4, 2, 0 ], "overmap": "lake_surface" },
+      { "point": [ 0, 3, 0 ], "overmap": "lake_surface" },
+      { "point": [ 1, 3, 0 ], "overmap": "lake_surface" },
+      { "point": [ 2, 3, 0 ], "overmap": "lake_surface" },
+      { "point": [ 3, 3, 0 ], "overmap": "lake_surface" },
+      { "point": [ 4, 3, 0 ], "overmap": "lake_surface" }
+    ],
+    "city_distance": [ -1, 1000 ],
+    "locations": [ "lake_surface" ],
+    "occurrences": [ 75, 100 ],
+    "flags": [ "LAKE", "MAN_MADE", "UNIQUE", "MILITARY" ]
+  }
+]

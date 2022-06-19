@@ -1,0 +1,76 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "helipad_magazine_stocked",
+    "object": {
+      "mapgensize": [ 5, 5 ],
+      "rows": [
+        "_____",
+        "_ccc_",
+        "_____",
+        "_ccc_",
+        "_____"
+      ],
+      "palettes": [ "bio_experiment_station_helipad_palette" ],
+      "place_loot": [
+        { "item": "atgm_heat", "x": 1, "y": 1, "chance": 100, "repeat": [ 0, 2 ] },
+        { "item": "atgm_heat", "x": 2, "y": 1, "chance": 100, "repeat": [ 0, 2 ] },
+        { "item": "atgm_heat", "x": 3, "y": 1, "chance": 100, "repeat": [ 0, 2 ] },
+        { "item": "belt50", "x": 1, "y": 3, "chance": 100, "repeat": [ 0, 1 ] },
+        { "item": "belt50", "x": 2, "y": 3, "chance": 100, "repeat": [ 0, 1 ] },
+        { "item": "belt50", "x": 3, "y": 3, "chance": 100, "repeat": [ 0, 1 ] }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "helipad_magazine_used",
+    "object": {
+      "mapgensize": [ 5, 5 ],
+      "rows": [
+        "_____",
+        "_ccc_",
+        "_____",
+        "_ccc_",
+        "_____"
+      ],
+      "palettes": [ "bio_experiment_station_helipad_palette" ],
+      "place_loot": [
+        { "item": "atgm_heat", "x": 1, "y": 1, "chance": 10, "repeat": [ 0, 2 ] },
+        { "item": "atgm_heat", "x": 2, "y": 1, "chance": 10, "repeat": [ 0, 2 ] },
+        { "item": "atgm_heat", "x": 3, "y": 1, "chance": 10, "repeat": [ 0, 2 ] },
+        { "item": "belt50", "x": 1, "y": 3, "chance": 10, "repeat": [ 0, 1 ] },
+        { "item": "belt50", "x": 2, "y": 3, "chance": 10, "repeat": [ 0, 1 ] },
+        { "item": "belt50", "x": 3, "y": 3, "chance": 10, "repeat": [ 0, 1 ] }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "helipad_magazine_suicide",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "||||||",
+        "|3____",
+        "|c___c",
+        "|____c",
+        "|____c",
+        "|_____"
+      ],
+      "palettes": [ "bio_experiment_station_helipad_palette" ],
+      "place_graffiti": [ { "x": 0, "y": 3, "snippet": "magazine_suicide_graffiti_snippets" } ],
+      "terrain": { "3": "t_strconc_floor" },
+      "furniture": { "3": "f_makeshift_bed" },
+      "place_loot": [
+        { "item": "atgm_heat", "x": 5, "y": 2, "chance": 100, "repeat": [ 0, 2 ] },
+        { "item": "atgm_heat", "x": 1, "y": 2, "chance": 100, "repeat": [ 0, 2 ] },
+        { "item": "belt50", "x": 5, "y": 3, "chance": 100, "repeat": [ 0, 1 ] },
+        { "item": "belt50", "x": 5, "y": 4, "chance": 100, "repeat": [ 0, 1 ] }
+      ]
+    }
+  }
+]

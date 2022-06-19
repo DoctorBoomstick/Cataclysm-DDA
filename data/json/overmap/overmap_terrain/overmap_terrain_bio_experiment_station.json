@@ -1,0 +1,19 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "helipad_guard_post1",
+      "helipad_foundation1",
+      "helipad_foundation2",
+      "helipad_guard_post1",
+      "helipad_guard_post_magazine",
+      "helipad_foundation3",
+      "Helipad_foundation4"
+    ],
+    "name": "naval-research station helipad",
+    "sym": "N",
+    "color": "red",
+    "see_cost": 5,
+    "flags": [ "RISK_HIGH", "LAKE" ]
+  }
+]

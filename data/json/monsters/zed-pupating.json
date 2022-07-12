@@ -32,6 +32,75 @@
     }
   },
   {
+    "id": "mon_zombie_child_pupa_decoy",
+    "type": "MONSTER",
+    "name": { "str": "pupating zombie child", "str_pl": "pupating zombie children" },
+    "description": "Under the fibrous, black wrapping encasing this toddling corpse, the cocooned form of a small body is vaguely recognisable.  In a past life, long since violently surrendered to the Cataclysm, you surmise that this creature might have been a child.  Now, only the rotting shreds of its face remain visible, and the beast’s fleshy bindings periodically strain and bulge as, from within, something fights to break free.",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [ "ZOMBIE" ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "hp": 40,
+    "speed": 65,
+    "material": [ "flesh" ],
+    "symbol": "z",
+    "color": "light_green",
+    "aggression": 60,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "armor_bash": 4,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "armor_elec": 3,
+    "dodge": 1,
+    "weakpoint_sets": [ "wps_humanoid_body", "wps_humanoid_child_body", "wps_humanoid_head_big" ],
+    "families": [ "prof_intro_biology", "prof_wp_zombie", "prof_wp_child" ],
+    "vision_day": 30,
+    "vision_night": 3,
+    "harvest": "zombie",
+    "special_attacks": [ { "id": "scratch", "attack_upper": false, "cooldown": 15 } ],
+    "bleed_rate": 50,
+    "regenerates": 10,
+    "death_drops": { "subtype": "collection", "groups": [ [ "default_zombie_clothes", 100 ], [ "child_items", 65 ] ] },
+    "burn_into": "mon_zombie_child_scorched",
+    "//": "no GUILT because it no longer looks enough like a child to evoke pity",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "SMALLSLUDGETRAIL",
+      "SLUDGEPROOF",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_child_pupa",
+    "type": "MONSTER",
+    "name": { "str": "pupating zombie child", "str_pl": "pupating zombie children" },
+    "description": "Under the fibrous, black wrapping encasing this toddling corpse, the cocooned form of a small body is vaguely recognisable.  In a past life, long since violently surrendered to the Cataclysm, you surmise that this creature might have been a child.  Now, only the rotting shreds of its face remain visible, and the beast’s fleshy bindings periodically strain and bulge as, from within, something fights to break free.",
+    "copy-from": "mon_zombie_child_pupa_decoy",
+    "extend": {
+      "special_attacks": [
+        {
+          "type": "spell",
+          "spell_data": { "id": "small_raptor_spawn", "hit_self": true },
+          "cooldown": 50,
+          "monster_message": "The pupating zombie child bursts, and gore-smeared winged beasts climb out of the corpse!"
+        }
+      ]
+    }
+  },
+  {
     "id": "mon_zombie_pupa_decoy",
     "type": "MONSTER",
     "name": { "str": "pupating zombie" },

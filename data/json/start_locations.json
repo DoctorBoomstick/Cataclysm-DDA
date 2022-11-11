@@ -610,5 +610,11 @@
     "id": "sloc_retirement_community",
     "name": "Retirement Community - Townhouse",
     "terrain": [ "retirement_community_b_5" ]
+  },
+  {
+    "type": "start_location",
+    "id": "sloc_shooting_range",
+    "name": "competition gun range",
+    "terrain": [ "shootingrange_1a", "shootingrange_2a" ]
   }
 ]

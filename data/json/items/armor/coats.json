@@ -3085,5 +3085,111 @@
     "material_thickness": 1,
     "valid_mods": [ "steel_padded" ],
     "flags": [ "VARSIZE", "POCKETS", "HOOD", "OUTER", "WATERPROOF", "SOFT" ]
+  },
+  {
+    "id": "military_coat",
+    "type": "ARMOR",
+    "name": { "str_sp": "infantry overcoat" },
+    "description": "Cut in the style of older and deprecated military tunics, this reproduction overcoat is fit for the battlefields of the hardiest re-enactments.",
+    "weight": "2428 g",
+    "volume": "8 L",
+    "price": 11000,
+    "price_postapoc": 500,
+    "to_hit": -3,
+    "material": [ "wool" ],
+    "symbol": "[",
+    "looks_like": "coat_winter",
+    "color": "green",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 11, 20 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": [ 0, 0 ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 79,
+        "encumbrance": [ 11, 13 ],
+        "specifically_covers": [ "leg_draped_l", "leg_draped_r" ],
+        "layers": [ "BELTED" ]
+      },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 11, 11 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "24 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "24 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "13 cm",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "13 cm",
+        "moves": 120
+      }
+    ],
+    "warmth": 50,
+    "material_thickness": 0.5,
+    "valid_mods": [ "steel_padded" ],
+    "environmental_protection": 1,
+    "flags": [ "VARSIZE", "POCKETS", "COLLAR", "OUTER" ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "coat_us1917",
+        "name": { "str": "infantry overcoat" },
+        "description": "The hardy breeches that made the men, this is a reproduction of the general issue pants provided to soldiers of the American Expeditionary Force during World War One.  Dyed a shade of olive drab and sown from semi-coarse wool, it features two front pockets, double stitched seems, and reinforced thigh linings that’s advertised to be capable of enduring the most severe of re-enactments.  Its designers likely didn’t have your present situation in mind when they made that assertion.",
+        "weight": 50,
+        "append": true
+      },
+      {
+        "id": "coat_german1910",
+        "name": { "str": "infantry overcoat" },
+        "description": "Fashioned from stone-grey wool, this is a reproduction of the imperial German army’s standard trousers during the First World War.  Exuding an authority of regimental precision in its fit and cut, the garment features two slanted pockets, red leg piping, and a high waistline.",
+        "color": "dark_gray",
+        "price": 7400,
+        "weight": 25,
+        "append": true
+      },
+      {
+        "id": "coat_brit1902",
+        "name": { "str": "infantry overcoat" },
+        "description": "This is a reproduction of the standard service trousers issued to British soldiers of the Great War.  Cut from khaki wool with an array of supporting buttons, the pants come provided with two generous pockets.",
+        "color": "green",
+        "price": 6500,
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "coat_russian_ww1",
+        "name": { "str": "infantry overcoat" },
+        "description": "This pair of reproduction pants is dyed khaki brown, and is sown from harsh wool.  A re-enactment quality replica of imperial Russia’s First World War service trousers, it features two pockets.",
+        "color": "brown",
+        "weight": 5,
+        "append": true
+      },
+      {
+        "id": "coat_french1915",
+        "name": { "str": "infantry overcoat" },
+        "description": "Dyed horizon-blue, this thick woollen greatcoat is a quality reproduction of the French army’s First World War tunic.",
+        "color": "blue",
+        "weight": 5,
+        "append": true
+      }
+    ]
   }
 ]

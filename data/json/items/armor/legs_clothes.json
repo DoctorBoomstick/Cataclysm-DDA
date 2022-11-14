@@ -1667,7 +1667,7 @@
       {
         "id": "breeches_french1915",
         "name": { "str": "military breeches" },
-        "description" "Dyed an iconic horizon-blue and featuring two pockets, these woollen trousers mirror the standard breeches provided to French soldiers during the Great War.",
+        "description": "Dyed an iconic horizon-blue and featuring two pockets, these woollen trousers mirror the standard breeches provided to French soldiers during the Great War.",
         "color": "blue",
         "weight": 5,
         "append": true

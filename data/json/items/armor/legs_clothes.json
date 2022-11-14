@@ -1594,5 +1594,84 @@
     "material_thickness": 0.25,
     "flags": [ "VARSIZE", "POCKETS", "WATERPROOF" ],
     "armor": [ { "encumbrance": 1, "coverage": 100, "covers": [ "leg_l", "leg_r" ], "volume_encumber_modifier": 0.6 } ]
+  },
+  {
+    "id": "military_breeches",
+    "type": "ARMOR",
+    "name": { "str_sp": "military breeches" },
+    "description": "A quality pair of reproduction uniform breeches, styled in the image of older military pants and fit for the rigors of re-enactment duty.",
+    "weight": "520 g",
+    "volume": "1750 ml",
+    "price": 5300,
+    "price_postapoc": 60,
+    "to_hit": 1,
+    "material": [ "wool" ],
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80
+      }
+    ],
+    "warmth": 20,
+    "material_thickness": 0.5,
+    "flags": [ "VARSIZE", "POCKETS", "SOFT" ],
+    "armor": [ { "encumbrance": 8, "coverage": 80, "covers": [ "leg_l", "leg_r" ] } ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "breeches_us1917",
+        "name": { "str": "military breeches" },
+        "description": "The hardy breeches that made the men, this is a reproduction of the general issue pants provided to soldiers of the American Expeditionary Force during World War One.  Dyed a shade of olive drab and sown from semi-coarse wool, it features two front pockets, double stitched seems, and reinforced thigh linings that’s advertised to be capable of enduring the most severe of re-enactments.  Its designers likely didn’t have your present situation in mind when they made that assertion.",
+        "weight": 50,
+        "append": true
+      },
+      {
+        "id": "breeches_german1910",
+        "name": { "str": "military breeches" },
+        "description": "Fashioned from stone-grey wool, this is a reproduction of the imperial German army’s standard trousers during the First World War.  Exuding an authority of regimental precision in its fit and cut, the garment features two slanted pockets, red leg piping, and a high waistline.",
+        "color": "dark_gray",
+        "price": 7400,
+        "weight": 25,
+        "append": true
+      },
+      {
+        "id": "breeches_brit1902",
+        "name": { "str": "military breeches" },
+        "description": "This is a reproduction of the standard service trousers issued to British soldiers of the Great War.  Cut from khaki wool with an array of supporting buttons, the pants come provided with two generous pockets.",
+        "color": "green",
+        "price": 6500,
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "breeches_russian_ww1",
+        "name": { "str": "military breeches" },
+        "description": "This pair of reproduction pants is dyed khaki brown, and is sown from harsh wool.  A re-enactment quality replica of imperial Russia’s First World War service trousers, it features two pockets.",
+        "color": "brown",
+        "weight": 5,
+        "append": true
+      },
+      {
+        "id": "breeches_french1915",
+        "name": { "str": "military breeches" },
+        "description" "Dyed an iconic horizon-blue and featuring two pockets, these woollen trousers mirror the standard breeches provided to French soldiers during the Great War.",
+        "color": "blue",
+        "weight": 5,
+        "append": true
+      }
+    ]
   }
 ]

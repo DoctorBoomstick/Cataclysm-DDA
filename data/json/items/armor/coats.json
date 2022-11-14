@@ -3152,32 +3152,31 @@
       {
         "id": "coat_us1917",
         "name": { "str": "infantry overcoat" },
-        "description": "The hardy breeches that made the men, this is a reproduction of the general issue pants provided to soldiers of the American Expeditionary Force during World War One.  Dyed a shade of olive drab and sown from semi-coarse wool, it features two front pockets, double stitched seems, and reinforced thigh linings that’s advertised to be capable of enduring the most severe of re-enactments.  Its designers likely didn’t have your present situation in mind when they made that assertion.",
+        "description": "Sown from coarse wool dyed a shade of olive drab, this overcoat is a reproduction of the issued uniform tunic provided to American soldiers during the Great War.  With a standing collar, khaki inner lining, and double stitched seems, the garment features four storage pockets.",
         "weight": 50,
         "append": true
       },
       {
         "id": "coat_german1910",
         "name": { "str": "infantry overcoat" },
-        "description": "Fashioned from stone-grey wool, this is a reproduction of the imperial German army’s standard trousers during the First World War.  Exuding an authority of regimental precision in its fit and cut, the garment features two slanted pockets, red leg piping, and a high waistline.",
+        "description": "A quality reproduction of imperial Germany’s First World War service greatcoat, this garment features four sizable pockets.  Cut from wool dyed a recognisable field-grey and with integrated red piping, the coat fastens shut with an array of brass buttons.",
         "color": "dark_gray",
-        "price": 7400,
+        "price": 12500,
         "weight": 25,
         "append": true
       },
       {
         "id": "coat_brit1902",
         "name": { "str": "infantry overcoat" },
-        "description": "This is a reproduction of the standard service trousers issued to British soldiers of the Great War.  Cut from khaki wool with an array of supporting buttons, the pants come provided with two generous pockets.",
+        "description": "Dyed khaki and with sown on shoulder straps, this thick woollen coat is a quality representation of the British army’s standard First World War tunic.  Hosting two sizable breast pockets with an additional couple smaller ones, the garment comes tailored with rifle patches and stitched rank insignia.",
         "color": "green",
-        "price": 6500,
         "weight": 15,
         "append": true
       },
       {
         "id": "coat_russian_ww1",
         "name": { "str": "infantry overcoat" },
-        "description": "This pair of reproduction pants is dyed khaki brown, and is sown from harsh wool.  A re-enactment quality replica of imperial Russia’s First World War service trousers, it features two pockets.",
+        "description": "This reproduction greatcoat is dyed khaki brown, and is sown from harsh wool.  A re-enactment quality replica of imperial Russia’s First World War service tunic, it features four pockets.",
         "color": "brown",
         "weight": 5,
         "append": true

@@ -124,6 +124,7 @@
       { "item": "jacket_chef", "prob": 25 },
       { "item": "jacket_leather", "prob": 40 },
       { "item": "jacket_army", "prob": 25 },
+      { "item": "military_coat", "prob": 25 },
       { "item": "jacket_ninja", "prob": 25 }
     ]
   },

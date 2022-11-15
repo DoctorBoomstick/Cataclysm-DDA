@@ -3026,5 +3026,60 @@
     "name": { "str": "XL tempered steel sabaton" },
     "proportional": { "weight": 1.25, "volume": 1.25 },
     "extend": { "flags": [ "OVERSIZE" ] }
+  },
+  {
+    "id": "jackboot",
+    "repairs_like": "boots_larmor",
+    "type": "ARMOR",
+    "name": { "str": "pair of jackboots", "str_pl": "pairs of jackboots" },
+    "description": "A solidly built pair of old hobnail combat boots, with iron-rimmed heels and no laces, these modern copies retain the original’s durability and hardiness.  Though commonly associated with totalitarian regimes, owing to their widespread use by Nazi soldiers, different versions of these venerable boots were used by a large array of other military forces throughout the twentieth century.",
+    "weight": "1520 g",
+    "volume": "3750 ml",
+    "longest_side": "381 mm",
+    "price": 10500,
+    "price_postapoc": 1400,
+    "to_hit": -1,
+    "bashing": 1,
+    "material": [ "leather" ],
+    "symbol": "[",
+    "looks_like": "boots_larmor",
+    "color": "dark_gray",
+    "warmth": 20,
+    "material_thickness": 2,
+    "environmental_protection": 2,
+    "flags": [ "VARSIZE", "WATERPROOF" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.2 },
+          { "type": "iron", "covered_by_mat": 100, "thickness": 4.0 }
+        ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
+        "coverage": 100,
+        "encumbrance": 15
+      }
+    ]
   }
 ]

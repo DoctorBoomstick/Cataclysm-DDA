@@ -1259,5 +1259,68 @@
     "use_action": { "type": "holster", "holster_prompt": "Stash ammo", "holster_msg": "You stash your %s." },
     "flags": [ "WATER_FRIENDLY", "BELTED", "PALS_SMALL" ],
     "armor": [ { "coverage": 25, "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ] } ]
+  },
+  {
+    "id": "old_webbing",
+    "type": "ARMOR",
+    "//": "Based off the 1908 webbing equipment used by British soldiers.",
+    "name": { "str": "vintage webbing" },
+    "description": "A modern reproduction of old webbing equipment issued to First World War soldiers, this rigging features a three-inch belt with two straps that pass over the user’s shoulders and crisscross at the back.  Featuring a set of cartridge pouches connected to the belt, with included provisions for a water bottle and entrenching tool, the entire array is connected through a succession of brass buckles.",
+    "weight": "210 g",
+    "volume": "500 ml",
+    "price": 15800,
+    "price_postapoc": 50,
+    "material": [ "leather", "brass" ],
+    "symbol": "[",
+    "looks_like": "leather_belt",
+    "color": "brown",
+    "material_thickness": 1.5,
+    "pocket_data": [
+      {
+        "holster": true,
+        "max_contains_volume": "150 ml",
+        "max_contains_weight": "1000 g",
+        "max_item_length": "10 cm",
+        "moves": 40,
+        "description": "A set of cartridge pouches.",
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+      },
+      {
+        "holster": true,
+        "max_contains_volume": "150 ml",
+        "max_contains_weight": "1000 g",
+        "max_item_length": "10 cm",
+        "moves": 40,
+        "description": "A set of cartridge pouches.",
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+      },
+      {
+        "holster": true,
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2000 g",
+        "max_item_length": "10 cm",
+        "moves": 60,
+        "description": "A carrier for a water bottle."
+      },
+      {
+        "holster": true,
+        "max_contains_volume": "1000 ml",
+        "max_contains_weight": "453 g",
+        "max_item_length": "23 cm",
+        "moves": 60,
+        "description": "A carrier for an entrenching tool."
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Stash item", "holster_msg": "You stash your %s." },
+    "flags": [ "BELTED", "WATER_FRIENDLY" ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 50,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_waist" ],
+        "volume_encumber_modifier": 0.35
+      }
+    ]
   }
 ]

@@ -3184,7 +3184,7 @@
       {
         "id": "coat_french1915",
         "name": { "str": "infantry overcoat" },
-        "description": "Dyed horizon-blue, this thick woollen greatcoat is a quality reproduction of the French army’s First World War tunic.",
+        "description": "Dyed horizon-blue, this thick, woollen, four pocket greatcoat is a quality reproduction of the French army’s First World War tunic.",
         "color": "blue",
         "weight": 5,
         "append": true

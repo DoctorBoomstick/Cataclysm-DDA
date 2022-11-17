@@ -5503,5 +5503,45 @@
       "male": [ "briefs" ],
       "female": [ "boy_shorts", "sports_bra" ]
     }
+  },
+  {
+    "type": "profession",
+    "id": "doughboy",
+    "name": "Doughboy",
+    "description": "Inspired by the footsteps left behind by your great-grandfather, you have taken the liberty to dawn the olive bearing of a World War One American doughboy.  Now that your personal Great War has started, your heirloom in hand and reproduction equipment pressed, readied, and tucked in place, you’ve got some mighty big boots to fill.",
+    "points": 2,
+    "skills": [ { "level": 2, "name": "gun" }, { "level": 2, "name": "rifle" }, { "level": 2, "name": "pistol" } ],
+    "items": {
+      "both": {
+        "items": [
+          "longshirt",
+          "socks",
+          "jackboot",
+          "old_webbing",
+          "wristwatch"
+        ],
+        "entries": [
+          { "group": "charged_smart_phone" },
+          { "item": "military_breeches", "variant": "breeches_us1917" }
+          { "item": "military_coat", "variant": "coat_us1917" }
+          { "item": "water_clean", "container-item": "bottle_metal" },
+            "item": "e_tool",
+          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
+          {
+            "item": "m1903",
+            "ammo-item": "3006",
+            "charges": 5,
+            "contents-item": "shoulder_strap",
+            "custom-flags": [ "no_auto_equip" ]
+          },
+          { "item": "m1911", "ammo-item": "45_acp", "container-item": "holster", "charges": 7 },
+          { "item": "m1911mag", "ammo-item": "45_acp", "charges": 7, "count": 2 },
+          { "item": "scabbard", "contents-item": "sword_bayonet" }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boxer_shorts" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
   }
 ]

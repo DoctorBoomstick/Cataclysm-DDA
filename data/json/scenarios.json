@@ -606,6 +606,7 @@
     "id": "heli_crash",
     "name": "Helicopter Crash",
     "points": -5,
+    "forced_traits": [ "HAS_NEMESIS" ],
     "description": "While being transported to a different military base, the pilot lost control of the helicopter and crashed in the middle of nowhere.  Hopefully some of the soldiers that were with you also survived the accident.",
     "start_name": "Crash site",
     "allowed_locs": [ "sloc_field", "sloc_forest", "sloc_desert_island" ],
@@ -821,6 +822,17 @@
     "allowed_locs": [ "sloc_retirement_community" ],
     "start_name": "Retirement Community",
     "professions": [ "senior", "old_vet" ],
+    "flags": [ "CITY_START", "LONE_START" ]
+  },
+  {
+    "type": "scenario",
+    "id": "wwc",
+    "name": "World War C",
+    "points": 1,
+    "description": "Being the self-respecting American citizen that you are, you weren’t about to let a little national emergency interrupt your shooting match.  Having put your name down for a themed competition at your local gun range, fundamentally an excuse to partake in cosplay… with big guns, you intended to attend with your favoured historical loadout.  Whether you were picking out your last pieces of equipment or on the range itself, you’re not sure if zombies jibe well with your getup.  The one thing that you do know is that, come literal hell or high water, you’re going to participate in that match.  You’re targets are just going to be a little different is all.",
+    "allowed_locs": [ "sloc_shooting_range", "sloc_gun_store", "sloc_military_surplus" ],
+    "start_name": "Shooting Match",
+    "professions": [ "doughboy", "old_vet" ],
     "flags": [ "CITY_START", "LONE_START" ]
   }
 ]

@@ -3028,7 +3028,7 @@
     "extend": { "flags": [ "OVERSIZE" ] }
   },
   {
-    "id": "jackboot",
+    "id": "jackboots",
     "repairs_like": "boots_larmor",
     "type": "ARMOR",
     "name": { "str": "pair of jackboots", "str_pl": "pairs of jackboots" },
@@ -3039,10 +3039,10 @@
     "price": 10500,
     "price_postapoc": 1400,
     "to_hit": -1,
-    "bashing": 1,
+    "bashing": 1
     "material": [ "leather" ],
     "symbol": "[",
-    "looks_like": "boots_larmor",
+    "looks_like": "boots_steel",
     "color": "dark_gray",
     "warmth": 20,
     "material_thickness": 2,
@@ -3052,26 +3052,23 @@
       {
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
-        "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 0.2 },
-          { "type": "iron", "covered_by_mat": 100, "thickness": 4.0 }
-        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 6.0 } ],
         "coverage": 100,
         "encumbrance": 20
       },
       {
         "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [
-          "foot_heel_r",
-          "foot_heel_l",
-          "foot_arch_r",
-          "foot_arch_l",
-          "foot_toes_r",
-          "foot_toes_l",
-          "foot_ankle_l",
-          "foot_ankle_r"
-        ],
+        "specifically_covers": [ "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l", "foot_ankle_l", "foot_ankle_r" ],
         "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_heel_l", "foot_heel_r" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "iron", "covered_by_mat": 100, "thickness": 4.0 }
+        ],
         "coverage": 100
       },
       {
@@ -3079,6 +3076,73 @@
         "specifically_covers": [ "leg_lower_l", "leg_lower_r" ],
         "coverage": 100,
         "encumbrance": 15
+      }
+    ]
+  },
+  {
+    "id": "mountain_boots",
+    "type": "ARMOR",
+    "name": { "str": "pair of mountain boots", "str_pl": "pairs of mountain boots" },
+    "description": "Beefy, hardwearing ankle boots, styled after the image of older combat footwear.",
+    "weight": "1060 g",
+    "volume": "2500 ml",
+    "price": 10000,
+    "price_postapoc": 750,
+    "to_hit": -1,
+    "bashing": 1,
+    "symbol": "[",
+    "looks_like": "boots_steel",
+    "color": "dark_gray",
+    "warmth": 20,
+    "environmental_protection": 2,
+.    "flags": [ "VARSIZE", "WATERPROOF" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 6.0 } ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_arch_r", "foot_arch_l", "foot_toes_r", "foot_toes_l", "foot_ankle_l", "foot_ankle_r" ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2.0 } ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_heel_l", "foot_heel_r" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 },
+          { "type": "iron", "covered_by_mat": 100, "thickness": 4.0 }
+        ],
+        "coverage": 100
+      }
+    ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "generic_mountain_boots",
+        "name": { "str": "pair of mountain boots", "str_pl": "pairs of mountain boots" },
+        "description": "Outfitted with iron heels and cotton laces, these insulated boots are clones of the footwear worn by alpine soldiers of the Austrian army during the First World War.  The boots are also well known for their use by German Storm Troopers during the conflict, where they replaced the more cumbersome jackboots then in standard issue.",
+    "warmth": 35,
+        "weight": 50,
+        "append": true
+      },
+      {
+        "id": "pershing_boots",
+        "name": { "str": "pair of trench boots", "str_pl": "pairs of trench boots" },
+        "description": "Designed to assist the American soldier in marching their way across France without concerning themselves with silly shoe maintenance, these hardwearing trench boots, also called 'Pershing boots,' are made from thick leather, are waterproof, and are studded with heel irons.",
+        "weight": 30,
+        "append": true
+      },
+      {
+        "id": "ammunition_boots",
+        "name": { "str": "pair of ammunition boots", "str_pl": "pairs of ammunition boots" },
+        "description": "Confusingly named and created with comfort as an afterthought, these robust, studded boots are a modern take on the twentieth-century footwear issued to the British armed forces.  They're made to last, with iron heels, leather laces, and hobnail-   studded soles, and will likely outlast you.  Though, given the circumstances, that isn’t a particularly high bar to beat.",
+        "weight": 30,
+        "append": true
       }
     ]
   }

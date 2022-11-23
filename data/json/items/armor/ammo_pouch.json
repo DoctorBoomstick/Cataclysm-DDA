@@ -1283,7 +1283,7 @@
         "max_item_length": "10 cm",
         "moves": 40,
         "description": "A set of cartridge pouches.",
-        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+        "flag_restriction": [ "SPEEDLOADER", "MAG_COMPACT", "SPEEDLOADER", "MAG_BULKY" ]
       },
       {
         "pocket_type": "CONTAINER",
@@ -1292,7 +1292,7 @@
         "max_item_length": "10 cm",
         "moves": 40,
         "description": "A set of cartridge pouches.",
-        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+        "flag_restriction": [ "SPEEDLOADER", "MAG_COMPACT", "MAG_BULKY" ]
       },
       {
         "holster": true,

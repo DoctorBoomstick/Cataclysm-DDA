@@ -5517,12 +5517,40 @@
         "entries": [
           { "group": "army_mags_1911" },
           { "item": "military_breeches", "variant": "breeches_us1917" },
+          { "item": "military_coat", "variant": "coat_us1917" },
           { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
           { "item": "water_clean", "container-item": "bottle_metal" },
           { "item": "m1911", "ammo-item": "45_acp", "charges": 7, "container-item": "holster" },
-          { "item": "garand", "ammo-item": "3006", "charges": 8, "contents-item": "shoulder_strap" },
-          { "item": "garandclip", "ammo-item": "3006", "charges": 8 },
-          { "item": "3006", "charges": 4 }
+          { "item": "3006_clip", "ammo-item": "3006", "charges": 5, "count": 4 },
+          { "item": "sword_bayonet", "container-item": "scabbard" },
+          { "item": "m1903", "ammo-item": "3006", "charges": 5, "contents-item": "shoulder_strap" }
+        ]
+      },
+      "male": [ "boxer_shorts" ],
+      "female": [ "sports_bra", "boy_shorts" ]
+    },
+    "flags": [ "SCEN_ONLY" ]
+  },
+  {
+    "type": "profession",
+    "id": "storm_trooper",
+    "name": "Storm Trooper",
+    "description": "Inspired by the footsteps left behind by your great-grandfather, you have taken the liberty to dawn the olive bearing of a World War One American doughboy.  Now that your personal Great War has started, your heirloom in hand and reproduction equipment pressed, readied, and tucked in place, you’ve got some mighty big boots to fill.",
+    "points": 4,
+    "skills": [ { "level": 2, "name": "gun" }, { "level": 2, "name": "smg" }, { "level": 2, "name": "pistol" } ],
+    "items": {
+      "both": {
+        "items": [ "longshirt", "socks_wool", "mountain_boots", "old_webbing", "wristwatch" ],
+        "entries": [
+          { "item": "military_breeches", "variant": "breeches_us1917" },
+          { "item": "military_coat", "variant": "coat_us1917" },
+          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
+          { "item": "water_clean", "container-item": "bottle_metal" },
+          { "item": "sheath", "contents-item": "knife_trench" },
+          { "item": "p08", "ammo-item": "9mm", "charges": 8, "container-item": "holster" },
+          { "item": "p08mag_8rd", "ammo-item": "9mm", "charges": 8, "count": 2 },
+          { "item": "mp18", "ammo-item": "9mm", "charges": 32, "contents-item": "shoulder_strap" },
+          { "item": "p08mag_32rd", "ammo-item": "9mm", "charges": 32 }
         ]
       },
       "male": [ "boxer_shorts" ],

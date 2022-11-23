@@ -827,11 +827,11 @@
     "type": "scenario",
     "id": "wwc",
     "name": "World War C",
-    "points": 1,
-    "description": "Being the self-respecting American citizen that you are, you weren’t about to let a little national emergency interrupt your shooting match.  Having put your name down for a themed competition at your local gun range, fundamentally an excuse to partake in cosplay… with big guns, you intended to attend with your favoured historical loadout.  Whether you were picking out your last pieces of equipment or on the range itself, you’re not sure if zombies jibe well with your getup.  The one thing that you do know is that, come literal hell or high water, you’re going to participate in that match.  You’re targets are just going to be a little different is all.",
-    "allowed_locs": [ "sloc_shooting_range", "sloc_gun_store", "sloc_military_surplus" ],
+    "points": 2,
+    "description": "Being the self-respecting American citizen that you are, you weren’t about to let a little national emergency interrupt your shooting match.  Having put your name down for a themed competition at your local gun range, fundamentally an excuse to partake in cosplay… with big guns, you intended to attend with your favoured historical loadout.  You’re not sure if zombies jibe well with your getup.  The one thing that you do know is that, come literal hell or high water, you’re going to participate in that match.  You’re targets are just going to be a little different is all.",
+    "allowed_locs": [ "sloc_shooting_range" ],
     "start_name": "Shooting Match",
-    "professions": [ "doughboy", "old_vet" ],
-    "flags": [ "CITY_START", "LONE_START" ]
+    "professions": [ "doughboy", "storm_trooper" ],
+    "flags": [ "LONE_START" ]
   }
 ]

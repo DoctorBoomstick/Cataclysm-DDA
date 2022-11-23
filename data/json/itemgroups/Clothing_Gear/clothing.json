@@ -465,7 +465,8 @@
       { "item": "boots_combat", "prob": 10 },
       { "item": "boots_hiking", "prob": 40 },
       { "item": "boots_western", "prob": 15 },
-      { "item": "jackboot", "prob": 5 },
+      { "item": "jackboots", "prob": 5 },
+      { "item": "mountain_boots", "prob": 5 },
       { "item": "knee_high_boots", "prob": 20 },
       { "item": "thigh_high_boots", "prob": 20 }
     ]
@@ -1611,7 +1612,8 @@
     "id": "shoes",
     "items": [
       [ "sneakers", 80 ],
-      { "item": "jackboot", "prob": 5 },
+      [ "jackboots", 5 ],
+      [ "mountain_boots", 40 ],
       [ "knee_high_boots", 20 ],
       [ "thigh_high_boots", 20 ],
       [ "boots", 70 ],
@@ -1905,7 +1907,8 @@
     "id": "shoestore_shoes",
     "items": [
       [ "sneakers", 100 ],
-      { "item": "jackboot", "prob": 5 },
+      [ "jackboots", 5 ],
+      [ "mountain_boots", 40 ],
       [ "knee_high_boots", 40 ],
       [ "thigh_high_boots", 40 ],
       [ "boots", 100 ],
@@ -4087,7 +4090,8 @@
           { "item": "boots_fur", "prob": 10 },
           { "item": "boots_western", "prob": 40 },
           { "item": "boots_winter", "prob": 30 },
-          { "item": "jackboot", "prob": 5 },
+          { "item": "jackboots", "prob": 5 },
+          { "item": "mountain_boots", "prob": 5 },
           { "item": "knee_high_boots", "prob": 15 },
           { "item": "motorbike_boots", "prob": 35 },
           { "item": "thigh_high_boots", "prob": 5 }

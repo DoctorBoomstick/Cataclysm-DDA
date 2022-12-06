@@ -616,5 +616,10 @@
     "id": "sloc_shooting_range",
     "name": "competition gun range",
     "terrain": [ "shootingrange_1a", "shootingrange_2a" ]
+  },
+  {
+    "id": "nuclear_plant",
+    "name": "Nuclear Power Plant",
+    "terrain": [ "nuclear_plant_5_5_1", "nuclear_plant_10_5_1" ]
   }
 ]

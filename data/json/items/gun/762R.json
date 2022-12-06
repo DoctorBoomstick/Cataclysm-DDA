@@ -112,5 +112,61 @@
     "pocket_data": [
       { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762R": 5 }, "allowed_speedloaders": [ "762R_clip" ] }
     ]
+  },
+  {
+    "id": "svd",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": { "str": "Dragunov marksmen rifle" },
+    "description": "The Dragunov, developed for the Soviet military during the Cold War, was a marksmen’s rifle that fired the 7.62x54mm cartridge and was in service from 1965 until contemporary times.  The Dragunov is a dependable and tough combat precision rifle that will almost certainly bring out the sniper stalker in you, even if you aren't likely to be in Eastern Europe anytime soon.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "svd",
+        "name": { "str": "SVD Dragunov" },
+        "description": "Often mislabeled a sniper rifle, the SVD Dragunov was one of the world’s first purpose-built marksmen’s weapons.  Produced by the Soviet Union during the Cold War and originally fielded in 1965, the SVD prompted a number of copycat designs to be produced for the armies of various other nations, namely China and Iraq.  The weapon is tough, reliable, and sufficiently accurate for long-range squad support, and it became a well-regarded precision rifle across eastern Europe.  Like most other communist armaments, the Dragunov was a quite rare find in the US collector’s market, though its semi-automatic design made it a more feasible import than its automatic brethren.",
+        "weight": 1
+      }
+    ],
+    "weight": "4000 g",
+    "volume": "3500 ml",
+    "longest_side": "1225 mm",
+    "price": "190 USD",
+    "bashing": 10,
+    "to_hit": -1,
+    "material": [ "steel", "wood" ],
+    "symbol": "(",
+    "color": "brown",
+    "skill": "rifle",
+    "ammo": [ "762R" ],
+    "range": 7,
+    "dispersion": 120,
+    "durability": 10,
+    "blackpowder_tolerance": 24,
+    "barrel_volume": "1250 ml",
+    "valid_mod_locations": [
+      [ "accessories", 4 ],
+      [ "barrel", 1 ],
+      [ "brass catcher", 1 ],
+      [ "grip mount", 1 ],
+      [ "mechanism", 4 ],
+      [ "muzzle", 1 ],
+      [ "rail mount", 1 ],
+      [ "sights", 1 ],
+      [ "sling", 1 ],
+      [ "stock mount", 1 ],
+      [ "stock accessory", 2 ],
+      [ "underbarrel", 1 ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [ "7.62x54Rmag", "7.62x54Rmag2" ]
+      }
+    ]
   }
 ]

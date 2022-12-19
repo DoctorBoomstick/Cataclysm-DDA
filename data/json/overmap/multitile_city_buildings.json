@@ -3945,6 +3945,15 @@
   },
   {
     "type": "city_building",
+    "id": "s_hunting2",
+    "locations": [ "land" ],
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "s_hunting2_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "s_hunting_2nd_floor_north" }
+    ]
+  },
+  {
+    "type": "city_building",
     "id": "house_rv",
     "locations": [ "land" ],
     "overmaps": [

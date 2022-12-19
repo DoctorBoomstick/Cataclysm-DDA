@@ -1631,6 +1631,23 @@
   },
   {
     "type": "overmap_terrain",
+    "id": "s_hunting2",
+    "copy-from": "generic_city_building",
+    "name": "hunting supply store",
+    "sym": "H",
+    "color": "brown",
+    "extend": { "flags": [ "SOURCE_WEAPON", "SOURCE_CLOTHING" ] }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "s_hunting2_2nd_floor",
+    "copy-from": "generic_city_building",
+    "name": "hunting supply store 2nd floor",
+    "sym": "H",
+    "color": "brown"
+  },
+  {
+    "type": "overmap_terrain",
     "id": "s_camping",
     "name": "outdoorsman's store",
     "copy-from": "generic_city_building",

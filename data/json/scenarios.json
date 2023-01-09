@@ -825,6 +825,7 @@
   },
   {
     "type": "scenario",
+<<<<<<< HEAD
     "id": "wwc",
     "name": "World War C",
     "points": 2,
@@ -835,6 +836,8 @@
     "flags": [ "LONE_START" ]
   },
   {
+=======
+>>>>>>> master
     "id": "nuclear_plant_start",
     "name": "Nuclear Power Plant",
     "points": 1,

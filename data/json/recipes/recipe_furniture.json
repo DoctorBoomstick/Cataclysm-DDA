@@ -71,7 +71,11 @@
     "autolearn": true,
     "qualities": [ { "id": "AXE", "level": 3 } ],
     "components": [ [ [ "log", 1 ] ] ],
+<<<<<<< HEAD
     "byproducts": [ [ "splinter", 750 ] ]
+=======
+    "byproducts": [ [ "splinter", 120 ] ]
+>>>>>>> master
   },
   {
     "result": "chair_wood_black",

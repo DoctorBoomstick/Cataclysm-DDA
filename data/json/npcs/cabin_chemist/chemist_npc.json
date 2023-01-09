@@ -15,6 +15,10 @@
     "id": "NC_CHEM_MERCHANT",
     "name": { "str": "Chemist" },
     "job_description": "I make and sell chemicals",
+<<<<<<< HEAD
+=======
+    "common": false,
+>>>>>>> master
     "traits": [
       { "group": "BG_survival_story_RURAL" },
       { "group": "NPC_starting_traits" },

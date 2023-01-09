@@ -1658,7 +1658,12 @@ void dialogue::add_topic( const std::string &topic_id )
 void dialogue::add_topic( const talk_topic &topic )
 {
     if( actor( true )->get_npc() ) {
+<<<<<<< HEAD
         topic_stack.emplace_back( actor( true )->get_npc()->get_specified_talk_topic( topic.id ) );
+=======
+        std::string const &newid = actor( true )->get_npc()->get_specified_talk_topic( topic.id );
+        topic_stack.emplace_back( newid, topic.item_type, topic.reason );
+>>>>>>> master
     } else {
         topic_stack.push_back( topic );
     }
@@ -4929,10 +4934,17 @@ std::string npc::pick_talk_topic( const Character &/*u*/ )
     return chatbin.talk_stranger_neutral;
 }
 
+<<<<<<< HEAD
 std::string npc::get_specified_talk_topic( const std::string &topic_id )
 {
     static const dialogue_chatbin default_chatbin;
     static const std::vector<std::pair<std::string, std::string>> talk_topics = {
+=======
+std::string const &npc::get_specified_talk_topic( std::string const &topic_id )
+{
+    static const dialogue_chatbin default_chatbin;
+    std::vector<std::pair<std::string const &, std::string const &>> const talk_topics = {
+>>>>>>> master
         {default_chatbin.first_topic, chatbin.first_topic},
         {default_chatbin.talk_radio, chatbin.talk_radio},
         {default_chatbin.talk_leader, chatbin.talk_leader},

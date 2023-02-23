@@ -298,7 +298,7 @@
     "to_hit": -4,
     "flags": [ "TRADER_AVOID", "SINGLE_USE" ],
     "price": 30000,
-    "price_postapoc": 0
+    "price_postapoc": 40
   },
   {
     "type": "GENERIC",
@@ -315,7 +315,7 @@
     "to_hit": -4,
     "flags": [ "TRADER_AVOID", "SINGLE_USE" ],
     "price": 30000,
-    "price_postapoc": 0
+    "price_postapoc": 40
   },
   {
     "type": "GENERIC",
@@ -331,7 +331,20 @@
     "bashing": 5,
     "to_hit": -4,
     "flags": [ "TRADER_AVOID", "SINGLE_USE" ],
-    "price": 30000,
-    "price_postapoc": 0
+    "price": 20000,
+    "price_postapoc": 40
+  },
+  {
+    "type": "GENERIC",
+    "id": "plaster_chunk",
+    "copy-from": "generic_fossil_bone",
+    "name": { "str": "fragment of cast-plaster", "str_pl": "fragments of cast-plaster" },
+    "description": "a splintered chunk of plaster, a former component of some manner of cast or statue.",
+    "weight": "100 g",
+    "material": [ "plaster" ],
+    "bashing": 1,
+    "flags": [ "TRADER_AVOID", "SINGLE_USE" ],
+    "price": 10,
+    "price_postapoc": 10
   }
 ]

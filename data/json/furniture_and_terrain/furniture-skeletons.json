@@ -32,7 +32,7 @@
   {
     "type": "furniture",
     "id": "f_gorgosaurus_skull",
-    "name": "Gorgosaurus skull",
+    "name": "mounted Gorgosaur skull",
     "description": "Suspended off the floor at roughly head height and held aloft by a metal framework, this gigantic cranium of a Gorgosaurus regards the space before it with empty, dust-caked eye sockets.  With its giant jaws poised open and rows of curved fangs prominently in view, the skull has been somewhat angled to the side.",
     "symbol": "G",
     "color": "dark_gray",
@@ -47,64 +47,154 @@
       "sound": "crunch!",
       "sound_fail": "whack.",
       "furn_set": "f_armature",
-      "items": [ { "item": "plaster_chunk", "count": [ 800, 1400 ] }, { "item": "predator fang", "count": [ 45, 72 ] } ]
+      "items": [ { "item": "plaster_chunk", "count": [ 800, 1400 ] }, { "item": "tooth_tyrannosaur", "count": [ 45, 72 ] } ]
     }
   },
   {
     "type": "furniture",
-    "id": "f_dimetrodon_sculpture",
-    "name": "sculpture",
-    "description": "A waist-high, fixed block of smoothened marble, serving as a plinth.  Coiled about its peak like some form of oversized lizard, the quadruped sculpture of a dimetrodon rests in languid repose, its front claws draped over the slab's lip.",
-    "symbol": "S",
+    "id": "f_therapod_neck",
+    "name": "fossilized kneck segment",
+    "description": "Featuring prominent vertebra and tilted downwards, this S-shaped section of neck has been mounted on a painted and concealed network of metal framing.",
+    "symbol": "n",
     "color": "dark_gray",
     "move_cost_mod": -1,
-    "coverage": 70,
+    "coverage": 75,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "BLOCKSDOOR", "MINEABLE" ],
+    "flags": [ "TRANSPARENT" ],
+    "deconstruct": { "furn_set": "f_armature", "items": [ { "item": "generic_fossil_bone", "count": [ 88, 110 ] } ] },
     "bash": {
-      "str_min": 40,
-      "str_max": 70,
-      "sound": "smash!",
-      "sound_fail": "thump.",
-      "items": [ { "item": "rock", "count": [ 25, 60 ] } ]
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whack.",
+      "furn_set": "f_armature",
+      "items": [ { "item": "fossil_bone_fragment", "count": [ 396, 495 ] }, { "item": "generic_fossil_bone", "count": [ 0, 4 ] } ]
     }
   },
   {
     "type": "furniture",
-    "id": "f_smilodon_sculpture",
-    "name": "sculpture",
-    "description": "A waist-high, fixed block of smoothened marble, serving as a plinth.  Its top is adorned with the worn sculpture of a Smilodon, the robust feline standing poised with its head raised and sabre-like fangs bared.",
-    "symbol": "S",
+    "id": "f_dinosaur_spine",
+    "name": "mounted spinal column",
+    "description": "Arcing many feet above the floor, this robust spinal cord is supported and held aloft by a network of metal framing.",
+    "symbol": "s",
     "color": "dark_gray",
     "move_cost_mod": -1,
-    "coverage": 70,
+    "coverage": 75,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "BLOCKSDOOR", "MINEABLE" ],
+    "flags": [ "TRANSPARENT" ],
+    "deconstruct": { "furn_set": "f_armature", "items": [ { "item": "generic_fossil_bone", "count": [ 88, 110 ] } ] },
     "bash": {
-      "str_min": 40,
-      "str_max": 70,
-      "sound": "smash!",
-      "sound_fail": "thump.",
-      "items": [ { "item": "rock", "count": [ 25, 60 ] } ]
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whack.",
+      "furn_set": "f_armature",
+      "items": [ { "item": "fossil_bone_fragment", "count": [ 396, 495 ] }, { "item": "generic_fossil_bone", "count": [ 0, 4 ] } ]
     }
   },
   {
     "type": "furniture",
-    "id": "f_struthiomimus_sculpture",
-    "name": "sculpture",
-    "description": "a waist-high, fixed block of smoothened marble, serving as a plinth.  Its crest bears an Ostridge-like sculpture of a lanky Struthiomimus, with its reptilian neck poised in a sidelong ark and head cocked.",
-    "symbol": "S",
+    "id": "f_dinosaur_tail",
+    "name": "fossilized tail segment",
+    "description": "Held many feet off the ground by a series of steel girders, this is a section of a saurian’s fossilized tail.  The length of the fossil is ridged with large vertebral bones and ossified tendons.",
+    "symbol": "T",
     "color": "dark_gray",
     "move_cost_mod": -1,
-    "coverage": 70,
+    "coverage": 75,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "BLOCKSDOOR", "MINEABLE" ],
+    "flags": [ "TRANSPARENT" ],
+    "deconstruct": { "furn_set": "f_armature", "items": [ { "item": "generic_fossil_bone", "count": [ 177, 222 ] } ] },
     "bash": {
-      "str_min": 40,
-      "str_max": 70,
-      "sound": "smash!",
-      "sound_fail": "thump.",
-      "items": [ { "item": "rock", "count": [ 25, 60 ] } ]
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whack.",
+      "furn_set": "f_armature",
+      "items": [ { "item": "fossil_bone_fragment", "count": [ 796, 1000 ] }, { "item": "generic_fossil_bone", "count": [ 0, 8 ] } ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_tyrannosaur_arm",
+    "name": "fossilized thorax",
+    "description": "Held in place by a network of partly concealed girders, this curved sheath of ribs forms the pectoral area of a sizable skeleton.  The region possesses a relatively tiny forelimb, surmounted by two clawed digits, and a vestigial 3rd metacarpal bone lower on the arm.",
+    "symbol": "T",
+    "color": "dark_gray",
+    "move_cost_mod": -1,
+    "coverage": 75,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT" ],
+    "deconstruct": {
+      "furn_set": "f_armature",
+      "items": [ { "item": "fossil_rib_large", "count": [ 2, 3 ] }, { "item": "generic_fossil_bone", "count": [ 22, 30 ] } ]
+    },
+    "bash": {
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whack.",
+      "furn_set": "f_armature",
+      "items": [
+        { "item": "fossil_bone_fragment", "count": [ 220, 300 ] },
+        { "item": "fossil_rib_large", "count": [ 0, 2 ] },
+        { "item": "generic_fossil_bone", "count": [ 0, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_dinosaur_ribs",
+    "name": "suspended ribcage",
+    "description": "Held in place by a network of partly concealed girders, this curved sheath of ribs forms the midsection of a sizable skeleton.",
+    "symbol": "T",
+    "color": "dark_gray",
+    "move_cost_mod": -1,
+    "coverage": 75,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT" ],
+    "deconstruct": {
+      "furn_set": "f_armature",
+      "items": [ { "item": "fossil_rib_large", "count": [ 4, 6 ] }, { "item": "generic_fossil_bone", "count": [ 4, 6 ] } ]
+    },
+    "bash": {
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whack.",
+      "furn_set": "f_armature",
+      "items": [
+        { "item": "fossil_bone_fragment", "count": [ 140, 210 ] },
+        { "item": "fossil_rib_large", "count": [ 0, 2 ] },
+        { "item": "generic_fossil_bone", "count": [ 0, 2 ] }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_Therapod_leg",
+    "name": "skeletal hindlimb",
+    "description": "This area is dominated by a massive leg made of fossilized bones, with its three-toed, clawed foot firmly planted on the ground.  A far smaller fourth toe is located upon the rear of the ankle, which is overshadowed by the lanky bones of the rest of the hindlimb.  Towering to a height of multiple meters, a large femur is affixed upon the leg's apex, with the entire construct being held by a tall network of metal supports.",
+    "symbol": "T",
+    "color": "dark_gray",
+    "move_cost_mod": -1,
+    "coverage": 75,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT" ],
+    "deconstruct": {
+      "furn_set": "f_armature",
+      "items": [ { "item": "fossil_rib_large", "count": [ 2, 3 ] }, { "item": "generic_fossil_bone", "count": [ 144, 160 ] } ]
+    },
+    "bash": {
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crunch!",
+      "sound_fail": "whack.",
+      "furn_set": "f_armature",
+      "items": [
+        { "item": "fossil_bone_fragment", "count": [ 830, 900 ] },
+        { "item": "fossil_rib_large", "count": [ 0, 2 ] },
+        { "item": "generic_fossil_bone", "count": [ 0, 10 ] }
+      ]
     }
   }
 ]

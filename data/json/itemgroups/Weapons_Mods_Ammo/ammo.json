@@ -913,5 +913,16 @@
       { "group": "ammo_rifle_hunting", "prob": 100 },
       { "group": "ammo_shotgun_common", "prob": 100 }
     ]
+  },
+  {
+    "type": "item_group",
+    "id": "ammo_rpg",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "RPG-7_ammo", "prob": 100 },
+      { "item": "RPG-7_og7v", "prob": 75 },
+      { "item": "RPG-7_pg7vr", "prob": 50 },
+      { "item": "RPG-7_tbg7v", "prob": 25 }
+    ]
   }
 ]

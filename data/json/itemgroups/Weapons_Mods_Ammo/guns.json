@@ -1263,6 +1263,7 @@
     "type": "item_group",
     "id": "guns_illegal_empty",
     "//": "This is a group for unloaded weapons and their associated magazines that are, under constitutional law, illegal to own under most practical circumstances, even by collectors. This includes NFA-regulated arms, automatic weapons produced after 1986, destructive devices, and other assorted illegal firearms. This group is expressly not meant for commercial or civilian locations and is solely intended for sites of criminal and covert activity, smuggling, black market auctions, etc.",
+    "ammo": 0,
     "items": [
       {
         "collection": [ { "item": "ar15", "count": [ 1, 2 ], "contents-item": "dias" }, { "item": "stanag30", "count": [ 2, 4 ] } ],
@@ -1299,7 +1300,10 @@
       },
       { "collection": [ { "item": "ak47", "count": [ 1, 2 ] }, { "item": "akmag30", "count": [ 2, 4 ] } ], "prob": 4 },
       { "collection": [ { "item": "ak74", "count": [ 1, 2 ] }, { "item": "ak74mag", "count": [ 2, 4 ] } ], "prob": 3 },
-      { "collection": [ { "item": "RPG" }, { "item": "RPG-7_ammo", "count": [ 2, 4 ] } ], "prob": 1 }
+      { "collection": [ { "item": "RPG" }, { "group": "ammo_rpg", "count": [ 1, 4 ] } ], "prob": 1 },
+      { "collection": [ { "item": "launcher_simple" }, { "item": "40x46mm_m433" } ], "prob": 1 },
+      { "collection": [ { "item": "triple_launcher_simple" }, { "item": "40x46mm_m433" } ], "prob": 1 },
+      { "collection": [ { "item": "m79" }, { "item": "40x46mm_m433" } ], "prob": 1 }
     ]
   }
 ]

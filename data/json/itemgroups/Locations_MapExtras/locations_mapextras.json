@@ -339,5 +339,49 @@
     "//": "Contains a selection of possible drugs, ready for shipment.",
     "subtype": "collection",
     "entries": [ { "group": "packaged_drugs" }, { "group": "bagged_drugs", "count": [ 1, 2 ], "prob": 40 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "Packaged_equipment",
+    "//": "Assorted equipment, including ballistic vests, protective clothing, and miscellaneous gear, that are packed and ready for shipment.",
+    "subtype": "collection",
+    "container-item": "box_medium_wood",
+    "on_overflow": "spill",
+    "entries": [
+      { "group": "civilian_armor", "count": [ 1, 4 ], "prob": 40 },
+      { "group": "clothing_outdoor_shoes", "count": [ 1, 4 ], "prob": 40 },
+      { "group": "tools_gunsmith", "count": [ 1, 2 ], "prob": 40 },
+      { "group": "tools_lighting", "count": [ 1, 2 ], "prob": 40 },
+      { "group": "tools_entry", "count": [ 1, 2 ], "prob": 40 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "packaged_weapons",
+    "//": "contains an assortment of packaged weapons.",
+    "subtype": "distribution",
+    "container-item": "box_oversize_wood",
+    "on_overflow": "spill",
+    "entries": [ { "group": "guns_illegal_empty", "count": [ 2, 5 ], "prob": 50 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "packaged_explosives",
+    "//": "contains an assortment of packaged explosives.",
+    "subtype": "distribution",
+    "container-item": "box_medium_metal",
+    "on_overflow": "spill",
+    "entries": [ { "group": "explosives_illegal", "count": [ 4, 10 ], "prob": 100 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "equipment_cargo",
+    "//": "An assortment of boxed weapons, munitions, explosives, and other equipment that are ready for shipment.",
+    "subtype": "distribution",
+    "entries": [
+      { "group": "Packaged_equipment", "prob": 50 },
+      { "group": "packaged_weapons", "prob": 25 },
+      { "group": "packaged_explosives", "prob": 15 }
+    ]
   }
 ]

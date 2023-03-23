@@ -15,6 +15,7 @@
       [ "purple_drink", 15 ],
       [ "mag_melee", 30 ],
       { "group": "liquor_and_spirits", "prob": 16 },
+      { "group": "guns_crime", "prob": 10 },
       [ "bum_wine", 10 ],
       { "item": "chem_ethanol", "prob": 12, "charges": [ 1, 200 ] },
       { "group": "salty_snacks", "prob": 135 },
@@ -44,7 +45,6 @@
       [ "kukri", 2 ],
       [ "knife_hunting", 4 ],
       { "group": "knife_rambo_cont", "prob": 16 },
-      [ "knife_rm42", 2 ],
       [ "throwing_knife", 7 ],
       [ "leg_sheath6", 5 ],
       [ "gartersheath1", 15 ],
@@ -64,32 +64,11 @@
       [ "backpack", 38 ],
       [ "backpack_leather", 28 ],
       [ "holster", 8 ],
-      [ "bholster", 2 ],
-      [ "bbholster", 2 ],
       [ "armguard_soft", 40 ],
       [ "chestguard_hard", 20 ],
       [ "armguard_hard", 20 ],
       [ "legguard_hard", 15 ],
-      { "item": "shot_00", "prob": 8, "charges": [ 1, 20 ] },
-      { "item": "9mm", "prob": 8, "charges": [ 1, 50 ] },
-      { "item": "45_acp", "prob": 7, "charges": [ 1, 30 ] },
-      { "item": "223", "prob": 2, "charges": [ 1, 30 ] },
-      { "item": "20x66_shot", "prob": 2, "charges": [ 1, 20 ] },
-      { "item": "glock_19", "prob": 5, "charges": [ 0, 15 ] },
-      { "item": "uzi", "prob": 8, "charges": [ 0, 32 ] },
-      { "item": "tec9", "prob": 10, "charges": [ 0, 32 ] },
-      { "item": "cx4", "prob": 2, "charges": [ 0, 32 ] },
-      { "item": "ksub2000", "prob": 10, "charges": [ 0, 15 ] },
-      { "item": "mac_10", "prob": 7, "charges": [ 0, 30 ] },
-      { "item": "mac_11", "prob": 10, "charges": [ 0, 32 ] },
-      { "item": "j22", "prob": 13, "charges": [ 0, 6 ] },
-      { "item": "kp32", "prob": 3, "charges": [ 0, 7 ] },
-      { "item": "kpf9", "prob": 6, "charges": [ 0, 7 ] },
-      { "item": "kp3at", "prob": 8, "charges": [ 0, 7 ] },
-      { "item": "rugerlcp", "prob": 10, "charges": [ 0, 6 ] },
-      { "item": "rm228", "prob": 1, "charges": [ 0, 10 ] },
       [ "suppressor", 15 ],
-      [ "shot_suppressor", 1 ],
       [ "mag_porn", 20 ],
       { "item": "lighter", "prob": 60, "charges": [ 0, 100 ] },
       { "item": "ref_lighter", "prob": 2, "charges": [ 0, 50 ] },
@@ -97,10 +76,6 @@
       { "item": "ref_matches", "prob": 60, "charges": [ 0, 32 ] },
       [ "claw_bar", 3 ],
       [ "crowbar", 18 ],
-      [ "improvised_pipebomb", 4 ],
-      [ "grenade", 3 ],
-      [ "grenade_inc", 1 ],
-      [ "mininuke", 1 ],
       { "item": "crack", "prob": 8, "charges": [ 1, 4 ] },
       [ "crackpipe", 37 ],
       [ "laser_sight", 15 ],
@@ -111,13 +86,7 @@
       { "item": "caff_gum", "prob": 7, "charges": [ 1, 10 ] },
       { "item": "nic_gum", "prob": 1, "charges": [ 1, 10 ] },
       [ "improve_sights", 10 ],
-      [ "waterproof_gunmod", 4 ],
       [ "u_shotgun", 4 ],
-      [ "RPG", 1 ],
-      [ "RPG-7_ammo", 1 ],
-      [ "RPG-7_og7v", 2 ],
-      [ "RPG-7_tbg7v", 1 ],
-      [ "RPG-7_pg7vr", 1 ],
       [ "flask_hip", 10 ],
       { "item": "chemistry_set", "prob": 2, "charges": [ 0, 500 ] },
       [ "knife_trench", 7 ],
@@ -129,13 +98,7 @@
       [ "pocketwatch", 2 ],
       [ "gold_dental_grill", 2 ],
       [ "diamond_dental_grill", 1 ],
-      [ "match_trigger", 3 ],
-      [ "pocketwatch", 2 ],
-      [ "wakizashi_inferior", 1 ],
-      [ "tanto", 4 ],
-      [ "katana_inferior", 1 ],
-      [ "survnote", 3 ],
-      [ "ear_spool", 30 ]
+      [ "pocketwatch", 2 ]
     ]
   },
   {
@@ -300,5 +263,81 @@
       { "item": "cell_phone", "prob": 6, "charges": [ 0, 150 ] },
       { "item": "smart_phone", "prob": 44, "charges-min": 0 }
     ]
+  },
+  {
+    "type": "item_group",
+    "id": "packaged_drugs_minimum",
+    "//": "Contains a selection of possible drugs, all crated and packaged.",
+    "subtype": "distribution",
+    "container-item": "box_large_wood",
+    "on_overflow": "spill",
+    "entries": [
+      { "item": "weed", "container-item": "plastic_bag_shrink", "count": 25, "prob": 10 },
+      { "item": "crack", "container-item": "plastic_bag_shrink", "count": 25, "prob": 10 },
+      { "item": "coke", "container-item": "plastic_bag_shrink", "count": 25, "prob": 40 },
+      { "item": "meth", "container-item": "plastic_bag_shrink", "count": 25, "prob": 30 },
+      { "item": "heroin", "container-item": "plastic_bag_shrink", "count": 25, "prob": 20 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "packaged_drugs_half",
+    "//": "Contains a selection of possible drugs, all crated and packaged.",
+    "subtype": "distribution",
+    "container-item": "box_large_wood",
+    "on_overflow": "spill",
+    "entries": [
+      { "item": "weed", "container-item": "plastic_bag_shrink", "count": 50, "prob": 10 },
+      { "item": "crack", "container-item": "plastic_bag_shrink", "count": 50, "prob": 10 },
+      { "item": "coke", "container-item": "plastic_bag_shrink", "count": 50, "prob": 40 },
+      { "item": "meth", "container-item": "plastic_bag_shrink", "count": 50, "prob": 30 },
+      { "item": "heroin", "container-item": "plastic_bag_shrink", "count": 50, "prob": 20 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "packaged_drugs_full",
+    "//": "Contains a selection of possible drugs, all crated and packaged.",
+    "subtype": "distribution",
+    "container-item": "box_large_wood",
+    "on_overflow": "spill",
+    "entries": [
+      { "item": "weed", "container-item": "plastic_bag_shrink", "count": 100, "prob": 10 },
+      { "item": "crack", "container-item": "plastic_bag_shrink", "count": 100, "prob": 10 },
+      { "item": "coke", "container-item": "plastic_bag_shrink", "count": 100, "prob": 40 },
+      { "item": "meth", "container-item": "plastic_bag_shrink", "count": 100, "prob": 30 },
+      { "item": "heroin", "container-item": "plastic_bag_shrink", "count": 100, "prob": 20 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "packaged_drugs",
+    "//": "A selection of all the possible crated drugs liable to spawn within a covert shipment.",
+    "subtype": "distribution",
+    "entries": [
+      { "group": "packaged_drugs_minimum", "prob": 100 },
+      { "group": "packaged_drugs_half", "prob": 75 },
+      { "group": "packaged_drugs_full", "prob": 50 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "bagged_drugs",
+    "//": "Contains a selection of possible drugs, all bagged and packaged.",
+    "subtype": "distribution",
+    "container-item": "bag_canvas_small",
+    "on_overflow": "spill",
+    "entries": [
+      { "item": "oxycodone", "container-item": "bottle_plastic_pill_prescription", "count": 3, "prob": 25 },
+      { "item": "adderall", "container-item": "bottle_plastic_pill_prescription", "count": 3, "prob": 25 },
+      { "item": "lsd", "charges": [ 200, 200 ], "prob": 30 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "drug_cargo",
+    "//": "Contains a selection of possible drugs, ready for shipment.",
+    "subtype": "collection",
+    "entries": [ { "group": "packaged_drugs" }, { "group": "bagged_drugs", "count": [ 1, 2 ], "prob": 40 } ]
   }
 ]

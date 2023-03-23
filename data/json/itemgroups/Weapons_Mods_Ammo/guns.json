@@ -596,6 +596,7 @@
       { "group": "nested_scar_h", "prob": 50 },
       { "group": "nested_m110a1", "prob": 50 },
       { "group": "nested_M24", "prob": 15 },
+      { "group": "nested_m16a4", "prob": 15 },
       { "group": "nested_acr_300blk", "prob": 15 }
     ]
   },
@@ -1174,6 +1175,131 @@
       { "item": "mk47", "prob": 1, "charges-min": 0, "charges-max": 30 },
       { "item": "ak556", "prob": 2, "charges-min": 0, "charges-max": 30 },
       { "item": "ak556", "variant": "zpapm90", "prob": 1, "charges-min": 0, "charges-max": 0 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "guns_pistol_crime",
+    "//": "This is a group for handguns commonly used by criminals, with about 7/10 being semi-automatic pistols and the rest being revolvers. The guns are generally of US manufacture, of decent quality and caliber, but not expensive. Pistols are mainly chambered for 9mm, with less than 20% of guns firing below .38 caliber cartridges and guns firing other calibres: .45, .40, and .357 resting between the two in commonality.",
+    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "items": [
+      { "group": "nested_kpf9", "prob": 12 },
+      { "group": "nested_hptc9", "prob": 12 },
+      { "group": "nested_glock_17", "prob": 12 },
+      { "group": "nested_glock_19", "prob": 12 },
+      { "group": "nested_m9", "prob": 8 },
+      { "group": "nested_px4", "prob": 8 },
+      { "group": "nested_glock_21", "prob": 5 },
+      { "group": "nested_hptjcp", "prob": 5 },
+      { "group": "nested_m1911", "prob": 5 },
+      { "group": "nested_hptjhp", "prob": 4 },
+      { "group": "nested_glock_22", "prob": 4 },
+      { "group": "nested_px4_40", "prob": 4 },
+      { "group": "nested_sw_22", "prob": 4 },
+      { "group": "nested_ruger_lcr_22", "prob": 3 },
+      { "group": "nested_j22", "prob": 4 },
+      { "group": "nested_hptcf380", "prob": 3 },
+      { "group": "nested_taurus_spectrum", "prob": 3 },
+      { "group": "nested_model_10_revolver", "prob": 3 },
+      { "group": "nested_ruger_lcr_38", "prob": 3 },
+      { "group": "nested_sw_619", "prob": 3 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "guns_rifle_crime",
+    "//": "This is a group for semi-automatic and bolt-action rifles commonly used by criminals. The guns are generally of US manufacture, of decent quality and caliber, but not expensive. The distribution is split between weapons chambering .223, 7.62x39mm, and .22 LR.",
+    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "items": [
+      { "group": "nested_ar15", "prob": 10 },
+      { "group": "nested_ruger_mini", "prob": 6 },
+      { "group": "nested_ar_pistol", "prob": 6 },
+      { "group": "nested_ruger_1022", "prob": 5 },
+      { "group": "nested_sks", "prob": 5 },
+      { "group": "nested_aksemi", "prob": 5 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "guns_shotgun_crime",
+    "//": "This is a group for shotguns commonly used by criminals. The guns are generally of US manufacture, of decent quality and caliber, but not expensive.",
+    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "items": [
+      { "group": "nested_mossberg_500", "prob": 10 },
+      { "group": "nested_remington_870", "prob": 10 },
+      { "group": "nested_mossberg_500_security", "prob": 8 },
+      { "group": "nested_remington_870_express", "prob": 6 },
+      { "group": "nested_shotgun_d", "prob": 3 },
+      { "group": "nested_shotgun_s", "prob": 2 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "guns_automatic_crime",
+    "//": "This is a group for automatic weapons used by criminals. The guns are generally of US manufacture, of decent quality and caliber, but not expensive.",
+    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "items": [
+      { "group": "nested_ar15", "contents-item": "dias", "prob": 15 },
+      { "group": "nested_mac_10", "prob": 10 },
+      { "group": "nested_mac_11", "prob": 10 },
+      { "group": "nested_tec9", "contents-item": "tec9_auto_parts", "prob": 10 },
+      { "group": "nested_uzi", "prob": 8 },
+      { "group": "nested_m4_carbine", "prob": 6 },
+      { "group": "nested_m16a4", "prob": 6 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "guns_crime",
+    "//": "This is a group for all manner of firearms used by criminals, with a predominant distribution of handguns (about 70–80% of all guns), the rest split between shotguns and rifles, and automatic weapons being negligible in their commonality.",
+    "items": [
+      { "group": "guns_pistol_crime", "prob": 70 },
+      { "group": "guns_rifle_crime", "prob": 15 },
+      { "group": "guns_shotgun_crime", "prob": 15 },
+      { "group": "guns_automatic_.crime", "prob": 2 }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "guns_illegal_empty",
+    "//": "This is a group for unloaded weapons and their associated magazines that are, under constitutional law, illegal to own under most practical circumstances, even by collectors. This includes NFA-regulated arms, automatic weapons produced after 1986, destructive devices, and other assorted illegal firearms. This group is expressly not meant for commercial or civilian locations and is solely intended for sites of criminal and covert activity, smuggling, black market auctions, etc.",
+    "items": [
+      {
+        "collection": [ { "item": "ar15", "count": [ 1, 2 ], "contents-item": "dias" }, { "item": "stanag30", "count": [ 2, 4 ] } ],
+        "prob": 15
+      },
+      {
+        "collection": [
+          { "item": "tec9", "count": [ 1, 2 ], "contents-item": [ "tec9_auto_parts" ] },
+          { "item": "tec9mag", "count": [ 2, 4 ] }
+        ],
+        "prob": 12
+      },
+      {
+        "collection": [ { "item": "mac_10", "count": [ 1, 2 ] }, { "item": "mac10mag", "count": [ 2, 4 ] } ],
+        "prob": 12
+      },
+      {
+        "collection": [ { "item": "mac_11", "count": [ 1, 2 ] }, { "item": "mac11mag", "count": [ 2, 4 ] } ],
+        "prob": 12
+      },
+      {
+        "collection": [ { "item": "glock_18c", "count": [ 1, 2 ] }, { "item": "glock17_17", "count": [ 2, 4 ] } ],
+        "prob": 10
+      },
+      { "collection": [ { "item": "uzi", "count": [ 1, 2 ] }, { "item": "uzimag", "count": [ 2, 4 ] } ], "prob": 8 },
+      { "item": "mossberg_590", "variant": "SPAS_12", "count": [ 1, 2 ], "prob": 8 },
+      {
+        "collection": [ { "item": "m16a4", "count": [ 1, 2 ] }, { "item": "stanag30", "count": [ 2, 4 ] } ],
+        "prob": 5
+      },
+      {
+        "collection": [ { "item": "m4_carbine", "variant": "m4a1", "count": [ 1, 2 ] }, { "item": "stanag30", "count": [ 2, 4 ] } ],
+        "prob": 5
+      },
+      { "collection": [ { "item": "ak47", "count": [ 1, 2 ] }, { "item": "akmag30", "count": [ 2, 4 ] } ], "prob": 4 },
+      { "collection": [ { "item": "ak74", "count": [ 1, 2 ] }, { "item": "ak74mag", "count": [ 2, 4 ] } ], "prob": 3 },
+      { "collection": [ { "item": "RPG" }, { "item": "RPG-7_ammo", "count": [ 2, 4 ] } ], "prob": 1 }
     ]
   }
 ]

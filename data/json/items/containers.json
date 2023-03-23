@@ -2730,7 +2730,7 @@
     "type": "GENERIC",
     "category": "container",
     "name": { "str": "maker kit box", "str_pl": "maker kit boxes" },
-    "description": "A small box with an image of a children building things.  'Makerspace Learner Kit'",
+    "description": "A small box with an image of children building things.  'Makerspace Learner Kit'",
     "weight": "400 g",
     "volume": "3200 ml",
     "price": 0,
@@ -2754,7 +2754,7 @@
     "type": "GENERIC",
     "category": "container",
     "name": { "str": "robot kit box", "str_pl": "robot kit boxes" },
-    "description": "A small box with an image of a children building robots.",
+    "description": "A small box with an image of children building robots.",
     "weight": "400 g",
     "volume": "3200 ml",
     "price": 0,
@@ -3497,6 +3497,32 @@
         "max_contains_volume": "1000 ml",
         "max_contains_weight": "2 kg",
         "max_item_length": "20 cm"
+      }
+    ],
+    "flags": [ "COLLAPSE_CONTENTS" ]
+  },
+  {
+    "id": "plastic_bag_shrink",
+    "type": "GENERIC",
+    "category": "container",
+    "name": { "str": "shrink-wrapped parcel" },
+    "looks_like": "bag_plastic",
+    "description": "This is a brick-shaped parcel formed from wrapped plastic film, sealed with the application of heat to form an airtight package.  Functionally, the plastic is worthless once it has been unraveled and the seal broken.",
+    "weight": "2 g",
+    "volume": "10 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "plastic" ],
+    "symbol": "%",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "open_container": true,
+        "watertight": true,
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "1 kg",
+        "sealed_data": { "spoil_multiplier": 0.5 }
       }
     ],
     "flags": [ "COLLAPSE_CONTENTS" ]

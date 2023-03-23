@@ -433,6 +433,7 @@
             "distribution": [
               { "item": "jeans", "prob": 60 },
               { "item": "pants", "prob": 100 },
+              { "item": "pants_hiking", "prob": 30 },
               { "item": "pants_leather", "prob": 30 },
               { "item": "pants_cargo", "prob": 30 },
               { "item": "shorts_cargo", "prob": 60 },

@@ -216,6 +216,19 @@
     ]
   },
   {
+    "id": "nested_j22",
+    "type": "item_group",
+    "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [
+      { "item": "j22", "charges-min": 0, "charges-max": 6 },
+      { "item": "j22mag" },
+      { "item": "j22mag", "prob": 50 },
+      { "group": "on_hand_22" }
+    ]
+  },
+  {
     "id": "nested_sw_22",
     "type": "item_group",
     "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
@@ -1484,6 +1497,19 @@
       { "item": "m16_auto_rifle", "variant": "acr", "charges-min": 0, "charges-max": 30 },
       { "item": "stanag10" },
       { "item": "stanag10", "prob": 50 },
+      { "group": "on_hand_223" }
+    ]
+  },
+  {
+    "id": "nested_m16a4",
+    "type": "item_group",
+    "//": "this is a distribution for the gun, reasonable number of backup mags, and some ammo to repack",
+    "subtype": "collection",
+    "ammo": 100,
+    "entries": [
+      { "item": "m16a4", "charges-min": 0, "charges-max": 30 },
+      { "item": "stanag30" },
+      { "item": "stanag30", "prob": 50 },
       { "group": "on_hand_223" }
     ]
   },

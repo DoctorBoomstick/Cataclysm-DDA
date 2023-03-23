@@ -74,24 +74,29 @@
   {
     "type": "item_group",
     "subtype": "collection",
-    "id": "map_extra_drugdeal",
+    "id": "map_extra_criminal",
     "entries": [
       { "group": "drugdealer", "prob": 75 },
+      { "group": "guns_crime", "prob": 50 },
+      { "group": "wallets", "damage-min": 0, "damage-max": 3, "prob": 40 },
       {
         "distribution": [
-          { "item": "weed", "container-item": "bag_zipper", "charges-min": 20, "charges-max": 30, "prob": 10 },
-          { "item": "coke", "container-item": "bag_zipper", "charges-min": 10, "charges-max": 20, "prob": 40 },
-          { "item": "meth", "container-item": "bag_zipper", "charges-min": 8, "charges-max": 14, "prob": 30 },
-          { "item": "heroin", "container-item": "bag_zipper", "charges-min": 6, "charges-max": 12, "prob": 20 }
+          { "group": "clothing_outdoor_shoes", "prob": 50 },
+          { "item": "sneakers", "prob": 25 },
+          { "item": "sneakers_steel", "prob": 25 }
         ],
-        "prob": 50
+        "damage-min": 0,
+        "damage-max": 4
       },
-      { "item": "pants_cargo", "damage-min": 1, "damage-max": 4 },
-      { "group": "socks_unisex", "damage-min": 1, "damage-max": 4 },
-      { "group": "lab_shoes", "damage-min": 1, "damage-max": 4, "prob": 50 },
-      { "group": "shirts", "damage-min": 1, "damage-max": 4, "prob": 50 },
-      { "group": "jackets", "damage-min": 1, "damage-max": 4, "prob": 30 },
-      { "group": "underwear", "damage-min": 1, "damage-max": 3 },
+      { "group": "socks_unisex", "damage-min": 0, "damage-max": 4 },
+      { "group": "underwear", "damage-min": 0, "damage-max": 3 },
+      { "group": "clothing_outdoor_pants", "damage-min": 1, "damage-max": 4 },
+      { "group": "clothing_outdoor_torso", "damage-min": 1, "damage-max": 4 },
+      { "group": "clothing_glasses", "damage-min": 0, "damage-max": 3, "prob": 20 },
+      { "group": "clothing_watch", "damage-min": 0, "damage-max": 3, "prob": 20 },
+      { "group": "civilian_body_armor", "damage-min": 1, "damage-max": 4, "prob": 20 },
+      { "group": "small_bags", "damage": [ 1, 4 ], "contents-group": "default_zombie_items_bags_small", "prob": 10 },
+      { "group": "default_zombie_items_pockets", "prob": 20 },
       { "item": "corpse", "damage": 4 }
     ]
   },

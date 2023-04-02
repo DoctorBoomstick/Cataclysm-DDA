@@ -752,5 +752,10 @@
     "id": "badge_cybercop",
     "type": "MIGRATION",
     "replace": "badge_marshal"
+  },
+  {
+    "id": "ar15",
+    "type": "MIGRATION",
+    "replace": "ar15_migration"
   }
 ]

@@ -17,6 +17,658 @@
     "replace": "scar_l"
   },
   {
+    "id": "m38dmr",
+    "type": "MIGRATION",
+    "replace": "m27_assault_rifle",
+    "variant": "m38dmr"
+  },
+  {
+    "id": "nato_assault_rifle",
+    "from_variant": "m38dmr",
+    "type": "MIGRATION",
+    "replace": "m27_assault_rifle",
+    "variant": "m38dmr"
+  },
+  {
+    "id": "sig552",
+    "type": "MIGRATION",
+    "replace": "sig_assault_rifle",
+    "variant": "sig553"
+  },
+  {
+    "id": "glock_40",
+    "type": "MIGRATION",
+    "replace": "glock_20",
+    "variant": "glock_40"
+  },
+  {
+    "id": "lw223bigmag",
+    "type": "MIGRATION",
+    "replace": "stanag50"
+  },
+  {
+    "id": "lw223mag",
+    "type": "MIGRATION",
+    "replace": "stanag30"
+  },
+  {
+    "id": "lw12mag",
+    "type": "MIGRATION",
+    "replace": "m1911mag"
+  },
+  {
+    "id": "m1911_MEU",
+    "type": "MIGRATION",
+    "replace": "m1911",
+    "variant": "m1911_MEU"
+  },
+  {
+    "id": "mk23",
+    "type": "MIGRATION",
+    "replace": "usp_45",
+    "variant": "mk23"
+  },
+  {
+    "id": "solar_panel_v3",
+    "type": "MIGRATION",
+    "replace": "solar_panel_v2"
+  },
+  {
+    "id": "q_solarpack",
+    "type": "MIGRATION",
+    "replace": "solarpack"
+  },
+  {
+    "id": "q_solarpack_on",
+    "type": "MIGRATION",
+    "replace": "solarpack_on"
+  },
+  {
+    "id": "bio_solar",
+    "type": "MIGRATION",
+    "replace": "potato"
+  },
+  {
+    "id": "p320mag_14rd_357sig",
+    "type": "MIGRATION",
+    "replace": "p320mag_13rd_357sig"
+  },
+  {
+    "id": "p226mag_15rd_357sig",
+    "type": "MIGRATION",
+    "replace": "p226mag_12rd_357sig"
+  },
+  {
+    "id": "akmmag",
+    "type": "MIGRATION",
+    "replace": "akmag30"
+  },
+  {
+    "id": "akmbigmag",
+    "type": "MIGRATION",
+    "replace": "akmag40"
+  },
+  {
+    "id": "rm99_pistol",
+    "type": "MIGRATION",
+    "replace": "rm103a_pistol"
+  },
+  {
+    "id": "8x40_speedloader5",
+    "type": "MIGRATION",
+    "replace": "8x40_10_mag"
+  },
+  {
+    "id": "kevlar_plate",
+    "type": "MIGRATION",
+    "replace": "sheet_kevlar_layered"
+  },
+  {
+    "id": "can_drink_unsealed",
+    "type": "MIGRATION",
+    "replace": "can_drink"
+  },
+  {
+    "id": "can_food_unsealed",
+    "type": "MIGRATION",
+    "replace": "can_food"
+  },
+  {
+    "id": "can_food_big_unsealed",
+    "type": "MIGRATION",
+    "replace": "can_food_big"
+  },
+  {
+    "id": "cup_plastic_unsealed",
+    "type": "MIGRATION",
+    "replace": "cup_plastic"
+  },
+  {
+    "id": "can_medium_unsealed",
+    "type": "MIGRATION",
+    "replace": "can_medium"
+  },
+  {
+    "id": "carton_unsealed",
+    "type": "MIGRATION",
+    "replace": "carton_sealed"
+  },
+  {
+    "id": "jar_3l_glass",
+    "type": "MIGRATION",
+    "replace": "jar_3l_glass_sealed"
+  },
+  {
+    "id": "jar_glass",
+    "type": "MIGRATION",
+    "replace": "jar_glass_sealed"
+  },
+  {
+    "id": "condiment_bottle_unsealed",
+    "type": "MIGRATION",
+    "replace": "condiment_bottle_sealed"
+  },
+  {
+    "id": "acid",
+    "type": "MIGRATION",
+    "replace": "chem_sulphuric_acid"
+  },
+  {
+    "id": "water_acid",
+    "type": "MIGRATION",
+    "replace": "chem_sulphuric_acid"
+  },
+  {
+    "id": "water_acid_weak",
+    "type": "MIGRATION",
+    "replace": "chem_acetic_acid"
+  },
+  {
+    "id": "four_winds_shotgun",
+    "type": "MIGRATION",
+    "replace": "slamfire_shotgun"
+  },
+  {
+    "id": "rag_bloody",
+    "type": "MIGRATION",
+    "replace": "rag",
+    "flags": [ "FILTHY" ]
+  },
+  {
+    "id": "bottle_plastic_sealed",
+    "type": "MIGRATION",
+    "replace": "bottle_plastic"
+  },
+  {
+    "id": "jug_plastic_sealed",
+    "type": "MIGRATION",
+    "replace": "jug_plastic"
+  },
+  {
+    "id": "surv_carbine_223",
+    "type": "MIGRATION",
+    "replace": "ar15"
+  },
+  {
+    "id": "rifle_308",
+    "type": "MIGRATION",
+    "replace": "m1a"
+  },
+  {
+    "id": "rifle_3006",
+    "type": "MIGRATION",
+    "replace": "remington_700"
+  },
+  {
+    "id": "towel_soiled",
+    "type": "MIGRATION",
+    "replace": "towel",
+    "flags": [ "FILTHY" ]
+  },
+  {
+    "id": "gloves_xlsurvivor",
+    "type": "MIGRATION",
+    "replace": "xl_gloves_survivor"
+  },
+  {
+    "id": "adv_UPS_off",
+    "type": "MIGRATION",
+    "replace": "UPS_off"
+  },
+  {
+    "id": "money_bundle",
+    "type": "MIGRATION",
+    "replace": "money_bundle_twenty"
+  },
+  {
+    "id": "bootleg_grenade",
+    "type": "MIGRATION",
+    "replace": "military_explosive_small_grenade"
+  },
+  {
+    "id": "bootleg_pipebomb",
+    "type": "MIGRATION",
+    "replace": "military_explosive_pipebomb"
+  },
+  {
+    "id": "tool_small_bootleg_fragmentation_device",
+    "type": "MIGRATION",
+    "replace": "military_explosive_bomb"
+  },
+  {
+    "id": "tool_bootleg_barrel_bomb",
+    "type": "MIGRATION",
+    "replace": "military_explosive_full_barrel_bomb"
+  },
+  {
+    "id": "can_bomb",
+    "type": "MIGRATION",
+    "replace": "small_homemade_grenade"
+  },
+  {
+    "id": "primitive_grenade",
+    "type": "MIGRATION",
+    "replace": "small_homemade_grenade"
+  },
+  {
+    "id": "improvised_grenade",
+    "type": "MIGRATION",
+    "replace": "small_homemade_grenade"
+  },
+  {
+    "id": "primitive_pipebomb",
+    "type": "MIGRATION",
+    "replace": "pipebomb"
+  },
+  {
+    "id": "improvised_pipebomb",
+    "type": "MIGRATION",
+    "replace": "pipebomb"
+  },
+  {
+    "id": "tool_small_primitive_fragmentation_device",
+    "type": "MIGRATION",
+    "replace": "homemade_bomb"
+  },
+  {
+    "id": "tool_small_improvised_fragmentation_device",
+    "type": "MIGRATION",
+    "replace": "homemade_bomb"
+  },
+  {
+    "id": "primitive_demolition_charge",
+    "type": "MIGRATION",
+    "replace": "homemade_demolition_charge"
+  },
+  {
+    "id": "improvised_demolition_charge",
+    "type": "MIGRATION",
+    "replace": "homemade_demolition_charge"
+  },
+  {
+    "id": "tool_improvised_barrel_bomb",
+    "type": "MIGRATION",
+    "replace": "full_barrel_bomb"
+  },
+  {
+    "id": "lo_q_crude_oil",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_crude_oil",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "lo_q_crude_oil_filtered",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_crude_oil_filtered",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "lo_q_crude_oil_ethanol",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_crude_oil_ethanol",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "lo_q_crude_oil_ethanol_filtered",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_crude_oil_ethanol_filtered",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_distillate_heads",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_distillate_tails",
+    "type": "MIGRATION",
+    "replace": "hi_q_distillate"
+  },
+  {
+    "id": "hi_q_distillate_cart",
+    "type": "MIGRATION",
+    "replace": "hi_q_shatter"
+  },
+  {
+    "id": "vac_oven_small_done",
+    "type": "MIGRATION",
+    "replace": "vac_oven_small"
+  },
+  {
+    "id": "vac_oven_small_full",
+    "type": "MIGRATION",
+    "replace": "vac_oven_small"
+  },
+  {
+    "id": "vac_oven_small_on",
+    "type": "MIGRATION",
+    "replace": "vac_oven_small"
+  },
+  {
+    "id": "vac_pump_on",
+    "type": "MIGRATION",
+    "replace": "vac_pump"
+  },
+  {
+    "id": "closed_loop_extractor_small_on",
+    "type": "MIGRATION",
+    "replace": "closed_loop_extractor_small"
+  },
+  {
+    "id": "closed_loop_extractor_large_on",
+    "type": "MIGRATION",
+    "replace": "closed_loop_extractor_large"
+  },
+  {
+    "id": "dab_pen",
+    "type": "MIGRATION",
+    "replace": "advanced_ecig"
+  },
+  {
+    "id": "dab_pen_on",
+    "type": "MIGRATION",
+    "replace": "advanced_ecig"
+  },
+  {
+    "id": "manual_computers",
+    "type": "MIGRATION",
+    "replace": "manual_computer"
+  },
+  {
+    "id": "pistachio_unshelled",
+    "type": "MIGRATION",
+    "replace": "pistachio_shelled"
+  },
+  {
+    "id": "almond_unshelled",
+    "type": "MIGRATION",
+    "replace": "almond_shelled"
+  },
+  {
+    "id": "pecan_unshelled",
+    "type": "MIGRATION",
+    "replace": "pecan_shelled"
+  },
+  {
+    "id": "peanut_unshelled",
+    "type": "MIGRATION",
+    "replace": "peanut_shelled"
+  },
+  {
+    "id": "walnut_unshelled",
+    "type": "MIGRATION",
+    "replace": "walnut_shelled"
+  },
+  {
+    "id": "chestnut_unshelled",
+    "type": "MIGRATION",
+    "replace": "chestnut_shelled"
+  },
+  {
+    "id": "hazelnut_unshelled",
+    "type": "MIGRATION",
+    "replace": "hazelnut_shelled"
+  },
+  {
+    "id": "hickory_nut_unshelled",
+    "type": "MIGRATION",
+    "replace": "hickory_nut_shelled"
+  },
+  {
+    "id": "bthk_stock",
+    "type": "MIGRATION",
+    "replace": "adjustable_stock"
+  },
+  {
+    "id": "folding_bthk_stock",
+    "type": "MIGRATION",
+    "replace": "high_end_folding_stock"
+  },
+  {
+    "id": "sourdough_young",
+    "type": "MIGRATION",
+    "replace": "jar_glass_sealed",
+    "contents": [ { "id": "sourdough_young_uncovered", "count": 1 } ]
+  },
+  {
+    "id": "sourdough_split",
+    "type": "MIGRATION",
+    "replace": "jar_glass_sealed",
+    "contents": [ { "id": "sourdough_split_uncovered", "count": 1 } ]
+  },
+  {
+    "id": "sourdough_starter",
+    "type": "MIGRATION",
+    "replace": "jar_glass_sealed",
+    "contents": [ { "id": "sourdough_starter_uncovered", "count": 1 } ]
+  },
+  {
+    "id": "folding_poncho_on",
+    "type": "MIGRATION",
+    "replace": "folding_poncho"
+  },
+  {
+    "id": "emer_blanket_on",
+    "type": "MIGRATION",
+    "replace": "emer_blanket"
+  },
+  {
+    "id": "tire_iron",
+    "type": "MIGRATION",
+    "replace": "lug_wrench"
+  },
+  {
+    "id": "reptile_sample",
+    "type": "MIGRATION",
+    "replace": "lizard_sample"
+  },
+  {
+    "id": "molerat_sample",
+    "type": "MIGRATION",
+    "replace": "troglobite_sample"
+  },
+  {
+    "id": "bovine_sample",
+    "type": "MIGRATION",
+    "replace": "cattle_sample"
+  },
+  {
+    "id": "snail_sample",
+    "type": "MIGRATION",
+    "replace": "gastropod_sample"
+  },
+  {
+    "id": "frog_sample",
+    "type": "MIGRATION",
+    "replace": "batrachian_sample"
+  },
+  {
+    "id": "rabbit_foot",
+    "type": "MIGRATION",
+    "replace": "rabbit_sample"
+  },
+  {
+    "id": "slug_garden",
+    "type": "MIGRATION",
+    "replace": "snail_garden"
+  },
+  {
+    "id": "rag",
+    "type": "MIGRATION",
+    "replace": "cotton_patchwork"
+  },
+  {
+    "type": "MIGRATION",
+    "id": "ammonia",
+    "replace": "ammonia_hydroxide"
+  },
+  {
+    "id": "canola",
+    "type": "MIGRATION",
+    "replace": "seed_canola"
+  },
+  {
+    "id": "vaccine_shot",
+    "type": "MIGRATION",
+    "replace": "syringe"
+  },
+  {
+    "id": "ammunition_box_9mm",
+    "type": "MIGRATION",
+    "replace": "ammunition_box_308"
+  },
+  {
+    "id": "egg_trout",
+    "type": "MIGRATION",
+    "replace": "egg_fish"
+  },
+  {
+    "id": "egg_steelhead_trout",
+    "type": "MIGRATION",
+    "replace": "egg_rainbow_trout"
+  },
+  {
+    "id": "egg_coho_salmon",
+    "type": "MIGRATION",
+    "replace": "egg_fish"
+  },
+  {
+    "id": "egg_chinook_salmon",
+    "type": "MIGRATION",
+    "replace": "egg_fish"
+  },
+  {
+    "id": "egg_white_bass",
+    "type": "MIGRATION",
+    "replace": "egg_fish"
+  },
+  {
+    "id": "egg_longear_sunfish",
+    "type": "MIGRATION",
+    "replace": "egg_fish"
+  },
+  {
+    "id": "egg_redear_sunfish",
+    "type": "MIGRATION",
+    "replace": "egg_fish"
+  },
+  {
+    "id": "veh_tracker",
+    "type": "MIGRATION",
+    "replace": "vehicle_dashboard"
+  },
+  {
+    "id": "primitive_pipebomb_act",
+    "type": "MIGRATION",
+    "replace": "pipebomb_act"
+  },
+  {
+    "id": "primitive_grenade_act",
+    "type": "MIGRATION",
+    "replace": "small_homemade_grenade_act"
+  },
+  {
+    "id": "improvised_pipebomb_act",
+    "type": "MIGRATION",
+    "replace": "pipebomb_act"
+  },
+  {
+    "id": "improvised_grenade_act",
+    "type": "MIGRATION",
+    "replace": "small_homemade_grenade_act"
+  },
+  {
+    "id": "tool_improvised_barrel_bomb_act",
+    "type": "MIGRATION",
+    "replace": "full_barrel_bomb_act"
+  },
+  {
+    "id": "can_bomb_act",
+    "type": "MIGRATION",
+    "replace": "small_homemade_grenade_act"
+  },
+  {
+    "id": "bootleg_pipebomb_act",
+    "type": "MIGRATION",
+    "replace": "military_explosive_pipebomb_act"
+  },
+  {
+    "id": "bootleg_grenade_act",
+    "type": "MIGRATION",
+    "replace": "military_explosive_small_grenade_act"
+  },
+  {
+    "id": "tool_bootleg_barrel_bomb_act",
+    "type": "MIGRATION",
+    "replace": "military_explosive_full_barrel_bomb_act"
+  },
+  {
+    "id": "primitive_demolition_charge_act",
+    "type": "MIGRATION",
+    "replace": "homemade_demolition_charge_act"
+  },
+  {
+    "id": "tool_small_primitive_fragmentation_device_act",
+    "type": "MIGRATION",
+    "replace": "homemade_bomb_act"
+  },
+  {
+    "id": "tool_small_improvised_fragmentation_device_act",
+    "type": "MIGRATION",
+    "replace": "homemade_bomb_act"
+  },
+  {
+    "id": "tool_small_bootleg_fragmentation_device_act",
+    "type": "MIGRATION",
+    "replace": "military_explosive_bomb_act"
+  },
+  {
+    "id": "improvised_demolition_charge_act",
+    "type": "MIGRATION",
+    "replace": "homemade_demolition_charge_act"
+  },
+  {
+    "id": "bag_paper_powder_small",
+    "type": "MIGRATION",
+    "replace": "bag_paper_powder"
+  },
+  {
     "id": "r_paint",
     "type": "MIGRATION",
     "replace": "paint_can_steel",
@@ -95,5 +747,10 @@
     "id": "mess_tin",
     "type": "MIGRATION",
     "replace": "mess_kit"
+  },
+  {
+    "id": "badge_cybercop",
+    "type": "MIGRATION",
+    "replace": "badge_marshal"
   }
 ]

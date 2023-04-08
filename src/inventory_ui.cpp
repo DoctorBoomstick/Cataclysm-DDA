@@ -3096,7 +3096,13 @@ item_location inventory_pick_selector::execute()
             if( highlight( input.entry->any_item() ) ) {
                 ui_manager::redraw();
             }
+<<<<<<< HEAD
             return input.entry->any_item();
+=======
+            if( input.action == "SELECT" || input.action == "ANY_INPUT" ) {
+                return input.entry->any_item();
+            }
+>>>>>>> master
         } else if( input.action == "ORGANIZE_MENU" ) {
             u.worn.organize_items_menu();
             return item_location();
@@ -3396,8 +3402,15 @@ std::pair<const item *, const item *> inventory_compare_selector::execute()
 
         if( input.entry != nullptr ) {
             highlight( input.entry->any_item() );
+<<<<<<< HEAD
             toggle_entry( input.entry );
             just_selected = input.entry;
+=======
+            if( input.action == "SELECT" || input.action == "ANY_INPUT" ) {
+                toggle_entry( input.entry );
+                just_selected = input.entry;
+            }
+>>>>>>> master
         } else if( input.action == "TOGGLE_ENTRY" ) {
             const auto selection( get_active_column().get_all_selected() );
 
@@ -3552,8 +3565,16 @@ void inventory_multiselector::on_input( const inventory_input &input )
 {
     if( input.entry != nullptr ) { // Single Item from mouse
         highlight( input.entry->any_item() );
+<<<<<<< HEAD
         toggle_entries( count );
     } else if( input.action == "TOGGLE_NON_FAVORITE" ) {
+=======
+        if( input.action == "SELECT" || input.action == "ANY_INPUT" ) {
+            toggle_entries( count );
+        }
+    }
+    if( input.action == "TOGGLE_NON_FAVORITE" ) {
+>>>>>>> master
         toggle_entries( count, toggle_mode::NON_FAVORITE_NON_WORN );
     } else if( input.action == "MARK_WITH_COUNT" ) { // Set count and mark selected with specific key
         int query_result = query_count();
@@ -3997,7 +4018,13 @@ int inventory_examiner::execute()
             if( highlight( input.entry->any_item() ) ) {
                 ui_manager::redraw();
             }
+<<<<<<< HEAD
             return cleanup();
+=======
+            if( input.action == "SELECT" || input.action == "ANY_INPUT" ) {
+                return cleanup();
+            }
+>>>>>>> master
         }
 
         if( input.action == "QUIT" || input.action == "CONFIRM" ) {

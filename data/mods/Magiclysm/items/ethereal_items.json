@@ -1331,10 +1331,13 @@
 <<<<<<< HEAD
     "weight": "70 g",
     "volume": "250 ml",
+<<<<<<< HEAD
 =======
     "weight": "50 g",
     "volume": "60 ml",
 >>>>>>> master
+=======
+>>>>>>> parent of 0b78a46782 (fixes merge errors.)
     "price": 1,
     "price_postapoc": 1,
     "material": [ "wood" ],

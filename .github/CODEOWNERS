@@ -25,7 +25,11 @@
 
 magic*.cpp @KorGgenT
 magic*.h @KorGgenT
+<<<<<<< HEAD
 /tools/ @int-ua
+=======
+/tools/ @jbytheway @int-ua
+>>>>>>> parent of 0b78a46782 (fixes merge errors.)
 /lang/ @BrettDong
 widget.cpp @wapcaplet @dseguin
 widget.h @wapcaplet @dseguin

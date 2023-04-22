@@ -536,6 +536,7 @@
         "fake_dex": 4,
         "fake_per": 4,
         "require_targeting_player": false,
+        "target_moving_vehicles": true,
         "description": "The vicious vicuña spits a glob of acid!",
         "ranges": [ [ 2, 10, "DEFAULT" ] ]
       },
@@ -680,6 +681,7 @@
     "armor_bash": 8,
     "armor_cut": 2,
     "armor_bullet": 1,
+    "families": [ "prof_intro_biology", "prof_wp_zombie", "prof_biochemistry" ],
     "vision_night": 7,
     "harvest": "zombie_acid",
     "path_settings": { "max_dist": 5 },

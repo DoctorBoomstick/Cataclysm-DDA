@@ -1091,7 +1091,11 @@
       { "item": "bronze_pickaxe", "prob": 2, "damage": [ 2, 4 ] },
       { "item": "bone_flute", "prob": 10, "damage": [ 2, 4 ] },
       { "item": "spear_stone", "prob": 50, "damage": [ 2, 4 ] },
-      { "item": "hand_axe", "prob": 50, "damage": [ 2, 4 ] }
+      { "item": "hand_axe", "prob": 50, "damage": [ 2, 4 ] },
+      { "item": "bone_fossil", "prob": 20, "damage": [ 2, 4 ] },
+      { "item": "large_bone_fossil", "prob": 20, "damage": [ 2, 4 ] },
+      { "item": "bone_plaster", "prob": 50, "damage": [ 2, 4 ] },
+      { "item": "large_bone_plaster", "prob": 50, "damage": [ 2, 4 ] }
     ]
   },
   {
@@ -2125,6 +2129,7 @@
       { "item": "mutagen", "prob": 1 },
       { "item": "purifier", "prob": 1 },
       { "item": "yeast", "prob": 3 },
+      { "item": "yogurt_starter_culture", "prob": 1 },
       { "item": "royal_jelly", "prob": 4 },
       { "item": "superglue", "prob": 30 },
       { "item": "bottle_glass", "prob": 10 },

@@ -101,6 +101,12 @@
         "name": { "str": "T-rex figurine" },
         "description": "A relatively large plastic figurine of a T-rex.",
         "weight": 1
+      },
+      {
+        "id": "toy_figure_tank",
+        "name": { "str": "battle tank play-set" },
+        "description": "Ready for deployment upon the playroom’s battle fields, with its main gun raised to the fore, this tank is resplendent with a truly excessive amount of high-caliber ordinance.  Its abandoned, grimly staring crew rests haphazardly within the turret: tiny soldiers forsaken by a commander who will never return and as lifeless as their full-sized compatriots.",
+        "weight": 1
       }
     ]
   },

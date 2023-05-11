@@ -107,6 +107,12 @@
         "name": { "str": "battle tank play-set" },
         "description": "Ready for deployment upon the playroom’s battle fields, with its main gun raised to the fore, this tank is resplendent with a truly excessive amount of high-caliber ordinance.  Its abandoned, grimly staring crew rests haphazardly within the turret: tiny soldiers forsaken by a commander who will never return and as lifeless as their full-sized compatriots.",
         "weight": 1
+      },
+      {
+        "id": "toy_figure_xenomorph",
+        "name": { "str": "alien statuette" },
+        "description": "A vision of pure nightmare, this slavering alien crouches upon fully articulated legs, clawed forelimbs poised as its scorpion-like tail arcs across its back.  Clad in an ebony exoskeleton, its tubular head is cocked to the side, jaws parted, and an inner mandible jutting as it silently challenges the Cataclysm.",
+        "weight": 1
       }
     ]
   },

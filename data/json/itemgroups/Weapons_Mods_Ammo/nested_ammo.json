@@ -565,11 +565,16 @@
     ]
   },
   {
+<<<<<<< HEAD
     "id": "on_hand_50beowulf",
+=======
+    "id": "on_hand_303",
+>>>>>>> master
     "type": "item_group",
     "//": "a collection of ammo that would be found with a loaded gun.",
     "subtype": "distribution",
     "entries": [
+<<<<<<< HEAD
       { "item": "50beowulf_xtp", "prob": 100, "charges": [ 1, 20 ] },
       { "item": "50beowulf_penetrator", "prob": 100, "charges": [ 1, 20 ] },
       { "item": "50beowulf_xtp", "prob": 75, "charges": [ 22, 40 ] },
@@ -615,6 +620,17 @@
       { "item": "338lapua_api", "prob": 75, "charges": [ 22, 40 ] },
       { "item": "338lapua_hpbt", "prob": 30, "charges": [ 44, 80 ] },
       { "item": "338lapua_api", "prob": 30, "charges": [ 44, 80 ] }
+=======
+      { "item": "303_bthp", "prob": 100, "charges": [ 1, 20 ] },
+      { "item": "303_bthp", "prob": 75, "charges": [ 22, 40 ] },
+      { "item": "303_bthp", "prob": 30, "charges": [ 44, 80 ] },
+      { "item": "303_sp", "prob": 100, "charges": [ 1, 20 ] },
+      { "item": "303_sp", "prob": 75, "charges": [ 22, 40 ] },
+      { "item": "303_sp", "prob": 30, "charges": [ 44, 80 ] },
+      { "item": "303_fmjbt", "prob": 100, "charges": [ 1, 20 ] },
+      { "item": "303_fmjbt", "prob": 75, "charges": [ 22, 40 ] },
+      { "item": "303_fmjbt", "prob": 30, "charges": [ 44, 80 ] }
+>>>>>>> master
     ]
   }
 ]

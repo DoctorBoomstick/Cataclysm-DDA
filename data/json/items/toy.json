@@ -216,5 +216,104 @@
     "price_postapoc": 5,
     "symbol": "/",
     "color": "green"
+  },
+  {
+    "type": "GENERIC",
+    "id": "toy_soldier",
+    "//": "These are meant to be cheap plastic army men that come by the bucket, rather than the more expensive display or collectible pieces.",
+    "name": { "str": "army man", "str_pl": "army men" },
+    "description": "A small toy soldier.  This is the generic variant; if you see this, something’s broken.  Better go open an issue about it.",
+    "category": "other",
+    "material": [ "plastic" ],
+    "weight": "2 g",
+    "volume": "12 ml",
+    "longest_side": "54 mm",
+    "price": 27,
+    "price_postapoc": 10,
+    "symbol": "a",
+    "color": "green",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "toy_soldier1",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Standing with feet parted, helmeted head tilted downward, and cast in an olive-green uniform, this is a small toy soldier stooping over a shovel held in mid-swing.",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier2",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Feet planted, right hand raised, and uniform cast from green plastic, this is a small toy soldier gripping a lowered, long-barrelled pistol.",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier3",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Poised in mid-jog and dressed in a uniform cast from olive green plastic, this is a small toy soldier tightly clutching a battle rifle, the lowered weapon’s bayonet nearly brushing against the ground.",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier4",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Poised in a defensive stance and gesturing imploringly to the rear, this is a small toy soldier clutching a handgun before him.",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier5",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Kneeling on the ground, helmeted head gazing down a rifle's sights, and clad in a uniform of tan plastic, this is a small toy soldier bracing its weapon across a raised knee.",
+        "color": "brown",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier6",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Wading through unseen mire and clad in a uniform of dull brown plastic, this is a small toy soldier bearing an upside-down assault rifle over its helmeted head.",
+        "color": "brown",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier7",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Standing rigidly at attention, with arms folded behind its back and a flat-peeked cap crowning its head, this is a small toy soldier clad in a military officer’s uniform cast from tan plastic.",
+        "color": "brown",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier8",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Hand raised and tilted to the rear, its body twisted in mid-throw, this is a small toy soldier clinging onto an upright battle rifle as it hurls a hand grenade.",
+        "color": "brown",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier9",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Frozen in mid-run and clad in a uniform of gray plastic, this is a small toy soldier hefting a light machinegun, the weapon’s ammunition belt trailing along the soldier's front.",
+        "color": "light_gray",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier10",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "With a pair of binoculars raised to its face and a free hand lifted over its beret-clad head, this is a small toy soldier leaning to the fore as it peers towards the horizon.",
+        "color": "light_gray",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier11",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Standing with one boot planted aft of its mate and a floppy beret pulled down to its eyes, this is a small toy soldier cradling a submachine gun in its arms.",
+        "color": "light_gray",
+        "weight": 1
+      },
+      {
+        "id": "toy_soldier12",
+        "name": { "str": "army man", "str_pl": "army men" },
+        "description": "Laying prone in an army crawl and clad in a uniform of dull gray plastic, this is a small toy soldier with a machine pistol clutched close to its body and a combat knife gripped in its extended hand.",
+        "color": "light_gray",
+        "weight": 1
+      }
+    ]
   }
 ]

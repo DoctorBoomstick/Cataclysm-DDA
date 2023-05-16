@@ -530,13 +530,16 @@
     "type": "TOOL",
     "name": { "str": "handheld game system" },
     "description": "A portable video game console, with a backlit screen allowing you to play in the dark.  You can use it to play a game, but this requires batteries.  Multiple game systems can be linked together for multiplayer games.",
-    "weight": "200 g",
-    "volume": "230 ml",
+    "weight": "272 g",
+    "volume": "288 ml",
+    "longest_side": "18 cm",
+    "//": "Size statistics were generated after averaging the measurements and weights of the Nintendo Switch, Nintendo 3DS, and PSP.  The result is, after rounding the numbers, an 18x8x2 cm box.",
     "price": 12000,
     "price_postapoc": 100,
     "material": [ "plastic" ],
     "symbol": ";",
     "color": "light_gray",
+    "to_hit": { "grip": "none", "length": "hand", "surface": "any", "balance": "uneven" },
     "ammo": [ "battery" ],
     "charges_per_use": 1,
     "flags": [ "WATER_BREAK", "ELECTRONIC" ],
@@ -547,6 +550,49 @@
         "rigid": true,
         "flag_restriction": [ "BATTERY_LIGHT", "BATTERY_ULTRA_LIGHT" ],
         "default_magazine": "light_disposable_cell"
+      }
+    ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "portable_game_switch",
+        "name": { "str": "Nintendo Switch", "str_pl": "Nintendo Switch consoles" },
+        "description": "This is a handily portable videogame console consisting of a touch-screen-based tablet unit and two wireless Joy-Con controllers, with the device’s housing finished in a sleek, matte black coat.  Each controller may be attached to the tablet’s flanks to form a unified games console or left separate for individual use, with the controllers themselves incorporating motion-control and haptic feedback technology, directional analog sticks, a traditional button layout, triggers, and shoulder buttons.  It’s a luxury piece of hardware for the aspiring survivor who wants to keep their inner couch potato alive and well, even while on the run.",
+        "color": "black",
+        "//2": "Figures place worldwide sales of the Switch at 125.62 million shipped units, with 47.66 million in the US as of 2023.",
+        "weight": 100
+      },
+      {
+        "id": "portable_game_psp",
+        "name": { "str": "PSP", "str_pl": "PSP consoles" },
+        "description": "Rectangular in shape and possessing a screen dominating its front, this is a hand-held 7th generation games console finished with a glossy coating of black.  The display is flanked by four action buttons, a directional pad, and a pair of shoulder buttons, with a UMD drive to play games, movies, and other media from proprietary UMD disks present along the top edge of the device.  Fortunately, it seems like the console’s previous owner took the trouble to natively download some games from the PlayStation Store.",
+        "color": "black",
+        "//3": "Figures place worldwide sales of the PSP at 80-82 million shipped units, with 17 million in the US as of 2023.",
+        "weight": 36
+      },
+      {
+        "id": "portable_game_3ds",
+        "name": { "str": "Nintendo 3DS", "str_pl": "Nintendo 3DS consoles" },
+        "description": "This is a glossy, portable video game console with a folding clamshell design, possessing a screen display on its upper half and a touch screen unit on its lower extremities.  The device’s lower half is additionally equipped with a directional pad, action buttons, and a circle pad, with the console itself incorporating a built-in gyroscope and accelerometer for motion control, a front-facing camera, two rear-facing cameras, and a detachable stylus.",
+        "color": "white",
+        "//4": "Figures place worldwide sales of the Nintendo 3DS at 75.94 million shipped units, with 26.73 million in the US as of 2023.",
+        "weight": 56
+      },
+      {
+        "id": "portable_game_vita",
+        "name": { "str": "PlayStation Vita", "str_pl": "PlayStation Vita consoles" },
+        "description": "Housed within a pill-shaped unit of slim proportions, this is a portable 8th generation game console possessing an OLED screen on its front and a touchpad incorporated into its rear.  The screen is flanked by two symmetric analog sticks, a directional pad, a traditional PlayStation action button arrangement, and surmounted by dual shoulder buttons, as well as a front- and rear-facing camera.",
+        "color": "black",
+        "//5": "Estimations place world-wide PS Vita sales at 16 million shipped units, with my searching being unable to find numbers for strictly US-based sales. As such, the number here is a very rough approximation, estimating 4 million total PS Vita sales in North America. If you can find better statistics, feel free to correct this value.",
+        "weight": 8
+      },
+      {
+        "id": "portable_game_deck",
+        "name": { "str": "Steam Deck", "str_pl": "Steam Deck consoles" },
+        "description": "Configured in a tablet format with an LCD touchscreen display housed within a sleek black casing, this is a hand-held videogame console incorporating a gyroscope as well as control-based capacitive sensing and haptic feedback technologies.  The device’s input controls are formed from two thumb sticks surmounted over a pair of trackpads, traditional action buttons, a directional pad, and shoulder buttons.  Also included is a custom Linux distribution with software rendering it compatible with Windows programs.  It won't save you from the Cataclysm, but you can, at least, pretend that you're not living in hell.",
+        "color": "black",
+        "//6": "I couldn’t find any data whatsoever regarding steam deck sails, either worldwide or in the US. As such, I’m calling it a very, very rough estimate of 1 million units, but if you can find better statistics, feel free to correct this value.",
+        "weight": 2
       }
     ]
   },

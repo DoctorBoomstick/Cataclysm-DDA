@@ -1,0 +1,49 @@
+[
+  {
+    "id": "generic_figurine_box",
+    "type": "GENERIC",
+    "category": "container",
+    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+    "description": "Futility personified, this is a box: a pointless piece of world-building junk in and of itself, and even more pointless by virtue of the fact that this is a generic description that is never meant to be seen.  Yet, in its futility, it is powerful, for this description will never spawn or view the Cataclysm.  When the earth is devoured and the player dies, it will live on.  Unless you’re seeing this, open an issue if you are, by the way.",
+    "weight": "80 g",
+    "volume": "525 ml",
+    "longest_side": "15 cm",
+    "//": "A 15x7x5 box.",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -1,
+    "material": [ "cardboard" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "195 ml",
+        "max_contains_weight": "600 g",
+        "rigid": true,
+        "moves": 100
+      }
+    ],
+    "symbol": ")",
+    "color": "red",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "figurine_box1",
+    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within.",
+        "weight": 10
+      },
+      {
+        "id": "figurine_box2",
+    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within.  Festooned with an array of eye-catching colors, as though it had come into contact with a particularly vomitous rainbow, the container is remarkable for the sheer, impressive number of grammatical errors, spelling mistakes, and typos the manufacturer managed to squeeze onto its available real estate.  Your favorite example resides upon the box's rear, where it boldly proclaims the legend, \"PERFICT GIFT FOR MAN!  This is a perfect Christma or Birthday Gifts which will make boy and man manly and brave\!"",
+        "weight": 5
+      },
+      {
+        "id": "figurine_box3",
+    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within—or it would, had not the plastic been crumpled and split.  The container’s top is mangled and largely shredded, bored through by a ragged, stray bullet hole.",
+        "weight": 2
+      }
+    ]
+  }
+]

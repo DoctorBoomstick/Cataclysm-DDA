@@ -123,8 +123,10 @@
     "description": "A normal-sized manufactured figurine.  This is the default variant, if you see it something went wrong.",
     "category": "other",
     "material": [ "plastic" ],
-    "weight": "125 g",
-    "volume": "200 ml",
+    "weight": "68 g",
+    "volume": "36 ml",
+    "longest_side": "10 cm",
+    "//": "Numbers modelled in line with 1:18 scale figures.",
     "price": 2000,
     "price_postapoc": 10,
     "symbol": "f",
@@ -183,6 +185,78 @@
         "id": "toy_figure_superhero",
         "name": { "str": "superhero figurine" },
         "description": "A superhero action figure.  Its limbs can be adjusted for different poses, and it is designed to do battle against a wide variety of crooks and supervillains, sold separately.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "Constructed from soft plastics and clad in a green, beige, and brown uniform, this helmeted action figure of a US Army soldier stands with boots apart, an M4 carbine slung across his back, and a service handgun tucked in a leg holster.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier2",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "With limbs twisted into a kneeling position behind a light machinegun, this is the boonie hat-crowned figurine of a soldier, her body clad in a Marine’s woodland camo uniform and a spare ammo belt worn across her chest.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier3",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "Regarding the world through the eyepieces of a grey gasmask, this soldier figurine stands with their shoulders hunched and body poised in a skulking crouch, their Red Army uniform all but concealed beneath a rubber NBC suit and a Kalashnikov strapped to their chest.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier4",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "Clad in the multi-pattern camouflage uniform of a SAS operative and sporting a floppy, beige beret, this figurine of a British soldier rests prone upon his belly, peeking through the gunsight of a mounted sniper rifle.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier5",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "Outfitted in an old-fashioned black, tan, and olive drabuniform with a green beret perched atop her head, this mud-splattered figurine of a soldier is poised in a running crouch with an M16 assault rifle cradled in her arms and a grenade launcher slung across a shoulder.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier6",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "All but concealed under a parachute smock, with an oxygen mask strapped to their face and a short carbine slung across their chest, this helmeted figurine of a paratrooper stands hunched beneath the bulk of a parachute backpack.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_soldier7",
+        "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
+        "description": "This hefty figurine wields a large machinegun in their gauntlet-clad hands, the operator visible through the plastic visor of a set of powered infantry armor that envelops them—a protective shell that forms a barrier between the tiny soldier within and the Cataclysm.  If anyone survived this mess, you’d hope it’d be this toy’s full-sized compatriots.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_police",
+        "name": { "str": "police officer action figure", "str_pl": "police officer action figures" },
+        "description": "Huddling behind the plastic rectangle of a riot shield, this blue-uniformed police officer peers through a visored helmet, his belt heavy under the weight of a holstered handgun, flashlight, and handcuffs.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_police2",
+        "name": { "str": "police officer action figure", "str_pl": "police officer action figures" },
+        "description": "Outfitted in charcoal-black body armor, this figurine of a police officer cradles an MP5 submachinegun, a breaching shotgun clipped to her vest above an array of tier gas grenades, a radio, and a cartridge belt.  You can’t imagine that this toy was particularly popular during the riots.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_zombie",
+        "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
+        "description": "Painted a stylized green, this shambling figurine stands with arms outstretched and bloodied jaws parted, their body clad in a tattered lab coat and with one shoe missing.  The toy doesn’t spawn pleasant memories.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_zombie2",
+        "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
+        "description": "Laying prone, with one leg reduced to a red-smeared stump and half its gaping jaw blown off in a spray of plastic bone fragments, this figurine rests poised in mid-crawl with a single, grasping hand lifted to the fore.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_zombie3",
+        "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
+        "description": "Swollen with distended muscles and stylized wounds, this remarkably beefy figurine of a zombie stands with meaty hands poised and one ear notably gnawed off.  Come to think of it, it’d probably be able to pass for a heavyweight boxer were it not for its green skin and bodily trauma, though the latter might not be too out of place either.",
         "weight": 1
       }
     ]

@@ -28,20 +28,20 @@
     "variants": [
       {
         "id": "figurine_box1",
-    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
-        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within.",
+        "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+        "description": "Manufactured to contain and display small toys for sale, this is a cardboard box decked out in a glossy finish and printed with bold text, with its front panel consisting of a see-through plastic window.",
         "weight": 10
       },
       {
         "id": "figurine_box2",
-    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
-        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within.  Festooned with an array of eye-catching colors, as though it had come into contact with a particularly vomitous rainbow, the container is remarkable for the sheer, impressive number of grammatical errors, spelling mistakes, and typos the manufacturer managed to squeeze onto its available real estate.  Your favorite example resides upon the box's rear, where it boldly proclaims the legend, \"PERFICT GIFT FOR MAN!  This is a perfect Christma or Birthday Gifts which will make boy and man manly and brave\!"",
+        "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within.  Festooned with an array of eye-catching colors, as though it had come into contact with a particularly vomitous rainbow, the container is remarkable for the sheer, impressive number of grammatical errors, spelling mistakes, and typos the manufacturer managed to squeeze onto its available real estate.  Your favorite example resides upon the box's rear, where it boldly proclaims the legend, \"PERFICT GIFT FOR MAN!  This is a perfect Christmas or Birthday Gifts which will make boy and man manly and brave!\"",
         "weight": 5
       },
       {
         "id": "figurine_box3",
-    "name": { "str": "action figure box", "str_pl": "action figure boxes" },
-        "description": "Designed to contain small children’s toys, this is a modestly sized and glossy cardboard box fitted with a plastic window, allowing unrestrained visual access to the contents within—or it would, had not the plastic been crumpled and split.  The container’s top is mangled and largely shredded, bored through by a ragged, stray bullet hole.",
+        "name": { "str": "action figure box", "str_pl": "action figure boxes" },
+        "description": "Its top mangled and shredded, this once was a brightly decorated box produced to contain small figurines for sale, with the plastic window composing its front now perforated by a solitary, stray bullet hole.",
         "weight": 2
       }
     ]

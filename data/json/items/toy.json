@@ -191,72 +191,112 @@
         "id": "toy_figure_soldier",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "Constructed from soft plastics and clad in a green, beige, and brown uniform, this helmeted action figure of a US Army soldier stands with boots apart, an M4 carbine slung across his back, and a service handgun tucked in a leg holster.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_soldier2",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "With limbs twisted into a kneeling position behind a light machinegun, this is the boonie hat-crowned figurine of a soldier, her body clad in a Marine’s woodland camo uniform and a spare ammo belt worn across her chest.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_soldier3",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "Regarding the world through the eyepieces of a grey gasmask, this soldier figurine stands with their shoulders hunched and body poised in a skulking crouch, their Red Army uniform all but concealed beneath a rubber NBC suit and a Kalashnikov strapped to their chest.",
+        "color": "light_gray",
         "weight": 1
       },
       {
         "id": "toy_figure_soldier4",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "Clad in the multi-pattern camouflage uniform of a SAS operative and sporting a floppy, beige beret, this figurine of a British soldier rests prone upon his belly, peeking through the gunsight of a mounted sniper rifle.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_soldier5",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "Outfitted in an old-fashioned black, tan, and olive drabuniform with a green beret perched atop her head, this mud-splattered figurine of a soldier is poised in a running crouch with an M16 assault rifle cradled in her arms and a grenade launcher slung across a shoulder.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_soldier6",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "All but concealed under a parachute smock, with an oxygen mask strapped to their face and a short carbine slung across their chest, this helmeted figurine of a paratrooper stands hunched beneath the bulk of a parachute backpack.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_soldier7",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "This hefty figurine wields a large machinegun in their gauntlet-clad hands, the operator visible through the plastic visor of a set of powered infantry armor that envelops them—a protective shell that forms a barrier between the tiny soldier within and the Cataclysm.  If anyone survived this mess, you’d hope it’d be this toy’s full-sized compatriots.",
+        "color": "black",
         "weight": 1
       },
       {
         "id": "toy_figure_police",
         "name": { "str": "police officer action figure", "str_pl": "police officer action figures" },
         "description": "Huddling behind the plastic rectangle of a riot shield, this blue-uniformed police officer peers through a visored helmet, his belt heavy under the weight of a holstered handgun, flashlight, and handcuffs.",
+        "color": "blue",
         "weight": 1
       },
       {
         "id": "toy_figure_police2",
         "name": { "str": "police officer action figure", "str_pl": "police officer action figures" },
         "description": "Outfitted in charcoal-black body armor, this figurine of a police officer cradles an MP5 submachinegun, a breaching shotgun clipped to her vest above an array of tier gas grenades, a radio, and a cartridge belt.  You can’t imagine that this toy was particularly popular during the riots.",
+        "color": "black",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_detective",
+        "name": { "str": "detective action figure", "str_pl": "detective action figures" },
+        "description": "Swathed in the embrace of a tan duster and with a wide-brimmed hat pulled low over their eyes, this figurine stands with the grip of a holstered revolver peeking from beneath the lapel of their coat.  Solving 7 billion homicide cases and tracking down the start of the Cataclysm probably sit above this particular detective’s paygrade.",
+        "color": "brown",
         "weight": 1
       },
       {
         "id": "toy_figure_zombie",
         "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
-        "description": "Painted a stylized green, this shambling figurine stands with arms outstretched and bloodied jaws parted, their body clad in a tattered lab coat and with one shoe missing.  The toy doesn’t spawn pleasant memories.",
+        "description": "Painted a stylized green, this shambling figurine stands with arms outstretched and bloodied jaws parted, their body clad in a tattered lab coat and with one shoe missing.  The toy doesn’t prompt pleasant memories.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_zombie2",
         "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
         "description": "Laying prone, with one leg reduced to a red-smeared stump and half its gaping jaw blown off in a spray of plastic bone fragments, this figurine rests poised in mid-crawl with a single, grasping hand lifted to the fore.",
+        "color": "green",
         "weight": 1
       },
       {
         "id": "toy_figure_zombie3",
         "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
-        "description": "Swollen with distended muscles and stylized wounds, this remarkably beefy figurine of a zombie stands with meaty hands poised and one ear notably gnawed off.  Come to think of it, it’d probably be able to pass for a heavyweight boxer were it not for its green skin and bodily trauma, though the latter might not be too out of place either.",
+        "description": "Swollen with distended muscles and coated in stylized wounds, this remarkably beefy figurine of a zombie stands with meaty hands poised and one ear notably gnawed off.",
+        "color": "green",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_crusader",
+        "name": { "str": "crusader action figure", "str_pl": "crusader action figures" },
+        "description": "Clad in polished plate armor and hefting a tower shield, this great helm-wearing warrior brandishes an absurdly massive great sword.",
+        "color": "light_gray",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_pirate",
+        "name": { "str": "pirate action figure", "str_pl": "pirate action figures" },
+        "description": "Laden with a bandoleer of flintlock pistols, this old-fashionedly dressed figurine grips a blunderbuss in their gnarled hands, their singular eye leering forth beside its eye-patched mate.",
+        "color": "brown",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_pirate2",
+        "name": { "str": "pirate action figure", "str_pl": "pirate action figures" },
+        "description": "Brandishing a cutlass in one hand and a twin-barrelled pistol in the other, this traditionally clad sea raider stands resplendent with a peg leg, a captain’s hat, and even a multi-colored parrot.",
+        "color": "brown",
         "weight": 1
       }
     ]

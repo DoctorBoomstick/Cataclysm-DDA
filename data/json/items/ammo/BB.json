@@ -1,0 +1,25 @@
+[
+  {
+    "type": "AMMO",
+    "id": "bb",
+    "looks_like": "pebble",
+    "name": { "str": "6mm BB" },
+    "description": "A small plastic ball that can be fired from a BB or airsoft gun.  Deals virtually no damage.",
+    "volume": "104 ml",
+    "weight": "1 g",
+    "longest_side": "6 mm",
+    "//": "Assuming these to be 6mm 0.20 gram BBs.",
+    "price": 500,
+    "price_postapoc": 50,
+    "symbol": "=",
+    "color": "light_gray",
+    "material": [ "plastic" ],
+    "ammo_type": "BB",
+    "damage": { "damage_type": "bullet", "amount": 1 },
+    "dispersion": 100,
+    "count": 500,
+    "stack_size": 200,
+    "loudness": 9,
+    "effects": [ "NOGIB", "NEVER_MISFIRES", "NON_FOULING" ]
+  }
+]

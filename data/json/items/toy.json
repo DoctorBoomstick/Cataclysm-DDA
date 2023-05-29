@@ -188,6 +188,27 @@
         "weight": 1
       },
       {
+        "id": "toy_figure_raptor",
+        "name": { "str": "raptor figurine" },
+        "description": "Standing with clawed feet parted and jaws open in a silent growl, this is the nondescript figurine of some manner of dromaeosaur, with a flare of brightly colored plumage arching from the back of its neck and running along its spine.",
+        "color": "green",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_dilophosaur",
+        "name": { "str": "Dilophosaur figurine" },
+        "description": "With its neck lowered and head curiously cocked, this Dilophosaur figurine stands poised upon a base of faux mud, two semi-circular crests rising from its angular skull.",
+        "color": "green",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_pachycephalosaur",
+        "name": { "str": "pachycephalosaur figurine" },
+        "description": "Standing with a circlet of bony nubs crowning its skull, this dome-headed figurine crouches upon a pair of stocky legs with its lowered, battering-ram-like cranium presented towards the Cataclysm.",
+        "color": "green",
+        "weight": 1
+      },
+      {
         "id": "toy_figure_soldier",
         "name": { "str": "soldier action figure", "str_pl": "soldier action figures" },
         "description": "Constructed from soft plastics and clad in a green, beige, and brown uniform, this helmeted action figure of a US Army soldier stands with boots apart, an M4 carbine slung across his back, and a service handgun tucked in a leg holster.",

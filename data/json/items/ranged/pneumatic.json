@@ -34,5 +34,42 @@
     ],
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "BB": 150 } } ],
     "melee_damage": { "bash": 9 }
+  },
+  {
+    "id": "airsoft_1911",
+    "type": "GUN",
+    "looks_like": "m1911",
+    "reload_noise_volume": 10,
+    "name": { "str": "airsoft pistol" },
+    "description": "A rather hefty pistol styled after old US Army handguns, with modernized polymer grips and an under-barrel rail, this is a gas-powered airsoft replica that fires small BB pellets from a detachable, CO2-powered magazine.  Utilized for airsoft games, low-risk target plinking, and the safe training of young shooters, the pistol is, with the exception of firing harmless pellets rather than actual bullets, almost indistinguishable from its genuine counterpart.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "airsoft_1911",
+        "name": { "str": "Elite Force 1911 Tac" },
+        "description": "A hefty, full-metal handgun constructed after the image of modern 1911 clones, the Elite Force 1911 is a blowback gas-powered pistol.  A threaded orange tip denotes it as an airsoft replica bored for 6mm BB pellets.",
+        "weight": 1
+      }
+    ],
+    "ascii_picture": "m1911",
+    "weight": "908 g",
+    "volume": "454 ml",
+    "longest_side": "24 cm",
+    "price": 13500,
+    "price_postapoc": 200,
+    "to_hit": -1,
+    "material": [ "steel", "aluminum", "plastic" ],
+    "symbol": "(",
+    "color": "black",
+    "skill": "pistol",
+    "ammo": [ "BB" ],
+    "range": 12,
+    "dispersion": 150,
+    "durability": 7,
+    "valid_mod_locations": [ [ "sights", 1 ], [ "stock mount", 1 ], [ "rail mount", 1 ], [ "grip mount", 1 ], [ "underbarrel", 1 ] ],
+    "flags": [ "NEVER_JAMS", "NON_FOULING", "ALLOWS_BODY_BLOCK" ],
+    "pocket_data": [ { "magazine_well": "250 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "m1911mag", "m1911bigmag" ] } ],
+    "weapon_category": [ "AUTOMATIC_PISTOLS" ],
+    "melee_damage": { "bash": 9 }
   }
 ]

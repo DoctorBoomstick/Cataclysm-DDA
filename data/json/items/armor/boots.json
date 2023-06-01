@@ -1467,7 +1467,35 @@
         "coverage": 100
       }
     ],
-    "melee_damage": { "bash": 6 }
+    "melee_damage": { "bash": 6 },
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "heels_stiletto",
+        "name": { "str": "pair of stiletto heels", "str_pl": "pairs of stiletto heels" },
+        "description": "A traditional pair of tall, high-heeled shoes with a tapered, slender heel, which makes strutting fashionable, walking a challenge, and running an impossibility.  These days, they’d probably be more useful to stab a zombie’s eyes out than as footwear.",
+        "weight": 10
+      },
+      {
+        "id": "heels_block",
+        "name": { "str": "pair of block heels", "str_pl": "pairs of block heels" },
+        "description": "These are a pair of chunky, broad-based shoes with a sturdy block-like heel, and while they don’t do you any favors in the mobility department, they’re at least more comfortable to trudge about in than their peers and won't likely cause irreversible damage to your feet.",
+        "weight": 10
+      },
+      {
+        "id": "heels_wedge",
+        "name": { "str": "pair of wedges", "str_pl": "pairs of wedges" },
+        "description": "A pair of tall, high-heeled, open-toed shoes with thick wedges running the length of the shoe, serving as its heels.",
+        "color": "blue",
+        "weight": 10
+      },
+      {
+        "id": "heels_platform",
+        "name": { "str": "pair of platform heels", "str_pl": "pairs of platform heels" },
+        "description": "A pair of heavy, thick-soled high-heeled shoes with a ridiculously tall heel supported by an ankle strap and chunky soles.  A great choice for when you've given up on basic biomechanical function and decided that you're more than willing to risk long-term damage to your feet for the sake of a ridiculous fashion statement in the ruins of America.",
+        "weight": 10
+      }
+    ]
   },
   {
     "id": "knee_high_boots",

@@ -65,6 +65,7 @@
     "difficulty": 3,
     "time": "30 s",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "pineapple_juice", 4 ] ], [ [ "can_coconut", 1 ] ] ]
@@ -78,6 +79,7 @@
     "skill_used": "cooking",
     "time": "30 s",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "lemonlime", 1 ], [ "lemonade", 1 ], [ "oj", 1 ], [ "oj_fresh", 1 ] ], [ [ "grenadine_syrup", 1 ] ] ]
@@ -91,6 +93,7 @@
     "skill_used": "cooking",
     "time": "30 s",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "cola", 1 ] ], [ [ "grenadine_syrup", 1 ] ] ]
@@ -103,6 +106,7 @@
     "subcategory": "CSC_*_NESTED",
     "skill_used": "cooking",
     "difficulty": 1,
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "time": "30 s",
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
@@ -183,6 +187,7 @@
     "skill_used": "cooking",
     "time": "30 s",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "beer", 1 ], [ "hb_beer", 1 ] ], [ [ "grenadine_syrup", 1 ] ] ]
@@ -196,6 +201,7 @@
     "skill_used": "cooking",
     "time": "30 s",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "coffee", 1 ], [ "coffee_sweetened", 1 ] ], [ [ "moonshine", 1 ], [ "vodka", 1 ] ] ]
@@ -209,6 +215,7 @@
     "skill_used": "cooking",
     "time": "30 s",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "tea", 1 ] ], [ [ "rum", 1 ] ] ]
@@ -224,6 +231,7 @@
     "time": "30 s",
     "autolearn": true,
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "flags": [ "BLIND_HARD" ],
     "components": [ [ [ "gin", 1 ], [ "vodka", 1 ] ], [ [ "tonic_water", 1 ] ] ]
   },
@@ -238,6 +246,7 @@
     "difficulty": 3,
     "time": "1 m",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [
@@ -257,6 +266,7 @@
     "difficulty": 3,
     "time": "1 m",
     "batch_time_factors": [ 50, 4 ],
+    "proficiencies": [ { "proficiency": "prof_cocktail_making" } ],
     "autolearn": true,
     "flags": [ "BLIND_HARD" ],
     "components": [

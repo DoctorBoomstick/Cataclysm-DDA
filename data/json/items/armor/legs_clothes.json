@@ -615,7 +615,65 @@
     "warmth": 15,
     "material_thickness": 0.2,
     "flags": [ "VARSIZE", "POCKETS" ],
-    "armor": [ { "encumbrance": [ 7, 11 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
+    "armor": [ { "encumbrance": [ 7, 11 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "generic_pants",
+        "name": { "str": "khaki pants", "str_pl": "pairs of khaki pants" },
+        "description": "A pair of khaki pants.  Slightly warmer than jeans.",
+        "weight": 10
+      },
+      {
+        "id": "pants_blue",
+        "name": { "str": "blue pants", "str_pl": "pairs of blue pants" },
+        "description": "A comfortable set of navy blue pants with large pockets: these trousers    are slightly thicker and warmer than regular jeans.",
+        "color": "blue",
+        "weight": 10
+      },
+      {
+        "id": "pants_black",
+        "name": { "str": "black pants", "str_pl": "pairs of black pants" },
+        "description": "A snappy set of black, neatly pressed trousers, perfect for formal events or looking professional.",
+        "color": "black",
+        "weight": 10
+      },
+      {
+        "id": "pants_grey",
+        "name": { "str": "grey pants", "str_pl": "pairs of grey pants" },
+        "description": "a set of storm gray pants speckled with dark stains so deeply assimilated into the fabric that they’re nigh-irremovable. You vehemently hope that they’re just the mortal remains of some spilled Beveridge.",
+        "color": "dark_gray",
+        "weight": 10
+      },
+      {
+        "id": "pants_red",
+        "name": { "str": "red pants", "str_pl": "pairs of red pants" },
+        "description": "A pair of soft, comfortable burgundy trousers with a button-up fly and spacious pockets.",
+        "color": "red",
+        "weight": 10
+      },
+      {
+        "id": "pants_purple",
+        "name": { "str": "purple pants", "str_pl": "pairs of purple pants" },
+        "description": "A set of rugged and comfortable trousers dyed a soft shade of violet, these pants come equipped with an adjustable waistband.",
+        "color": "blue",
+        "weight": 10
+      },
+      {
+        "id": "pants_brown",
+        "name": { "str": "brown pants", "str_pl": "pairs of brown pants" },
+        "description": "Boredom personified, this pair of corduroy pants is a dull hue of brown.",
+        "color": "brown",
+        "weight": 10
+      },
+      {
+        "id": "pants_flag",
+        "name": { "str": "liberty’s pants", "str_pl": "pairs of liberty’s pants" },
+        "description": "These pair of sky blue pants are resplendent with a pair of stitched American flags, their flag poles running down each leg, and a standard flanking the trousers’ front and rear.  \"Freedom\" is boldly stitched across the fly and enclosed by a ring of golden stars, while the back bears the legend, \"Liberbooty!\"",
+        "color": "light_blue",
+        "weight": 2
+      }
+    ]
   },
   {
     "id": "pants_army",
@@ -1652,5 +1710,180 @@
     "material_thickness": 0.25,
     "flags": [ "VARSIZE", "POCKETS", "WATERPROOF" ],
     "armor": [ { "encumbrance": 1, "coverage": 100, "covers": [ "leg_l", "leg_r" ], "volume_encumber_modifier": 0.6 } ]
+  },
+  {
+    "id": "pants_tactical",
+    "type": "ARMOR",
+    "//": "Based on Vertx Cutback Technical Pants, https://vertx.com/cutback-pants",
+    "name": { "str": "tactical pants", "str_pl": "pairs of tactical pants" },
+    "description": "Coated in more pockets than is probably either necessary or healthy and looking like they belong within a SWAT locker, these rugged combat pants possess a water-repellent coating, tough double-stitched seams, reinforced belt loops, and articulated knees.",
+    "weight": "720 g",
+    "volume": "2500 ml",
+    "price": 8099,
+    "price_postapoc": 250,
+    "material": [ { "type": "nylon", "portion": 7 }, { "type": "cotton", "portion": 3 } ],
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80,
+        "description": "Front pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80,
+        "description": "Front pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "120 ml",
+        "max_contains_weight": "200 g",
+        "max_item_length": "5 cm",
+        "moves": 140,
+        "description": "Watch pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80,
+        "description": "Side utility pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 80,
+        "description": "Side utility pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 100,
+        "description": "Rear pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1080 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "19 cm",
+        "moves": 100,
+        "description": "Rear pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "300 ml",
+        "max_contains_weight": "600 g",
+        "max_item_length": "8 cm",
+        "moves": 140,
+        "description": "Wallet trap."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "300 ml",
+        "max_contains_weight": "600 g",
+        "max_item_length": "8 cm",
+        "moves": 140,
+        "description": "Wallet trap."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "200 g",
+        "max_item_length": "6 cm",
+        "moves": 60,
+        "description": "Mini stash pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "200 g",
+        "max_item_length": "6 cm",
+        "moves": 60,
+        "description": "Mini stash pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "200 g",
+        "max_item_length": "6 cm",
+        "moves": 60,
+        "description": "Mini stash pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "200 g",
+        "max_item_length": "6 cm",
+        "moves": 60,
+        "description": "Mini stash pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "100 ml",
+        "max_contains_weight": "200 g",
+        "max_item_length": "6 cm",
+        "moves": 60,
+        "description": "Mini stash pocket."
+      }
+    ],
+    "warmth": 5,
+    "material_thickness": 0.25,
+    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF" ],
+    "armor": [ { "encumbrance": 2, "coverage": 100, "covers": [ "leg_l", "leg_r" ], "volume_encumber_modifier": 0.6 } ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "tactical_pants_grey",
+        "name": { "str": "tactical pants", "str_pl": "pairs of tactical pants" },
+        "description": "This particular pair is dyed a muted, beige-like shade of wolf gray.",
+        "weight": 10,
+        "append": true
+      },
+      {
+        "id": "tactical_pants_coyote",
+        "name": { "str": "tactical pants", "str_pl": "pairs of tactical pants" },
+        "description": "This pair is predominantly an earthy shade of coyote brown.",
+        "color": "brown",
+        "weight": 10,
+        "append": true
+      },
+      {
+        "id": "tactical_pants_desert",
+        "name": { "str": "tactical pants", "str_pl": "pairs of tactical pants" },
+        "description": "This pair sports a warm, yellowish beige desert tan hue—a bold choice, considering New England’s notable lack of deserts.",
+        "color": "brown",
+        "weight": 10,
+        "append": true
+      },
+      {
+        "id": "tactical_pants_black",
+        "name": { "str": "tactical pants", "str_pl": "pairs of tactical pants" },
+        "description": "This worn and smoke-hued pair is completely dyed black.",
+        "color": "black",
+        "weight": 10,
+        "append": true
+      },
+      {
+        "id": "tactical_pants_green",
+        "name": { "str": "tactical pants", "str_pl": "pairs of tactical pants" },
+        "description": "This remarkably drab, traditional camouflage pair is dyed a muted shade of OD green, much like old US Army battle dress.",
+        "weight": 10,
+        "color": "green",
+        "append": true
+      }
+    ]
   }
 ]

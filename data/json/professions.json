@@ -5949,15 +5949,18 @@
     "proficiencies": [ "prof_cocktail_making" ],
     "items": {
       "both": {
-        "items": [ "polo_shirt", "pants", "apron_cotton", "socks", "dress_shoes" ],
+        "items": [ "polo_shirt", "pants", "apron_cotton" ],
         "entries": [
           { "group": "charged_smart_phone" },
           { "group": "charged_penblack" },
           { "item": "coffee", "container-item": "coffeepot" }
         ]
       },
-      "male": [ "briefs" ],
-      "female": [ "panties", "bra" ]
+      "male": { "items": [ "socks", "boxer_shorts", "dress_shoes", "copper_locket" ] },
+      "female": {
+        "items": [ "stockings", "amethyst_silver_earring", "amethyst_silver_bracelet" ],
+        "entries": [ { "item": "heels", "variant": "heels_wedge" } ]
+      }
     }
   }
 ]

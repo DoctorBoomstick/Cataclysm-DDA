@@ -1486,7 +1486,6 @@
         "id": "heels_wedge",
         "name": { "str": "pair of wedges", "str_pl": "pairs of wedges" },
         "description": "A pair of tall, high-heeled, open-toed shoes with thick wedges running the length of the shoe, serving as its heels.",
-        "color": "blue",
         "weight": 10
       },
       {
@@ -1505,13 +1504,14 @@
     "description": "Very long leather boots that cover the lower legs, they are cumbersome to wear.",
     "weight": "1520 g",
     "volume": "3750 ml",
+    "longest_side": "33 cm",
     "price": 8000,
     "price_postapoc": 1250,
     "to_hit": -1,
     "material": [ "leather" ],
     "symbol": "[",
     "looks_like": "boots_larmor",
-    "color": "dark_gray",
+    "color": "black",
     "warmth": 20,
     "material_thickness": 2,
     "environmental_protection": 2,
@@ -1549,7 +1549,22 @@
         "encumbrance": 15
       }
     ],
-    "melee_damage": { "bash": 1 }
+    "melee_damage": { "bash": 1 },
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "generic_knee_high_boots",
+        "name": { "str": "pair of knee-high boots", "str_pl": "pairs of knee-high boots" },
+        "description": "Very long leather boots that cover the lower legs, they are cumbersome to wear.",
+        "weight": 10
+      },
+      {
+        "id": "jackboots",
+        "name": { "str": "pair of jackboots", "str_pl": "pairs of jackboots" },
+        "description": "A pair of sturdy, over-the-knee, laceless boots fitted with a rubberized sole: these imposing combat boots provide good traction despite their encumbering nature.  Most commonly associated with totalitarian regimes due to their use by Nazi soldiers, this style of boot is warm, protective, and produces a deeply satisfying sound while marching.",
+        "weight": 10
+      }
+    ]
   },
   {
     "id": "motor_police_boots",

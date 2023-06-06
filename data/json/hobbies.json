@@ -823,5 +823,15 @@
     "description": "You make a habit of clearing your thoughts and finding your center, even amidst the chaos of the world.",
     "points": 3,
     "traits": [ "OPTIMISTIC", "SPIRITUAL" ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "cocktail_making",
+    "name": "Mixology",
+    "description": "You fancied yourself an amateur bartender, taking pleasure in crafting tasteful cocktails for the enjoyment of friends and yourself.  Now that the Cataclysm is upon you, knowing your way around a shaker might not be the most transferable skill in your situation, but at least you’ll have a monopoly on cocktails now that all the real bartenders are dead.",
+    "points": 1,
+    "proficiencies": [ "prof_cocktail_making" ],
+    "skills": [ { "level": 2, "name": "cooking" } ]
   }
 ]

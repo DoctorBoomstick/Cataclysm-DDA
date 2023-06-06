@@ -626,7 +626,7 @@
       },
       {
         "id": "pants_blue",
-        "name": { "str": "blue pants", "str_pl": "pairs of blue pants" },
+        "name": { "str": "navy-blue pants", "str_pl": "pairs of navy-blue pants" },
         "description": "A comfortable set of navy blue pants with large pockets: these trousers    are slightly thicker and warmer than regular jeans.",
         "color": "blue",
         "weight": 10
@@ -647,14 +647,14 @@
       },
       {
         "id": "pants_red",
-        "name": { "str": "red pants", "str_pl": "pairs of red pants" },
+        "name": { "str": "burgundy pants", "str_pl": "pairs of burgundy pants" },
         "description": "A pair of soft, comfortable burgundy trousers with a button-up fly and spacious pockets.",
         "color": "red",
         "weight": 10
       },
       {
         "id": "pants_purple",
-        "name": { "str": "purple pants", "str_pl": "pairs of purple pants" },
+        "name": { "str": "purple trackpants", "str_pl": "pairs of purple trackpants" },
         "description": "A set of rugged and comfortable trousers dyed a soft shade of violet, these pants come equipped with an adjustable waistband.",
         "color": "blue",
         "weight": 10
@@ -672,7 +672,361 @@
         "description": "These pair of sky blue pants are resplendent with a pair of stitched American flags, their flag poles running down each leg, and a standard flanking the trousers’ front and rear.  \"Freedom\" is boldly stitched across the fly and enclosed by a ring of golden stars, while the back bears the legend, \"Liberbooty!\"",
         "color": "light_blue",
         "weight": 2
-      }
+      },
+      {
+        "id": "pants_cream",
+        "name": { "str": "cream pants", "str_pl": "pairs of cream pants" },
+        "description": "A pair of milky, off-white pants dyed a shade of soft cream.  They're slightly warmer than jeans.",
+        "weight": 10
+      },
+      {
+        "id": "pants_stone",
+        "name": { "str": "stone-gray pants", "str_pl": "pairs of stone-gray pants" },
+        "description": "A business-like set of stone-gray trousers for business-like people, these pants are the same hue as concrete and are relatively warm.",
+        "weight": 10
+      },
+      {
+        "id": "pants_beige",
+        "name": { "str": "beige pants", "str_pl": "pairs of beige pants" },
+        "description": "A pair of modest, beige-colored pants with a dirty white undertone.  These trousers are somewhat warmer than jeans.",
+        "weight": 10
+      },
+      {
+        "id": "pants_british_khaki",
+        "name": { "str": "British-khaki pants", "str_pl": "pairs of British-khaki pants" },
+        "description": "While these pants might not be English, their color certainly is.  More specifically, these comfortable trousers are a shade of British-khaki, a type of brownish-yellow hue developed by the empire's military for use in service uniforms.",
+        "weight": 8
+      },
+      {
+        "id": "pants_tan",
+        "name": { "str": "tan-khaki pants", "str_pl": "pairs of tan-khaki pants" },
+        "description": "A pair of casual, tan-hued pants with a slight yellowish overtone, intended to contrast with one's skin color.",
+        "weight": 8
+      },
+      {
+        "id": "pants_hot_pink",
+        "name": { "str": "hot-pink sweatpants", "str_pl": "pairs of hot-pink trackpants" },
+        "description": "Flaunting an almost aggressively vibrant shade of bright pink, this pair of soft, plush pants is slightly warmer than far duller jeans and makes a bold statement to any onlookers: human, zombie, or otherwise.  Though, perhaps dressing up like an anthropomorphic Easter egg isn’t, in retrospect, the wisest way to prolong your time on this earth.",
+        "weight": 8
+      },
+      {
+        "id": "pants_pebble ",
+        "name": { "str": "pebble-khaki pants", "str_pl": "pairs of pebble-khaki pants" },
+        "description": "A pair of comfortable pants dyed pebble-khaki, a type of hue consisting of muted greys and browns.",
+        "weight": 8
+      },
+      {
+        "id": "pants_ivory",
+        "name": { "str": "ivory pants", "str_pl": "pairs of ivory pants" },
+        "description": "A pair of clear, creamy-hued ivory-colored pants, from which the inevitable splashes of zombie gore will be nigh-impossible to wash off.  The trousers are slightly warmer than jeans and provide a fashionable touch to your ventures in the ruins of New England.",
+        "weight": 8
+              },
+      {
+        "id": "pants_maroon",
+        "name": { "str": "maroon sweatpants", "str_pl": "pairs of maroon sweatpants" },
+        "description": "A visually appealing and subtle blend of browns and deep reds characterizes this pair of pants, which come equipped with a drawstring at the waist, elastic cuffs, and zip-up pockets.  An energetic and sporting set of pants for high-energy situations.",
+        "weight": 8
+      },
+      {
+        "id": "pants_olive_khaki",
+        "name": { "str": "olive-khaki pants", "str_pl": "pairs of olive-khaki pants" },
+        "description": "A rustic blend of greenish browns characterizes this set of casual pants, along with a pair of deep pockets and a padded construction that makes them warmer than regular jeans.",
+        "weight": 8
+      },
+      {
+        "id": "pants_od",
+        "name": { "str": "olive-drab pants", "str_pl": "pairs of olive-drab pants" },
+        "description": "While these aren’t US-issued military trousers or even civilian tactical pants, this article of clothing possesses a blend of dark greens, browns, and blacks identical to the camouflage pattern of Vietnam-era army uniforms.  Slightly warmer than regular jeans, it’s a decent piece of foe-military kit for those unwilling to shill out on a pair of actual BDU pants.",
+        "weight": 8
+      },
+      {
+        "id": "pants_turquoise",
+        "name": { "str": "turquoise pants", "str_pl": "pairs of turquoise pants" },
+        "description": "A pair of casual, greenish-blue trousers with deep pockets.  With the potential to be commendably fashionable and elegant given the right accompanying accents, the pants are a shade warmer than regular jeans.",
+        "weight": 8
+      },
+      {
+        "id": "pants_ecru",
+        "name": { "str": "ecru pants", "str_pl": "pairs of ecru pants" },
+        "description": "A pair of moderately warm and comfortable ecru pants dyed a pale, greyish yellow color.",
+        "weight": 6
+      },
+      {
+        "id": "pants_fawn_khaki",
+        "name": { "str": "fawn-khaki pants", "str_pl": "pairs of fawn-khaki pants" },
+        "description": "A pair of comfortable, light, delicate brown trousers dyed the same warm hue as young deer fawns.",
+        "weight": 6
+      },
+      {
+        "id": "pants_camel_khaki",
+        "name": { "str": "camel-khaki pants", "str_pl": "pairs of camel-khaki pants" },
+        "description": "Classy and stylish, this pair of warm, business-like trousers is dyed a neutral shade of camel.  A sophisticated pair of pants for only the most sophisticated of folks.",
+        "weight": 6
+      },
+      {
+        "id": "pants_coffee",
+        "name": { "str": "coffee-brown pants", "str_pl": "pairs of coffee-brown pants" },
+        "description": "Dyed a rich shade of deep brown reminiscent of a piping-hot coffee, this pair of comfortable pants is excellent at concealing stains, whether from dropped food, spilled beverages, or, nowadays, dried blood.",
+        "weight": 6
+      },
+      {
+        "id": "pants_moss",
+        "name": { "str": "moss-green trackpants", "str_pl": "pairs of moss-green trackpants" },
+        "description": "A comfortable, earthy pair of soft green pants with a muted hue, they're slightly warmer than regular jeans and would blend in well against a backdrop of woodland moss.",
+        "weight": 6
+      },
+      {
+        "id": "pants_paprika",
+        "name": { "str": "paprika-red pants", "str_pl": "pairs of paprika-red pants" },
+        "description": "Vibrant and bold, this pair of comfortable and statement-making trousers is dyed an energetic, spicy red color.  Somewhat warmer than regular jeans, you hope that wearing them won't increase your visual resemblance to a stuffed chili pepper.",
+        "weight": 6
+      },
+      {
+        "id": "pants_white",
+        "name": { "str": "white pants", "str_pl": "pairs of white pants" },
+        "description": "Notorious for either looking fabulous or disastrous with little in between, this stylish pair of boot-cut white trousers will almost certainly gain a plethora of irremovable stains as soon as you set foot beyond the threshold of your abode.",
+        "weight": 6
+      },
+      {
+        "id": "pants_nude",
+        "name": { "str": "nude trackpants", "str_pl": "pairs of nude trackpants" },
+        "description": "While this plush pair of pink, flesh-colored trousers doesn’t, thankfully, possess any unmentionables in and of itself, it will almost certainly make you look like you're striding about with your legs, caboose, and immodesty on display if it’s too tight.  Who knows, perhaps it would be enough to blind some poor, unfortunate zombies.",
+        "weight": 4
+      },
+      {
+        "id": "pants_dusty_pink",
+        "name": { "str": "dusty-pink pants", "str_pl": "pairs of dusty-pink pants" },
+        "description": "A pair of delicately colored and fashionable pants dyed a pale, soft pink hue, much like cherry blossoms.",
+        "weight": 4
+      },
+      {
+        "id": "pants_periwinkle_blue",
+        "name": { "str": "periwinkle-blue pants", "str_pl": "pairs of periwinkle-blue pants" },
+        "description": "Dyed a light shade of almost sky-blue, this soft pair of trousers is both comfortable and warmer than regular jeans.",
+        "weight": 4
+      },
+      {
+        "id": "pants_grape",
+        "name": { "str": "grape-purple pants", "str_pl": "pairs of grape-purple pants" },
+        "description": "Stylish and refined-looking, this pair of elegant trousers is dyed a rich purple hue, like fresh, glistening grapes.  You wonder if that makes you look more or less appetizing to the zombies.",
+        "weight": 4
+      },
+      {
+        "id": "pants_ice_blue",
+        "name": { "str": "ice-blue pants", "str_pl": "pairs of ice-blue pants" },
+        "description": "Soft, cool, and subtle, this pair of comfortable trousers sports a serene blue hue—a shade of azure as cold as the flesh of mankind's corpses.",
+        "weight": 4
+      },
+      {
+        "id": "pants_baby_blue",
+        "name": { "str": "baby-blue pants", "str_pl": "pairs of baby-blue pants" },
+        "description": "Dyed the characteristic color of youth and whimsy, the gentle hue of this set of ethereal-blue pants offers recollections of dreamy, playful youth—a dream that no one upon this forsaken earth will ever know again.",
+        "weight": 4
+      },
+      {
+        "id": "pants_emerald",
+        "name": { "str": "emerald-green pants", "str_pl": "pairs of emerald-green pants" },
+        "description": "There isn't such a thing as too shiny, or at least there wasn’t for the maker of this particular pair of vibrant green pants.  Composed from glossy cotton dyed with a subtle blue cast and equipped with a pair of sizable pockets, it would be fashionable were it not for the fact that dawning them makes the wearer look like a post-apocalyptic leprechaun.",
+        "weight": 4
+      },
+      {
+        "id": "pants_royal_blue",
+        "name": { "str": "royal-blue pants", "str_pl": "pairs of royal-blue pants" },
+        "description": "A centuries-old gift from the United Kingdom, this pair of comfortable trousers is dyed a classic shade of deep, vivid blue.",
+        "weight": 4
+      },
+      {
+        "id": "pants_teal",
+        "name": { "str": "teal pants", "str_pl": "pairs of teal pants" },
+        "description": "Dyed a predominantly greenish hue of deep cyan, this pair of pants is both comfortable and warmer than regular jeans.",
+        "weight": 4
+      },
+      {
+        "id": "pants_ash_gray",
+        "name": { "str": "ash-gray pants", "str_pl": "pairs of ash-gray pants" },
+        "description": "A set of comfortable and smart-looking pants dyed a similar shade to volcanic ash: a pale, low-saturation grayish green color.",
+        "weight": 4
+      },
+      {
+        "id": "pants_fuchsia",
+        "name": { "str": "fuchsia pants", "str_pl": "pairs of fuchsia pants" },
+        "description": "a bright, fashionable, and charming-looking pair of reddish purple trousers, with two deep pockets and a construction that favors heat retention more than regular jeans.",
+        "weight": 4
+      },
+      {
+        "id": "pants_coral",
+        "name": { "str": "coral-pink pants", "str_pl": "pairs of coral-pink pants" },
+        "description": "Dyed a soft shade of pink strongly verging upon an orange hue, this pair of trousers would look right at home against a backdrop of vibrant sea coral.",
+        "weight": 4
+      },
+      {
+        "id": "pants_chartreuse",
+        "name": { "str": "chartreuse-green pants", "str_pl": "pairs of chartreuse-green pants" },
+        "description": "An almost florescent set of yellowish-green pants with two deep pockets.  Considering that chartreuse has better night-visibility than most other colors, these pants, apart from being a nightmare to match with other hues, would probably be an ill-advised choice to dawn if you wish to keep your legs attached to your boddy.",
+        "weight": 4
+      },
+      {
+        "id": "pants_orange",
+        "name": { "str": "orange trackpants", "str_pl": "pairs of orange trackpants" },
+        "description": "Reminiscent of the color of flames, this pair of cotton trackpants is, perhaps optimistically, dyed a muted shade of burned orange.",
+        "weight": 4
+      },
+      {
+        "id": "pants_regimental_blue",
+        "name": { "str": "regimental-blue pants", "str_pl": "pairs of regimental-blue pants" },
+        "description": "A pair of spiffy, bluish-purple trousers with deep pockets.  You feel smart and well-put-together just looking at it.",
+        "weight": 4
+      },
+      {
+        "id": "pants_corvette",
+        "name": { "str": "corvette-red pants", "str_pl": "pairs of corvette-red pants" },
+        "description": "The classic color of vintage Corvette muscle cars, this pair of vibrant trousers is dyed an eye-bleedingly bright shade of crimson, a color in which they will shortly be bathed should any resident of the Cataclysm mangle you after spotting you by virtue of the cartoonishly energetic shade that these pants flaunt.",
+        "weight": 4
+      },
+      {
+        "id": "rredpants",
+        "name": { "str": "rangoon khaki pants", "str_pl": "pairs of rangoon khaki pants" },
+        "description": "A pair of rangoon red coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "predpants",
+        "name": { "str": "poppy red khaki pants", "str_pl": "pairs of poppy red khaki pants" },
+        "description": "A pair of poppy red coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "pyellowpants",
+        "name": { "str": "Phoenician yellow khaki pants", "str_pl": "pairs of Phoenician yellow khaki pants" },
+        "description": "A pair of Phoenician yellow coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "lyellowpants",
+        "name": { "str": "lemon yellow khaki pants", "str_pl": "pairs of lemon yellow khaki pants" },
+        "description": "A pair of lemon yellow coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "myellowpants",
+        "name": { "str": "mustard khaki pants", "str_pl": "pairs of mustard khaki pants" },
+        "description": "A pair of mustard yellow coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "lgreenpants",
+        "name": { "str": "lime green khaki pants", "str_pl": "pairs of lime green khaki pants" },
+        "description": "A pair of lime green coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "cbluepants",
+        "name": { "str": "ceil khaki pants", "str_pl": "pairs of ceil khaki pants" },
+        "description": "A pair of ceil blue coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "wbluepants",
+        "name": { "str": "water blue khaki pants", "str_pl": "pairs of water blue khaki pants" },
+        "description": "A pair of water blue coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "lilacpants",
+        "name": { "str": "lilac khaki pants", "str_pl": "pairs of lilac khaki pants" },
+        "description": "A pair of plain lilac coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "jadepants",
+        "name": { "str": "jade green khaki pants", "str_pl": "pairs of jade green khaki pants" },
+        "description": "A pair of jade green coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "palepants",
+        "name": { "str": "pale yellow khaki pants", "str_pl": "pairs of pale yellow khaki pants" },
+        "description": "A pair of pale yellow coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "birdpants",
+        "name": { "str": "bird yellow khaki pants", "str_pl": "pairs of bird yellow khaki pants" },
+        "description": "A pair of bird yellow coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "lavenderpants",
+        "name": { "str": "lavender purple khaki pants", "str_pl": "pairs of lavender purrple khaki pants" },
+        "description": "A pair of lavender purple coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "mauvepants",
+        "name": { "str": "mauve khaki pants", "str_pl": "pairs of mauve khaki pants" },
+        "description": "A pair of mauve coloured (something like a mix of purple and pink) khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "plumpants",
+        "name": { "str": "plum purple khaki pants", "str_pl": "pairs of plum purple khaki pants" },
+        "description": "A pair of plum purple coloured khaki pants.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants",
+        "name": { "str": "forest camo khaki pants", "str_pl": "pairs of forest camo khaki pants" },
+        "description": "A pair of khaki pants printed with a forest camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants0",
+        "name": { "str": "jungle camo khaki pants", "str_pl": "pairs of jungle camo khaki pants" },
+        "description": "A pair of khaki pants printed with a jungle camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants1",
+        "name": { "str": "grassland camo khaki pants", "str_pl": "pairs of grassland camo khaki pants" },
+        "description": "A pair of khaki pants printed with a grassland camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants2",
+        "name": { "str": "wetland camo khaki pants", "str_pl": "pairs of wetland camo khaki pants" },
+        "description": "A pair of khaki pants printed with a wetland (or swamp) camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants3",
+        "name": { "str": "desert camo khaki pants", "str_pl": "pairs of desert camo khaki pants" },
+        "description": "A pair of khaki pants printed with a desert camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants4",
+        "name": { "str": "mountain camo khaki pants", "str_pl": "pairs of mountain camo khaki pants" },
+        "description": "A pair of khaki pants printed with a mountain camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants5",
+        "name": { "str": "urban camo khaki pants", "str_pl": "pairs of urban camo khaki pants" },
+        "description": "A pair of khaki pants printed with a urban camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants6",
+        "name": { "str": "volcano camo khaki pants", "str_pl": "pairs of volcano camo khaki pants" },
+        "description": "A pair of khaki pants printed with a reddish volcano camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants7",
+        "name": { "str": "ocean camo khaki pants", "str_pl": "pairs of ocean camo khaki pants" },
+        "description": "A pair of khaki pants printed with a navy blue ocean camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants8",
+        "name": { "str": "freshwater camo khaki pants", "str_pl": "pairs of freshwater camo khaki pants" },
+        "description": "A pair of khaki pants printed with a light blue freshwater camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants9",
+        "name": { "str": "tundra camo khaki pants", "str_pl": "pairs of tundra camo khaki pants" },
+        "description": "A pair of khaki pants printed with a tundra camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants10",
+        "name": { "str": "snowland camo khaki pants", "str_pl": "pairs of forest camo khaki pants" },
+        "description": "A pair of khaki pants printed with a snowlamd camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants11",
+        "name": { "str": "black camo khaki pants", "str_pl": "pairs of black camo khaki pants" },
+        "description": "A pair of khaki pants printed with a black camo pattern.  Slightly warmer than jeans.",
+      },
+      {
+        "id": "camopants12",
+        "name": { "str": "white and black camo khaki pants", "str_pl": "pairs of white and back camo khaki pants" },
+        "description": "A pair of khaki pants printed with a black and white camo pattern.  Slightly warmer than jeans.",
     ]
   },
   {
@@ -1418,6 +1772,81 @@
     "armor": [
       { "coverage": 100, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
       { "coverage": 75, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+    ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "skirt_pencil_blue",
+    "name": { "str": "blue pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This particular one is dyed a light shade of calliope blue, with its fabric infused with a subtle, purplish tinge.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_black",
+    "name": { "str": "black pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This particular skirt is dyed a severe shade of midnight black.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_gray",
+    "name": { "str": "gray pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This one has a deep hue of gunmetal gray.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_checkered",
+    "name": { "str": "checkered pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This one is resplendent with a black and red checkered pattern, a splendid choice for aesthetics or when you need to play a game of checkers but don’t have a board.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_dotted",
+    "name": { "str": "polka dotted pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This one features a speckle of white polka dots across a navy blue background, with a ring of small red flowers embroidered about the waist.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_leopard",
+    "name": { "str": "leopard print pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This particular garment's deep brown fabric is emblazoned with numerous spots and patches of lighter brown, beige, and white—a facsimile of the coats of big cats.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_mini_yellow",
+    "name": { "str": "yello mini skirt" },
+        "description": "Dyed an almost offensively bright shade of sunrise yellow, this is a short skirt with a hem that trails down to the wearer’s mid-thigh.  It’s an excellent choice, if you’re in the market to announce your existence to anything that's in possession of a functioning pair of eyeballs.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_mini_orange",
+    "name": { "str": "orange mini skirt" },
+        "description": "Dyed an almost offensively bright shade of sunrise yellow, this is a short skirt with a hem that trails down to the wearer’s mid-thigh.  It’s an excellent choice, if you’re in the market to announce your existence to anything that's in possession of a functioning pair of eyeballs.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_checkered",
+    "name": { "str": "checkered pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This one is resplendent with a black and red checkered pattern, a splendid choice for aesthetics or when you need to play a game of checkers but don’t have a board.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_dotted",
+    "name": { "str": "polka dotted pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This one features a speckle of white polka dots across a navy blue background, with a ring of small red flowers embroidered about the waist.",
+        "weight": 10
+      },
+      {
+        "id": "skirt_pencil_leopard",
+    "name": { "str": "leopard print pencil skirt" },
+        "description": "The staple apparel of businesswomen and professionals around the world, this is a slim-fitting skirt with a strait, narrow cut and a hem that drapes down to the knees.  This particular garment's deep brown fabric is emblazoned with numerous spots and patches of lighter brown, beige, and white—a facsimile of the coats of big cats.",
+        "weight": 10
+      },
+      {
+        "id": "heels_platform",
+    "name": { "str": "pencil skirt" },
+        "description": "A pair of heavy, thick-soled high-heeled shoes with a ridiculously tall heel supported by an ankle strap and chunky soles.  A great choice for when you've given up on basic biomechanical function and decided that you're more than willing to risk long-term damage to your feet for the sake of a ridiculous fashion statement in the ruins of America.",
+        "weight": 10
+      }
     ]
   },
   {

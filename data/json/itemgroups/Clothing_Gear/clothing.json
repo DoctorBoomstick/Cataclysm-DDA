@@ -110,6 +110,18 @@
       { "item": "leg_small_bag", "prob": 10 },
       { "item": "armrig", "prob": 10 },
       { "item": "ankle_wallet_pouch", "prob": 5 },
+      {
+        "distribution": [
+          { "item": "pants", "variant": "pants_woodland", "prob": 15 },
+          { "item": "pants", "variant": "pants_jungle", "prob": 15 },
+          { "item": "pants", "variant": "pants_marshland", "prob": 15 },
+          { "item": "pants", "variant": "pants_alpine", "prob": 15 },
+          { "item": "pants", "variant": "pants_urban", "prob": 15 },
+          { "item": "pants", "variant": "pants_black_camo", "prob": 15 }
+        ],
+        "prob": 65
+      },
+      { "item": "pants_tactical", "prob": 20 },
       { "item": "pants_hiking", "prob": 10 }
     ]
   },
@@ -434,8 +446,10 @@
               { "item": "jeans", "prob": 60 },
               { "item": "pants", "prob": 100 },
               { "item": "pants_leather", "prob": 30 },
+              { "item": "pants_tactical", "prob": 20 },
               { "item": "pants_cargo", "prob": 30 },
               { "item": "shorts_cargo", "prob": 60 },
+              { "item": "pants", "variant": "pants_flag", "prob": 70, "event": "independence_day" },
               { "item": "flag_pants", "prob": 1 },
               { "item": "flag_pants", "prob": 70, "event": "independence_day" }
             ]
@@ -1405,6 +1419,7 @@
       { "item": "pants_cargo", "prob": 70 },
       { "item": "pants_checkered", "prob": 55 },
       { "item": "pants_ski", "prob": 45 },
+      { "item": "pants_tactical", "prob": 40 },
       { "item": "pants_fur", "prob": 5 },
       { "item": "pants_faux_fur", "prob": 15 },
       { "item": "hot_pants", "prob": 30 },
@@ -1414,6 +1429,7 @@
       { "item": "flag_pants", "prob": 10 },
       { "item": "trousers_ninja", "prob": 1 },
       { "group": "pants_mens", "prob": 10 },
+      { "item": "pants", "variant": "pants_flag", "prob": 70, "event": "independence_day" },
       { "item": "flag_pants", "prob": 70, "event": "independence_day" },
       { "group": "christmas_pants_male", "prob": 150, "event": "christmas" },
       { "group": "costume_pants", "prob": 150, "event": "halloween" }
@@ -1454,6 +1470,7 @@
       [ "pants_leather", 60 ],
       [ "pants_cargo", 70 ],
       [ "pants_hiking", 1 ],
+      { "item": "pants_tactical", "prob": 5 },
       [ "shorts_cargo", 50 ],
       [ "motorbike_pants", 5 ],
       [ "breeches", 5 ],
@@ -1692,6 +1709,7 @@
       [ "shorts", 70 ],
       [ "shorts_denim", 35 ],
       [ "pants_hiking", 2 ],
+      { "item": "pants_tactical", "prob": 5 },
       [ "pants", 75 ],
       [ "leather_belt", 30 ],
       [ "pants_leather", 60 ],
@@ -1710,6 +1728,7 @@
       [ "nanoskirt", 10 ],
       [ "flag_pants", 5 ],
       { "group": "costume_pants_skirts", "prob": 1 },
+      { "item": "pants", "variant": "pants_flag", "prob": 100, "event": "independence_day" },
       { "item": "flag_pants", "prob": 100, "event": "independence_day" },
       { "group": "christmas_pants_male", "prob": 100, "event": "christmas" },
       { "group": "costume_pants_skirts", "prob": 100, "event": "halloween" }

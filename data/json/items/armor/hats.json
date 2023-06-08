@@ -1,5 +1,259 @@
 [
   {
+    "id": "leather_hatball",
+    "looks_like": "hat_ball",
+    "repairs_like": "cowboy_hat",
+    "type": "ARMOR",
+    "name": { "str": "leather baseball cap" },
+    "//": "Head encumbrance stops you from wearing additional headgear.  No helmet over a ballcap, sorry.  But brimmed gear gets the anti-glare flag!",
+    "description": "This is a leather cap with a rounded crown, an adjustable strap, and a long visor.  The garment shields your eyes from the sun and provides a little warmth, while also providing more protection from cuts and scratches than its cloth counterpart.",
+    "weight": "110 g",
+    "volume": "500 ml",
+    "price": 2990,
+    "price_postapoc": 50,
+    "material": [ "leather" ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 5,
+    "material_thickness": 0.2,
+    "environmental_protection": 2,
+    "flags": [ "SUN_GLASSES", "WATER_FRIENDLY" ],
+    "armor": [
+      {
+        "encumbrance_modifiers": [ "NONE" ],
+        "coverage": 100,
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_crown", "head_forehead" ]
+      }
+    ]
+  },
+  {
+    "id": "vizor_hat",
+    "repairs_like": "balcrava",
+    "type": "ARMOR",
+    "name": { "str": "visor cap" },
+    "//": "Head encumbrance stops you from wearing additional headgear.  No helmet over a ballcap, sorry.  But brimmed gear gets the anti-glare flag!",
+    "description": "This is a crownless hat that simply consists of a visor with an adjustable strap encircling the head.  The top of the head is not covered, and the visor protects the face, including the eyes, nose, and cheeks, from the sun.  Popular amongst tennis players and joggers for allowing good ventilation during hot days, it’s a perfect piece of kit for the summer.",
+    "weight": "113 g",
+    "volume": "300 ml",
+    "longest_side": "122 mm",
+    "price": 2099,
+    "price_postapoc": 50,
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "looks_like": "hat_cotton",
+    "color": "white",
+    "warmth": 1,
+    "material_thickness": 0.1,
+    "flags": [ "SUN_GLASSES" ],
+    "armor": [
+      {
+        "encumbrance_modifiers": [ "NONE" ],
+        "coverage": 100,
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_forehead" ]
+      }
+    ]
+  },
+  {
+    "id": "trucker_hat",
+    "repairs_like": "balclava",
+    "type": "ARMOR",
+    "name": { "str": "trucker cap" },
+    "//": "Head encumbrance stops you from wearing additional headgear.  No helmet over a ballcap, sorry.  But brimmed gear gets the anti-glare flag!",
+    "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  The trucker hat came about in its true form in the early 1970s as a promotional give-away from US feed or farming supply companies to farmers, truck drivers (hence the name), and other rural workers.  It is perfect for keeping your head cool and the sun out of your eyes.",
+    "weight": "88 g",
+    "volume": "500 ml",
+    "price": 2500,
+    "price_postapoc": 50,
+    "material": [ "cotton", "plastic" ],
+    "symbol": "[",
+    "looks_like": "hat_cotton",
+    "color": "blue",
+    "warmth": 3,
+    "material_thickness": 0.1,
+    "environmental_protection": 1,
+    "flags": [ "SUN_GLASSES" ],
+    "armor": [ { "encumbrance_modifiers": [ "NONE" ], "coverage": 45, "covers": [ "head" ] } ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "generic_truckball",
+        "name": { "str": "trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  The trucker hat came about in its true form in the early 1970s as a promotional give-away from US feed or farming supply companies to farmers, truck drivers (hence the name), and other rural workers.  It is perfect for keeping your head cool and the sun out of your eyes.",
+        "weight": 40
+      },
+      {
+        "id": "beer_truckball",
+        "name": { "str": "beer trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  It has the icon of a glass full of beer at the front and a text in a funny font that reads, \"beer is my diesel,\" besides it.",
+        "weight": 5
+      },
+      {
+        "id": "proud_truckball",
+        "name": { "str": "proud trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  It has the icon of a truck, apparently a Ford F of some series, at the front, alongside the flag of the United States of America and text that reads, \"Proud to be a Trucker.\"  It is more than a cap; it is a symbol of love and respect for the people who once spent their lives on the road so other people could live in comfort with all the goods they transported from great distances.",
+        "weight": 10
+      },
+      {
+        "id": "american_truckball",
+        "name": { "str": "US Flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  It is printed with the pattern of the flag of the United States of America.  Makes you feel like a patriot.",
+        "weight": 15
+      },
+      {
+        "id": "england_ball",
+        "name": { "str": "British flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation.  It is embossed with the pattern of the Union Jack.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "mexican_ball",
+        "name": { "str": "Mexican flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the United Mexican States.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "jamaica_ball",
+        "name": { "str": "Jamaican flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of Jamaica.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "canadian_ball",
+        "name": { "str": "Canadian flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the Commonwealth of Canada.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "russian_ball",
+        "name": { "str": "Russian flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the Russian Federation.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "soviet_ball",
+        "name": { "str": "Soviet flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the (now dissoluted) Soviet Union.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "puerto_ball",
+        "name": { "str": "Puerto Rican flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the Commonwealth of Puerto Rico.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "empire_ball",
+        "name": { "str": "Brazilian imperial flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the (now extinct) Empire of Brazil.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "brazil_ball",
+        "name": { "str": "Brazilian flag trucker cap" },
+        "description": "A cotton cap with a broad front and a plastic mesh at the back, allowing better air circulation. It is embossed with the pattern of the flag of the Federative Republic of Brazil.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "baseball_fan_ball",
+        "name": { "str": "baseball fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local baseball team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "football_fan_ball",
+        "name": { "str": "football fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local football team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "soccer_fan_ball",
+        "name": { "str": "soccer fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local soccer team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "basketball_fan_ball",
+        "name": { "str": "basketball fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local basketball team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "volleyball_fan_ball",
+        "name": { "str": "volleyball fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local volleyball team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 2
+      },
+      {
+        "id": "hockey_fan_ball",
+        "name": { "str": "hockey fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local hockey team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 5
+      },
+      {
+        "id": "dodgeball_fan_ball",
+        "name": { "str": "dodgeball fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local dodgeball team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "rugby_fan_ball",
+        "name": { "str": "rugby fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local rugby team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "tennis_fan_ball",
+        "name": { "str": "tennis fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local tennis team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "lacrosse_fan_ball",
+        "name": { "str": "lacrosse fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local lacrosse team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "badminton_fan_ball",
+        "name": { "str": "badminton fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local badminton team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "flatball_fan_ball",
+        "name": { "str": "flatball fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local flatball team.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "golf_fan_ball",
+        "name": { "str": "golf fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local golf club.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "snooker_fan_ball",
+        "name": { "str": "snooker fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local snooker, pool and billiards club.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "foosball_fan_ball",
+        "name": { "str": "foosball fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a local foosball club.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      },
+      {
+        "id": "westling_fan_ball",
+        "name": { "str": "westling fan trucker cap" },
+        "description": "A snapback trucker cap displaying the logo of a popular westling rooster.  It shields your eyes from the sun and provides a little bit of warmth.",
+        "weight": 1
+      }
+    ]
+  },
+  {
     "id": "10gal_hat",
     "repairs_like": "tricorne",
     "type": "ARMOR",

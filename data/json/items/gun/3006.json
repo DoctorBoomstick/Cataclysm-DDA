@@ -139,7 +139,7 @@
       }
     ],
     "ascii_picture": "1918_BAR",
-    "weight": "7250 g",
+    "weight": "7248 g",
     "volume": "4450 ml",
     "longest_side": "1194 mm",
     "barrel_length": "610 mm",
@@ -185,15 +185,15 @@
     "variants": [
       {
     "id": "m1918",
-        "name": { "str": "BAR M1918" },
+        "name": { "str": "BAR M1918A2" },
         "description": "Adopted in 1917 for an envisioned use in breaking the trench-based deadlock on World War One’s Western Front, the M1918 was one of the world’s first man-portable automatic rifles, intended for both accurate semi-automatic fire and suppressive automatic bursts.  One of the only weapons designed to be fired from the hip as well as from the shoulder, while the original M1918 was too heavy for a battle rifle and only saw combat two months before the war’s conclusion, this antique is still more than capable of completing its service past the Cataclysm.",
         "weight": 1
       }
     ],
     "ascii_picture": "1918_BAR",
-    "weight": "7250 g",
+    "weight": "9525 g",
     "volume": "4450 ml",
-    "longest_side": "1194 mm",
+    "longest_side": "(1214 mm",
     "barrel_length": "610 mm",
     "price": 350000,
     "price_postapoc": 4000,
@@ -206,7 +206,7 @@
     "dispersion": 180,
     "durability": 8,
     "min_cycle_recoil": 3420,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 3 ] ],
+    "modes": [ [ "DEFAULT", "low auto", 2 ], [ "AUTO", "high auto", 4 ] ],
     "barrel_volume": "1000 ml",
     "valid_mod_locations": [
       [ "barrel", 1 ],

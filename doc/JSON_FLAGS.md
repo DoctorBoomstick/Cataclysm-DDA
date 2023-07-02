@@ -744,6 +744,8 @@ These flags can be applied via JSON item definition to most items.  Not to be co
 
 ### Flags
 
+- ```BANK_NOTE_SHAPED``` ... This item fits into the folded sleeve of wallets, like a bank note.
+- ```BANK_NOTE_STRAP_SHAPED``` ... This item fits into pockets intended for money straps (like a cash register).
 - ```BIONIC_NPC_USABLE``` ... Safe CBMs that NPCs can use without extensive NPC rewrites to utilize toggle CBMs.
 - ```BIONIC_TOGGLED``` ... This bionic only has a function when activated, instead of causing its effect every turn.
 - ```BIONIC_POWER_SOURCE``` ... This bionic is a source of bionic power.
@@ -752,6 +754,8 @@ These flags can be applied via JSON item definition to most items.  Not to be co
 - ```BIONIC_WEAPON``` ... This bionic is a weapon bionic and activating it will create (or destroy) its fake_item in the user's hands. Prevents all other activation effects.
 - ```BIONIC_ARMOR_INTERFACE``` ... This bionic can provide power to powered armor.
 - ```BIONIC_SLEEP_FRIENDLY``` ... This bionic won't provide a warning if the player tries to sleep while it's active.
+- ```COIN_SHAPED``` ... This item is shaped like a coin and fits into the coin purse of a wallet.
+- ```CREDIT_CARD_SHAPED``` ... This item is shaped like a credit card and fits into the card slots of a wallet and similar pockets.
 - ```CONDUCTIVE``` ... Item is considered as conducting electricity, even if material it's made of is non-conductive. Opposite of `NONCONDUCTIVE`.
 - ```CORPSE``` ... Flag used to spawn various human corpses during the mapgen.
 - ```CRUTCHES``` ... Item with this flag helps characters not to fall down if their legs are broken.
@@ -870,7 +874,7 @@ See [Mapgen flags](MAPGEN.md#mapgen-flags).
 - ```mx_clearcut``` ... All trees become stumps.
 - ```mx_collegekids``` ... Corpses and items.
 - ```mx_corpses``` ... Up to 5 corpses with everyday loot.
-- ```mx_crater``` ... Crater with rubble (and radioactivity).
+- ```mx_crater``` ... Crater formed using a bomb.
 - ```mx_drugdeal``` ... Corpses and some drugs.
 - ```mx_dead_vegetation``` ... Kills all plants. (aftermath of acid rain etc.)
 - ```mx_exocrash_1``` ... Area of glassed sand created by a crashed pod of space travelers. Populated by zomborgs.
@@ -1084,7 +1088,6 @@ Other monster flags.
 - ```ID_CARD_DESPAWN``` Despawns when a science ID card is used on a nearby console.
 - ```INTERIOR_AMMO``` Monster contains ammo inside itself, no need to load on launch. Prevents ammo from being dropped on disable.
 - ```KEENNOSE``` Keen sense of smell.
-- ```LARVA``` Creature is a larva. Currently used for gib and blood handling.
 - ```LOUDMOVES``` Makes move noises as if ~2 sizes louder, even if flying.
 - ```MECH_RECON_VISION``` This mech grants you night-vision and enhanced overmap sight radius when piloted.
 - ```MECH_DEFENSIVE``` This mech can protect you thoroughly when piloted.

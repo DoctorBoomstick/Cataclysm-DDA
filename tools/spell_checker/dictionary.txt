@@ -59,6 +59,7 @@ alay
 albertonykus
 albertosaurus
 alchemic
+alchemically
 alchemies
 aldosterone
 alembic
@@ -198,6 +199,8 @@ autosaves
 autoselect
 autoshotgun
 avellana
+aventail
+aventails
 avgas
 avians
 aving
@@ -330,7 +333,7 @@ bodkin
 bodyglove
 bodymesh
 bodypart
-bodyweight 
+bodyweight
 bokken
 bolas
 bolded
@@ -389,6 +392,7 @@ bugout
 buildups
 builtin
 bulette
+bulkiness
 bullhead
 bullpup
 bumbles
@@ -431,6 +435,7 @@ canina
 cannelured
 caparison
 caprison
+capsicum
 carabiner
 carabiners
 carapace
@@ -783,7 +788,7 @@ doesnt
 doffing
 dogbane
 doggo
-doglike 
+doglike
 domestica
 dongle
 doomseer
@@ -813,6 +818,7 @@ drivetrain
 dromaeosaurid
 dromaeosaurus
 droppers
+drotik
 drowse
 druidic
 druidry
@@ -898,6 +904,8 @@ eou
 epicuticle
 epistemology
 eppies
+equestrian
+equestrians
 ergometer
 ergonomics
 erlischt
@@ -933,6 +941,8 @@ excreta
 excretions
 exhorts
 existentialists
+exobay
+exodii
 exoplanet
 exosuit
 exosuits
@@ -1357,6 +1367,8 @@ hygroscopic
 hyolith
 hypacrosaurus
 hyperaggressive
+hyperboloid
+hyperboloids
 hyperdimensional
 hypergeometric
 hypermedia
@@ -1575,7 +1587,7 @@ lbs
 leache
 leatherbacked
 leatherbound
-leathercrafters 
+leathercrafters
 leatherworking
 leavening
 lectern
@@ -1659,6 +1671,7 @@ macronutrient
 macrophenotypic
 macuahuitl
 maculata
+magickal
 magwells
 maiasaura
 maintainers
@@ -1750,7 +1763,7 @@ midden
 mideast
 mideastern
 midgame
-midground 
+midground
 midrange
 midsentence
 migo
@@ -1838,6 +1851,7 @@ multiplier
 multipronged
 multitool
 multiversal
+mundanity
 murderball
 murdersaw
 musculoskeletal
@@ -1958,6 +1972,8 @@ numbnut
 numpad
 obovate
 obsoleted
+occultism
+occultists
 ocher
 octo
 ocularium
@@ -1968,6 +1984,7 @@ offroad
 ohms
 oignon
 oleaginous
+oleoresin
 olieribos
 olor
 omnivore
@@ -2009,7 +2026,7 @@ overclock
 overclocks
 overdosage
 overdrinking
-overengineered 
+overengineered
 overexertion
 overgrowth
 overmap
@@ -2079,6 +2096,8 @@ pentagonal
 peptone
 percents
 perforator
+periapta
+periaptas
 peridot
 peridots
 peripheric
@@ -2112,6 +2131,7 @@ phyle
 physicochemical
 pickelhaube
 pickerel
+pickerels
 pickhead
 pickin
 pickins
@@ -2301,6 +2321,8 @@ raggiana
 railguns
 raincatcher
 rainsuit
+raketa
+raketas
 randomize
 randomizes
 rangehands
@@ -2362,6 +2384,7 @@ regia
 regrows
 regurgitates
 reimpose
+reinstalling
 remodulator
 rended
 renderer
@@ -2428,6 +2451,7 @@ rollmat
 roncone
 roofless
 rootlike
+ropers
 ropy
 rothe
 roun
@@ -2500,8 +2524,8 @@ screwdriving
 scrrrash
 scruffs
 scutcher
-scutellosaurus
 scute
+scutellosaurus
 scutes
 scuttles
 sealab
@@ -2571,6 +2595,7 @@ siloing
 sinensis
 sintering
 sithen
+sixdust
 skeletonized
 skeltal
 skillset
@@ -2638,6 +2663,8 @@ spalling
 spasmically
 spasming
 spearcat
+spearfisher
+spearfishers
 spearhand
 spearmen
 speciesism
@@ -2666,6 +2693,7 @@ spinnerets
 spinosaurus
 spinwheel
 spitter
+splashproof
 splicer
 splinting
 splorch
@@ -2768,6 +2796,7 @@ supergluing
 supergravity
 superheroic
 supermaterials
+superoxide
 superpositional
 supersoldier
 supersoldiers
@@ -2835,6 +2864,7 @@ testbed
 tetradrachm
 tetrahedron
 th
+thaumaturgical
 thawb
 themm
 therizinosaurus
@@ -2849,6 +2879,7 @@ thorned
 thornothurian
 thosun
 threateningly
+throated
 throating
 throwable
 thru
@@ -2866,6 +2897,8 @@ tinamou
 tinning
 tiredly
 tireplate
+titani
+titanis
 titanochelon
 toecaps
 toggled
@@ -2927,6 +2960,7 @@ trippin
 troglobite
 troodon
 troublin
+truckstop
 trudges
 tryphillum
 tsumi
@@ -2956,7 +2990,7 @@ uggo
 uistate
 ultracapacitor
 ultralight
-ultras 
+ultras
 ultratech
 unarmored
 unawareness
@@ -3008,7 +3042,6 @@ unlively
 unlives
 unlooted
 unlubricated
-unspooled
 unmalted
 unmark
 unmarred
@@ -3033,6 +3066,7 @@ unsiatable
 unskillfully
 unsorted
 unspecialized
+unspooled
 unsteadily
 unstocked
 unstrained
@@ -3111,6 +3145,7 @@ wabbits
 wacka
 wakizashi
 wakizashis
+walleri
 walleye
 wammles
 wanderin
@@ -3203,6 +3238,7 @@ wyrmling
 wyrms
 x
 xamine
+xedra
 xenobiology
 xiph
 xiphos
@@ -3221,7 +3257,7 @@ ynn
 yoroi
 youre
 yourselves
-youthful 
+youthful
 yowl
 yoyos
 yugg

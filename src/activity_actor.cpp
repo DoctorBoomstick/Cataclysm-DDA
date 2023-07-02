@@ -2443,9 +2443,20 @@ void lockpick_activity_actor::finish( player_activity &act, Character &who )
     const tripoint target = here.getlocal( this->target );
     const ter_id ter_type = here.ter( target );
     const furn_id furn_type = here.furn( target );
+    optional_vpart_position const veh = here.veh_at( target );
+    int locked_part = -1;
     ter_id new_ter_type;
     furn_id new_furn_type;
     std::string open_message = _( "The lock opens…" );
+
+    if( veh ) {
+        std::vector<vehicle_part *> parts_at_target = veh->vehicle().get_parts_at(
+                    target, "LOCKABLE_DOOR", part_status_flag::available );
+        if( !parts_at_target.empty() ) {
+            locked_part = veh->vehicle().next_part_to_unlock(
+                              veh->vehicle().index_of_part( parts_at_target.front() ) );
+        }
+    }
 
     if( here.has_furn( target ) ) {
         if( furn_type->lockpick_result.is_null() ) {
@@ -2457,6 +2468,8 @@ void lockpick_activity_actor::finish( player_activity &act, Character &who )
         if( !furn_type->lockpick_message.empty() ) {
             open_message = furn_type->lockpick_message.translated();
         }
+    } else if( locked_part >= 0 ) {
+        // no-op.
     } else {
         if( ter_type->lockpick_result.is_null() ) {
             who.add_msg_if_player( m_bad, _( "You can't open this lock." ) );
@@ -2520,6 +2533,8 @@ void lockpick_activity_actor::finish( player_activity &act, Character &who )
         }
         if( here.has_furn( target ) ) {
             here.furn_set( target, new_furn_type );
+        } else if( locked_part >= 0 ) {
+            veh->vehicle().unlock( locked_part );
         } else {
             here.ter_set( target, new_ter_type );
         }
@@ -2578,10 +2593,13 @@ std::optional<tripoint> lockpick_activity_actor::select_location( avatar &you )
     }
 
     const std::function<bool( const tripoint & )> is_pickable = [&you]( const tripoint & p ) {
+        const map &here = get_map();
+        const optional_vpart_position vpart = here.veh_at( p );
         if( p == you.pos() ) {
             return false;
         }
-        return get_map().has_flag( ter_furn_flag::TFLAG_PICKABLE, p );
+        return here.has_flag( ter_furn_flag::TFLAG_PICKABLE, p ) ||
+               ( vpart && vpart->vehicle().next_part_to_unlock( vpart->part_index() ) >= 0 );
     };
 
     std::optional<tripoint> target = choose_adjacent_highlight(
@@ -3200,6 +3218,8 @@ craft_activity_actor::craft_activity_actor( item_location &it, const bool is_lon
     cached_assistants = 0;
     cached_base_total_moves = 1;
     cached_cur_total_moves = 1;
+    cached_workbench_multiplier = 0;
+    use_cached_workbench_multiplier = false;
 }
 
 bool craft_activity_actor::check_if_craft_okay( item_location &craft_item, Character &crafter )
@@ -3235,6 +3255,8 @@ void craft_activity_actor::start( player_activity &act, Character &crafter )
     }
     activity_override = craft_item.get_item()->get_making().exertion_level();
     cached_crafting_speed = 0;
+    cached_workbench_multiplier = 0;
+    use_cached_workbench_multiplier = false;
 }
 
 void craft_activity_actor::do_turn( player_activity &act, Character &crafter )
@@ -3250,7 +3272,13 @@ void craft_activity_actor::do_turn( player_activity &act, Character &crafter )
     const std::optional<tripoint> location = craft_item.where() == item_location::type::character
             ? std::optional<tripoint>() : std::optional<tripoint>( craft_item.position() );
     const recipe &rec = craft.get_making();
-    const float crafting_speed = crafter.crafting_speed_multiplier( craft, location );
+    if( !use_cached_workbench_multiplier ) {
+        cached_workbench_multiplier = crafter.workbench_crafting_speed_multiplier( craft, location );
+        use_cached_workbench_multiplier = true;
+    }
+    const float crafting_speed = crafter.crafting_speed_multiplier( craft, location,
+                                 use_cached_workbench_multiplier,
+                                 cached_workbench_multiplier );
     const int assistants = crafter.available_assistant_count( craft.get_making() );
 
     if( crafting_speed <= 0.0f ) {
@@ -3313,6 +3341,8 @@ void craft_activity_actor::do_turn( player_activity &act, Character &crafter )
         level_up |= crafter.craft_proficiency_gain( craft, pct_time * five_percent_steps );
         // Invalidate the crafting time cache because proficiencies may have changed
         cached_crafting_speed = 0;
+        // Also reset the multiplier
+        use_cached_workbench_multiplier = false;
     }
 
     // Unlike skill, tools are consumed once at the start and should not be consumed at the end
@@ -4659,6 +4689,9 @@ void disassemble_activity_actor::start( player_activity &act, Character &who )
     target->set_var( "activity_var", who.name );
 
     activity_override = target->get_making().exertion_level();
+
+    cached_workbench_multiplier = 0;
+    use_cached_workbench_multiplier = false;
 }
 
 void disassemble_activity_actor::do_turn( player_activity &act, Character &who )
@@ -4673,7 +4706,12 @@ void disassemble_activity_actor::do_turn( player_activity &act, Character &who )
 
     const std::optional<tripoint> location = target.where() == item_location::type::character
             ? std::optional<tripoint>() : std::optional<tripoint>( target.position() );
-    const float crafting_speed = who.crafting_speed_multiplier( craft, location );
+    if( !use_cached_workbench_multiplier ) {
+        cached_workbench_multiplier = who.workbench_crafting_speed_multiplier( craft, location );
+        use_cached_workbench_multiplier = true;
+    }
+    const float crafting_speed = who.crafting_speed_multiplier( craft, location,
+                                 use_cached_workbench_multiplier, cached_workbench_multiplier );
 
     if( crafting_speed <= 0.0f ) {
         who.cancel_activity();

@@ -108,12 +108,7 @@
         "description": "Ready for deployment upon the playroom’s battle fields, with its main gun raised to the fore, this tank is resplendent with a truly excessive amount of high-caliber ordinance.  Its abandoned, grimly staring crew rests haphazardly within the turret: tiny soldiers forsaken by a commander who will never return and as lifeless as their full-sized compatriots.",
         "weight": 1
       },
-      {
-        "id": "toy_figure_xenomorph",
-        "name": { "str": "alien statuette" },
-        "description": "A vision of pure nightmare, this slavering alien crouches upon fully articulated legs, clawed forelimbs poised as its scorpion-like tail arcs across its back.  Clad in an ebony exoskeleton, its tubular head is cocked to the side, jaws parted, and an inner mandible jutting as it silently challenges the Cataclysm.",
-        "weight": 1
-      }
+      { "id": "toy_figure_xenomorph", "name": { "str": "alien statuette" }, "description": "", "weight": 1 }
     ]
   },
   {
@@ -300,6 +295,13 @@
         "weight": 1
       },
       {
+        "id": "toy_figure_zombie4",
+        "name": { "str": "zombie action figure", "str_pl": "zombie action figures" },
+        "description": "This is the plastic figurine of a famous smart zombie from popular media.  The toy has a torn ear, a soft, fuzzy blanket, and a removable jar of bloody pet treats.  It's saluting like a soldier.",
+        "color": "green",
+        "weight": 1
+      },
+      {
         "id": "toy_figure_crusader",
         "name": { "str": "crusader action figure", "str_pl": "crusader action figures" },
         "description": "Clad in polished plate armor and hefting a tower shield, this great helm-wearing warrior brandishes an absurdly massive great sword.",
@@ -318,6 +320,78 @@
         "name": { "str": "pirate action figure", "str_pl": "pirate action figures" },
         "description": "Brandishing a cutlass in one hand and a twin-barrelled pistol in the other, this traditionally clad sea raider stands resplendent with a peg leg, a captain’s hat, and even a multi-colored parrot.",
         "color": "brown",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher",
+        "name": { "str": "hockey-mask killer action figure", "str_pl": "hockey-mask killer action figures" },
+        "description": "A plastic figurine of a tall, strong individual wielding a bloody machete in his left hand.  He wears a beaten-up hockey mask and ragged clothes that resemble a jacket and jeans.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher2",
+        "name": { "str": "chainsaw killer action figure", "str_pl": "chainsaw killer action figures" },
+        "description": "A plastic figurine of a somewhat tall, fat individual wielding a bloody chainsaw with both hands.  He wears a dirty apron and a shirt, and apparently, he wears a mask made of hide.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher3",
+        "name": { "str": "ghost killer action figure", "str_pl": "ghost killer action figures" },
+        "description": "A plastic figurine of an individual wearing a scary white ghost mask with a flowing black robe, wielding a hunting knife in his right hand.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher4",
+        "name": { "str": "tallman action figure", "str_pl": "tallman action figures" },
+        "description": "A plastic figurine of a tall individual wearing a black suit, white dress shirt, and red tie.  He possesses a distinct pale complexion as well as a unique silver ball in his hand.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_alien",
+        "name": { "str": "alien action figure", "str_pl": "alien action figures" },
+        "description": "A vision of pure nightmare, this slavering alien crouches upon fully articulated legs, clawed forelimbs poised as its scorpion-like tail arcs across its back.  Clad in an ebony exoskeleton, its tubular head is cocked to the side, jaws parted, and an inner mandible jutting as it silently challenges the Cataclysm.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_alien2",
+        "name": { "str": "alien action figure", "str_pl": "alien action figures" },
+        "description": "A plastic figurine of a very tall, highly detailed creature wearing armor with a shoulder-mounted cannon and a detachable helmet, revealing its ugly face.  It is wielding a futuristic spear and has wrist blades.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher5",
+        "name": { "str": "evil cop action figure", "str_pl": "evil cop action figures" },
+        "description": "This is a plastic figurine of a strong individual wearing a police officer's uniform, including a leather jacket and a police cap, with a big scar on the right side of his deformed face.  He presents a stern and unyielding expression while wielding a police baton.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher6",
+        "name": { "str": "killer doll action figure", "str_pl": "killer doll action figures" },
+        "description": "A plastic figurine of a small red-haired doll wearing overalls and a striped shirt.  He wields a kitchen knife.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher7",
+        "name": { "str": "killer clown action figure", "str_pl": "killer clown action figures" },
+        "description": "A plastic figurine of a scary clown with sharp teeth, wild fluorescent red hair, and a ruffled clown suit, along with a sinister expression on his face.  This figure also comes with a removable red balloon accessory.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher8",
+        "name": { "str": "white masked action figure", "str_pl": "white masked action figures" },
+        "description": "A plastic figurine of a large individual wearing a white mask and a jumpsuit, wielding a bloody butcher knife.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher9",
+        "name": { "str": "hooked killer action figure", "str_pl": "hooked killer action figures" },
+        "description": "A plastic figurine of an African-American individual wearing a black, shadowy coat with exposed ribs and a hook for a hand.",
+        "weight": 1
+      },
+      {
+        "id": "toy_figure_slasher10",
+        "name": { "str": "killer fisherman action figure", "str_pl": "killer fishermen action figures" },
+        "description": "A plastic figurine of an individual wearing a trench coat, gloves, and a fishing hat, as well as a removable hook hand.",
         "weight": 1
       }
     ]

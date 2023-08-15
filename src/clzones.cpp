@@ -785,16 +785,40 @@ std::unordered_set<tripoint> zone_manager::get_point_set_loot( const tripoint_ab
 {
     std::unordered_set<tripoint> res;
     map &here = get_map();
-    for( const tripoint &elem : here.points_in_radius( here.getlocal( where ), radius, radius ) ) {
-        const zone_data *zone = get_zone_at( here.getglobal( elem ), true, fac );
-        if( zone == nullptr ) {
-            continue;
+    for( const std::pair<std::string, std::unordered_set<tripoint_abs_ms>> cache : area_cache ) {
+        zone_type_id type = zone_data::unhash_type( cache.first );
+        faction_id z_fac = zone_data::unhash_fac( cache.first );
+        if( fac == z_fac && type.str().substr( 0, 4 ) == "LOOT" ) {
+            for( tripoint_abs_ms point : cache.second ) {
+                if( square_dist( where, point ) <= radius ) {
+                    res.emplace( here.getlocal( point ) );
+                }
+            }
         }
-        if( npc_search && has( zone_type_NO_NPC_PICKUP, where ) ) {
-            continue;
-        }
-        res.insert( elem );
     }
+    for( const std::pair<std::string, std::unordered_set<tripoint_abs_ms>> cache : vzone_cache ) {
+        zone_type_id type = zone_data::unhash_type( cache.first );
+        faction_id z_fac = zone_data::unhash_fac( cache.first );
+        if( fac == z_fac && type.str().substr( 0, 4 ) == "LOOT" ) {
+            for( tripoint_abs_ms point : cache.second ) {
+                if( square_dist( where, point ) <= radius ) {
+                    res.emplace( here.getlocal( point ) );
+                }
+            }
+        }
+    }
+
+    if( npc_search ) {
+        for( const std::pair<std::string, std::unordered_set<tripoint_abs_ms>> cache : vzone_cache ) {
+            zone_type_id type = zone_data::unhash_type( cache.first );
+            if( type == zone_type_NO_NPC_PICKUP ) {
+                for( tripoint_abs_ms point : cache.second ) {
+                    res.erase( here.getlocal( point ) );
+                }
+            }
+        }
+    }
+
     return res;
 }
 
@@ -838,6 +862,30 @@ bool zone_manager::has_near( const zone_type_id &type, const tripoint_abs_ms &wh
     }
 
     return false;
+}
+
+std::vector<zone_data const *> zone_manager::get_near_zones( const zone_type_id &type,
+        const tripoint_abs_ms &where, int range,
+        const faction_id &fac ) const
+{
+    std::vector<zone_data const *> ret;
+    for( const zone_data &zone : zones ) {
+        if( square_dist( zone.get_center_point(), where ) <= range && zone.get_type() == type &&
+            zone.get_faction() == fac ) {
+            ret.emplace_back( &zone );
+        }
+    }
+
+    map &here = get_map();
+    auto vzones = here.get_vehicle_zones( here.get_abs_sub().z() );
+    for( const zone_data *zone : vzones ) {
+        if( square_dist( zone->get_center_point(), where ) <= range && zone->get_type() == type &&
+            zone->get_faction() == fac ) {
+            ret.emplace_back( zone );
+        }
+    }
+
+    return ret;
 }
 
 bool zone_manager::has_loot_dest_near( const tripoint_abs_ms &where ) const
@@ -1164,7 +1212,7 @@ void zone_manager::add( const std::string &name, const zone_type_id &type, const
     // only non personal zones can be vehicle zones
     if( !personal ) {
         optional_vpart_position const vp = here.veh_at( here.getlocal( start ) );
-        if( vp && vp->vehicle().get_owner() == fac && vp.part_with_feature( "CARGO", false ) ) {
+        if( vp && vp->vehicle().get_owner() == fac && vp.cargo() ) {
             // TODO:Allow for loot zones on vehicles to be larger than 1x1
             if( start == end &&
                 ( silent || query_yn( _( "Bind this zone to the cargo part here?" ) ) ) ) {
@@ -1533,8 +1581,8 @@ void zone_manager::revert_vzones()
     map &here = get_map();
     for( zone_data zone : removed_vzones ) {
         //Code is copied from add() to avoid yn query
-        if( const std::optional<vpart_reference> vp = here.veh_at( here.getlocal(
-                    zone.get_start_point() ) ).part_with_feature( "CARGO", false ) ) {
+        const tripoint pos = here.getlocal( zone.get_start_point() );
+        if( const std::optional<vpart_reference> vp = here.veh_at( pos ).cargo() ) {
             zone.set_is_vehicle( true );
             vp->vehicle().loot_zones.emplace( vp->mount(), zone );
             here.register_vehicle_zone( &vp->vehicle(), here.get_abs_sub().z() );

@@ -10,6 +10,7 @@
 #include "dialogue.h"
 #include "game.h"
 #include "math_parser_shim.h"
+#include "mtype.h"
 #include "options.h"
 #include "string_input_popup.h"
 #include "units.h"
@@ -192,6 +193,61 @@ std::function<double( dialogue & )> armor_eval( char scope,
     };
 }
 
+std::function<double( dialogue & )> effect_intensity_eval( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &kwargs )
+{
+    diag_value bp_val( std::string{} );
+    if( kwargs.count( "bodypart" ) != 0 ) {
+        bp_val = *kwargs.at( "bodypart" );
+    }
+    return[effect_id = params[0], bp_val, beta = is_beta( scope )]( dialogue const & d ) {
+        std::string const bp_str = bp_val.str( d );
+        bodypart_id const bp = bp_str.empty() ? bodypart_str_id::NULL_ID() : bodypart_id( bp_str );
+        effect target = d.actor( beta )->get_effect( efftype_id( effect_id.str( d ) ), bp );
+        return target.is_null() ? -1 : target.get_intensity();
+    };
+}
+
+std::function<double( dialogue & )> hp_eval( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
+{
+    diag_value bp_val( std::string{} );
+    if( !params.empty() ) {
+        bp_val = params[0];
+    }
+    return[bp_val, beta = is_beta( scope )]( dialogue const & d ) {
+        std::string const bp_str = bp_val.str( d );
+        bodypart_id const bp = bp_str.empty() ? bodypart_str_id::NULL_ID() : bodypart_id( bp_str );
+        return d.actor( beta )->get_cur_hp( bp );
+    };
+}
+
+std::function<void( dialogue &, double )> hp_ass( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
+{
+    diag_value bp_val( std::string{} );
+    if( !params.empty() ) {
+        bp_val = params[0];
+    }
+    return [bp_val, beta = is_beta( scope )]( dialogue const & d, double val ) {
+        std::string const bp_str = bp_val.str( d );
+        if( bp_str.empty() ) {
+            d.actor( beta )->set_all_parts_hp_cur( val );
+        } else {
+            d.actor( beta )->set_part_hp_cur( bodypart_id( bp_str ), val );
+        }
+    };
+}
+
+std::function<double( dialogue & )> hp_max_eval( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
+{
+    return[bpid = params[0], beta = is_beta( scope )]( dialogue const & d ) {
+        bodypart_id bp( bpid.str( d ) );
+        return d.actor( beta )->get_hp_max( bp );
+    };
+}
+
 std::function<double( dialogue & )> num_input_eval( char /*scope*/,
         std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
 {
@@ -216,6 +272,63 @@ std::function<double( dialogue & )> attack_speed_eval( char scope,
 {
     return[beta = is_beta( scope )]( dialogue const & d ) {
         return d.actor( beta )->attack_speed();
+    };
+}
+
+namespace
+{
+bool _filter_monster( Creature const &critter, std::vector<mtype_id> const &ids, int radius,
+                      tripoint_abs_ms const &loc )
+{
+    if( critter.is_monster() ) {
+        mtype_id const mid = critter.as_monster()->type->id;
+        bool const id_filter =
+        ids.empty() || std::any_of( ids.begin(), ids.end(), [&mid]( mtype_id const & id ) {
+            return id == mid;
+        } );
+        // friendly to the player, not a target for us
+        return id_filter && critter.as_monster()->friendly == 0 &&
+               radius >= rl_dist( critter.get_location(), loc );
+    }
+    return false;
+}
+
+} // namespace
+
+std::function<double( dialogue & )> monsters_nearby_eval( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &kwargs )
+{
+    diag_value radius_val( 1000.0 );
+    std::optional<var_info> loc_var;
+    if( kwargs.count( "radius" ) != 0 ) {
+        radius_val = *kwargs.at( "radius" );
+    }
+    if( kwargs.count( "location" ) != 0 ) {
+        loc_var = kwargs.at( "location" )->var();
+    } else if( scope == 'g' ) {
+        throw std::invalid_argument( string_format(
+                                         R"("monsters_nearby" needs either an actor scope (u/n) or a 'location' kwarg)" ) );
+    }
+
+    return [beta = is_beta( scope ), params, loc_var, radius_val]( dialogue & d ) {
+        tripoint_abs_ms loc;
+        if( loc_var.has_value() ) {
+            loc = get_tripoint_from_var( loc_var, d );
+        } else {
+            loc = d.actor( beta )->global_pos();
+        }
+
+        int const radius = static_cast<int>( radius_val.dbl( d ) );
+        std::vector<mtype_id> mids( params.size() );
+        std::transform( params.begin(), params.end(), mids.begin(), [&d]( diag_value const & val ) {
+            return mtype_id( val.str( d ) );
+        } );
+
+        std::vector<Creature *> const targets = g->get_creatures_if( [&mids, &radius,
+               &loc]( const Creature & critter ) {
+            return _filter_monster( critter, mids, radius, loc );
+        } );
+        return static_cast<double>( targets.size() );
     };
 }
 
@@ -251,6 +364,22 @@ std::function<void( dialogue &, double )> skill_ass( char scope,
     };
 }
 
+std::function<double( dialogue & )> spell_exp_eval( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
+{
+    return[beta = is_beta( scope ), sid = params[0]]( dialogue const & d ) {
+        return d.actor( beta )->get_spell_exp( spell_id( sid.str( d ) ) );
+    };
+}
+
+std::function<void( dialogue &, double )> spell_exp_ass( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
+{
+    return[beta = is_beta( scope ), sid = params[0]]( dialogue const & d, double val ) {
+        return d.actor( beta )->set_spell_exp( spell_id( sid.str( d ) ), val );
+    };
+}
+
 std::function<double( dialogue & )> test_diag( char /* scope */,
         std::vector<diag_value> const &params, diag_kwargs const &kwargs )
 {
@@ -266,6 +395,15 @@ std::function<double( dialogue & )> test_diag( char /* scope */,
             ret += v.dbl( d );
         }
         return ret;
+    };
+}
+
+std::function<double( dialogue & )> warmth_eval( char scope,
+        std::vector<diag_value> const &params, diag_kwargs const &/* kwargs */ )
+{
+    return[bpid = params[0], beta = is_beta( scope )]( dialogue const & d ) {
+        bodypart_id bp( bpid.str( d ) );
+        return d.actor( beta )->get_cur_part_temp( bp );
     };
 }
 
@@ -290,6 +428,11 @@ std::function<double( dialogue & )> weather_eval( char /* scope */,
     if( params[0] == "pressure" ) {
         return []( dialogue const & ) {
             return get_weather().weather_precise->pressure;
+        };
+    }
+    if( params[0] == "precipitation" ) {
+        return []( dialogue const & ) {
+            return precip_mm_per_hour( get_weather().weather_id->precip );
         };
     }
     throw std::invalid_argument( string_format( "Unknown weather aspect %s", params[0].str() ) );

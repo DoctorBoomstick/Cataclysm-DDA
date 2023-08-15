@@ -117,6 +117,9 @@ class item_pocket
                 const std::optional<std::string> &get_preset_name() const;
                 void set_preset_name( const std::string & );
 
+                void set_was_edited();
+                bool was_edited() const;
+
                 void info( std::vector<iteminfo> &info ) const;
 
                 void serialize( JsonOut &json ) const;
@@ -131,6 +134,7 @@ class item_pocket
                 bool collapsed = false;
                 bool disabled = false;
                 bool unload = true;
+                bool player_edited = false;
         };
 
         item_pocket() = default;
@@ -195,6 +199,7 @@ class item_pocket
          * @param it the item being put in
          */
         ret_val<contain_code> can_contain( const item &it ) const;
+        ret_val<contain_code> can_contain( const item &it, int &copies_remaining ) const;
         bool can_contain_liquid( bool held_or_ground ) const;
         bool contains_phase( phase_id phase ) const;
 
@@ -326,6 +331,7 @@ class item_pocket
           * may create a new pocket
           */
         void add( const item &it, item **ret = nullptr );
+        void add( const item &it, int copies, item **ret );
         bool can_unload_liquid() const;
 
         int fill_with( const item &contained, Character &guy, int amount = 0,
@@ -398,6 +404,9 @@ class item_pocket
         static void delete_preset( std::vector<item_pocket::favorite_settings>::iterator iter );
         static std::vector<item_pocket::favorite_settings> pocket_presets;
 
+        // Set wether rigid items are blocked in the pocket
+        void set_no_rigid( const std::set<sub_bodypart_id> &is_no_rigid );
+
         // should the name of this pocket be used as a description
         bool name_as_description = false; // NOLINT(cata-serialize)
     private:
@@ -408,6 +417,8 @@ class item_pocket
         // the items inside the pocket
         std::list<item> contents;
         bool _sealed = false;
+        // list of sub body parts that can't currently support rigid ablative armor
+        std::set<sub_bodypart_id> no_rigid;
 };
 
 /**

@@ -4,11 +4,21 @@
     "copy-from": "rifle_manual",
     "looks_like": "modular_ar15",
     "type": "GUN",
-    "name": { "str": "Marlin 1895 SBL" },
-    "description": "A handy but powerful lever-action rifle chambered for .45-70 Government.  Designed for wilderness guides for defense against large predators such as grizzly bears, moose, and dinosaurs.",
+    "name": { "str": "big game rifle" },
+    "description": "You may not be Buffalo Bill or strutting around in the old west, but with this rifle in hand, you’re not about to let that deter you from looking like you’re prepping to take the fight to North America’s large animal contingent: bears, assorted cattle, and mutant nightmares.  A pleasingly powerful mesh of old-time aesthetics with modern conveniences, this long gun deals a hefty punch with the .45-70 cartridge that it fires, and its 6-round clip size ensures that if whatever you’re planning to introduce to the afterlife hasn’t kicked the bucket after the first shot, the next 5 rounds will certainly send it on its merry way.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "1895sbl",
+        "name": { "str": "Marlin 1895 SBL" },
+        "description": "A handy but powerful lever-action rifle chambered for .45-70 Government.  Designed for wilderness guides for defense against large predators such as grizzly bears, moose, and dinosaurs.",
+        "weight": 1
+      }
+    ],
     "weight": "3629 g",
     "volume": "1829 ml",
     "longest_side": "943 mm",
+    "barrel_length": "485 mm",
     "price": 100000,
     "price_postapoc": 2500,
     "to_hit": 1,
@@ -74,9 +84,18 @@
     "copy-from": "gun_base",
     "looks_like": "modular_ar15",
     "type": "GUN",
-    "name": { "str_sp": "1874 Sharps" },
     "//": "Specs from Uberti 32in barrel Special",
+    "name": { "str": "buffalo rifle" },
+    "description": "You may not be Buffalo Bill or strutting around in the old west, but with this rifle in hand, you’re not about to let that deter you from looking like you’re prepping to take the fight to North America’s large animal contingent: bears, assorted cattle, and mutant nightmares.  A pleasingly powerful mesh of old-time aesthetics with modern conveniences, this long gun deals a hefty punch with the .45-70 cartridge that it fires, and its 6-round clip size ensures that if whatever you’re planning to introduce to the afterlife hasn’t kicked the bucket after the first shot, the next 5 rounds will certainly send it on its merry way.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "1895sbl",
+    "name": { "str_sp": "1874 Sharps" },
     "description": "A reproduction of an antique single-shot .45-70 rifle once used to hunt buffalo and other large game in the late 19th Century.  Highly accurate and powerful for the time, this one is made to handle modern smokeless ammunition.",
+        "weight": 1
+      }
+    ],
     "weight": "4819 g",
     "volume": "2936 ml",
     "longest_side": "1278 mm",

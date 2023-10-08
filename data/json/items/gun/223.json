@@ -455,8 +455,17 @@
     "copy-from": "rifle_auto",
     "looks_like": "modular_ar15",
     "type": "GUN",
-    "name": { "str": "M249" },
-    "description": "The M249 is a mountable machine gun used by the US military and SWAT teams.  Quite inaccurate and difficult to control, the M249 is designed to fire many rounds very quickly.",
+    "name": { "str": "belt-fed light machine gun" },
+    "description": "This is a hefty and stout machine gun employed by the United States military as well as local swat and foreign militant users.  Firing the 5.56x45mm cartridge from either linked belts of ammunition or STANAG magazines, while the weapon is relatively easily man-portable, effective shooting is best accomplished from a bipod or other mounting.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "m249",
+        "name": { "str": "M249" },
+        "description": "The M249 is a mountable machine gun used by the US military and SWAT teams.  Quite inaccurate and difficult to control, the M249 is designed to fire many rounds very quickly.",
+        "weight": 1
+      }
+    ],
     "ascii_picture": "m249_saw",
     "weight": "7500 g",
     "volume": "10610 ml",
@@ -520,8 +529,17 @@
     "id": "m249_semi",
     "type": "GUN",
     "copy-from": "m249",
-    "name": { "str": "M249S" },
-    "description": "This is a semi-automatic civilian variant of the M249 machine gun, manufactured for sport shooting and collectors market.  Notably, it retains the ability to be belt fed, an uncommon feature in civilian firearms.",
+    "name": { "str": "belt-fed rifle" },
+    "description": "Closely parroting the looks of fully-automatic machine guns in use by units of the US military, this overly hefty rifle is a semi-automatic clone of its marshal ancestors.  Utilising either linked belts of 5.56mm NATO ammunition or regular STANAG magazines, it’s a weapon intended for the aspiring collector or, more than likely, those who wish to play with big-man army toys without being smacked in the face with a felony charge.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "m249_semi",
+        "name": { "str": "M249S" },
+        "description": "This is a semi-automatic civilian variant of the M249 machine gun, manufactured for sport shooting and the collectors market.  Notably, it retains the ability to be belt fed, an uncommon feature in civilian firearms.",
+        "weight": 1
+      }
+    ],
     "modes": [ [ "DEFAULT", "semi-auto", 1 ] ]
   },
   {

@@ -4,24 +4,32 @@
     "copy-from": "rifle_semi",
     "looks_like": "modular_ar15",
     "type": "GUN",
-    "name": { "str_sp": "Barrett M107A1" },
-    "//": "Price based on unit cost quote for fiscal year 2005 listed at inetres.com, with gunmod modifiers to be added later.",
-    "description": "A large, shoulder-fired, .50 caliber anti-materiel rifle.  Its large size, recoil, and noise is offset by its damage and range.",
+    "name": { "str": "Barrett anti-material rifle" },
+    "description": "The mother of all man-portable infantry ordinance, before getting into light cannonry, this behemoth of a rifle is to other small arms what a moose is to humans: big, powerful, and capable of delivering one mighty bitch-slap.  Firing the .50 BMG cartridge from a 10-round box magazine and employed for explosive munitions disposal and engagements against light vehicles, the rifle is essentially the gun equivalent of a panacea to blow away most of what the apocalypse can chuck your way.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "m107a1",
+        "name": { "str_sp": "Barrett M107A1" },
+        "description": "A large, shoulder-fired, .50 caliber anti-materiel rifle.  Its large size, recoil, and noise is offset by its damage and range.",
+        "weight": 1
+      }
+    ],
     "weight": "12950 g",
     "volume": "7570 ml",
     "longest_side": "145 cm",
+    "barrel_length": "737 mm",
     "price": 1483300,
+    "//": "Price based on unit cost quote for fiscal year 2005 listed at inetres.com, with gunmod modifiers to be added later.",
     "price_postapoc": 12000,
     "to_hit": -1,
     "material": [ "steel" ],
     "ammo": [ "50" ],
     "range": 100,
-    "ranged_damage": { "damage_type": "bullet", "amount": -5 },
     "dispersion": 130,
     "durability": 8,
     "min_cycle_recoil": 23625,
     "default_mods": [ "bipod", "rifle_scope", "muzzle_brake" ],
-    "flags": [ "NEVER_JAMS" ],
     "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "m107a1mag" ] } ],
     "melee_damage": { "bash": 12 }
   },
@@ -30,11 +38,21 @@
     "copy-from": "rifle_auto",
     "looks_like": "modular_ar15",
     "type": "GUN",
-    "name": { "str_sp": "M2HB Browning HMG" },
-    "description": "A heavy machine gun used by the US Military from its inception to the Cataclysm, and even rarely by Cataclysm survivors.  Its massive size and design make it impossible to use unless deployed or mounted to a vehicle.",
+    "name": { "str": "belt-fed heavy machine gun" },
+    "description": "A weapon that might be best described as a very, very angry box of death, this vaguely cuboid contraption with a barrel sticking out of one end and dual spade grips on the other is a heavy machine gun that was a mainstay within the US military’s arsenal.  Mounted on a wide assortment of vehicles, from tanks to Humvees and, if you choose, your own assorted post-apocalyptic gas-guzzler, the weapon fires .50 BMG ammunition linked in an ammo belt.  Difficult to even lift, the gun requires mounting before firing can be seriously contemplated.",
+    "variant_type": "gun",
+    "variants": [
+      {
+    "id": "m2browning",
+        "name": { "str_sp": "M2HB Browning HMG" },
+        "description": "A heavy machine gun used by the US Military from its inception to the Cataclysm, and even rarely by Cataclysm survivors.  Its massive size and design make it impossible to use unless deployed or mounted to a vehicle.",
+        "weight": 1
+      }
+    ],
     "weight": "38000 g",
     "volume": "9020 ml",
     "longest_side": "165 cm",
+    "barrel_length": "1143 mm",
     "price": 1800000,
     "price_postapoc": 10000,
     "to_hit": -1,
@@ -129,8 +147,17 @@
     "copy-from": "rifle_manual",
     "looks_like": "modular_ar15",
     "type": "GUN",
+    "name": { "str": "bolt-action .50-caliber rifle" },
+    "description": "The mother of all man-portable infantry ordinance, before getting into light cannonry, this behemoth of a rifle is to other small arms what a moose is to humans: big, powerful, and capable of delivering one mighty bitch-slap.  Firing the .50 BMG cartridge from a 10-round box magazine and employed for explosive munitions disposal and engagements against light vehicles, the rifle is essentially the gun equivalent of a panacea to blow away most of what the apocalypse can chuck your way.",
+    "variant_type": "gun",
+    "variants": [
+      {
+    "id": "tac50",
     "name": { "str": "McMillan TAC-50" },
     "description": "A long-range anti-materiel and anti-personnel sniper rifle made by McMillan Firearms, serving the Canadian Army since 2000 as the C15, and the Navy Seals as the Mk 15 Mod 0.  This .50 caliber bolt-action rifle is capable of defeating light vehicles, radar installations and crew-served weapons at extreme distances.  It notably holds the longest-range confirmed sniper kill, as well as the 4th and 5th longest.",
+        "weight": 1
+      }
+    ],
     "weight": "11790 g",
     "volume": "6500 ml",
     "longest_side": "146 cm",

@@ -866,6 +866,16 @@ void memorial_logger::notify( const cata::event &e )
             }
             break;
         }
+        case event_type::gains_proficiency: {
+            character_id ch = e.get<character_id>( "character" );
+            if( ch == avatar_id ) {
+                proficiency_id proficiency = e.get<proficiency_id>( "proficiency" );
+                add( pgettext( "memorial_male", "Gained the proficiency '%s'." ),
+                     pgettext( "memorial_female", "Gained the proficiency '%s'." ),
+                     proficiency->name() );
+            }
+            break;
+        }
         case event_type::gains_skill_level: {
             character_id ch = e.get<character_id>( "character" );
             if( ch == avatar_id ) {
@@ -1096,6 +1106,7 @@ void memorial_logger::notify( const cata::event &e )
         case event_type::avatar_enters_omt:
         case event_type::avatar_moves:
         case event_type::character_consumes_item:
+        case event_type::character_dies:
         case event_type::character_eats_item:
         case event_type::character_finished_activity:
         case event_type::character_gets_headshot:

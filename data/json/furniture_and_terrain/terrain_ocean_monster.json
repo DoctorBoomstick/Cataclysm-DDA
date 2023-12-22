@@ -1,0 +1,108 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_gel_water",
+    "copy-from": "t_gel",
+    "name": "waterlogged gel",
+    "description": "This stretch of ocean presents a head-scratching sight, seeming to form the boundary of a vast stretch of ebony liquid, which, for all the world, looks like it’s replaced a section of where the Atlantic was supposed to be.  Rolling and swelling like waves below the lightless span of night, the viscous, almost gel-like fluid meets the regular sea in irregular patterns, with cleanly delineated and angular lines parting the two spaces as though by an invisible wall.  In other regions, however, ordinary salt water has saturated the thicker material as if it were struggling to reclaim the space from the alien-looking gel.",
+    "move_cost": 10
+  },
+  {
+    "type": "terrain",
+    "id": "t_gel",
+    "name": "black gel",
+    "description": "As though the eddies of a sea were captured in slow motion, this broad expanse of gel-like liquid undulates and rolls with oily movements that belie both the wind and the regular motions of the Atlantic, which it has seemingly transplanted.  As you contemplate the unfamiliar stretch of fluid, its surface appears to dance between different hues of ethereal black that range from the eery tones of ether voids to glimmering onyx within the blink of an eye, as fractal ripples unfold across its glossy countenance in graceful, angular patterns.  All things considered, your muscles ache at even the mere idea of trying to swim through the glistening gel.",
+    "symbol": "~",
+    "color": "black",
+    "looks_like": "t_water_dp",
+    "move_cost": 15,
+    "connect_groups": "ailien_gel",
+    "connects_to": "alien_gel",
+    "flags": [ "TRANSPARENT", "LIQUID", "NO_SCENT", "SWIMMABLE", "DEEP_WATER", "NO_FLOOR_WATER" ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_gel_plankton",
+    "copy-from": "t_gel",
+    "name": "ethereal gel",
+    "description": "Black waves roll across this stretch of ebony fluid with oleaginous slowness, their frontiers enveloping networks of softly glowing pinpricks that glimmer through the thick, gel-like substance in mesmerising sheens.  As you regard the viscous stretch of alien rollers, you catch yourself growing almost entranced by the sight of multitudes of silvery white glints that dart below the surface like submerged fireflies: clusters of gentle lights forming in swift schools before the gel’s circulation disbands the glittering assembly and sends the members tumbling along.  To your unknowing eye, the mobile lights could almost pass for masses of deep-sea zooplankton.",
+    "light_emitted": 14
+  },
+  {
+    "type": "terrain",
+    "id": "t_gel_debry",
+    "copy-from": "t_gel",
+    "name": "clouded gel",
+    "description": "Sluggish under the burden of its own viscosity, this stretch of black gel bares along a flotilla of coralline detritus within its rolling waves: small chunks of red, brown, and amethyst debris floating below the liquid’s surface.  Rarer within the overall landscape of refuse, though still far from scarce, you can see coin-sized speckles drifting between the larger articles of flotsam like tiny, silver barges, resembling nothing so much as the malted scales of some large fish.  As you gaze down upon the alien mosaic, a squadron of white, glowing blobs periodically dart between the floating debris, settling around choice pieces in a loose swarm before dispersing in a sub-surface swell of dimming light, almost as though they’re playing among the detritus.",
+    "light_emitted": 12
+  },
+  {
+    "type": "terrain",
+    "id": "alien_coral_platform",
+    "name": "reinforced concrete floor",
+    "description": "Multi-coloured coral-like growths carpet the ground here in an uneven landscape of red, brown, and purple shades suffused by fist-sized globs of the congealed black gel, the entire range promising twisted ankles for the unwary walker. Smoothened to all but a level polish, as though by the immemorial actions of waves, the organic coating swells and dips with gradients of dome-like corals, squat spires, and bole-shaped trenches. Through the few hair’s-breadth gaps that are present, you can catch glimpses of something silvery that occasionally sparkles when light lances down upon it.s",
+    "looks_like": "t_strconc_floor",
+    "symbol": ".",
+    "color": "cyan",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "FLAT", "ROAD" ],
+    "connect_groups": "CONCRETE",
+    "connects_to": "CONCRETE",
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 150,
+      "str_max": 400,
+      "str_min_supported": 200,
+      "items": [
+        { "item": "rock", "count": [ 10, 22 ] },
+        { "item": "scrap", "count": [ 10, 12 ] },
+        { "item": "rebar", "count": [ 0, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_strconc_floor_no_roof",
+    "name": "reinforced concrete floor",
+    "description": "Almost like some bizarre shoreline, a slope of multi-hued coral ramps downward into the sea, the blood-red, amethyst purple, and rust-brown hues of the casing melding with the black gel that laps at it in ankle-high waves.",
+    "looks_like": "t_strconc_floor",
+    "symbol": ".",
+    "color": "cyan",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "FLAT", "ROAD" ],
+    "connect_groups": "CONCRETE",
+    "connects_to": "CONCRETE",
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 150,
+      "str_max": 400,
+      "str_min_supported": 200,
+      "items": [
+        { "item": "rock", "count": [ 10, 22 ] },
+        { "item": "scrap", "count": [ 10, 12 ] },
+        { "item": "rebar", "count": [ 0, 4 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_gutter_downspout",
+    "name": "downspout",
+    "description": "An uphill gradient rises skywards from the terrain before it, with the rock-like coating of coral that carpets it affording various footholds and handholds for an aspiring climber.  The smooth and tapered surfaces that jut from the crust in spider-webbing ridges almost certainly promise to keep such an endeavour from being easy, though.",
+    "symbol": "|",
+    "looks_like": "t_chainfence_posts",
+    "color": "white",
+    "move_cost": 3,
+    "flags": [ "TRANSPARENT", "UNSTABLE", "CLIMBABLE" ],
+    "bash": {
+      "str_min": 5,
+      "str_max": 12,
+      "sound": "clang!",
+      "sound_fail": "clang.",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "scrap_aluminum", "count": [ 4, 7 ] } ]
+    }
+  }
+]

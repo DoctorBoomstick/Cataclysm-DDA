@@ -6783,5 +6783,25 @@
       "male": [ "boxer_shorts" ],
       "female": [ "sports_bra", "boxer_shorts" ]
     }
+  },
+  {
+    "type": "profession",
+    "id": "bartender",
+    "name": "Bartender",
+    "description": "Mixing and serving various drinks while remaining spiffy has been your daily slog for years, in addition to dealing with patrons.  Now, with your bar closed, your clientele dead, and nobody left to appreciate your mixing skills, you yourself might need a few shots to get through the dark days ahead.",
+    "points": 1,
+    "skills": [ { "level": 2, "name": "speech" }, { "level": 3, "name": "cooking" } ],
+    "proficiencies": [ "prof_cocktail_making" ],
+    "items": {
+      "both": {
+        "items": [ "polo_shirt", "apron_cotton", "knife_paring", "wristwatch" ],
+        "entries": [ { "group": "charged_smart_phone" } ]
+      },
+      "male": { "items": [ "socks", "boxer_shorts", "dress_shoes", "pants", "copper_locket" ] },
+      "female": {
+        "items": [ "stockings", "skirt", "amethyst_silver_earring", "amethyst_silver_bracelet" ],
+        "entries": [ { "item": "heels", "variant": "heels_wedge" } ]
+      }
+    }
   }
 ]

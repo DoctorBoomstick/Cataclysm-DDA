@@ -618,5 +618,70 @@
     "time": "9 m",
     "fun": 1,
     "melee_damage": { "bash": 1 }
+  },
+  {
+    "id": "cocktail_cookbook",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "generic cocktail book", "str_pl": "copies of generic cocktail book" },
+    "description": "Not even worthy of a proper name, this book is the generic variant of the base cocktail cookbook, with a name and description that hold no value, for they will never spawn nor see the light of day.  Unless you’re reading this, put up an issue about it if you are, by the way.",
+    "variants": [
+      {
+        "id": "cocktail_cookbook_1",
+        "name": {
+          "str": "Cocktail Codex: Fundamentals, Formulas, Evolutions",
+          "str_pl": "copies of Cocktail Codex: Fundamentals, Formulas, Evolutions"
+        },
+        "description": "A hefty, hardback book claiming to teach all the fundamentals behind cocktail making, incorporating six general templates that encompass most mixed beverages and aim to introduce the aspiring bartender to the hows and whys of mixology.  It acts as a good reference guide for crafting both classic and improvised cocktails.",
+        "//": "160774970X",
+        "weight": 1
+      },
+      {
+        "id": "cocktail_cookbook_2",
+        "name": {
+          "str": "I'm Just Here for the Drinks: A Guide to Spirits, Drinking and More Than 100 Extraordinary Cocktails",
+          "str_pl": "copies of I'm Just Here for the Drinks: A Guide to Spirits, Drinking and More Than 100 Extraordinary Cocktails"
+        },
+        "description": "A hardbound book packed with essays and conversational passages from the work’s author, Sother Teague, on the history of spirits.  The text combines useful bar wisdom and wit with a wide array of possible cocktail recipes, making you feel as though you’re having a one-sided conversation with the writer.  Too bad they’re most likely dead.",
+        "//": "0998789844",
+        "weight": 1
+      },
+      {
+        "id": "cocktail_cookbook_3",
+        "name": {
+          "str": "Joy of Mixology: The Consummate Guide to the Bartender's Craft",
+          "str_pl": "copies of Joy of Mixology: The Consummate Guide to the Bartender's Craft"
+        },
+        "description": "Hefty, chunky, and packed with an exceeding amount of cocktail-related knowledge, this book, written by Gary Regan, is an extensive reference tome on the art of crafting cocktails.  The bartender and mixologist’s bible, this volume methodically divides drinks into various easy-to-remember families and breaks down their complexity.",
+        "//": "0451499026",
+        "weight": 1
+      },
+      {
+        "id": "cocktail_cookbook_4",
+        "name": {
+          "str": "Liquid Intelligence - The Art and Science of the Perfect Cocktail",
+          "str_pl": "copies of Liquid Intelligence - The Art and Science of the Perfect Cocktail"
+        },
+        "description": "This hardbound science kit masquerading as a bartender’s handbook adopts a different approach to the craft of cocktail making, utilizing chemical science to explain how carbonation, acidity, and temperature affect a drink.  While it reads like a giant science essay, the book demonstrates scientific tweaks to revolutionize classic cocktails and enhance one’s beverages.",
+        "//": "978-0393089035",
+        "weight": 1
+      }
+    ],
+    "weight": "1587 g",
+    "volume": "1719 ml",
+    "price": 2892,
+    "price_postapoc": 800,
+    "material": [ "cardboard", "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "?",
+    "color": "blue",
+    "skill": "cooking",
+    "required_level": 1,
+    "max_level": 3,
+    "proficiencies": [ { "proficiency": "prof_cocktail_making", "time_factor": 0.25, "fail_factor": 0.5 } ],
+    "intelligence": 8,
+    "time": "15 m",
+    "fun": 1,
+    "melee_damage": { "bash": 4 }
   }
 ]

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "medal_purple_heart",
+    "copy-from": "generic_military_medal",
+    "type": "ARMOR",
+    "name": { "str": "Purple Heart" },
+    "description": "A gold-bordered medal cast in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed, bronze heart, and the entire decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel after receiving injuries from enemy action while engaged in combat, considering the current state of the world, you’d wager that just about everybody left in the continental United States is probably eligible for one of these.",
+    "longest_side": "35 mm",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "medal_purple_heart",
+        "name": { "str": "Purple Heart" },
+        "description": "A gold-bordered medal cast in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed, bronze heart, and the entire decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel after receiving injuries from enemy action while engaged in combat, considering the current state of the world, you’d wager that just about everybody left in the continental United States is probably eligible for one of these.",
+        "weight": 50
+      },
+      {
+        "id": "medal_purple_heart_bronze_leaves",
+        "name": { "str": "Purple Heart with bronze oakleaves", "str_pl": "Purple Hearts with bronze oakleaves" },
+        "description": "This particular medal has a bronze twig with four oak leaves and three acorns attached to the ribbon, signifying that the soldier or airman who earned it had been awarded the decoration multiple times.",
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "medal_purple_heart_silver_leaves",
+        "name": { "str": "Purple Heart with silver oakleaves", "str_pl": "Purple Hearts with silver oakleaves" },
+        "description": "This particular medal has a silver twig with four oak leaves and three acorns attached to the ribbon, signifying that the soldier or airman who earned it had been awarded the decoration 5 times.",
+        "weight": 5,
+        "append": true
+      }
+    ]
+  }
+]

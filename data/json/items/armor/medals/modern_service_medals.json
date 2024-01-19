@@ -4,7 +4,7 @@
     "copy-from": "generic_military_medal",
     "type": "ARMOR",
     "name": { "str": "Purple Heart" },
-    "description": "A gold-bordered medal in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed bronze heart, and the decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel for combat injuries, considering the current state of the world, you’d wager that just about everybody left in the United States is probably eligible for one of these.",
+    "description": "A gold-bordered medal in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a rwhite shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed bronze heart, and the decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel for combat injuries, considering the current state of the world, you’d wager that just about everybody left in the United States is probably eligible for one of these.",
     "longest_side": "35 mm",
     "//": "Weights below do not represent a proper, statistical ratio of the amount of normal medals versus oakleaf and star variants. You have the numbers, you have the licence to change at will.",
     "variant_type": "generic",
@@ -63,7 +63,7 @@
       {
         "id": "medal_soldier",
         "name": { "str": "Soldier's Medal" },
-        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<us_military_rank><family_name>\n<given_name_army>.",
+        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<army_rank><family_name>\n<given_name_army>.",
         "expand_snippets": true,
         "append": true,
         "weight": 100
@@ -71,7 +71,7 @@
       {
         "id": "medal_soldier_bronze_leaves",
         "name": { "str": "Soldier's Medal with bronze oakleaves", "str_pl": "Soldier's Medals with bronze oakleaves" },
-        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<us_military_rank><family_name>\n<given_name_army>\nThis medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier or airman this formerly belonged to.  There are <medal_device_number> present in total.",
+        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<army_rank><family_name>\n<given_name_army>\nThis medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier this formerly belonged to.  There are <medal_device_number> present in total.",
         "expand_snippets": true,
         "append": true,
         "weight": 25
@@ -79,10 +79,52 @@
       {
         "id": "medal_soldier_silver_leaves",
         "name": { "str": "Soldier's Medal with silver oakleaves", "str_pl": "Soldier's Medals with silver oakleaves" },
-        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<us_military_rank><family_name>\n<given_name_army>\nThis particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier or airman this formerly belonged to.  There're <medal_device_number> present in total.",
+        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<army_rank><family_name>\n<given_name_army>\nThis particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier this formerly belonged to.  There're <medal_device_number> present in total.",
         "expand_snippets": true,
         "append": true,
         "weight": 6
+      }
+    ]
+  },
+  {
+    "id": "medal_distinguished_service_army",
+    "copy-from": "generic_military_medal",
+    "type": "ARMOR",
+    "name": { "str": "Distinguished Service Medal" },
+    "description": "Depicting the golden profile of an egal perched beneath 13 stars and clutching a shealed, an olive branch, and arrows while it holds a scroll with the words, \"E Pluribus Unum,\" within its beak, this medal is encircled by a blue border engraved with the text, \"For Distinguished Service MCMXVIII.\"  Awarded to members of the United States Army for meritorious service rendered while in a position of great responsibility, usually bestowed upon high-ranking officers, the decoration hangs from a white ribbon, flanked on either side by a vertical blue and red stripe.",
+    "longest_side": "38 mm",
+    "//": "Weights below do not represent a proper, statistical ratio of the amount of normal medals versus oakleaf and star variants. You have the numbers, you have the licence to change at will.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "medal_distinguished_service_army",
+        "name": { "str": "Distinguished Service Medal" },
+        "description": "The award’s reverse side depicts a trophy of flags and armaments, upon which the recipient’s name is engraved:\n<army_officer_rank><family_name>\n<given_name_army>.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 100
+      },
+      {
+        "id": "medal_distinguished_service_army_bronze_leaves",
+        "name": {
+          "str": "Distinguished Service Medal with bronze oakleaves",
+          "str_pl": "Distinguished Service Medals with bronze oakleaves"
+        },
+        "description": "The award’s reverse side depicts a trophy of flags and armaments, upon which the recipient’s name is engraved:\n<army_officer_rank><family_name>\n<given_name_army>\nThis medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier this formerly belonged to.  There are <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 17
+      },
+      {
+        "id": "medal_distinguished_service_army_silver_leaves",
+        "name": {
+          "str": "Distinguished Service Medal with silver oakleaves",
+          "str_pl": "Distinguished Service Medals with silver oakleaves"
+        },
+        "description": "The award’s reverse side depicts a trophy of flags and armaments, upon which the recipient’s name is engraved:\n<army_officer_rank><family_name>\n<given_name_army>\nThis particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier this formerly belonged to.  There're <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 3
       }
     ]
   }

@@ -1097,11 +1097,14 @@
   },
   {
     "type": "snippet",
-    "category": "<army_rank>",
+    "category": "<navy_rank>",
+    "//": "Also includes ranks for the Marine Core",
     "text": [
       { "text": "<navy_enlisted_rank>", "weight": 40 },
       { "text": "<warrant_officer_rank>", "weight": 15 },
-      { "text": "<navy_officer_rank>", "weight": 10 }
+      { "text": "<navy_officer_rank>", "weight": 10 },
+      { "text": "<army_enlisted_rank>", "weight": 25 },
+      { "text": "<army_officer_rank>", "weight": 5 }
     ]
   },
   {

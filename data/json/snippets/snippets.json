@@ -990,55 +990,123 @@
   },
   {
     "type": "snippet",
-    "category": "<army_rank>",
+    "category": "<warrant_officer_rank>",
     "text": [
-      { "id": "warrant_officer1", "text": "Warrant Officer 1", "weight": 7 },
-      { "id": "chief_warrant_officer2", "text": "Chief Warrant Officer 2", "weight": 7 },
-      { "id": "chief_warrant_officer3", "text": "Chief Warrant Officer 3", "weight": 7 },
-      { "id": "chief_warrant_officer4", "text": "Chief Warrant Officer 4", "weight": 7 },
-      { "id": "chief_warrant_officer5", "text": "Chief Warrant Officer 5", "weight": 7 },
-      { "id": "private", "text": "Private", "weight": 34 },
-      { "id": "private_first_class", "text": "Private First Class", "weight": 23 },
-      { "id": "specialist", "text": "Specialist", "weight": 11 },
-      { "id": "corporal", "text": "Corporal", "weight": 2 },
-      { "id": "sergeant", "text": "Sergeant", "weight": 2 },
-      { "id": "staff_sergeant", "text": "Staff Sergeant", "weight": 21 },
-      { "id": "sergeant_first_class", "text": "Sergeant First Class", "weight": 7 },
-      { "id": "master_sergeant", "text": "Master Sergeant", "weight": 34 },
-      { "id": "1st_sergeant", "text": "1st Sergeant", "weight": 23 },
-      { "id": "sergeant_major", "text": "Sergeant Major", "weight": 11 },
-      { "id": "2nd_lieutenant", "text": "2nd Lieutenant", "weight": 2 },
-      { "id": "1st_lieutenant", "text": "1st Lieutenant", "weight": 2 },
-      { "id": "captain", "text": "Captain", "weight": 21 },
-      { "id": "major", "text": "Major", "weight": 7 },
-      { "id": "lieutenant_colonel", "text": "Lieutenant Colonel", "weight": 11 },
-      { "id": "colonel", "text": "Colonel", "weight": 2 },
-      { "id": "brigadier_general", "text": "Brigadier General", "weight": 2 },
-      { "id": "major_general", "text": "Major General", "weight": 21 },
-      { "id": "lieutenant_general", "text": "Lieutenant General", "weight": 7 },
-      { "id": "general", "text": "General", "weight": 7 }
+      { "id": "warrant_officer1", "text": "Warrant Officer 1" },
+      { "id": "cwo2", "text": "Chief Warrant Officer 2" },
+      { "id": "cwo3", "text": "Chief Warrant Officer 3" },
+      { "id": "cwo4", "text": "Chief Warrant Officer 4" },
+      { "id": "cwo5", "text": "Chief Warrant Officer 5" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<army_enlisted_rank>",
+    "text": [
+      { "id": "army_private_2nd", "text": "Private 2nd Class" },
+      { "id": "army_private_1st", "text": "Private 1st Class" },
+      { "id": "army_specialist", "text": "Specialist" },
+      { "id": "army_corporal", "text": "Corporal" },
+      { "id": "army_sergeant", "text": "Sergeant" },
+      { "id": "army_staff_sergeant", "text": "Staff Sergeant" },
+      { "id": "army_sergeant_first", "text": "Sergeant First Class" },
+      { "id": "army_master_sergeant", "text": "Master Sergeant" },
+      { "id": "army_1st_sergeant", "text": "1st Sergeant" },
+      { "id": "army_sergeant_major", "text": "Sergeant Major" },
+      { "id": "army_csm", "text": "Command Sergeant Major" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<air_force_enlisted_rank>",
+    "text": [
+      { "id": "air_force_airman", "text": "Airman" },
+      { "id": "air_force_airman_1st", "text": "Airman 1st Class" },
+      { "id": "air_force_senior_airman", "text": "Senior Airman" },
+      { "id": "air_force_staff_sergeant", "text": "Staff Sergeant" },
+      { "id": "air_force_technical_sergeant", "text": "Technical Sergeant" },
+      { "id": "air_force_master_sergeant", "text": "Master Sergeant" },
+      { "id": "air_force_sms", "text": "Senior Master Sergeant" },
+      { "id": "air_force_cms", "text": "Chief Master Sergeant" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<navy_enlisted_rank>",
+    "text": [
+      { "id": "navy_seaman", "text": "Seaman" },
+      { "id": "navy_po_3rd", "text": "Petty Officer 3rd Class" },
+      { "id": "navy_po_2nd", "text": "Petty Officer 2nd Class" },
+      { "id": "navy_po_1st", "text": "Petty Officer 1st Class" },
+      { "id": "navy_cpo", "text": "Chief Petty Officer" },
+      { "id": "navy_scpo", "text": "Senior Chief Petty Officer" },
+      { "id": "navy_mcpo", "text": "Master Chief Petty Officer" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<army_officer_rank>",
+    "//": "This should also be used when needing Air Force and marine officer ranks, as they’re the same between the army, US Air Force, and US Marine Core.",
+    "text": [
+      { "id": "army_2nd_lieutenant", "text": "2nd Lieutenant" },
+      { "id": "army_1st_lieutenant", "text": "1st Lieutenant" },
+      { "id": "army_captain", "text": "Captain" },
+      { "id": "army_major", "text": "Major" },
+      { "id": "army_lieutenant_colonel", "text": "Lieutenant Colonel" },
+      { "id": "army_colonel", "text": "Colonel" },
+      { "id": "army_brigadier_general", "text": "Brigadier General" },
+      { "id": "army_major_general", "text": "Major General" },
+      { "id": "army_lieutenant_general", "text": "Lieutenant General" },
+      { "id": "army_general", "text": "General" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<navy_officer_rank>",
+    "text": [
+      { "id": "navy_ensign", "text": "Ensign" },
+      { "id": "navy_jlt", "text": "Junior Lieutenant" },
+      { "id": "navy_lieutenant", "text": "Lieutenant" },
+      { "id": "navy_ltc", "text": "Lieutenant Commander" },
+      { "id": "navy_Commander", "text": "Commander" },
+      { "id": "navy_captain", "text": "Captain" },
+      { "id": "navy_rear_admiral_lh", "text": "Rear Admiral Lower Half" },
+      { "id": "navy_rear_admiral_uh", "text": "Rear Admiral Upper Half" },
+      { "id": "navy_vice_admiral", "text": "Vice Admiral" },
+      { "id": "navy_admiral", "text": "Admiral" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<army_rank>",
+    "//": "Also covers the Marine Core",
+    "text": [
+      { "text": "<army_enlisted_rank>", "weight": 40 },
+      { "text": "<warrant_officer_rank>", "weight": 15 },
+      { "text": "<army_officer_rank>", "weight": 10 }
     ]
   },
   {
     "type": "snippet",
     "category": "<air_force_rank>",
     "text": [
-      { "id": "airman", "text": "Airman", "weight": 7 },
-      { "id": "senior_airman", "text": "Senior Airman", "weight": 7 },
-      { "id": "staff_sergeant", "text": "Staff Sergeant", "weight": 21 },
-      { "id": "technical_sergeant", "text": "Technical Sergeant", "weight": 7 },
-      { "id": "master_sergeant", "text": "Master Sergeant", "weight": 34 },
-      { "id": "senior_master_sergeant", "text": "Senior Master Sergeant", "weight": 34 },
-      { "id": "2nd_lieutenant", "text": "2nd Lieutenant", "weight": 2 },
-      { "id": "1st_lieutenant", "text": "1st Lieutenant", "weight": 2 },
-      { "id": "captain", "text": "Captain", "weight": 21 },
-      { "id": "major", "text": "Major", "weight": 7 },
-      { "id": "lieutenant_colonel", "text": "Lieutenant Colonel", "weight": 11 },
-      { "id": "colonel", "text": "Colonel", "weight": 2 },
-      { "id": "brigadier_general", "text": "Brigadier General", "weight": 2 },
-      { "id": "major_general", "text": "Major General", "weight": 21 },
-      { "id": "lieutenant_general", "text": "Lieutenant General", "weight": 7 },
-      { "id": "general", "text": "General", "weight": 7 }
+      { "text": "<air_force_enlisted_rank>", "weight": 40 },
+      { "text": "<warrant_officer_rank>", "weight": 15 },
+      { "text": "<army_officer_rank>", "weight": 10 }
     ]
+  },
+  {
+    "type": "snippet",
+    "category": "<army_rank>",
+    "text": [
+      { "text": "<navy_enlisted_rank>", "weight": 40 },
+      { "text": "<warrant_officer_rank>", "weight": 15 },
+      { "text": "<navy_officer_rank>", "weight": 10 }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<us_military_rank>",
+    "text": [ { "text": "<army_rank>" }, { "text": "<air_force_rank>" }, { "text": "<navy_rank>" } ]
   }
 ]

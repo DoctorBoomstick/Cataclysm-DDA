@@ -4,43 +4,85 @@
     "copy-from": "generic_military_medal",
     "type": "ARMOR",
     "name": { "str": "Purple Heart" },
-    "description": "A gold-bordered medal cast in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed, bronze heart, and the entire decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel after receiving injuries from enemy action while engaged in combat, considering the current state of the world, you’d wager that just about everybody left in the continental United States is probably eligible for one of these.",
+    "description": "A gold-bordered medal in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed bronze heart, and the decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel for combat injuries, considering the current state of the world, you’d wager that just about everybody left in the United States is probably eligible for one of these.",
     "longest_side": "35 mm",
+    "//": "Weights below do not represent a proper, statistical ratio of the amount of normal medals versus oakleaf and star variants. You have the numbers, you have the licence to change at will.",
     "variant_type": "generic",
     "variants": [
       {
         "id": "medal_purple_heart",
         "name": { "str": "Purple Heart" },
-        "description": "A gold-bordered medal cast in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed, bronze heart, and the entire decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel after receiving injuries from enemy action while engaged in combat, considering the current state of the world, you’d wager that just about everybody left in the continental United States is probably eligible for one of these.",
-        "weight": 50
+        "description": "A gold-bordered medal in the shape of a heart with a depiction of George Washingten, green leaves set atop, and a white shield with dual red bars and three red stars nestled among the leaves.  \"For Military Merit\" is engraved below the shealed, while the reverse possesses an embossed bronze heart, and the decoration hangs from a purple ribbon fringed with white stripes.  Awarded to military personnel for combat injuries, considering the current state of the world, you’d wager that just about everybody left in the United States is probably eligible for one of these.",
+        "weight": 100
       },
       {
         "id": "medal_purple_heart_bronze_leaves",
         "name": { "str": "Purple Heart with bronze oakleaves", "str_pl": "Purple Hearts with bronze oakleaves" },
-        "description": "This particular medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier or airman this formerly belonged to.  There are\n<medal_device_number>present in total.",
-        "weight": 15,
-        "append": true
+        "description": "This particular medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier or airman this formerly belonged to.  There are <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 33
       },
       {
         "id": "medal_purple_heart_silver_leaves",
         "name": { "str": "Purple Heart with silver oakleaves", "str_pl": "Purple Hearts with silver oakleaves" },
-        "description": "This particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier or airman this formerly belonged to.  There're\n<medal_device_number>present in total.",
-        "weight": 5,
-        "append": true
+        "description": "This particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier or airman this formerly belonged to.  There're <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 11
       },
       {
         "id": "medal_purple_heart_gold_star",
         "name": { "str": "Purple Heart with golden stars", "str_pl": "Purple Hearts with golden stars" },
-        "description": "This particular medal features a number of 5⁄16-inch golden stars upon the ribbon, each star denoting a separate award of the decoration to the sailer or marine this formerly belonged to, with\n<medal_device_number>present in total.",
-        "weight": 15,
-        "append": true
+        "description": "This particular medal features a number of 5⁄16-inch golden stars upon the ribbon, each star denoting a separate award of the decoration to the sailer or marine this formerly belonged to, with <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 33
       },
       {
         "id": "medal_purple_heart_silver_star",
         "name": { "str": "Purple Heart with silver stars", "str_pl": "Purple Hearts with silver stars" },
-        "description": "This particular medal features a number of 5⁄16-inch silver stars upon the ribbon, each star denoting 5 separate awards of the decoration to the sailer or marine this formerly belonged to, with\n<medal_device_number>present in total.",
-        "weight": 5,
-        "append": true
+        "description": "This particular medal features a number of 5⁄16-inch silver stars upon the ribbon, each star denoting 5 separate awards of the decoration to the sailer or marine this formerly belonged to, with <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 11
+      }
+    ]
+  },
+  {
+    "id": "medal_soldier",
+    "copy-from": "generic_military_medal",
+    "type": "ARMOR",
+    "name": { "str": "Soldier's Medal" },
+    "description": "A bronze, octagonal medal hanging from a ribbon of 13 red and white stripes flanked by Ultramarine Blue striations, stamped with an egal perched atop a fasces in between dual groups of stars, while a 13-peace shealed engraved with \"US\" is emblazoned on the reverse.  Above one of the star clusters is a spray of leaves, along with \"Soldier’s Medal\" inscribed across the top, as well as \"FOR VALOUR.\"",
+    "longest_side": "35 mm",
+    "//": "Weights below do not represent a proper, statistical ratio of the amount of normal medals versus oakleaf and star variants. You have the numbers, you have the licence to change at will.",
+    "//": "The medal is only awarded to army personnel, hence why there aren’t variants for the gold and silver star marine core and navy versions.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "medal_soldier",
+        "name": { "str": "Soldier's Medal" },
+        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<us_military_rank><family_name>\n<given_name_army>.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 100
+      },
+      {
+        "id": "medal_soldier_bronze_leaves",
+        "name": { "str": "Soldier's Medal with bronze oakleaves", "str_pl": "Soldier's Medals with bronze oakleaves" },
+        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<us_military_rank><family_name>\n<given_name_army>\nThis medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier or airman this formerly belonged to.  There are <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 25
+      },
+      {
+        "id": "medal_soldier_silver_leaves",
+        "name": { "str": "Soldier's Medal with silver oakleaves", "str_pl": "Soldier's Medals with silver oakleaves" },
+        "description": "Awarded to United States soldiers for heroism performed at the risk of one’s own life outside of combat, the award has the recipient’s name engraved across its bottom:\n<us_military_rank><family_name>\n<given_name_army>\nThis particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier or airman this formerly belonged to.  There're <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 6
       }
     ]
   }

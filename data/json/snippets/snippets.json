@@ -981,5 +981,64 @@
       { "id": "teal", "text": "teal" },
       { "id": "navy", "text": "navy" }
     ]
+  },
+  {
+    "type": "snippet",
+    "category": "<medal_device_number>",
+    "//": "Only exists to randomly generate the number of medal devices—oak leaves and 5⁄16-inch stars—present on the ribbons of military medals.",
+    "text": [ "1", "2", "3", "4" ]
+  },
+  {
+    "type": "snippet",
+    "category": "<army_rank>",
+    "text": [
+      { "id": "warrant_officer1", "text": "Warrant Officer 1", "weight": 7 },
+      { "id": "chief_warrant_officer2", "text": "Chief Warrant Officer 2", "weight": 7 },
+      { "id": "chief_warrant_officer3", "text": "Chief Warrant Officer 3", "weight": 7 },
+      { "id": "chief_warrant_officer4", "text": "Chief Warrant Officer 4", "weight": 7 },
+      { "id": "chief_warrant_officer5", "text": "Chief Warrant Officer 5", "weight": 7 },
+      { "id": "private", "text": "Private", "weight": 34 },
+      { "id": "private_first_class", "text": "Private First Class", "weight": 23 },
+      { "id": "specialist", "text": "Specialist", "weight": 11 },
+      { "id": "corporal", "text": "Corporal", "weight": 2 },
+      { "id": "sergeant", "text": "Sergeant", "weight": 2 },
+      { "id": "staff_sergeant", "text": "Staff Sergeant", "weight": 21 },
+      { "id": "sergeant_first_class", "text": "Sergeant First Class", "weight": 7 },
+      { "id": "master_sergeant", "text": "Master Sergeant", "weight": 34 },
+      { "id": "1st_sergeant", "text": "1st Sergeant", "weight": 23 },
+      { "id": "sergeant_major", "text": "Sergeant Major", "weight": 11 },
+      { "id": "2nd_lieutenant", "text": "2nd Lieutenant", "weight": 2 },
+      { "id": "1st_lieutenant", "text": "1st Lieutenant", "weight": 2 },
+      { "id": "captain", "text": "Captain", "weight": 21 },
+      { "id": "major", "text": "Major", "weight": 7 },
+      { "id": "lieutenant_colonel", "text": "Lieutenant Colonel", "weight": 11 },
+      { "id": "colonel", "text": "Colonel", "weight": 2 },
+      { "id": "brigadier_general", "text": "Brigadier General", "weight": 2 },
+      { "id": "major_general", "text": "Major General", "weight": 21 },
+      { "id": "lieutenant_general", "text": "Lieutenant General", "weight": 7 },
+      { "id": "general", "text": "General", "weight": 7 }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<air_force_rank>",
+    "text": [
+      { "id": "airman", "text": "Airman", "weight": 7 },
+      { "id": "senior_airman", "text": "Senior Airman", "weight": 7 },
+      { "id": "staff_sergeant", "text": "Staff Sergeant", "weight": 21 },
+      { "id": "technical_sergeant", "text": "Technical Sergeant", "weight": 7 },
+      { "id": "master_sergeant", "text": "Master Sergeant", "weight": 34 },
+      { "id": "senior_master_sergeant", "text": "Senior Master Sergeant", "weight": 34 },
+      { "id": "2nd_lieutenant", "text": "2nd Lieutenant", "weight": 2 },
+      { "id": "1st_lieutenant", "text": "1st Lieutenant", "weight": 2 },
+      { "id": "captain", "text": "Captain", "weight": 21 },
+      { "id": "major", "text": "Major", "weight": 7 },
+      { "id": "lieutenant_colonel", "text": "Lieutenant Colonel", "weight": 11 },
+      { "id": "colonel", "text": "Colonel", "weight": 2 },
+      { "id": "brigadier_general", "text": "Brigadier General", "weight": 2 },
+      { "id": "major_general", "text": "Major General", "weight": 21 },
+      { "id": "lieutenant_general", "text": "Lieutenant General", "weight": 7 },
+      { "id": "general", "text": "General", "weight": 7 }
+    ]
   }
 ]

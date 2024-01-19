@@ -17,14 +17,28 @@
       {
         "id": "medal_purple_heart_bronze_leaves",
         "name": { "str": "Purple Heart with bronze oakleaves", "str_pl": "Purple Hearts with bronze oakleaves" },
-        "description": "This particular medal has a bronze twig with four oak leaves and three acorns attached to the ribbon, signifying that the soldier or airman who earned it had been awarded the decoration multiple times.",
+        "description": "This particular medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the soldier or airman this formerly belonged to.  There are\n<medal_device_number>present in total.",
         "weight": 15,
         "append": true
       },
       {
         "id": "medal_purple_heart_silver_leaves",
         "name": { "str": "Purple Heart with silver oakleaves", "str_pl": "Purple Hearts with silver oakleaves" },
-        "description": "This particular medal has a silver twig with four oak leaves and three acorns attached to the ribbon, signifying that the soldier or airman who earned it had been awarded the decoration 5 times.",
+        "description": "This particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the soldier or airman this formerly belonged to.  There're\n<medal_device_number>present in total.",
+        "weight": 5,
+        "append": true
+      },
+      {
+        "id": "medal_purple_heart_gold_star",
+        "name": { "str": "Purple Heart with golden stars", "str_pl": "Purple Hearts with golden stars" },
+        "description": "This particular medal features a number of 5⁄16-inch golden stars upon the ribbon, each star denoting a separate award of the decoration to the sailer or marine this formerly belonged to, with\n<medal_device_number>present in total.",
+        "weight": 15,
+        "append": true
+      },
+      {
+        "id": "medal_purple_heart_silver_star",
+        "name": { "str": "Purple Heart with silver stars", "str_pl": "Purple Hearts with silver stars" },
+        "description": "This particular medal features a number of 5⁄16-inch silver stars upon the ribbon, each star denoting 5 separate awards of the decoration to the sailer or marine this formerly belonged to, with\n<medal_device_number>present in total.",
         "weight": 5,
         "append": true
       }

@@ -57,7 +57,7 @@
     "description": "A bronze, octagonal medal hanging from a ribbon of 13 red and white stripes flanked by Ultramarine Blue striations, stamped with an egal perched atop a fasces in between dual groups of stars, while a 13-peace shealed engraved with \"US\" is emblazoned on the reverse.  Above one of the star clusters is a spray of leaves, along with \"Soldier’s Medal\" inscribed across the top, as well as \"FOR VALOUR.\"",
     "longest_side": "35 mm",
     "//": "Weights below do not represent a proper, statistical ratio of the amount of normal medals versus oakleaf and star variants. You have the numbers, you have the licence to change at will.",
-    "//": "The medal is only awarded to army personnel, hence why there aren’t variants for the gold and silver star marine core and navy versions.",
+    "//2": "The medal is only awarded to army personnel, hence why there aren’t variants for the gold and silver star marine core and navy versions.",
     "variant_type": "generic",
     "variants": [
       {

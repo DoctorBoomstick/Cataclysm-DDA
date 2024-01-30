@@ -127,5 +127,50 @@
         "weight": 3
       }
     ]
+  },
+  {
+    "id": "medal_air",
+    "copy-from": "generic_military_medal",
+    "type": "ARMOR",
+    "name": { "str": "Air Medal" },
+    "description": "Bronz and cast in the shape of a 16-point compass rose, this medal depicts a swooping egal clutching dual lightning bolts, one grasped within each talon.  A fleur-de-lis design at the medal’s apex connects the award to its ribbon: a Braud expanse of ultramarine blue divided into three segments by two vertical golden orange stripes—the original colours of the Army Air Core.",
+    "longest_side": "43 mm",
+    "//": "Weights below do not represent a proper, statistical ratio of the amount of normal medals versus oakleaf and star variants. You have the numbers, you have the licence to change at will.",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "medal_air_air_force",
+        "name": { "str": "Air Medal" },
+        "description": "Issued to honour solitary acts of combat bravery or meritorious service performed by flight crew while in a combat zone, soldiers, or marines whose duties necessitate regular participation in airborne operations, the reverse side possesses the awardee’s name engraved:\n<air_force_rank><family_name>\n<given_name_army>",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 100
+      },
+      {
+        "id": "medal_air_army",
+        "//": "This also covers awards made to members of the US Marine Corps. This variant only exists to make Air Force awards of the medal more common than army or marine issuances of it.",
+        "name": { "str": "Air Medal" },
+        "description": "Issued to honour solitary acts of combat bravery or meritorious service performed by flight crew while in a combat zone, soldiers, or marines whose duties necessitate regular participation in airborne operations, the reverse side possesses the awardee’s name engraved:\n<army_rank><family_name>\n<given_name_army>",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 100
+      },
+      {
+        "id": "medal_air_air_force_bronze_leaves",
+        "name": { "str": "Air Medal with bronze oakleaves", "str_pl": "Air Service Medals with bronze oakleaves" },
+        "description": "Issued to honour solitary acts of combat bravery or meritorious service performed by flight crew while in a combat zone, soldiers, or marines whose duties necessitate regular participation in airborne operations, the reverse side possesses the awardee’s name engraved:\n<air_force_rank><family_name>\n<given_name_army>\nThis medal features a number of oakleaf clusters upon the ribbon (a bronze twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting a separate award of the decoration to the airman this formerly belonged to.  There are <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 17
+      },
+      {
+        "id": "medal_air_silver_leaves",
+        "name": { "str": "Air Medal with silver oakleaves", "str_pl": "Air Medals with silver oakleaves" },
+        "description": "Issued to honour solitary acts of combat bravery or meritorious service performed by flight crew while in a combat zone, soldiers, or marines whose duties necessitate regular participation in airborne operations, the reverse side possesses the awardee’s name engraved:\n<air_force_rank><family_name>\n<given_name_army>\nThis particular medal features a number of oakleaf clusters upon the ribbon (a silver twig tipped by 4 oakleaves and 3 acorns), with each cluster denoting 5 separate awards of the decoration to the airman this formerly belonged to.  There're <medal_device_number> present in total.",
+        "expand_snippets": true,
+        "append": true,
+        "weight": 3
+      }
+    ]
   }
 ]

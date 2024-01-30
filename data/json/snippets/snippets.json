@@ -990,6 +990,12 @@
   },
   {
     "type": "snippet",
+    "category": "<number_groups>",
+    "//": "Poor ID name aside, this only exists to be able to insert randomly generated numbers in a snippet where it wouldn’t make sense to have mentioned 0 or one of something.",
+    "text": [ "2", "3", "4", "5", "6", "7", "8", "9" ]
+  },
+  {
+    "type": "snippet",
     "category": "<warrant_officer_rank>",
     "text": [
       { "id": "warrant_officer1", "text": "Warrant Officer 1" },

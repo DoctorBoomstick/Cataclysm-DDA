@@ -568,5 +568,30 @@
     "price_postapoc": 0,
     "material": [ "paper" ],
     "flags": [ "TRADER_AVOID", "BANK_NOTE_SHAPED" ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "medal_citation",
+    "category": "books",
+    "symbol": ",",
+    "color": "white",
+    "name": { "str": "award citation" },
+    "description": "This is a slip of paper serving as a certificate, intended to be presented alongside military and civil medals, and upon which is noted the recipient’s award-worthy action that merited the granting of the accompanying decoration.",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "paper" ],
+    "flags": [ "PAPER_SHAPED" ],
+    "weight": "1 g",
+    "volume": "1 ml",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "medal_soldier_citation",
+        "name": { "str": "award citation" },
+        "description": "<citation_preamble> to <us_military_rank> <given_name_army> for <citation_deed_descriptor><citation_deed_action_non_combat1a><citation_deed_subject1a><citation_deed_location_non_combat>.",
+        "expand_snippets": true,
+        "append": true
+      }
+    ]
   }
 ]

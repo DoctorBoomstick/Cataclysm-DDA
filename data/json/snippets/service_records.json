@@ -1,0 +1,207 @@
+[
+  {
+    "type": "snippet",
+    "category": "<citation_preamble>",
+    "text": [
+      { "id": "preamble1", "text": "It is the pleasure of the United States armed forces to award" },
+      { "id": "preamble2", "text": "On behalf of the militant forces of the United States, I hereby award" },
+      {
+        "id": "preamble3",
+        "text": "In recognition of the valiant deeds of your loved one, under the approval of the president of the United States and the branch head of service, this document certifies the posthumous granting of"
+      },
+      { "id": "preamble4", "text": "In the name of the United States military, I am pleased to present" },
+      {
+        "id": "preamble5",
+        "text": "For services rendered to the United States and her allies, the armed forces of this nation are pleased to present"
+      },
+      {
+        "id": "preamble6",
+        "text": "In the name of the president of the United States of America, it is my complete pleasure to bestow"
+      },
+      {
+        "id": "preamble7",
+        "text": "In posthumous solemnity, the United States military and its people here commemorate your meritorious service to the nation and are proud to award"
+      },
+      {
+        "id": "preamble8",
+        "text": "For any consulting parties viewing this document in the future, this citation testifies that the United States Military, its president, and its people recognise the actions of one of their gallant servicemen and are pleased to award"
+      },
+      {
+        "id": "preamble9",
+        "text": "In the name of the United States of America and its president, this document verifies the granting of"
+      },
+      {
+        "id": "preamble10",
+        "text": "The Republic of the United States here recognises and commemorates your gallant actions, and it is its solemn pleasure to award"
+      },
+      {
+        "id": "preamble11",
+        "text": "In commemoration of one of our fallen soldiers, I, within the jurisdiction of the United States military, posthumously present"
+      },
+      {
+        "id": "preamble12",
+        "text": "Though no longer within the ranks, the armed forces of the United States, its president, and service branch chief staff feel it their duty to solemnly bestow"
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<citation_deed_descriptor>",
+    "text": [
+      { "id": "deed_descriptor1", "text": "gallantly" },
+      { "id": "deed_descriptor2", "text": "Vvaliantly" },
+      { "id": "deed_descriptor3", "text": "nobly" },
+      { "id": "deed_descriptor4", "text": "intrepidly" },
+      { "id": "deed_descriptor5", "text": "risking death while" },
+      { "id": "deed_descriptor6", "text": "bravely" },
+      { "id": "deed_descriptor7", "text": "meritoriously" },
+      { "id": "deed_descriptor8", "text": ", under peril of personal harm" },
+      { "id": "deed_descriptor9", "text": "heroically" },
+      { "id": "deed_descriptor10", "text": ", with the greatest level of composure," },
+      { "id": "deed_descriptor11", "text": ", with admirable levelheadedness," },
+      { "id": "deed_descriptor12", "text": ", with utter professionalism," },
+      { "id": "deed_descriptor13", "text": ", despite being wounded," },
+      { "id": "deed_descriptor14", "text": ", while under great personal suffering," },
+      { "id": "deed_descriptor15", "text": "chivalrously" },
+      { "id": "deed_descriptor16", "text": "daringly" },
+      { "id": "deed_descriptor17", "text": "bringing honour to our nation, our military, and themself by" },
+      { "id": "deed_descriptor18", "text": ", heedless of their own safety" },
+      { "id": "deed_descriptor19", "text": "courageously" },
+      { "id": "deed_descriptor20", "text": ", at the risk of life and limb," },
+      { "id": "deed_descriptor21", "text": ", though being the last survivor of their unit," }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<citation_deed_action_non_combat1a>",
+    "text": [
+      { "id": "action_nc1a", "text": "expediting the evacuation of" },
+      {
+        "id": "action_nc2a",
+        "text": "taking, on their own initiative after the death of the supervising officer, command of the evacuation of"
+      },
+      { "id": "action_nc3a", "text": "single handedly extinguishing a catastrophic fire that threatened harm upon" },
+      {
+        "id": "action_nc4a",
+        "text": "using their acquired technical knowledge to, while off duty, disarm discovered unexploded munitions that were posing a risk to"
+      },
+      {
+        "id": "action_nc5a",
+        "text": "assuming control and safely landing an aircraft after the pilot was rendered incapacitated, thus saving the lives of those on board, including"
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<citation_deed_subject1a>",
+    "text": [
+      { "id": "deed_subject1a", "text": "a <number_groups>-man group of US Army soldiers" },
+      { "id": "deed_subject2a", "text": "a group of <number_groups> civilians" },
+      { "id": "deed_subject3a", "text": "a collection of <number_groups> elderly citizens" },
+      { "id": "deed_subject4a", "text": "a group of <number_groups> young children" },
+      { "id": "deed_subject5a", "text": "<number_groups> sailors" },
+      { "id": "deed_subject6a", "text": "an assembly of <number_groups> university students" },
+      { "id": "deed_subject7a", "text": "a collection of scientific personnel" },
+      { "id": "deed_subject8a", "text": "groups of medical staff" },
+      { "id": "deed_subject9a", "text": "a traveling collection of Nobel nominees" },
+      { "id": "deed_subject10a", "text": "<number_groups> of government executives" },
+      { "id": "deed_subject11a", "text": "a series of professional acters and actresses" },
+      { "id": "deed_subject12a", "text": "a local team of journalists" },
+      { "id": "deed_subject13a", "text": "a foreign crew of journalists" },
+      { "id": "deed_subject14a", "text": "a <number_groups>-man diplomatic delegation" },
+      { "id": "deed_subject15a", "text": "a group of <number_groups> joint NATO personnel" },
+      { "id": "deed_subject16a", "text": "a group of <number_groups> fresh army recruits" },
+      { "id": "deed_subject17a", "text": "a group of <number_groups> US Marines" },
+      { "id": "deed_subject18a", "text": "a collection of endangered zoo animals" },
+      { "id": "deed_subject19a", "text": "<number_groups> toddlers and infants" },
+      { "id": "deed_subject20a", "text": "an assembly of <number_groups> religious preachers" },
+      { "id": "deed_subject21a", "text": "a group of <number_groups> travelling missionaries" },
+      { "id": "deed_subject22a", "text": "a collection of <number_groups> Jehovah’s Witnesses" },
+      { "id": "deed_subject23a", "text": "a travelling grouping of <number_groups> rabbis" },
+      { "id": "deed_subject24a", "text": "<number_groups> Muslim preachers" },
+      { "id": "deed_subject25a", "text": "a group of <number_groups> convalescent patients" },
+      { "id": "deed_subject26a", "text": "a detachment of military police" },
+      { "id": "deed_subject27a", "text": "<number_groups> wounded soldiers" },
+      { "id": "deed_subject28a", "text": "<number_groups> police officers" },
+      { "id": "deed_subject29a", "text": "a <number_groups>-man squad of injured US Marines" },
+      { "id": "deed_subject30a", "text": "a dance company" },
+      { "id": "deed_subject31a", "text": "a group of <number_groups> wounded sailors" },
+      { "id": "deed_subject32a", "text": "a theatrical outfit" },
+      { "id": "deed_subject33a", "text": "a Red Cross delegation" },
+      { "id": "deed_subject34a", "text": "<number_groups> government officials" },
+      { "id": "deed_subject35a", "text": "<number_groups> of foreign government officials" },
+      { "id": "deed_subject36a", "text": "a group of industrial workers" },
+      {
+        "id": "deed_subject37a",
+        "text": "an election candidate, <given_name> <family_name>, and their campaign staff"
+      },
+      { "id": "deed_subject38a", "text": "a shift of construction labourers" },
+      { "id": "deed_subject39a", "text": "<number_groups> wounded police officers" },
+      { "id": "deed_subject40a", "text": "a detachment of army engineers" },
+      {
+        "id": "deed_subject41a",
+        "text": "the CEO of a major pharmaceutical corporation, <given_name> <family_name>, and their entourage"
+      },
+      { "id": "deed_subject42a", "text": "a travelling group of <number_groups> teenagers" },
+      { "id": "deed_subject43a", "text": "<number_groups> members of a non-profit, charitable organisation" },
+      { "id": "deed_subject44a", "text": "a travelling class of schoolchildren" },
+      { "id": "deed_subject45a", "text": "members of an esteemed state orchestral outfit" },
+      { "id": "deed_subject46a", "text": "a group of <number_groups> tourists" },
+      { "id": "deed_subject47a", "text": "a collection of <number_groups> newly minted parents" },
+      { "id": "deed_subject48a", "text": "an outfit of <number_groups> foreign researchers" },
+      { "id": "deed_subject49a", "text": "<number_groups> incubators with underdeveloped newborns" },
+      { "id": "deed_subject50a", "text": "a national sports team" },
+      { "id": "deed_subject51a", "text": "a group of orphaned children" },
+      { "id": "deed_subject52a", "text": "an internationally touring music group" },
+      { "id": "deed_subject53a", "text": "a small group of nuclear power plant engineers" },
+      { "id": "deed_subject54a", "text": "an enormous litter of adorable puppies" },
+      { "id": "deed_subject55a", "text": "an enormous litter of non-adorable puppies" },
+      { "id": "deed_subject56a", "text": "a sizable group of agricultural workers" },
+      { "id": "deed_subject57a", "text": "an array of museum staff and their display collection" },
+      { "id": "deed_subject58a", "text": "<number_groups> federal agents" },
+      { "id": "deed_subject59a", "text": "an archaeological team on an expedition" },
+      { "id": "deed_subject60a", "text": "<number_groups> members of the central intelligence service" },
+      { "id": "deed_subject61a", "text": "a safari group on tour" },
+      { "id": "deed_subject62a", "text": "<number_groups> foreign dignitaries" },
+      { "id": "deed_subject63a", "text": "a collection of <number_groups> fellow hikers" },
+      {
+        "id": "deed_subject64a",
+        "text": "<number_groups> operatives from an allied nation's secret intelligence service"
+      },
+      { "id": "deed_subject65a", "text": "<number_groups> members of a travelling sports team in disarray" },
+      { "id": "deed_subject66a", "text": "<number_groups> injured foreign soldiers" },
+      { "id": "deed_subject67a", "text": "participants of a catastrophically derailed boat race" },
+      { "id": "deed_subject68a", "text": "<number_groups> injured foreign sailors" },
+      { "id": "deed_subject69a", "text": "<number_groups> survivors of a train derailment, scheduled for Medevac" },
+      {
+        "id": "deed_subject70a",
+        "text": "<number_groups> injured civilians following a terrorist attack utilising improvised explosive devices and toxic agents, slated for airlift"
+      },
+      {
+        "id": "deed_subject71a",
+        "text": "<number_groups> injured persons following an automotive accident, slated for an urgent medical airlift"
+      },
+      {
+        "id": "deed_subject72a",
+        "text": "<number_groups> wounded Survivors of a mass homicide incident: scheduled for emergency medevac"
+      },
+      { "id": "deed_subject73a", "text": "a group of <number_groups> Intensive Care Unit patients" },
+      { "id": "deed_subject74a", "text": "<number_groups> catering and hospitality staff" },
+      {
+        "id": "deed_subject75a",
+        "text": "a group of <number_groups> people recovering from intensive, invasive surgery"
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "<citation_deed_location_non_combat>",
+    "text": [
+      { "id": "location_nc1", "text": "<number> days after being discharged" },
+      { "id": "location_nc2", "text": "<number> weeks after being discharged" },
+      { "id": "location_nc3", "text": "<number> months after being discharged" },
+      { "id": "location_nc4", "text": "while on home-leave, stateside" },
+      { "id": "location_nc5", "text": "while on medical-leave" }
+    ]
+  }
+]

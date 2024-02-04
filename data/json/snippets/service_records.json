@@ -65,7 +65,7 @@
       { "id": "deed_descriptor15", "text": "chivalrously" },
       { "id": "deed_descriptor16", "text": "daringly" },
       { "id": "deed_descriptor17", "text": "bringing honour to our nation, our military, and themself by" },
-      { "id": "deed_descriptor18", "text": ", heedless of their own safety" },
+      { "id": "deed_descriptor18", "text": ", heedless of their own safety," },
       { "id": "deed_descriptor19", "text": "courageously" },
       { "id": "deed_descriptor20", "text": ", at the risk of life and limb," },
       { "id": "deed_descriptor21", "text": ", though being the last survivor of their unit," }
@@ -83,7 +83,7 @@
       { "id": "action_nc3a", "text": "single handedly extinguishing a catastrophic fire that threatened harm upon" },
       {
         "id": "action_nc4a",
-        "text": "using their acquired technical knowledge to, while off duty, disarm discovered unexploded munitions that were posing a risk to"
+        "text": "using their acquired technical knowledge to disarm discovered unexploded munitions that were posing a risk to"
       },
       {
         "id": "action_nc5a",
@@ -102,7 +102,7 @@
       { "id": "deed_subject5a", "text": "<number_groups> sailors" },
       { "id": "deed_subject6a", "text": "an assembly of <number_groups> university students" },
       { "id": "deed_subject7a", "text": "a collection of scientific personnel" },
-      { "id": "deed_subject8a", "text": "groups of medical staff" },
+      { "id": "deed_subject8a", "text": "medical personnel" },
       { "id": "deed_subject9a", "text": "a traveling collection of Nobel nominees" },
       { "id": "deed_subject10a", "text": "<number_groups> of government executives" },
       { "id": "deed_subject11a", "text": "a series of professional acters and actresses" },
@@ -200,8 +200,19 @@
       { "id": "location_nc1", "text": "<number> days after being discharged" },
       { "id": "location_nc2", "text": "<number> weeks after being discharged" },
       { "id": "location_nc3", "text": "<number> months after being discharged" },
-      { "id": "location_nc4", "text": "while on home-leave, stateside" },
-      { "id": "location_nc5", "text": "while on medical-leave" }
+      { "id": "location_nc4", "text": "on home-leave, stateside" },
+      { "id": "location_nc5", "text": "on medical-leave" },
+      { "id": "location_nc6", "text": "vacationing in <random_direction> Europe" },
+      { "id": "location_nc7", "text": "on holiday in <random_direction> Asia" },
+      { "id": "location_nc8", "text": "visiting <random_direction> Africa" },
+      { "id": "location_nc9", "text": "holidaying in <random_direction> latten America" },
+      { "id": "location_nc10", "text": "on a trip to <random_direction> Oceania" },
+      { "id": "location_nc11", "text": "on-route to participate in resupply operations to Antarctic research bases" },
+      {
+        "id": "location_nc12",
+        "text": "deployed to <city> to assist in maintaining order following increasingly violent rioting"
+      },
+      { "id": "location_nc13", "text": "participating in a joint training exercise with friendly NATO forces" }
     ]
   }
 ]

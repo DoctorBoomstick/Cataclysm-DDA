@@ -172,6 +172,8 @@
     "name": { "str": "rifle with manual actions", "str_pl": "rifles with manual actions" },
     "//": "Manual actions exclude the magazine location preventing installation of belt-feed adaptors",
     "faults": [ "fault_gun_blackpowder", "fault_gun_dirt" ],
+    "to_hit": { "grip": "solid", "length": "short", "surface": "any", "balance": "uneven" },
+    "2//": "The length variable’s set at short as we’re assuming that, when using it as a melee weapon, you’re probably flipping the gun around to strike with the butt while gripping it from its midpoint or handguard, rather than holding it normally and beating with the end of the muzzle.",
     "valid_mod_locations": [
       [ "barrel", 1 ],
       [ "bore", 1 ],

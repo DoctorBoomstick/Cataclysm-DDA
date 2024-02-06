@@ -2,7 +2,7 @@
   {
     "id": "remington700_270",
     "copy-from": "rifle_manual",
-    "looks_like": "modular_ar15",
+    "looks_like": "remington700",
     "type": "GUN",
     "name": { "str": "bolt-action hunting rifle" },
     "description": "Featuring a handsome set of wooden furnishings, a classic design, and a no nonsense .270 caliber chambering, this is a powerful hunting rifle.  With a tried and proven pedigree dating back over 60 years, millions of such rugged arms have been made, exported, and used throughout the United States and the world at large.  Where hunting is concerned, this is a highly capable and well proven weapon in all respects.  Fortunate, given that your prey in these dark days may turn out to be a little bit more feisty than typical White-Tailed deer, moose, and black bears.",
@@ -10,7 +10,7 @@
     "variants": [
       {
         "id": "remington700_270",
-        "name": { "str": "Remington 700 .270 Win rifle" },
+        "name": { "str": "Remington 700 CDL SF rifle" },
         "description": "A classic bolt-action rifle chambered for .270 Winchester, very popular among hunters.  This is a CDL SF model with a forged, fluted, 416 stainless steel barrel threaded into the receiver and a recessed bolt face.  It has checkered walnut furniture and a recoil pad to reduce perceived recoil."
       }
     ],
@@ -20,7 +20,6 @@
     "longest_side": "1135 mm",
     "price": 112600,
     "price_postapoc": 2750,
-    "to_hit": -1,
     "material": [ "steel", "wood" ],
     "color": "brown",
     "ammo": [ "270win" ],
@@ -42,8 +41,57 @@
       [ "grip mount", 1 ],
       [ "rail mount", 1 ],
       [ "stock mount", 1 ],
+      [ "stock accessory", 2 ],
       [ "underbarrel mount", 1 ]
     ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "270win": 4 } } ],
+    "melee_damage": { "bash": 12 }
+  },
+  {
+    "id": "t3x_sl",
+    "copy-from": "rifle_manual",
+    "looks_like": "remington700",
+    "type": "GUN",
+    "name": { "str": ".270-caliber mountain rifle" },
+    "description": "Eaze of carrying and stopping power are the name of the game when it comes to this plastic-built, magazine-fed hunting rifle: a combination of features that insures a powerhouse of a gun, as well as a firearm that can and will beat your shoulder to within an inch of it’s life.  .270 Winchester ammunition is not kind to the human body when fired from such a light platform, it turns out.  A rifle produced for mountain hunters or gamesmen on remote hunts a long way from any resupply point, it, despite its hefty recoil, is a light-weight, precise weapon that you could cast over a shoulder and barely notice as you hoof it about New England.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "t3x_sl",
+        "name": { "str": "Tikka T3x SUPERLITE" },
+        "description": "There are two sorts of people in the world: those who hear \"Tikka\" and look forward to dining on a dish of Indian chicken, and those whose minds bulldoze past that connotation and, rather, think of the series of Finish magazine rifles of the same name.  Possessing svelte lines and a hard-plastic construction, the Tikka T3x is a line of bolt-action hunting rifles produced by Sako, with this particular model being a lightened version, advertised to gamesmen as an eminently portable, high-precision shoulder arm.  Equipped with a synthetic stock, steel bolt shroud, fluted barrel, and a chambering of .270 Winchester, the firearm will assuredly deliver a punch to both your target and your own shoulder, for, despite the gun’s thick butt pad, the weapon’s lightness provokes little mercy from the recoil department."
+      }
+    ],
+    "weight": "2812 g",
+    "volume": "2202 ml",
+    "longest_side": "1082 mm",
+    "barrel_length": "569 mm",
+    "price": 112600,
+    "price_postapoc": 2750,
+    "material": [ "steel", "plastic" ],
+    "color": "brown",
+    "ammo": [ "270win" ],
+    "dispersion": 70,
+    "durability": 8,
+    "blackpowder_tolerance": 24,
+    "clip_size": 4,
+    "barrel_volume": "750 ml",
+    "flags": [ "RELOAD_ONE", "NEVER_JAMS", "EASY_CLEAN" ],
+    "valid_mod_locations": [
+      [ "barrel", 1 ],
+      [ "bore", 1 ],
+      [ "brass catcher", 1 ],
+      [ "mechanism", 4 ],
+      [ "sights", 1 ],
+      [ "sling", 1 ],
+      [ "grip", 1 ],
+      [ "rail mount", 1 ],
+      [ "stock mount", 1 ],
+      [ "stock accessory", 2 ],
+      [ "underbarrel mount", 1 ],
+      [ "muzzle", 1 ]
+    ],
+    "//": "The rifle doesn’t come with attached rails but does have scope rings built into the action, and it's drilled for after-market rail compatibility. Also, it doesn’t have an underbarrel rail, though a proprietary bipod can be attached. That being said, I don’t want players smashing an M203 on the undercarriage of their bolt rifle, so it doesn’t get an underbarrel slot. Lastly, there’s an option for the barrels to come either threaded for suppressors and muzzle breaks or not threaded at all. I’m assuming whoever bought, sold, or packed this one likely had the barrel threaded, so it gets a muzzle slot.",
     "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "270win": 4 } } ],
     "melee_damage": { "bash": 12 }
   }

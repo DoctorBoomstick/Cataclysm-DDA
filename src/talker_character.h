@@ -111,7 +111,7 @@ class talker_character_const: public talker_cloner<talker_character_const>
         effect get_effect( const efftype_id &effect_id, const bodypart_id &bp ) const override;
         bool is_deaf() const override;
         bool is_mute() const override;
-        std::string get_value( const std::string &var_name ) const override;
+        std::optional<std::string> maybe_get_value( const std::string &var_name ) const override;
 
         // stats, skills, traits, bionics, magic, and proficiencies
         std::vector<skill_id> skills_teacheable() const override;
@@ -192,6 +192,8 @@ class talker_character_const: public talker_cloner<talker_character_const>
         units::temperature_delta get_body_temp_delta() const override;
         bool knows_martial_art( const matype_id &id ) const override;
         bool using_martial_art( const matype_id &id ) const override;
+        int climate_control_str_heat() const override;
+        int climate_control_str_chill() const override;
     protected:
         talker_character_const() = default;
         const Character *me_chr_const;
@@ -238,6 +240,8 @@ class talker_character: public talker_cloner<talker_character, talker_character_
         void set_proficiency_practiced_time( const proficiency_id &prof, int turns ) override;
         void mutate( const int &highest_cat_chance, const bool &use_vitamins ) override;
         void mutate_category( const mutation_category_id &mut_cat, const bool &use_vitamins ) override;
+        void mutate_towards( const trait_id &trait, const mutation_category_id &mut_cat,
+                             const bool &use_vitamins ) override;
         void set_mutation( const trait_id &new_trait, const mutation_variant * = nullptr ) override;
         void unset_mutation( const trait_id &old_trait ) override;
         void activate_mutation( const trait_id &trait ) override;

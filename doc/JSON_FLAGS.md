@@ -159,11 +159,11 @@ These are handled through [ammo types](../data/json/items/ammo_types.json).  You
 
 Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other item types.  Experiment to find which flags work elsewhere.
 
-- ```ABLATIVE_CHAINMAIL_ARMS``` item can be worn with chainmanil armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
-- ```ABLATIVE_CHAINMAIL_ELBOWS``` item can be worn with chainmanil armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
-- ```ABLATIVE_CHAINMAIL_KNEES``` item can be worn with chainmanil armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
-- ```ABLATIVE_CHAINMAIL_LEGS``` item can be worn with chainmanil armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
-- ```ABLATIVE_CHAINMAIL_TORSO``` item can be worn with chainmanil armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
+- ```ABLATIVE_CHAINMAIL_ARMS``` item can be worn with chainmail armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
+- ```ABLATIVE_CHAINMAIL_ELBOWS``` item can be worn with chainmail armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
+- ```ABLATIVE_CHAINMAIL_KNEES``` item can be worn with chainmail armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
+- ```ABLATIVE_CHAINMAIL_LEGS``` item can be worn with chainmail armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
+- ```ABLATIVE_CHAINMAIL_TORSO``` item can be worn with chainmail armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
 - ```ABLATIVE_HELMET``` item can be worn with Hub 01 headgear without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
 - ```ABLATIVE_LARGE``` This item fits in large ablative pockets.
 - ```ABLATIVE_MANTLE``` item can be worn with Hub 01 armor without encumbrance penalty; specifically can be put in pocket for armor with this flag restriction.
@@ -191,18 +191,18 @@ Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other ite
 - ```FIN``` This item is swim fins aka diving fins aka flippets, and provide speed boost when you swim.
 - ```FIX_FARSIGHT``` This gear corrects farsightedness.
 - ```FIX_NEARSIGHT``` This gear corrects nearsightedness.
-- ```FLASH_PROTECTION``` This item grant a protection against different light-related dangers, including flashbangs and dazzling light.
+- ```FLASH_PROTECTION``` This item grants a protection against different light-related dangers, including flashbangs and dazzling light.
 - ```FLOTATION``` Prevents the player from drowning in deep water.  Also prevents diving underwater.
 - ```FRAGILE``` This gear is less resistant to damage than normal.
 - ```GAS_PROOF``` This item will completely protect you from any dangerous gases.
 - ```GNV_EFFECT``` Being worn, this item will give a night vision.  Using enchantment, that applies effect, that modifies character's night vision score, may be better alternative, and more flexible.
 - ```HELMET_AVENTAIL``` Item can be worn with nasal helmet; specifically can be put in pocket for armor with this flag restriction.
-- ```HELMET_BACK_POUCH``` Item can be worn with diferent hard hats, as attachment; specifically can be put in pocket for armor with this flag restriction.
-- ```HELMET_EAR_ATTACHMENT``` Item can be worn with diferent hard hats, as attachment; specifically can be put in pocket for armor with this flag restriction.
-- ```HELMET_FACE_SHIELD``` Item can be worn with diferent hard hats, as attachment; specifically can be put in pocket for armor with this flag restriction.
-- ```HELMET_MANDIBLE_GUARD_STRAPPED``` Item can be worn with diferent hard helmets, as attachment; specifically can be put in pocket for armor with this flag restriction.
-- ```HELMET_MANDIBLE_GUARD``` Item can be worn with diferent hard helmets, as attachment; specifically can be put in pocket for armor with this flag restriction.
-- ```HELMET_NAPE_PROTECTOR``` Item can be worn with diferent hard helmets, as attachment; specifically can be put in pocket for armor with this flag restriction.
+- ```HELMET_BACK_POUCH``` Item can be worn with different hard hats, as attachment; specifically can be put in pocket for armor with this flag restriction.
+- ```HELMET_EAR_ATTACHMENT``` Item can be worn with different hard hats, as attachment; specifically can be put in pocket for armor with this flag restriction.
+- ```HELMET_FACE_SHIELD``` Item can be worn with different hard hats, as attachment; specifically can be put in pocket for armor with this flag restriction.
+- ```HELMET_MANDIBLE_GUARD_STRAPPED``` Item can be worn with different hard helmets, as attachment; specifically can be put in pocket for armor with this flag restriction.
+- ```HELMET_MANDIBLE_GUARD``` Item can be worn with different hard helmets, as attachment; specifically can be put in pocket for armor with this flag restriction.
+- ```HELMET_NAPE_PROTECTOR``` Item can be worn with different hard helmets, as attachment; specifically can be put in pocket for armor with this flag restriction.
 - ```HOOD``` Allow this clothing to conditionally cover the head, for additional warmth or water protection, if the player's head isn't encumbered.
 - ```HYGROMETER``` This gear is equipped with an accurate hygrometer (which is used to measure humidity).
 - ```INTEGRATED``` This item represents a part of you granted by mutations or bionics.  It will always fit, cannot be unequipped (aside from losing the source), and won't drop on death, but otherwise behaves like normal armor with regards to function, encumbrance, layer conflicts and so on.
@@ -214,7 +214,6 @@ Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other ite
 - ```ONLY_ONE``` You can wear only one.
 - ```OUTER```  Outer garment layer.
 - ```OVERSIZE``` Can always be worn no matter what encumbrance/mutations/bionics/etc, but prevents any other clothing being worn over this.
-- ```PADDED``` This armor counts as comfortable even if none of the specific materials are soft.
 - ```PADDED``` This armor counts as comfortable even if none of the specific materials are soft.
 - ```PARTIAL_DEAF``` Reduces the volume of sounds to a safe level.
 - ```PERSONAL``` This item goes in the personal aura layer, intended for metaphysical effects.
@@ -232,7 +231,6 @@ Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other ite
 - ```SEMITANGIBLE``` Prevents the item from participating in the encumbrance system when worn.
 - ```SKINTIGHT``` Undergarment layer.
 - ```SLOWS_MOVEMENT``` This piece of clothing multiplies move cost by 1.1.
-- ```SLOWS_THIRST``` This piece of clothing multiplies the rate at which the player grows thirsty by 0.70.
 - ```STAR_PLATE``` Item can be worn with ryūsei battle kit armor; specifically can be put in pocket for armor with this flag restriction.
 - ```STAR_SHOULDER``` Item can be worn with ryūsei battle kit armor ; specifically can be put in pocket for armor with this flag restriction.
 - ```STAR_SKIRT``` Item can be worn with ryūsei battle kit armor; specifically can be put in pocket for armor with this flag restriction.
@@ -359,6 +357,7 @@ Character flags can be `trait_id`, `json_flag_id` or `flag_id`.  Some of these a
 - ```DIMENSIONAL_ANCHOR``` You can't be teleported.  Also protects you from any dangerous effects of portal storms.
 - ```DOWNED_RECOVERY``` Always has 50% chance to recover from downing, regardless of limb scores / stats.
 - ```ECTOTHERM``` For ectothermic mutations, like `COLDBLOOD4` and `DRAGONBLOOD3` (Black Dragon from Magiclysm).
+- ```ETHEREAL```  You will not drop your items if you gain the `incorporeal` effect.
 - ```ELECTRIC_IMMUNE``` You are immune to electric damage.
 - ```EMP_IMMUNE``` You bionic power cannot be drained and your vulnerable electronics cannot be broken during an EMP blast.
 - ```ENHANCED_VISION``` Increases the scouting range, similarly to `ZOOM` item flag.
@@ -417,7 +416,7 @@ Character flags can be `trait_id`, `json_flag_id` or `flag_id`.  Some of these a
 - ```STRICT_HUMANITARIAN``` You can eat foodstuffs tagged with `STRICT_HUMANITARIANISM` without morale penalties.
 - ```SUNBURN``` TBD, probably related to `ALBINO`.
 - ```SUPER_CLAIRVOYANCE``` Gives a super clairvoyance effect (works with multiple z-levels), used for debug purposes.
-- ```SUPER_HEARING``` You can hear much better than a normal person.
+- ```SAFECRACK_NO_TOOL``` Allows to open safes without stethoscope.
 - ```TELEPORT_LOCK``` You cannot teleport.  This has none of the protective effects of `DIMENSIONAL_ANCHOR`.
 - ```THERMOMETER``` You always know what temperature it is.
 - ```TINY``` Changes your size to `creature_size::tiny`.  Checked first of the size category flags.
@@ -433,7 +432,7 @@ Character flags can be `trait_id`, `json_flag_id` or `flag_id`.  Some of these a
 - ```WINGS_1``` You have 50% chance to ignore falling traps (including ledges).
 - ```WINGS_2``` You have 100% chance to ignore falling traps (including ledges).  Requires two flag instances.
 - ```WINGGLIDE``` You can glide using some part of your body and strenuous physical effort.
-- ```mycus``` TBD
+- ```mycus``` acts as `THRESH_MYCUS`, makes all monsters with FUNGUS species friendly, fungicidal gas & antifungal pills cause worse effects.  Mutate when eating mycus fruit, or when sleeping.
 
 
 ### Mutation Categories
@@ -450,7 +449,7 @@ These branches are the valid `dreams` from [dreams.json](../data/json/dreams.jso
 - ```MUTCAT_FISH``` "You are overcome by an overwhelming longing for the ocean."
 - ```MUTCAT_INSECT``` "You hear buzzing, and feel your body harden."
 - ```MUTCAT_LIZARD``` "For a heartbeat, your body cools down."
-- ```MUTCAT_MEDICAL``` "Your can feel the blood rushing through your veins and a strange, medicated feeling washes over your senses."
+- ```MUTCAT_MEDICAL``` "You can feel the blood rushing through your veins and a strange, medicated feeling washes over your senses."
 - ```MUTCAT_PLANT``` "You feel much closer to nature."
 - ```MUTCAT_RAPTOR``` "Mmm...sweet bloody flavor... tastes like victory."
 - ```MUTCAT_RAT``` "You feel a momentary nausea."
@@ -462,7 +461,7 @@ These branches are the valid `dreams` from [dreams.json](../data/json/dreams.jso
 ## Comestibles
 
 - ```ACID``` When consumed using the `BLECH` function, penalties are reduced if character has `ACIDPROOF` or `ACIDBLOOD` traits.
-- ```CARNIVORE_OK``` Can be eaten by characters with the Carnivore mutation.
+- ```CARNIVORE_OK``` Can be eaten by characters with the Carnivore mutation at 50% kcal reduction.
 - ```CANT_HEAL_EVERYONE``` This med can't be used by everyone, it requires a special mutation.  See `can_heal_with` in mutation.
 - ```CORROSIVE``` when consumed using the `BLECH` function, causes the same penalties as `ACID` but is not affected by `ACIDPROOF` or `ACIDBLOOD` traits.
 - ```EATEN_COLD``` Morale bonus for eating cold.
@@ -543,6 +542,7 @@ These flags apply to the `use_action` field, instead of the `flags` field.
 - ```INHALER``` Removes disease `asthma`.
 - ```IODINE``` Adds disease `iodine`.
 - ```MARLOSS``` "As you eat the berry, you have a near-religious experience, feeling at one with your surroundings..."
+- ```MYCUS``` if has trait `THRESH_MARLOSS`, neutral effect removes radiation, add 30 painkiller & heals all bodyparts by 4.  if good effect, add 1000 morale, sleep for 5 hours, add `THRESH_MYCUS`, also removes marloss addictions `addiction_marloss_r`,`addiction_marloss_b`, `addiction_marloss_y` .  With mycus threshold, adds 5 painkiller and stimulant.  With trait `M_DEPENDENT`, removes 87 kcal, add 10 thirst, adds 5 fatigue, and add morale to negate mutation pains. not having previously mentioned traits causes you to vomit, mutate, randomly gain 2 pain, reduce daily health by 8-50, removes 87 kcal, add 10 thirst, and add 5 fatigue.  Only applies to mycus fruit by default.
 - ```METH``` Adds disease `meth`.
 - ```NONE``` "You can't do anything of interest with your [x]."
 - ```PKILL``` Reduces pain.  Adds disease `pkill[n]` where `[n]` is the level of flag `PKILL_[n]` used on this comestible.
@@ -604,7 +604,6 @@ List of known flags, used in both `furniture` and `terrain`.  Some work for both
 - ```CONNECT_WITH_WALL``` (only for terrain) This flag has been superseded by the JSON entries `connect_group` and `connects_to`, but is retained for backward compatibility.
 - ```CONSOLE``` Used as a computer.
 - ```CONTAINER``` Items on this square are hidden until looted by the player.
-- ```CORNERED_FIGHTER``` This creature will stop fleeing and fight back if enemies pursue it into melee range.
 - ```CURRENT``` This water is flowing.
 - ```DEEP_WATER``` This is water that can submerge the player.
 - ```DESTROY_ITEM``` Items that land here are destroyed.  See also `NOITEM`.
@@ -723,6 +722,7 @@ List of known flags, used in both `furniture` and `terrain`.  Some work for both
 - ```AUTODOC_COUCH``` This furniture can be a couch for a furniture with the `autodoc` examine action.
 - ```BLOCKSDOOR``` This will boost map terrain's resistance to bashing if `str_*_blocked` is set (see `map_bash_info`).
 - ```BRIDGE``` If this furniture is placed over water tiles, it prevents player from becoming wet.
+- ```FLOATS_IN_AIR``` If this furniture is placed over open air it won't fall.
 
 
 ## Generic
@@ -748,7 +748,7 @@ These flags can be applied via JSON item definition to most items.  Not to be co
 - ```BIONIC_WEAPON_MELEE``` This weapon is bionic melee, used for different checks in EOCs.
 - ```BIRD``` Food that only player with `BIRD` threshold mutation can eat.  See also `INEDIBLE`.
 - ```BURNOUT``` You can visually inspect how much it is burned out (candle, torch).
-- ```CALORIES_INTAKE``` This item allow you to see detailed info about your calories intake for today and tomorrow in consuming menu.  Can be used with `CALORIES_INTAKE_TRACKER` `use_action`, that shows the same info.
+- ```CALORIES_INTAKE``` This item allows you to see detailed info about your calories intake for today and tomorrow in consuming menu.  Can be used with `CALORIES_INTAKE_TRACKER` `use_action`, that shows the same info.
 - ```CAMERA_PRO``` This item is professional camera, and increase the quality of made photos.
 - ```CATTLE``` Food that only player with `CATTLE` threshold mutation can eat.  See also `INEDIBLE`.
 - ```CBM``` This item is CBM, and works respectively.
@@ -1082,6 +1082,7 @@ Used to describe monster characteristics and set their properties and abilities.
 - ```COMBAT_MOUNT```  This mount has better chance to ignore hostile monster fear.
 - ```CONSOLE_DESPAWN``` Despawns when a nearby console is properly hacked.
 - ```CONVERSATION``` This monster can engage in conversation.  Will need to have chat_topics as well.
+- ```CORNERED_FIGHTER``` This creature will stop fleeing and fight back if enemies pursue it into melee range.
 - ```DORMANT``` This monster will be revived by dormant corpse traps.
 - ```DEADLY_VIRUS``` This monster can inflict the `zombie_virus` effect.  Used by the Dark Days of the Dead and Deadly Zombie Virus mods.
 - ```DESTROYS``` Bashes down walls and more (2.5x bash multiplier, where base is the critter's max melee bashing).
@@ -1104,6 +1105,10 @@ Used to describe monster characteristics and set their properties and abilities.
 - ```GRABS``` Its attacks may grab you!
 - ```GROUP_BASH``` Gets help from monsters around it when bashing, adding their strength together.
 - ```GROUP_MORALE``` More courageous when near friends.
+- ```GUILT_ANIMAL``` Killing this monster(i.e. a hatchling or a kitten) causes guilt to the player and is counted for the kill thresholds of animals where player experiences progressively less morale penalty. WARNING: Do not use without 'death_guilt' death function or together with other guilt flags.
+- ```GUILT_CHILD``` Killing this monster(i.e. a zombie child or mutant child) causes guilt to the player and is counted for the kill thresholds of children where player experiences progressively less morale penalty. WARNING: Do not use without 'death_guilt' death function or together with other guilt flags.
+- ```GUILT_HUMAN``` Killing this monster(i.e. a panicked person or futile fighter) causes guilt to the player and is counted for the kill thresholds of non-NPC humans where player experiences progressively less morale penalty. WARNING: Do not use without 'death_guilt' death function or together with other guilt flags.
+- ```GUILT_OTHERS``` Killing this monster(i.e. a blood sacrifice) causes guilt to the player and is counted for the kill thresholds of monsters that do not fit other categories where player experiences progressively less morale penalty. WARNING: Do not use without 'death_guilt' death function or together with other guilt flags.
 - ```HARDTOSHOOT``` It's one size smaller for ranged attacks, no less than the `TINY` flag.
 - ```HAS_MIND``` Is sapient and capable of reason (mi-go, triffids, cyborgs, etc.).  `HUMAN` assumes `HAS_MIND`.
 - ```HEARS``` It can hear you.
@@ -1149,6 +1154,7 @@ Used to describe monster characteristics and set their properties and abilities.
 - ```PUSH_MON``` Can push creatures out of its way.
 - ```PUSH_VEH``` Can push vehicles out of its way.
 - ```QUEEN``` When it dies, local populations start to die off too.
+- ```QUIETMOVES``` Makes move noises as if ~2 sizes smaller.
 - ```RANGED_ATTACKER``` Monster has any sort of ranged attack.
 - ```REVIVES_HEALTHY``` When revived, this monster has full hitpoints and speed.
 - ```REVIVES``` Monster corpse will revive after a short period of time.
@@ -1157,6 +1163,7 @@ Used to describe monster characteristics and set their properties and abilities.
 - ```SHEARABLE``` This monster can be sheared for wool.
 - ```SHORTACIDTRAIL``` Leaves an intermittent trail of acid.  See also `ACIDTRAIL`.
 - ```SILENT_DISAPPEAR``` If this monster dissapear (left no corpse), the `The %s disappears.` message won't be printed.
+- ```SILENTMOVES``` Makes no noise at all when moving.
 - ```SLUDGEPROOF``` Ignores the effect of sludge trails.
 - ```SLUDGETRAIL``` Causes the monster to leave a sludge trap trail when moving.
 - ```SMALLSLUDGETRAIL``` Causes the monster to occasionally leave a 1-tile sludge trail when moving.
@@ -1234,17 +1241,6 @@ Multiple time of day conditions will be combined together so that any of those c
 - ```NIGHT```
 
 
-### Sizes
-
-Monster physical sizes.
-
-- ```HUGE``` Tank
-- ```LARGE``` Cow
-- ```MEDIUM``` Human
-- ```SMALL``` Dog
-- ```TINY``` Squirrel
-
-
 ### Special attacks
 
 Special attacks have been moved to [MONSTER_SPECIAL_ATTACKS.md](MONSTER_SPECIAL_ATTACKS.md) as they have all been migrated away from flags.
@@ -1266,6 +1262,7 @@ See [Character](#character)
 - ```BEE``` Location is related to bees.  Used to classify location.
 - ```BLOB``` Location should "blob" outward from the defined location with a chance to be placed in adjacent locations.
 - ```CLASSIC``` Location is allowed when classic zombies are enabled.
+- ```DERMATIK``` Location is related to a dermatik infestation.  Used to classify location.
 - ```FARM```
 - ```FUNGAL``` Location is related to fungi.  Used to classify location.
 - ```GLOBALLY_UNIQUE``` Location will only occur once per world.  `occurrences` is overridden to define a percent chance (e.g. `"occurrences" : [75, 100]` is 75%).
@@ -1440,6 +1437,7 @@ Techniques may be used by tools, armors, weapons and anything else that can be w
 - ```HAS_RECIPE``` Used by the E-Ink tablet to indicate it's currently showing a recipe.
 - ```IS_UPS``` Item is Unified Power Supply.  Used in active item processing.
 - ```LIGHT_[X]``` Illuminates the area with light intensity `[X]` where `[X]` is an intensity value (e.g. `LIGHT_4` or `LIGHT_100`).  Note: this flags sets `itype::light_emission` field and then is removed (can't be found using `has_flag`).
+- ```MAGICAL``` Causes magical effects or functions based on arcane principles. Currently used by `iuse::robotcontrol` to determine if the hacking device is a computer (and thus has a screen that must be read etc).
 - ```NO_DROP``` Item should never exist on map tile as a discrete item (must be contained by another item).
 - ```NO_UNLOAD``` Cannot be unloaded.
 - ```POWERED``` If turned ON, item uses its own source of power, instead of relying on power of the user.
@@ -1474,21 +1472,13 @@ These flags apply to the `use_action` field, instead of the `flags` field.
 - ```BREAK_STICK``` Breaks long branch into two.
 - ```C4``` Arm the C4.
 - ```CAN_GOO``` Release a little blob buddy.
-- ```CAPTURE_MONSTER_ACT``` Capture and encapsulate a monster.  The associated action is also used for releasing it.
-- ```CARVER_OFF``` Turn the carver on.
-- ```CARVER_ON``` Turn the carver off.
-- ```CHAINSAW_OFF``` Turn the chainsaw on.
-- ```CHAINSAW_ON``` Turn the chainsaw off.
-- ```COMBATSAW_OFF``` Turn the combat-saw on.
-- ```COMBATSAW_ON``` Turn the combat-saw off
+- ```CAPTURE_MONSTER_ACT``` Capture and encapsulate a monster. The associated action is also used for releasing it.
 - ```CROWBAR``` Pry open doors, windows, man-hole covers and many other things that need prying.
 - ```DIG``` Clear rubble.
 - ```DIRECTIONAL_ANTENNA``` Find the source of a signal with your radio.
 - ```DIVE_TANK``` Use compressed air tank to breathe.
 - ```DOG_WHISTLE``` Dogs hate this thing; your dog seems pretty cool with it though.
 - ```DOLLCHAT``` That creepy doll just keeps on talking.
-- ```ELEC_CHAINSAW_OFF``` Turn the electric chainsaw on.
-- ```ELEC_CHAINSAW_ON``` Turn the electric chainsaw off.
 - ```EXTINGUISHER``` Put out fires.
 - ```FIRECRACKER_ACT``` The saddest Fourth of July.
 - ```FIRECRACKER_PACK_ACT``` Keep the change you filthy animal.

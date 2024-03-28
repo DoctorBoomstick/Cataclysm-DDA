@@ -20,6 +20,8 @@
     ],
     "price": 4397,
     "//": "Calculated by converting the default game price to the 1930 standard using https://www.amortization.org/inflation/amount.php?year=1930&amount=43.97&to=2024",
+    "to_hit": { "grip": "solid", "length": "hand", "surface": "any", "balance": "neutral" },
+    "material": [ { "type": "steel", "portion": 3 }, { "type": "wood", "portion": 1 } ],
     "valid_mod_locations": [
       [ "barrel", 1 ],
       [ "brass catcher", 1 ],
@@ -52,7 +54,7 @@
     "price": 2817,
     "//2": "Calculated by converting the revised 1917 contract price of $19 to the 1930 standard using https://www.amortization.org/inflation/amount.php?year=1917&amount=19&to=1930",
     "price_postapoc": 1250,
-    "to_hit": { "grip": "solid", "length": "short", "surface": "any", "balance": "neutral" },
+    "to_hit": { "grip": "solid", "length": "hand", "surface": "any", "balance": "neutral" },
     "material": [ { "type": "steel", "portion": 3 }, { "type": "wood", "portion": 1 } ],
     "symbol": "(",
     "color": "light_gray",
@@ -67,37 +69,39 @@
     "melee_damage": { "bash": 9 }
   },
   {
-    "id": "tommygun",
+    "id": "mm_m1921a",
     "type": "GUN",
     "copy-from": "tommygun",
-    "name": { "str": "Thompson submachine gun" },
-    "description": "A submachine gun chambered in .45 ACP and accepting Thompson magazines.",
+    "name": { "str": ".45-caliber Tommygun" },
+    "description": "Also known by a variety of nicknames — the Chicago typewriter, the trench broom, etc. — this clunky brick of a firearm packs the fire rate of a machine gun into the heft of a stout rifle.  A combination of peacetime and an eye-watering price made this weapon more recognisable through its role in motion pictures than service on the streets, though 700-800 rounds per minute of .45 Automatic is certainly nothing to scoff at, if hard to control.",
     "variant_type": "gun",
     "variants": [
       {
-        "id": "tommygun",
+        "id": "1921a",
         "name": { "str": "Auto-Ordnance M1921A submachine gun" },
-        "description": "An American-made submachine gun developed during the very end of World War I, too late to see action.  Infamous during the 1920s for its use by gangsters, and used during World War II before being mostly replaced with less-expensive alternatives."
+        "description": "A little, man-portable machine gun, iconic for gracing the screens of recent motion picture productions with its vertical foregrip, finned barrel, and stupendous drum magazine.  Even before the depression rendered it into a month’s wage, this .45-calibre trench broom was only a feasible acquisition for large police departments, private security, the continental postal service, and choice members of the criminal fraternity."
       }
     ],
-    "volume": "2228 ml",
-    "longest_side": "825 mm",
-    "//": "Size statistics derived from https://www.iwm.org.uk/collections/item/object/30029433",
+    "volume": "1468 ml",
+    "longest_side": "584 mm",
+    "//": "9.5 inches shorter than a regular M1921, with the difference being made up for with the removable buttstock mod.",
+    "//2": "Size statistics derived from https://www.iwm.org.uk/collections/item/object/30029433",
     "price": 16816,
-    "//2": "Calculated by converting the revised 1926 price of $175 to the 1930 standard using https://www.amortization.org/inflation/amount.php?year=1926&amount=175&to=1930",
+    "//3": "Calculated by converting the revised 1926 price of $175 to the 1930 standard using https://www.amortization.org/inflation/amount.php?year=1926&amount=175&to=1930",
     "material": [ { "type": "steel", "portion": 3 }, { "type": "wood", "portion": 2 } ],
-    "to_hit": { "grip": "solid", "length": "short", "surface": "any", "balance": "neutral" },
+    "to_hit": { "grip": "solid", "length": "short", "surface": "any", "balance": "uneven" },
+    "handling": 10,
+    "//4": "Normal handling for anything with a stock is 20. We bump it down to ten here so you can’t take off the stock and totle along without being affected. The difference is made up by the gun’s removable buttstock mod.",
+    "default_mods": [ "mm_tomson_grip", "mm_tomson_stock" ],
     "valid_mod_locations": [
       [ "barrel", 1 ],
       [ "brass catcher", 1 ],
       [ "mechanism", 2 ],
       [ "sights mount", 1 ],
       [ "sling", 1 ],
-      [ "stock mount", 1 ],
-      [ "stock accessory", 2 ],
+      [ "stock", 1 ],
       [ "underbarrel", 1 ]
     ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "thompson_mag", "thompson_drum", "thompson_makeshiftmag" ] } ],
-    "melee_damage": { "bash": 10 }
+    "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "thompson_mag", "thompson_drum", "thompson_makeshiftmag" ] } ]
   }
 ]

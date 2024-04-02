@@ -26,7 +26,6 @@
       "deep_rock"
     ],
     "default_groundcover": [ [ "t_region_groundcover", 1 ] ],
-    "//": "Weights are set high in order to allow mods to add rare terrains.  Dividing current weights by 1000 breaks in repo mods and should not be approved.",
     "region_terrain_and_furniture": {
       "terrain": {
         "t_region_groundcover": { "t_grass": 12000, "t_grass_dead": 2000, "t_dirt": 1000 },
@@ -42,13 +41,14 @@
           "t_shrub_blueberry": 2,
           "t_shrub_raspberry": 2,
           "t_shrub_strawberry": 1,
+          "t_fern_lady": 3,
           "t_shrub_rhododendron": 6
         },
-        "t_region_shrub_forest": { "t_region_shrub_forest_dense": 60, "t_shrub_rose": 5, "t_shrub_blackberry": 5 },
+        "t_region_shrub_forest": { "t_region_shrub_forest_dense": 60 },
         "t_region_shrub_plains": { "t_shrub": 6, "t_shrub_blueberry": 3, "t_shrub_strawberry": 1, "t_shrub_rhododendron": 6 },
-        "t_region_shrub_swamp": { "t_fern": 2, "t_shrub_raspberry": 2, "t_shrub_blueberry": 2, "t_shrub_huckleberry": 1, "t_shrub_rose": 1 },
-        "t_region_shrub_fruit": { "t_shrub_blueberry": 6, "t_shrub_strawberry": 6, "t_shrub_raspberry": 4 },
-        "t_region_shrub_decorative": { "t_shrub": 30, "t_fern": 5, "t_shrub_rose": 20, "t_shrub_hydrangea": 20, "t_shrub_lilac": 20, "t_bamboo_long": 5 },
+        "t_region_shrub_swamp": { "t_fern_lady": 2, "t_shrub_blueberry": 2 },
+        "t_region_shrub_fruit": { "t_shrub_blueberry": 6, "t_shrub_strawberry": 6 },
+        "t_region_shrub_decorative": { "t_shrub": 30, "t_fern_lady": 5 },
         "t_region_shrub": { "t_region_shrub_decorative": 60, "t_underbrush": 10, "t_region_shrub_fruit": 30 },
         "t_region_tree_forest_dense": { "t_tree_alder_green": 5, "t_region_tree_forest_other": 5 },
         "t_region_tree_forest_other": { "t_tree_willow_arctic": 15, "t_tree_alder_green": 15 },
@@ -61,14 +61,14 @@
         "t_region_tree_evergreen": { "t_tree_deadpine": 2 }
       },
       "furniture": {
-        "f_region_flower": { "f_bluebell": 100, "f_sunflower": 100 },
-        "f_region_flower_decorative": { "f_bluebell": 2, "f_fireweed": 1, "f_sunflower": 1 },
-        "f_region_weed": { "f_thistle": 400, "f_bluebell": 200 },
-        "f_region_plain": { "f_thistle": 300, "f_fireweed": 100, "f_dogbane": 30 },
-        "f_region_forest": { "f_bluebell": 600, "f_wintergreen": 100, "f_dogbane": 80 },
-        "f_region_forest_dense": { "f_bluebell": 800, "f_wintergreen": 200, "f_dogbane": 100 },
-        "f_region_forest_water": { "f_burdock": 4, "f_purple_loosestrife": 3, "f_japanese_knotweed": 2, "f_lily": 1 },
-        "f_region_water_plant": { "f_cattails": 15, "f_purple_loosestrife": 10, "f_wild_rice": 1, "f_lilypad": 1, "f_lotus": 5 }
+        "f_region_flower": { "f_bluebell": 100, "f_orchid_bog": 50, "f_buttercup": 100, "f_violet": 100 },
+        "f_region_flower_decorative": { "f_bluebell": 2, "f_fireweed": 1, "f_buttercup": 1, "f_violet": 2 },
+        "f_region_weed": { "f_thistle": 400, "f_buttercup": 400, "f_bluebell": 50 },
+        "f_region_plain": { "f_thistle": 300, "f_fireweed": 100, "f_violet": 250, "f_buttercup": 30 },
+        "f_region_forest": { "f_bluebell": 600, "f_wintergreen": 200, "f_violet": 200, "f_orchid_bog": 60, "f_buttercup": 60 },
+        "f_region_forest_dense": { "f_bluebell": 800, "f_wintergreen": 200 },
+        "f_region_forest_water": { "f_orchid_bog": 4, "f_violet": 2 },
+        "f_region_water_plant": { "f_cattails": 15 }
       }
     },
     "overmap_connection_settings": {

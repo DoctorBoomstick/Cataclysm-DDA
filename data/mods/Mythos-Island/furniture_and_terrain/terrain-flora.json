@@ -71,8 +71,27 @@
     "id": "t_shrub_rhododendron",
     "copy-from": "t_shrub",
     "looks_like": "t_shrub",
-    "//": "Intended to be hododendron camtschaticum.",
+    "//": "Intended to be rhododendron camtschaticum.",
     "name": "rhododendron shrub",
     "description": "A native of the eastern Soviet Union, sub-arctic, and alpine regions, this deciduous bush sprawls across rocky terrain, unfurling dense folds of glossy green leaves and clusters of pink or white flowers."
+  },
+  {
+    "type": "terrain",
+    "id": "t_fern_lady",
+    "copy-from": "t_fern",
+    "//": "Intended to be Athyrium filix femina.",
+    "name": "lady fern",
+    "description": "A feathery sprawl of green, lance-shaped fronds growing in a rosette from a central core, this elegant maiden of the natural ecology stands prim and upright as its foliage rustles in the wind.  Locals and colonists alike are known to steep the plant’s tresses in boiling water, forming teas to soothe labour pains.  For some reason, you suspect that you are more likely to find utility within its edible quadrants.",
+    "harvest_by_season": [ { "seasons": [ "summer" ], "id": "fern_harv" } ],
+    "transforms_into": "t_fern_lady_harvested"
+  },
+  {
+    "type": "terrain",
+    "id": "t_fern_lady_harvested",
+    "copy-from": "t_fern_harvested",
+    "//": "Intended to be Athyrium filix femina.",
+    "name": "lady fern",
+    "description": "A feathery sprawl of green, lance-shaped fronds growing in a rosette from a central core, this elegant maiden of the natural ecology stands prim and upright as its foliage rustles in the wind.  Locals and colonists alike are known to steep the plant’s tresses in boiling water, forming teas to soothe labour pains.  Considering the current unpleasantries, you’d find more utility in the vegetation’s edible shoots had they not already been plucked away from this particular specimen.",
+    "transforms_into": "t_fern_lady"
   }
 ]

@@ -21,29 +21,37 @@
   {
     "type": "furniture",
     "id": "f_buttercup",
-    "copy-from": "f_orchid_bog",
+    "looks_like": "f_dandelion",
     "//": "Intended to be Ranunculus acris",
     "name": "buttercup",
     "description": "This is a stately, several-foot-tall whiled flower of native descent, which, despite its pretty yellow leaves and cup-shaped petals, is considered to be an aggressive weed species.  Its heavy head of 5-pettled gold sways idly in the breeze, secretly promising a mild toxic and irritant effect to any man or beast that would consume it.  That being said, certain native American tribesmen have been known to use the plant in medicinal poultices.",
     "symbol": "f",
     "color": "yellow",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "TINY", "FLAMMABLE_ASH", "NOCOLLIDE", "FLOWER", "GRAZER_INEDIBLE" ],
     "examine_action": "harvest_furn_nectar",
     "harvest_by_season": [ { "seasons": [ "spring", "summer", "autumn", "winter" ], "id": "generic_flower_harv" } ],
-    "//2": "To do: add suitable Harvist results that provide mildly poisonous components in return for being usable in herbal crafts."
+    "//2": "To do: add suitable Harvist results that provide mildly poisonous components in return for being usable in herbal crafts.",
+    "bash": { "str_min": 2, "str_max": 6, "sound": "crunch.", "sound_fail": "whish." }
   },
   {
     "type": "furniture",
     "id": "f_violet",
-    "copy-from": "f_orchid_bog",
+    "looks_like": "f_dandelion",
     "//": "Intended to be Viola langsdorffii",
     "name": "Aleutian Violet",
     "description": "The purple-swayed herald of spring, this hardy flower is an island staple, with its rounded, heart-shaped petals in abundance all throughout the spring and summer months.  Happiest within meadows and bogs, the light blue flower, as well as its long leaves, form both an element of eye candy and a supplement to the palette should one require it.",
     "symbol": "f",
     "color": "blue",
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "TRANSPARENT", "TINY", "FLAMMABLE_ASH", "NOCOLLIDE", "FLOWER", "GRAZER_INEDIBLE" ],
     "examine_action": "harvest_furn_nectar",
     "harvest_by_season": [
       { "seasons": [ "spring", "summer" ], "id": "violet_harv" },
       { "seasons": [ "autumn", "winter" ], "id": "generic_flower_winter_harv" }
-    ]
+    ],
+    "bash": { "str_min": 2, "str_max": 6, "sound": "crunch.", "sound_fail": "whish." }
   }
 ]

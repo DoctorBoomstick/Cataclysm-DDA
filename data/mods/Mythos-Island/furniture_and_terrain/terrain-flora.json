@@ -5,6 +5,7 @@
     "copy-from": "t_tree_alder",
     "name": "Green Alder tree",
     "description": "A member of the hardy Alnus viridis tree species, it is a thicket-forming Alaskan pioneer of the Betulaceae family with grey bark and greenish yellow leaves.  Adapted for growth in barren, nutrient-exhausted areas, it is one of the few trees suited for life within the arctic isles, though high wind speeds make it, by necessity, more akin to a fairly tall shrub than an actual tree.",
+    "symbol": "7",
     "transforms_into": "t_tree_alder_green_harvested"
   },
   {
@@ -13,6 +14,7 @@
     "copy-from": "t_tree_alder_harvested",
     "name": "Green Alder tree",
     "description": "A member of the hardy Alnus viridis tree species, it is a thicket-forming Alaskan pioneer of the Betulaceae family with grey bark and greenish yellow leaves.  Adapted for growth in barren, nutrient-exhausted areas, it is one of the few trees suited for life within the arctic isles, though high wind speeds make it, by necessity, more akin to a fairly tall shrub than an actual tree.  This particular specimen has had swaths of its bark peeled away.",
+    "symbol": "7",
     "transforms_into": "t_tree_alder_green"
   },
   {
@@ -21,6 +23,7 @@
     "copy-from": "t_tree_willow",
     "name": "arctic willow tree",
     "description": "This is a squat member of the Salix genus, ostensibly a form of willow tree adapted to grow in tundra and marine climates, though this specie’s brand of dwarfism lends it a greater kinship with deciduous shrubs.  Whip-like, reddish-purple stems branch from the plant’s core in an orb-like arrangement, with narrow, blueish-green leaves swaying in the breeze.",
+    "symbol": "4",
     "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT" ],
     "//": "You should not be able to scale this, as Salix purpurea Nana grows to approximately 5 feet normally, even shorter on the Aleutians, which is quite a bit shorter than the established height for a single Z-level.",
     "transforms_into": "t_tree_willow_arctic_harvested",
@@ -44,6 +47,7 @@
     "name": "arctic willow tree",
     "description": "This is a squat member of the Salix genus, ostensibly a form of willow tree adapted to grow in tundra and marine climates, though this specie’s brand of dwarfism lends it a greater kinship with deciduous shrubs.  Whip-like, reddish-purple stems branch from the plant’s core in an orb-like arrangement, with narrow, blueish-green leaves swaying in the breeze.  It appears as though large helpings of this specimen’s bark have been stripped away, and a suitable replacement has yet to grow.",
     "color": [ "brown", "brown", "brown", "brown" ],
+    "symbol": "4",
     "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "TREE", "REDUCE_SCENT" ],
     "transforms_into": "t_tree_willow_arctic"
   },

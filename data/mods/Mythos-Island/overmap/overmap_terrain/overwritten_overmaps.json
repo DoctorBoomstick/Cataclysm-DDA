@@ -75,13 +75,9 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "road",
-    "copy-from": "generic_transportation",
-    "name": "street",
-    "color": "dark_gray",
-    "see_cost": 2,
-    "travel_cost_type": "road",
-    "extras": "road",
-    "flags": [ "LINEAR", "REQUIRES_PREDECESSOR" ]
+    "id": [ "earth_road", "earth_road_forest" ],
+    "copy-from": "generic_rural_road",
+    "name": "earthen road",
+    "extend": { "flags": [ "LINEAR" ] }
   }
 ]

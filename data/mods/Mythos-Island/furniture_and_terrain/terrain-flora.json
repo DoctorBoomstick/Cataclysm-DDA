@@ -168,7 +168,6 @@
     "name": "lady fern",
     "description": "A feathery sprawl of green, lance-shaped fronds growing in a rosette from a central core, this elegant maiden of the natural ecology stands prim and upright as its foliage rustles in the wind.  Locals and colonists alike are known to steep the plant’s tresses in boiling water, forming teas to soothe labour pains.  For some reason, you suspect that you are more likely to find utility within its edible quadrants.",
     "symbol": "#",
-    "looks_like": "t_underbrush",
     "color": [ "brown_green", "green", "green", "green" ],
     "move_cost": 3,
     "examine_action": "harvest_ter",

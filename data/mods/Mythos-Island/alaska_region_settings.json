@@ -53,8 +53,8 @@
         "t_region_tree_forest_dense": { "t_tree_alder_green": 5, "t_region_tree_forest_other": 5 },
         "t_region_tree_forest_other": { "t_tree_willow_arctic": 15, "t_tree_alder_green": 15 },
         "t_region_tree_forest": { "t_region_tree_forest_dense": 2, "t_region_tree_forest_other": 1 },
-        "t_region_tree": { "t_tree_alder_green": 12, "t_tree_arctic_willow": 32, "t_region_tree_dead": 48 },
-        "t_region_tree_shade": { "t_tree_alder_green": 16, "t_tree_arctic_willow": 32, "t_tree_dead": 2 },
+        "t_region_tree": { "t_tree_alder_green": 12, "t_tree_willow_arctic": 32, "t_region_tree_dead": 48 },
+        "t_region_tree_shade": { "t_tree_alder_green": 16, "t_tree_willow_arctic": 32, "t_tree_dead": 2 },
         "t_region_tree_fruit": { "t_tree_dead": 4 },
         "t_region_tree_dead": { "t_tree_dead": 7, "t_tree_dead_warped": 1 },
         "t_region_tree_nut": { "t_tree_dead": 4 },
@@ -72,8 +72,8 @@
       }
     },
     "overmap_connection_settings": {
-      "intra_city_road_connection": "country_road",
-      "inter_city_road_connection": "local_road",
+      "intra_city_road_connection": "local_road",
+      "inter_city_road_connection": "country_road",
       "trail_connection": "forest_trail",
       "sewer_connection": "sewer_tunnel",
       "subway_connection": "subway_tunnel",

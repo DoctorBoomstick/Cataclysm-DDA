@@ -10,7 +10,7 @@
     "price": 0,
     "price_postapoc": 0,
     "calories": 46,
-    "vitamins": [ [ "vitC", 5 ], [ "calcium", "17.6 mg" ], [ "iron", "0.3 mg" ] ],
+    "vitamins": [ [ "vitC", 5 ], [ "calcium", "17600 μg" ], [ "iron", "300 μg" ] ],
     "//": "Nutrition and vitamin numbers are based on the information in https://www.nutritionix.com/food/edible-flower",
     "//2": "Vitamin C numbers are, as of yet, still provisional, though they are supposedly high.",
     "spoils_in": "20 days",

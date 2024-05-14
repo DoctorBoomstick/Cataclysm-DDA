@@ -1,0 +1,34 @@
+[
+  {
+    "type": "palette",
+    "id": "fallout_shelter_surface_pallet",
+    "terrain": {
+      "#": "t_wall_wood",
+      "o": [ [ "t_door_metal_corrugated_c", 25 ], [ "t_door_c", 25 ], [ "t_door_metal_corrugated_o", 1 ], [ "t_door_o", 1 ] ],
+      " ": "t_dirtfloor",
+      ".": [ [ "t_region_groundcover", 60 ], [ "t_region_shrub", 2 ], [ "t_region_tree", 1 ] ],
+      "+": [ [ "t_dirtmound", 40 ], [ "t_claymound", 1 ] ],
+      "_": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],
+      "1": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],
+      "$": "t_open_air",
+      "<": "t_earth_ramp_down_high",
+      "d": "t_slope_down"
+    },
+    "furniture": { "1": "f_sandbag_half" },
+    "items": { ".": [ { "item": "forest", "chance": 1 }, { "item": "field", "chance": 2 } ] }
+  },
+  {
+    "type": "palette",
+    "id": "fallout_shelter_bunker_pallet",
+    "terrain": {
+      "#": "t_wall_rammed_earth",
+      "1": "t_column",
+      "|": "t_dirtfloor",
+      ".": "t_dirt",
+      ">": "t_earth_ramp_down_low",
+      "u": "t_slope_up"
+    },
+    "furniture": { "1": "f_sandbag_half" },
+    "items": { ".": [ { "item": "forest", "chance": 1 }, { "item": "field", "chance": 2 } ] }
+  }
+]

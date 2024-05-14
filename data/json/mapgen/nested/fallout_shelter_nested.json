@@ -1,0 +1,19 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "5x5_fallout_shelter_access",
+    "//": "a nested map to determine whether a small cabin should be present around the secondary exit point of fallout shelters.",
+    "object": {
+      "mapgensize": [ 5, 5 ],
+      "rows": [
+        "#####",
+        "#   #",
+        "o  d#",
+        "#   #",
+        "#####"
+      ],
+      "palettes": [ "fallout_shelter_surface_pallet" ]
+    }
+  }
+]

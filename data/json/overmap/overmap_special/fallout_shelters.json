@@ -1,0 +1,15 @@
+[
+  {
+    "type": "overmap_special",
+    "id": "fallout_shelter01_empty",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "Fallout_shelter01_s_empty_north" },
+      { "point": [ 0, 0, -1 ], "overmap": "Fallout_shelter01_u_empty_north" }
+    ],
+    "locations": [ "forest_without_trail" ],
+    "city_distance": [ 10, -1 ],
+    "city_sizes": [ 0, 12 ],
+    "occurrences": [ 80, 100 ],
+    "flags": [ "CLASSIC", "MAN_MADE", "WILDERNESS" ]
+  }
+]

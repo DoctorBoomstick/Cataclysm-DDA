@@ -1,0 +1,20 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "Fallout_shelter01_s_empty",
+    "name": "fallout shelter",
+    "sym": "+",
+    "color": "red",
+    "see_cost": 2,
+    "flags": [ "KNOWN_DOWN", "SOURCE_PEOPLE", "SOURCE_SAFETY", "SOURCE_GUN", "SOURCE_AMMO", "SOURCE_FOOD" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "Fallout_shelter01_u_empty",
+    "name": "fallout shelter",
+    "sym": "+",
+    "color": "red",
+    "see_cost": 2,
+    "flags": [ "KNOWN_UP", "SOURCE_PEOPLE", "SOURCE_SAFETY", "SOURCE_GUN", "SOURCE_AMMO", "SOURCE_FOOD" ]
+  }
+]

@@ -8,9 +8,9 @@
       "mapgensize": [ 5, 5 ],
       "rows": [
         "#####",
-        "#   #",
-        "o  d#",
-        "#   #",
+        "#|||#",
+        "o||d#",
+        "#|||#",
         "#####"
       ],
       "palettes": [ "fallout_shelter_surface_pallet" ]

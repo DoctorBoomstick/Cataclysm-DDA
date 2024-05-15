@@ -5,7 +5,7 @@
     "terrain": {
       "#": "t_wall_wood",
       "o": [ [ "t_door_metal_corrugated_c", 25 ], [ "t_door_c", 25 ], [ "t_door_metal_corrugated_o", 1 ], [ "t_door_o", 1 ] ],
-      " ": "t_dirtfloor",
+      "|": "t_dirtfloor",
       ".": [ [ "t_region_groundcover", 60 ], [ "t_region_shrub", 2 ], [ "t_region_tree", 1 ] ],
       "+": [ [ "t_dirtmound", 40 ], [ "t_claymound", 1 ] ],
       "_": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],

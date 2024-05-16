@@ -11,8 +11,9 @@
       "_": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],
       "1": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],
       "$": "t_open_air",
-      "<": "t_earth_ramp_down_high",
-      "d": "t_slope_down"
+      "D": "t_earth_ramp_down_high",
+      "d": "t_earth_ramp_down_low",
+      "<": "t_slope_down"
     },
     "furniture": { "1": "f_sandbag_half" },
     "items": { ".": [ { "item": "forest", "chance": 1 }, { "item": "field", "chance": 2 } ] }
@@ -25,10 +26,9 @@
       "1": "t_column",
       "|": "t_dirtfloor",
       ".": "t_dirt",
-      ">": "t_earth_ramp_down_low",
-      "u": "t_slope_up"
-    },
-    "furniture": { "1": "f_sandbag_half" },
-    "items": { ".": [ { "item": "forest", "chance": 1 }, { "item": "field", "chance": 2 } ] }
+      "U": "t_earth_ramp_up_high",
+      "u": "t_earth_ramp_up_low",
+      ">": "t_slope_up"
+    }
   }
 ]

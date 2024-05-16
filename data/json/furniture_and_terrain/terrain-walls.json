@@ -3039,5 +3039,45 @@
       "ter_set": "t_reb_cage",
       "items": [ { "item": "rock", "count": [ 10, 22 ] } ]
     }
+  },
+  {
+    "type": "terrain",
+    "id": "t_support_wood",
+    "looks_like": "t_column",
+    "name": "timber beam",
+    "description": "a stout, if roughly cut, tree log, trimmed of branches and firmly embedded upright into the earth, staking out walls and supporting the earthen roof overhead.",
+    "symbol": "1",
+    "color": "brown",
+    "move_cost": 0,
+    "coverage": 80,
+    "flags": [ "FLAMMABLE_ASH", "WALL", "PERMEABLE", "SUPPORTS_ROOF", "MINEABLE" ],
+    "bash": {
+      "str_min": 18,
+      "str_max": 65,
+      "sound": "crunch!",
+      "sound_fail": "whump!",
+      "ter_set": "t_support_wood_broken",
+      "items": [ { "item": "splinter", "count": [ 60, 100 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_support_wood_broken",
+    "looks_like": "t_column",
+    "name": "shattered timber beam",
+    "description": "Jagged splinters, cracked bark, and a shattered stump’s all that’s left of the log that composed this former, upright beam.  You doubt that it’ll be supporting many rooves any time soon.",
+    "symbol": "1",
+    "color": "brown",
+    "move_cost": 0,
+    "coverage": 55,
+    "flags": [ "FLAMMABLE_ASH", "WALL", "PERMEABLE", "MINEABLE", "TRANSPARENT" ],
+    "bash": {
+      "str_min": 18,
+      "str_max": 65,
+      "sound": "crunch!",
+      "sound_fail": "whump!",
+      "ter_set": "t_dirt",
+      "items": [ { "item": "splinter", "count": [ 100, 140 ] } ]
+    }
   }
 ]

@@ -3013,5 +3013,50 @@
       "ter_set": "t_mdoor_frame",
       "items": [ { "item": "scrap", "count": [ 12, 24 ] }, { "item": "steel_plate", "prob": 75 } ]
     }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tarp_c",
+    "looks_like": "f_canvas_door",
+    "name": "plastic flap",
+    "description": "This is a simple, wooden doorframe with a heavy sheet of thick, opaque plastic secured to it with a liberal amount of nails, its end dragging upon the floor.",
+    "symbol": "+",
+    "color": "brown",
+    "move_cost": 0,
+    "coverage": 95,
+    "roof": "t_wood_roof",
+    "flags": [ "FLAMMABLE_HARD", "DOOR", "NOITEM", "CONNECT_WITH_WALL", "BLOCK_WIND", "SUPPORTS_ROOF" ],
+    "open": "t_tarp_o",
+    "deconstruct": { "ter_set": "t_door_frame", "items": [ { "item": "tarp", "count": 1 }, { "item": "nail", "charges": [ 4, 6 ] } ] },
+    "bash": {
+      "str_min": 3,
+      "str_max": 15,
+      "sound": "rrrrip!",
+      "sound_fail": "slap!",
+      "ter_set": "t_door_frame",
+      "items": [ { "item": "tarp", "count": 1 }, { "item": "nail", "charges": [ 0, 6 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_tarp_o",
+    "looks_like": "f_canvas_door_o",
+    "name": "drawn plastic flap",
+    "description": "A thick, opaque sheet of plastic has been hung from this dust-caked doorframe’s top, secured to its edges with a liberal amount of nails.  The bottom folds of plastic, however, have been bunched up and drawn aside, permitting access.",
+    "symbol": "+",
+    "color": "brown",
+    "move_cost": 2,
+    "roof": "t_wood_roof",
+    "flags": [ "FLAMMABLE_HARD", "CONNECT_WITH_WALL", "TRANSPARENT", "SUPPORTS_ROOF" ],
+    "close": "t_tarp_c",
+    "deconstruct": { "ter_set": "t_door_frame", "items": [ { "item": "tarp", "count": 1 }, { "item": "nail", "charges": [ 4, 6 ] } ] },
+    "bash": {
+      "str_min": 3,
+      "str_max": 15,
+      "sound": "rrrrip!",
+      "sound_fail": "slap!",
+      "ter_set": "t_door_frame",
+      "items": [ { "item": "tarp", "count": 1 }, { "item": "nail", "charges": [ 0, 6 ] } ]
+    }
   }
 ]

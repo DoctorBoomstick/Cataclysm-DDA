@@ -21,7 +21,11 @@
   {
     "type": "palette",
     "id": "fallout_shelter_bunker_pallet",
+    "parameters": {
+      "door_type": { "type": "ter_str_id", "default": { "distribution": [ [ "t_flap_c", 1 ], [ "t_door_metal_corrugated_c", 1 ] ] } }
+    },
     "terrain": {
+      "*": { "param": "door_type", "fallback": "t_flap_c" },
       "#": "t_wall_rammed_earth",
       "1": "t_support_wood",
       "|": "t_dirtfloor",

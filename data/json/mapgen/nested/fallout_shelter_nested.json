@@ -15,5 +15,43 @@
       ],
       "palettes": [ "fallout_shelter_surface_pallet" ]
     }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "6x6_fallout_shelter_living_space1",
+    "//": "An empty living space layout with space for 3 people, 2 footlockers with survival equipment, a water storidge tank, and boxes of provisions.",
+    "//2": "Still stocked with emergency supplies. No personal effects that one would have brought along. No detritus, dead bodies, or otherwise. Likely, this shelter was never used.",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        " b---b",
+        " -----",
+        " ----d",
+        " e---d",
+        " e----",
+        " ae--b"
+      ],
+      "palettes": [ "fallout_shelter_bunker_pallet" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "6x6_fallout_shelter_living_space2",
+    "//": "An empty living space layout for 4 people, with a recessed liquid storage tank, a small work and exercise space, and boxes with provisions.",
+    "//2": "Still stocked with emergency supplies. No personal effects that one would have brought along. No detritus, dead bodies, or otherwise. Likely, this shelter was never used.",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        " f---c",
+        " h---e",
+        " h---b",
+        "g----b",
+        " e---e",
+        " ee--c"
+      ],
+      "palettes": [ "fallout_shelter_bunker_pallet" ]
+    }
   }
 ]

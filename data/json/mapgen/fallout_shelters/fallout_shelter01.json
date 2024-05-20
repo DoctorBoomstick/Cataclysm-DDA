@@ -56,7 +56,7 @@
         "          ##|1##1#.uU#  ",
         "          ##|##         ",
         "         1##*##1        ",
-        "         #|||||#        ",
+        "         #0||||#        ",
         "         1|||||1        ",
         "         #|||||#        ",
         "         #|||||#        ",
@@ -72,7 +72,8 @@
         "                        ",
         "                        "
       ],
-      "palettes": [ "fallout_shelter_bunker_pallet" ]
+      "palettes": [ "fallout_shelter_bunker_pallet" ],
+      "nested": { "0": { "chunks": [ [ "6x6_fallout_shelter_living_space1", 100 ], [ "6x6_fallout_shelter_living_space2", 100 ] ] } }
     }
   }
 ]

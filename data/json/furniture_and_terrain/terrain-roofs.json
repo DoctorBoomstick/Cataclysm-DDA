@@ -379,5 +379,17 @@
     "color": "red",
     "move_cost": 8,
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "UNSTABLE", "SINGLE_SUPPORT" ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_fallout_log_roof",
+    "looks_like": "t_log_sod_roof",
+    "name": "packed timber roof",
+    "description": "A number of dirt-caked, horizontally laid, roughly cut tree logs suspended over a floor below; the gaps are tightly packed with soil, mulch, and other detritus.",
+    "symbol": ".",
+    "color": "brown",
+    "move_cost": 2,
+    "flags": [ "TRANSPARENT", "FLAMMABLE" ],
+    "bash": { "str_min": 30, "str_max": 250, "sound": "crash!", "sound_fail": "whump!", "ter_set": "t_hole", "bash_below": false }
   }
 ]

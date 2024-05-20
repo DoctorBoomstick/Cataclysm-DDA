@@ -7,7 +7,7 @@
       "o": [ [ "t_door_metal_corrugated_c", 25 ], [ "t_door_c", 25 ], [ "t_door_metal_corrugated_o", 1 ], [ "t_door_o", 1 ] ],
       "|": "t_dirtfloor",
       ".": [ [ "t_region_groundcover", 60 ], [ "t_region_shrub", 2 ], [ "t_region_tree", 1 ] ],
-      "+": [ [ "t_dirtmound", 40 ], [ "t_claymound", 1 ] ],
+      "+": [ [ "t_dirtmound", 40 ], [ "t_claymound", 1 ], [ "t_region_shrub", 1 ] ],
       "_": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],
       "1": [ [ "t_region_groundcover_barren", 10 ], [ "t_region_groundcover", 2 ] ],
       "$": "t_open_air",
@@ -22,19 +22,40 @@
     "type": "palette",
     "id": "fallout_shelter_bunker_pallet",
     "parameters": {
-      "door_type": { "type": "ter_str_id", "default": { "distribution": [ [ "t_flap_c", 1 ], [ "t_door_metal_corrugated_c", 1 ] ] } }
+      "door_type": { "type": "ter_str_id", "default": { "distribution": [ [ "t_tarp_c", 1 ], [ "t_door_metal_corrugated_c", 1 ] ] } },
+      "shelter_floor_type": {
+        "type": "ter_str_id",
+        "default": { "distribution": [ [ "t_dirtfloor_fallout", 3 ], [ "t_wood_floor_fallout", 2 ], [ "t_thconc_floor_fallout", 1 ] ] }
+      }
     },
     "terrain": {
-      "*": { "param": "door_type", "fallback": "t_flap_c" },
+      "*": { "param": "door_type", "fallback": "t_tarp_c" },
+      "-": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
+      "a": "t_dirtfloor_fallout",
+      "b": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
+      "c": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
+      "d": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
+      "e": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
+      "f": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
+      "g": "t_dirtfloor_fallout",
+      "h": { "param": "shelter_floor_type", "fallback": "t_dirtfloor_fallout" },
       "#": "t_wall_rammed_earth",
       "1": "t_support_wood",
-      "|": "t_dirtfloor",
-      "a": "t_dirtfloor",
+      "|": "t_dirtfloor_fallout",
       ".": "t_dirt",
       "U": "t_earth_ramp_up_high",
       "u": "t_earth_ramp_up_low",
       ">": "t_slope_up"
     },
-    "furniture": { "a": "f_standing_tank" }
+    "furniture": {
+      "a": "f_standing_tank",
+      "b": "f_floor_mattress",
+      "c": [ [ "f_hammock", 1 ], [ "f_hammock_net", 1 ] ],
+      "d": "f_foot_locker_aluminum",
+      "e": "f_crate_c",
+      "f": [ [ "f_exercise", 1 ], [ "f_ergometer_mechanical", 1 ], [ "f_treadmill_mechanical", 1 ], [ "f_punching_bag", 1 ] ],
+      "g": "bulk storage tank",
+      "h": "f_tourist_table"
+    }
   }
 ]

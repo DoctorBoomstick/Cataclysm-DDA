@@ -634,6 +634,74 @@
   },
   {
     "type": "terrain",
+    "id": "t_dirtfloor_fallout",
+    "name": "dirt floor",
+    "description": "A floor consisting of finely mixed earth that has been tamped down with a sealing of perpendicularly laid logs, piled over with several feet of dirt, suspended atop it.",
+    "symbol": ".",
+    "color": "brown",
+    "connect_groups": "DIRT",
+    "connects_to": "DIRT",
+    "move_cost": 2,
+    "roof": "t_fallout_log_roof",
+    "flags": [ "TRANSPARENT", "FLAMMABLE", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "DIGGABLE" ],
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 50,
+      "str_max": 400,
+      "str_min_supported": 100,
+      "items": [ { "item": "splinter", "count": [ 2, 8 ] }, { "item": "nail", "charges": [ 5, 10 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_wood_floor_fallout",
+    "name": "wooden floor",
+    "description": "An unevenly laid floor of tightly packed boards arranged atop an earthen floor, with a low roof of horizontally placed logs suspended atop it.  Considering the roughshod work, it’s almost guaranteed to not be treated against fire.",
+    "symbol": ".",
+    "color": "brown",
+    "connect_groups": "WOODFLOOR",
+    "connects_to": "WOODFLOOR",
+    "move_cost": 2,
+    "comfort": 1,
+    "roof": "t_fallout_log_roof",
+    "flags": [ "TRANSPARENT", "FLAMMABLE", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT" ],
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 50,
+      "str_max": 400,
+      "str_min_supported": 100,
+      "items": [ { "item": "splinter", "count": [ 2, 8 ] }, { "item": "nail", "charges": [ 5, 10 ] } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_thconc_floor_fallout",
+    "name": "concrete floor",
+    "description": "A rather lumpy, form-over-function floor of poured concrete, resting beneath an uncomfortably low roof of horizontally laid logs.",
+    "symbol": ".",
+    "color": "cyan",
+    "move_cost": 2,
+    "roof": "t_fallout_log_roof",
+    "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT" ],
+    "connect_groups": "CONCRETE",
+    "connects_to": "CONCRETE",
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 100,
+      "str_max": 400,
+      "str_min_supported": 150,
+      "items": [
+        { "item": "rock", "count": [ 5, 10 ] },
+        { "item": "scrap", "count": [ 5, 8 ] },
+        { "item": "rebar", "count": [ 0, 2 ] }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
     "id": "t_grate",
     "name": "metal grate",
     "description": "A walkway that can be used as a protective covering over drains, or even as a filter.",

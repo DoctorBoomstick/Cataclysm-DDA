@@ -3025,7 +3025,7 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_wood_roof",
-    "flags": [ "FLAMMABLE_HARD", "DOOR", "NOITEM", "CONNECT_WITH_WALL", "BLOCK_WIND", "SUPPORTS_ROOF" ],
+    "flags": [ "FLAMMABLE_HARD", "DOOR", "NOITEM", "CONNECT_WITH_WALL", "BLOCK_WIND", "SUPPORTS_ROOF", "EASY_DECONSTRUCT" ],
     "open": "t_tarp_o",
     "deconstruct": { "ter_set": "t_door_frame", "items": [ { "item": "tarp", "count": 1 }, { "item": "nail", "charges": [ 4, 6 ] } ] },
     "bash": {
@@ -3047,7 +3047,7 @@
     "color": "brown",
     "move_cost": 2,
     "roof": "t_wood_roof",
-    "flags": [ "FLAMMABLE_HARD", "CONNECT_WITH_WALL", "TRANSPARENT", "SUPPORTS_ROOF" ],
+    "flags": [ "FLAMMABLE_HARD", "CONNECT_WITH_WALL", "TRANSPARENT", "SUPPORTS_ROOF", "EASY_DECONSTRUCT" ],
     "close": "t_tarp_c",
     "deconstruct": { "ter_set": "t_door_frame", "items": [ { "item": "tarp", "count": 1 }, { "item": "nail", "charges": [ 4, 6 ] } ] },
     "bash": {

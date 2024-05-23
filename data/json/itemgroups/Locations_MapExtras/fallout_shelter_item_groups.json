@@ -1,5 +1,29 @@
 [
   {
+    "id": "fs_cutlery",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A selection of handheld cutlery: forks, spoons, etc.",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "spork", "prob": 50 },
+          { "item": "foon", "prob": 50 },
+          { "collection": [ { "item": "plastic_fork" }, { "item": "plastic_spoon" } ], "prob": 150 }
+        ]
+      },
+      { "item": "plastic_knife" },
+      { "item": "can_opener", "prob": 75 }
+    ]
+  },
+  {
+    "id": "fs_shaving",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A reusable shaving razor with extra blades.",
+    "entries": [ { "item": "razor_shaving" }, { "item": "razor_blade", "count": [ 4, 8 ] } ]
+  },
+  {
     "id": "fs_bedding",
     "type": "item_group",
     "subtype": "collection",
@@ -25,15 +49,7 @@
     "subtype": "collection",
     "//": "A selection of food and personal eating and drinking equipment for use in fallout shelters. Just because you’re packing for a bunker doesn’t mean you’re abandoning those table manners, damn it.",
     "entries": [
-      {
-        "collection": [
-          { "distribution": [ { "item": "plastic_spoon", "prob": 60 }, { "item": "spork", "prob": 40 } ] },
-          { "distribution": [ { "item": "plastic_fork", "prob": 60 }, { "item": "foon", "prob": 40 } ] },
-          { "item": "plastic_knife" },
-          { "item": "can_opener", "prob": 75 }
-        ],
-        "container-item": "bag_plastic_small"
-      },
+      { "item": "bag_plastic_small", "contents-group": "fs_cutlery" },
       {
         "distribution": [
           { "item": "plastic_plate", "prob": 50 },
@@ -63,17 +79,10 @@
       },
       { "item": "string_floss", "prob": 40 },
       {
-        "distribution": [
-          { "item": "shavingkit", "prob": 50 },
-          {
-            "collection": [ { "item": "razor_shaving" }, { "item": "razor_blade", "count": [ 4, 8 ] } ],
-            "container-item": "bag_plastic_small",
-            "prob": 50
-          }
-        ],
+        "distribution": [ { "item": "shavingkit", "prob": 50 }, { "item": "bag_plastic_small", "contents-group": "fs_shaving" } ],
         "prob": 20
       },
-      { "collection": [ { "group": "menstrual_pad_box_full" }, { "item": "tampon_box_full" } ], "prob": 50 },
+      { "collection": [ { "group": "menstrual_pad_box_full" }, { "group": "tampon_box_full" } ], "prob": 50 },
       { "item": "soap", "count": [ 1, 2 ], "prob": 40 },
       { "item": "brush", "prob": 40 },
       { "item": "towel", "prob": 25 },
@@ -137,8 +146,8 @@
         "prob": 50
       },
       { "group": "fs_bedding", "prob": 95 },
-      { "group": "fs_utensils", "container-item": "bag_plastic", "prob": 95 },
-      { "group": "fs_toiletries", "container-item": "bag_plastic", "prob": 85 },
+      { "item": "bag_plastic", "contents-group": "fs_utensils", "prob": 85 },
+      { "item": "bag_plastic", "contents-group": "fs_toiletries", "prob": 85 },
       { "group": "fs_stored_lighting_selutions", "prob": 90 },
       { "group": "full_1st_aid", "prob": 20 }
     ]

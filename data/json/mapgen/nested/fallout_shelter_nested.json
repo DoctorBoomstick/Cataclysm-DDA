@@ -32,7 +32,8 @@
         " e----",
         " ae--b"
       ],
-      "palettes": [ "fallout_shelter_bunker_pallet" ]
+      "palettes": [ "fallout_shelter_bunker_pallet" ],
+      "items": { "e": [ { "item": "fs_individual_necessities_kit", "repeat": [ 1, 2 ] } ] }
     }
   },
   {
@@ -51,7 +52,8 @@
         " e---e",
         " ee--c"
       ],
-      "palettes": [ "fallout_shelter_bunker_pallet" ]
+      "palettes": [ "fallout_shelter_bunker_pallet" ],
+      "items": { "e": [ { "item": "fs_individual_necessities_kit", "repeat": 2 } ] }
     }
   }
 ]

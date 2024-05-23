@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fs_bedding",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "bedding supplies for a fallout shelter: one blanket or similar item; a chance for a pillow; and miner chances for some comfort items.",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "blanket", "prob": 75 },
+          { "item": "quilt", "prob": 50 },
+          { "item": "quilt_patchwork", "prob": 50 },
+          { "item": "sleeping_bag_roll", "prob": 50 },
+          { "item": "sleeping_bag_fur_roll", "prob": 25 },
+          { "item": "down_blanket", "prob": 25 }
+        ]
+      },
+      { "distribution": [ { "item": "pillow", "prob": 75 }, { "item": "down_pillow", "prob": 25 } ], "prob": 75 },
+      { "item": "teddy_bear", "prob": 2 }
+    ]
+  },
+  {
+    "id": "fs_utensils",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A selection of food and personal eating and drinking equipment for use in fallout shelters. Just because you’re packing for a bunker doesn’t mean you’re abandoning those table manners, damn it.",
+    "entries": [
+      {
+        "collection": [
+          { "distribution": [ { "item": "plastic_spoon", "prob": 60 }, { "item": "spork", "prob": 40 } ] },
+          { "distribution": [ { "item": "plastic_fork", "prob": 60 }, { "item": "foon", "prob": 40 } ] },
+          { "item": "plastic_knife" },
+          { "item": "can_opener", "prob": 75 }
+        ],
+        "container-item": "bag_plastic_small"
+      },
+      {
+        "distribution": [
+          { "item": "plastic_plate", "prob": 50 },
+          { "item": "bowl_plastic", "prob": 50 },
+          { "item": "bowl_pewter", "prob": 30 },
+          { "item": "tin_plate", "prob": 30 }
+        ],
+        "prob": 80
+      },
+      {
+        "distribution": [ { "item": "2lcanteen", "prob": 15 }, { "item": "canteen", "prob": 25 }, { "item": "tin_cup", "prob": 35 } ],
+        "prob": 80
+      },
+      { "item": "napkin", "count": [ 12, 20 ], "container-item": "bag_plastic_small", "prob": 75 }
+    ]
+  },
+  {
+    "id": "fs_toiletries",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A selection of non-essential, nice-to-have objects for use in fallout shelter provision boxes pertinent to personal hygiene and cleanliness.",
+    "//2": "Waste disposal medium isn’t included here, as having somewhere to use the loo is very, very different from packing in a nice shaving kit.",
+    "entries": [
+      {
+        "distribution": [ { "item": "toothbrush_plain", "prob": 50 }, { "item": "toothbrush_electric", "prob": 20 } ],
+        "prob": 40
+      },
+      { "item": "string_floss", "prob": 40 },
+      {
+        "distribution": [
+          { "item": "shavingkit", "prob": 50 },
+          {
+            "collection": [ { "item": "razor_shaving" }, { "item": "razor_blade", "count": [ 4, 8 ] } ],
+            "container-item": "bag_plastic_small",
+            "prob": 50
+          }
+        ],
+        "prob": 20
+      },
+      { "collection": [ { "group": "menstrual_pad_box_full" }, { "item": "tampon_box_full" } ], "prob": 50 },
+      { "item": "soap", "count": [ 1, 2 ], "prob": 40 },
+      { "item": "brush", "prob": 40 },
+      { "item": "towel", "prob": 25 },
+      { "group": "alcohol_wipes_box_full", "prob": 60, "count": [ 1, 2 ] }
+    ]
+  },
+  {
+    "id": "fs_stored_lighting_selutions",
+    "type": "item_group",
+    "subtype": "distribution",
+    "//": "A selection of stored-away lighting solutions for fallout shelters, including either electric lighting with associated battery packs or fuel-burning devices with respective materials and matches.",
+    "entries": [
+      {
+        "collection": [
+          { "item": "glowstick", "count": 2, "prob": 25 },
+          { "group": "light_batteries", "count": [ 1, 2 ] },
+          {
+            "distribution": [
+              { "item": "electric_lantern", "prob": 100 },
+              { "item": "flashlight", "prob": 75 },
+              { "item": "heavy_flashlight", "prob": 50 }
+            ]
+          }
+        ],
+        "prob": 60
+      },
+      {
+        "collection": [
+          { "item": "glowstick", "count": 2, "prob": 25 },
+          { "item": "ref_matches", "count": [ 1, 2 ], "charges": 32 },
+          {
+            "distribution": [
+              { "item": "candle", "count": [ 2, 4 ], "prob": 100 },
+              {
+                "collection": [ { "item": "gasoline_lantern" }, { "item": "gasoline", "charges": 3000 } ],
+                "prob": 50
+              },
+              { "collection": [ { "item": "oil_lamp" }, { "item": "lamp_oil", "charges": 3700 } ], "prob": 50 },
+              { "collection": [ { "item": "propane_lantern" }, { "item": "propane", "charges": 3000 } ], "prob": 50 }
+            ]
+          }
+        ],
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "id": "fs_individual_necessities_kit",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A collection of basic living necessities for a single person living within a fallout shelter: sleeping aids, waste disposal, etc. No food or, most, medical supplies are included, as those are handled in dedicated provision boxes.",
+    "container-item": "box_medium",
+    "on_overflow": "spill",
+    "entries": [
+      { "distribution": [ { "item": "bucket", "prob": 50 }, { "item": "bucket_5gal", "prob": 25 } ] },
+      {
+        "distribution": [
+          { "item": "bag_garbage", "count": [ 6, 12 ], "prob": 50 },
+          { "item": "bag_zipper_gallon", "count": [ 6, 12 ], "prob": 30 }
+        ],
+        "prob": 50
+      },
+      { "group": "fs_bedding", "prob": 95 },
+      { "group": "fs_utensils", "container-item": "bag_plastic", "prob": 95 },
+      { "group": "fs_toiletries", "container-item": "bag_plastic", "prob": 85 },
+      { "group": "fs_stored_lighting_selutions", "prob": 90 },
+      { "group": "full_1st_aid", "prob": 20 }
+    ]
+  }
+]

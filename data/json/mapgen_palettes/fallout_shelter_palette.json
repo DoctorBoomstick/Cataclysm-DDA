@@ -54,7 +54,7 @@
       "d": "f_foot_locker_aluminum",
       "e": "f_crate_c",
       "f": [ [ "f_exercise", 1 ], [ "f_ergometer_mechanical", 1 ], [ "f_treadmill_mechanical", 1 ], [ "f_punching_bag", 1 ] ],
-      "g": "bulk storage tank",
+      "g": "f_storage_tank",
       "h": "f_tourist_table"
     }
   }

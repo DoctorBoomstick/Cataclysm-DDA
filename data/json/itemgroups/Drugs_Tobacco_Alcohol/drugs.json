@@ -748,6 +748,20 @@
   },
   {
     "type": "item_group",
+    "id": "prussian_blue_bottle_full",
+    "subtype": "collection",
+    "container-item": "bottle_plastic_pill_supplement",
+    "entries": [ { "item": "prussian_blue", "container-item": "null", "count": 30 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "iodine_bottle_full",
+    "subtype": "collection",
+    "container-item": "bottle_plastic_pill_supplement",
+    "entries": [ { "item": "iodine", "container-item": "null", "count": 30 } ]
+  },
+  {
+    "type": "item_group",
     "id": "saline_bottle_random",
     "subtype": "distribution",
     "entries": [

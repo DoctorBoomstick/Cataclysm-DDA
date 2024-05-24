@@ -1,5 +1,23 @@
 [
   {
+    "id": "fs_electric_lighting_extras",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A selection of light batteries, spare glow sticks, and a chance for stashed matches.",
+    "entries": [
+      { "group": "light_batteries", "count": [ 1, 2 ] },
+      { "item": "ref_matches", "count": [ 1, 2 ], "charges": 32, "prob": 40 },
+      { "item": "glowstick", "count": 2, "prob": 25 }
+    ]
+  },
+  {
+    "id": "fs_fuel_lighting_extras",
+    "type": "item_group",
+    "subtype": "collection",
+    "//": "A selection of matches and spare glow sticks.",
+    "entries": [ { "item": "ref_matches", "count": [ 1, 2 ], "charges": 32 }, { "item": "glowstick", "count": 2, "prob": 25 } ]
+  },
+  {
     "id": "fs_cutlery",
     "type": "item_group",
     "subtype": "collection",
@@ -7,9 +25,9 @@
     "entries": [
       {
         "distribution": [
-          { "item": "spork", "prob": 50 },
-          { "item": "foon", "prob": 50 },
-          { "collection": [ { "item": "plastic_fork" }, { "item": "plastic_spoon" } ], "prob": 150 }
+          { "item": "spork", "prob": 30 },
+          { "item": "foon", "prob": 30 },
+          { "collection": [ { "item": "plastic_fork" }, { "item": "plastic_spoon" } ], "prob": 100 }
         ]
       },
       { "item": "plastic_knife" },
@@ -49,7 +67,7 @@
     "subtype": "collection",
     "//": "A selection of food and personal eating and drinking equipment for use in fallout shelters. Just because you’re packing for a bunker doesn’t mean you’re abandoning those table manners, damn it.",
     "entries": [
-      { "item": "bag_plastic_small", "contents-group": "fs_cutlery" },
+      { "item": "wrapper", "contents-group": "fs_cutlery" },
       {
         "distribution": [
           { "item": "plastic_plate", "prob": 50 },
@@ -97,8 +115,7 @@
     "entries": [
       {
         "collection": [
-          { "item": "glowstick", "count": 2, "prob": 25 },
-          { "group": "light_batteries", "count": [ 1, 2 ] },
+          { "item": "bag_plastic_small", "contents-group": "fs_electric_lighting_extras" },
           {
             "distribution": [
               { "item": "electric_lantern", "prob": 100 },
@@ -111,8 +128,7 @@
       },
       {
         "collection": [
-          { "item": "glowstick", "count": 2, "prob": 25 },
-          { "item": "ref_matches", "count": [ 1, 2 ], "charges": 32 },
+          { "item": "bag_plastic_small", "contents-group": "fs_fuel_lighting_extras" },
           {
             "distribution": [
               { "item": "candle", "count": [ 2, 4 ], "prob": 100 },
@@ -147,7 +163,7 @@
       },
       { "group": "fs_bedding", "prob": 95 },
       { "item": "bag_plastic", "contents-group": "fs_utensils", "prob": 85 },
-      { "item": "bag_plastic", "contents-group": "fs_toiletries", "prob": 85 },
+      { "item": "box_small_plastic", "contents-group": "fs_toiletries", "prob": 85 },
       { "group": "fs_stored_lighting_selutions", "prob": 90 },
       { "group": "full_1st_aid", "prob": 20 }
     ]

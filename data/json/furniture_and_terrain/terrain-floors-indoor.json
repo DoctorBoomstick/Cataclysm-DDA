@@ -9,7 +9,7 @@
     "move_cost": 2,
     "roof": "t_concrete_roof",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "bash": {
       "sound": "SMASH!",
@@ -35,7 +35,7 @@
     "move_cost": 2,
     "roof": "t_concrete_roof",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "bash": {
       "sound": "SMASH!",
@@ -59,7 +59,7 @@
     "color": "red",
     "looks_like": "t_floor_red",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "move_cost": 2,
     "roof": "t_concrete_roof",
@@ -74,7 +74,7 @@
     "color": "black",
     "looks_like": "t_thconc_warning",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "move_cost": 2,
     "roof": "t_concrete_roof",
@@ -91,7 +91,7 @@
     "looks_like": "t_thconc_y",
     "move_cost": 2,
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "roof": "t_concrete_roof",
     "copy-from": "t_thconc_floor",
@@ -118,7 +118,7 @@
     "light_emitted": 120,
     "roof": "t_concrete_roof",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "bash": {
       "str_min": 4,
@@ -139,7 +139,7 @@
     "description": "Interlocking wooden tiles that are more than likely treated against fire, with a still-functioning light attached to the ceiling above.",
     "symbol": ".",
     "color": "white",
-    "connect_groups": "WOODFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "WOODFLOOR" ],
     "connects_to": "WOODFLOOR",
     "move_cost": 2,
     "light_emitted": 120,
@@ -165,7 +165,7 @@
     "description": "A relatively flat area made of tightly placed bricks.",
     "symbol": ".",
     "color": "light_red",
-    "connect_groups": "BRICKFLOOR",
+    "connect_groups": [ "BRICKFLOOR", "INDOORFLOOR" ],
     "connects_to": "BRICKFLOOR",
     "move_cost": 2,
     "roof": "t_rock_roof",
@@ -179,7 +179,7 @@
     "description": "A floor consisting of finely mixed earth that has been tamped down, with a still-functioning light attached to the ceiling above.",
     "symbol": ".",
     "color": "brown",
-    "connect_groups": "DIRT",
+    "connect_groups": [ "DIRT", "INDOORFLOOR" ],
     "connects_to": "DIRT",
     "move_cost": 2,
     "light_emitted": 120,
@@ -205,7 +205,7 @@
     "description": "High-quality and tough checkered metal flooring to reduce the risk of slips and falls, with a still-functioning light attached to the ceiling above.",
     "symbol": ".",
     "color": "light_cyan",
-    "connect_groups": "METALFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "METALFLOOR" ],
     "connects_to": "METALFLOOR",
     "move_cost": 2,
     "light_emitted": 120,
@@ -235,7 +235,7 @@
     "roof": "t_concrete_roof",
     "looks_like": "t_thconc_floor_olight",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "INDOORS", "FLAT", "ROAD" ],
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "bash": {
       "str_min": 4,
@@ -256,7 +256,7 @@
     "description": "Linoleum flooring with a still-functioning light attached to the ceiling above.",
     "symbol": ".",
     "color": "white",
-    "connect_groups": "LINOLEUM",
+    "connect_groups": [ "INDOORFLOOR", "LINOLEUM" ],
     "connects_to": "LINOLEUM",
     "move_cost": 2,
     "light_emitted": 120,
@@ -282,7 +282,7 @@
     "description": "Linoleum flooring with a still-functioning light attached to the ceiling above.",
     "symbol": ".",
     "color": "white",
-    "connect_groups": "LINOLEUM",
+    "connect_groups": [ "INDOORFLOOR", "LINOLEUM" ],
     "connects_to": "LINOLEUM",
     "move_cost": 2,
     "light_emitted": 120,
@@ -326,7 +326,7 @@
     "description": "An extremely resilient floor made from carefully placed rebar and poured concrete, capable of providing protection from the elements.  As for the matching roof, it still requires supporting walls, otherwise it may very well cave in.",
     "symbol": ".",
     "color": "cyan",
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "move_cost": 2,
     "roof": "t_concrete_roof",
@@ -352,7 +352,7 @@
     "looks_like": "t_strconc_floor",
     "symbol": ".",
     "color": "cyan",
-    "connect_groups": "CONCRETE",
+    "connect_groups": [ "CONCRETE", "INDOORFLOOR" ],
     "connects_to": "CONCRETE",
     "emissions": [ "emit_plasma_continuously" ],
     "move_cost": 2,
@@ -398,6 +398,7 @@
     "symbol": ".",
     "color": "cyan",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT" ],
     "bash": {
       "sound": "SMASH!",
@@ -419,7 +420,7 @@
     "description": "A relatively flat area of rock and stone.  Looks stable enough to be mined with the proper mining gear.",
     "symbol": ".",
     "color": "light_gray",
-    "connect_groups": "ROCKFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "ROCKFLOOR" ],
     "connects_to": "ROCKFLOOR",
     "move_cost": 2,
     "roof": "t_rock_roof",
@@ -434,7 +435,7 @@
     "looks_like": "t_rock_floor",
     "symbol": ".",
     "color": "light_gray",
-    "connect_groups": "MARBLEFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "MARBLEFLOOR" ],
     "connects_to": "MARBLEFLOOR",
     "move_cost": 2,
     "roof": "t_rock_roof",
@@ -448,7 +449,7 @@
     "description": "A rough stone floor.  Its patterns constantly shift as if your mind can't quite understand what it's really seeing.",
     "symbol": ".",
     "color": "magenta",
-    "connect_groups": "ROCKFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "ROCKFLOOR" ],
     "connects_to": "ROCKFLOOR",
     "move_cost": 2,
     "roof": "t_warped_roof",
@@ -461,7 +462,7 @@
     "description": "High-quality and tough checkered metal flooring to reduce the risk of slips and falls, with a matching roof.",
     "symbol": ".",
     "color": "light_cyan",
-    "connect_groups": "METALFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "METALFLOOR" ],
     "connects_to": "METALFLOOR",
     "move_cost": 2,
     "roof": "t_metal_roof",
@@ -488,6 +489,7 @@
     "color": "light_cyan",
     "move_cost": 2,
     "roof": "t_metal_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "INDOORS" ],
     "bash": {
       "sound": "thump",
@@ -509,7 +511,7 @@
     "description": "Interlocking wooden tiles that are more than likely treated against fire, with wooden posts and beams supporting a roof.",
     "symbol": ".",
     "color": "cyan",
-    "connect_groups": "WOODFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "WOODFLOOR" ],
     "connects_to": "WOODFLOOR",
     "move_cost": 2,
     "comfort": 1,
@@ -534,6 +536,7 @@
     "looks_like": "t_dirtfloor",
     "move_cost": 2,
     "roof": "t_log_sod_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT" ],
     "bash": {
       "sound": "SMASH!",
@@ -557,6 +560,7 @@
     "color": "cyan",
     "move_cost": 2,
     "roof": "t_metal_flat_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
     "bash": {
       "str_min": 50,
@@ -574,7 +578,7 @@
     "description": "Hardwood flooring that has been treated with chemicals to improve slip resistance and sliding, commonly for recreational sports.",
     "symbol": ".",
     "color": "light_red",
-    "connect_groups": "WOODFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "WOODFLOOR" ],
     "connects_to": "WOODFLOOR",
     "move_cost": 2,
     "comfort": 1,
@@ -596,7 +600,7 @@
     "description": "A floor consisting of finely mixed earth that has been tamped down, with a wooden ceiling above it.",
     "symbol": ".",
     "color": "brown",
-    "connect_groups": "DIRT",
+    "connect_groups": [ "DIRT", "INDOORFLOOR" ],
     "connects_to": "DIRT",
     "move_cost": 2,
     "roof": "t_shingle_flat_roof",
@@ -618,7 +622,7 @@
     "symbol": ".",
     "color": "brown",
     "looks_like": "t_dirtfloor",
-    "connect_groups": "DIRT",
+    "connect_groups": [ "DIRT", "INDOORFLOOR" ],
     "connects_to": "DIRT",
     "move_cost": 2,
     "roof": "t_thatch_roof",
@@ -717,7 +721,7 @@
     "description": "An industrial floodlight set up to illuminate the surroundings.  Smashing it doesn't seem like it'd produce any worthwhile salvage.",
     "symbol": ".",
     "color": "white",
-    "connect_groups": "WOODFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "WOODFLOOR" ],
     "connects_to": "WOODFLOOR",
     "move_cost": 2,
     "roof": "t_flat_roof",
@@ -740,6 +744,7 @@
     "symbol": ".",
     "color": "yellow",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "INDOORS", "FLAT" ]
   },
   {
@@ -751,6 +756,7 @@
     "color": "magenta",
     "move_cost": 2,
     "roof": "t_flat_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "INDOORS", "TRANSPARENT", "FLAT", "ELEVATOR" ]
   },
   {
@@ -793,6 +799,7 @@
     "move_cost": 2,
     "comfort": 1,
     "roof": "t_flat_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -815,7 +822,7 @@
     "name": "carpet",
     "symbol": ".",
     "color": "red",
-    "connect_groups": "CARPET",
+    "connect_groups": [ "CARPET", "INDOORFLOOR" ],
     "connects_to": "CARPET",
     "move_cost": 2,
     "roof": "t_flat_roof",
@@ -832,6 +839,7 @@
     "symbol": ".",
     "color": "yellow",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor" }
   },
@@ -844,6 +852,7 @@
     "symbol": ".",
     "color": "green",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor" }
   },
@@ -856,6 +865,7 @@
     "symbol": ".",
     "color": "magenta",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor" }
   },
@@ -869,6 +879,7 @@
     "move_cost": 2,
     "comfort": 1,
     "roof": "t_flat_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -895,7 +906,7 @@
     "looks_like": "t_carpet_red",
     "symbol": ".",
     "color": "red",
-    "connect_groups": "CARPET",
+    "connect_groups": [ "CARPET", "INDOORFLOOR" ],
     "connects_to": "CARPET",
     "move_cost": 2,
     "roof": "t_flat_roof",
@@ -913,6 +924,7 @@
     "symbol": ".",
     "color": "yellow",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor_noroof" }
   },
@@ -926,6 +938,7 @@
     "symbol": ".",
     "color": "green",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor_noroof" }
   },
@@ -939,6 +952,7 @@
     "symbol": ".",
     "color": "magenta",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor_noroof" }
   },
@@ -951,6 +965,7 @@
     "move_cost": 2,
     "copy-from": "t_carpet_base",
     "description": "Base concrete carpet!",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -972,6 +987,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "description": "Firm, low-pile, high-durability carpet in a red color, for laying down on bare concrete."
   },
@@ -985,6 +1001,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 } ], "ter_set": "t_thconc_floor" }
   },
@@ -998,6 +1015,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 } ], "ter_set": "t_thconc_floor" }
   },
@@ -1011,6 +1029,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 } ], "ter_set": "t_thconc_floor" }
   },
@@ -1023,6 +1042,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -1044,6 +1064,7 @@
     "move_cost": 2,
     "looks_like": "t_carpet_red",
     "description": "Firm, low-pile, totally non-flammable carpet in a red color, with an insulation layer beneath.",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "r_carpet", "charges": 1 } ], "ter_set": "t_metal_floor" }
   },
@@ -1058,6 +1079,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 } ], "ter_set": "t_metal_floor" }
   },
@@ -1071,6 +1093,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 } ], "ter_set": "t_metal_floor" }
   },
@@ -1084,6 +1107,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 } ], "ter_set": "t_metal_floor" }
   },
@@ -1096,6 +1120,7 @@
     "move_cost": 2,
     "copy-from": "t_carpet_base",
     "description": "Base concrete carpet!",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -1117,6 +1142,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "description": "Firm, low-pile, high-durability carpet in a red color, for laying down on bare concrete."
   },
@@ -1130,6 +1156,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 } ], "ter_set": "t_strconc_floor" }
   },
@@ -1143,6 +1170,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 } ], "ter_set": "t_strconc_floor" }
   },
@@ -1156,6 +1184,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 } ], "ter_set": "t_strconc_floor" }
   },
@@ -1168,6 +1197,7 @@
     "move_cost": 2,
     "copy-from": "t_carpet_base",
     "description": "Base rock carpet!",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -1189,6 +1219,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "description": "Soft red carpet."
   },
@@ -1202,6 +1233,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_rock_floor" }
   },
@@ -1215,6 +1247,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_rock_floor" }
   },
@@ -1228,6 +1261,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_rock_floor" }
   },
@@ -1240,6 +1274,7 @@
     "move_cost": 2,
     "copy-from": "t_carpet_base",
     "description": "Base primitive floor carpet!",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -1265,6 +1300,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "description": "Soft red carpet."
   },
@@ -1278,6 +1314,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor_primitive" }
   },
@@ -1291,6 +1328,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor_primitive" }
   },
@@ -1304,6 +1342,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 }, { "item": "nail", "charges": 5 } ], "ter_set": "t_floor_primitive" }
   },
@@ -1316,6 +1355,7 @@
     "move_cost": 2,
     "copy-from": "t_carpet_base",
     "description": "Base gray linoleum floor carpet!",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -1341,6 +1381,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "description": "Soft red carpet."
   },
@@ -1354,6 +1395,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 } ], "ter_set": "t_linoleum_gray" }
   },
@@ -1367,6 +1409,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 } ], "ter_set": "t_linoleum_gray" }
   },
@@ -1380,6 +1423,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 } ], "ter_set": "t_linoleum_gray" }
   },
@@ -1392,6 +1436,7 @@
     "move_cost": 2,
     "copy-from": "t_carpet_base",
     "description": "Base white linoleum floor carpet!",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "bash": {
       "sound": "SMASH!",
@@ -1413,6 +1458,7 @@
     "symbol": ".",
     "color": "red",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "description": "Soft red carpet."
   },
@@ -1426,6 +1472,7 @@
     "color": "yellow",
     "move_cost": 2,
     "looks_like": "t_carpet_yellow",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "y_carpet", "charges": 1 } ], "ter_set": "t_linoleum_white" }
   },
@@ -1439,6 +1486,7 @@
     "color": "green",
     "move_cost": 2,
     "looks_like": "t_carpet_green",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "g_carpet", "charges": 1 } ], "ter_set": "t_linoleum_white" }
   },
@@ -1452,6 +1500,7 @@
     "color": "magenta",
     "move_cost": 2,
     "looks_like": "t_carpet_purple",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "RUG", "EASY_DECONSTRUCT" ],
     "deconstruct": { "items": [ { "item": "p_carpet", "charges": 1 } ], "ter_set": "t_linoleum_white" }
   },
@@ -1462,7 +1511,7 @@
     "description": "A section of flooring made out of a tough, rubbery material.  Colored a simple white.",
     "symbol": ".",
     "color": "white",
-    "connect_groups": "LINOLEUM",
+    "connect_groups": [ "INDOORFLOOR", "LINOLEUM" ],
     "connects_to": "LINOLEUM",
     "move_cost": 2,
     "roof": "t_flat_roof",
@@ -1484,7 +1533,7 @@
     "description": "A section of flooring made out of a tough, gray, rubbery material.",
     "symbol": ".",
     "color": "light_gray",
-    "connect_groups": "LINOLEUM",
+    "connect_groups": [ "INDOORFLOOR", "LINOLEUM" ],
     "connects_to": "LINOLEUM",
     "move_cost": 2,
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
@@ -1504,7 +1553,7 @@
     "description": "This section of wax flooring has been painted.",
     "symbol": ".",
     "color": "yellow",
-    "connect_groups": "WOODFLOOR",
+    "connect_groups": [ "INDOORFLOOR", "WOODFLOOR" ],
     "connects_to": "WOODFLOOR",
     "move_cost": 2,
     "roof": "t_flat_roof",
@@ -1561,6 +1610,7 @@
     "symbol": "LINE_OXOX",
     "color": "dark_gray",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT" ],
     "bash": {
       "str_min": 30,
@@ -1600,7 +1650,7 @@
     "description": "It's dirt.  Looks like some fine soil for tillage.  Could also be dug out for construction projects.",
     "symbol": ".",
     "color": "brown",
-    "connect_groups": "DIRT",
+    "connect_groups": [ "DIRT", "INDOORFLOOR" ],
     "connects_to": "DIRT",
     "move_cost": 2,
     "looks_like": "t_dirt",
@@ -1617,7 +1667,7 @@
     "symbol": ".",
     "color": "yellow",
     "looks_like": "t_sand",
-    "connect_groups": "SAND",
+    "connect_groups": [ "INDOORFLOOR", "SAND" ],
     "connects_to": "SAND",
     "move_cost": 3,
     "roof": "t_rock_roof",
@@ -1635,6 +1685,7 @@
     "color": "brown",
     "move_cost": 3,
     "roof": "t_rock_roof",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "INDOORS", "FLAT", "DIGGABLE" ],
     "bash": { "sound": "thump", "ter_set": "t_null", "str_min": 50, "str_max": 100, "str_min_supported": 100, "bash_below": true }
   },
@@ -1649,6 +1700,7 @@
     "symbol": ".",
     "color": "light_green",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "DIGGABLE", "FLAT", "SUPPORTS_ROOF", "INDOORS" ],
     "bash": { "sound": "thump", "ter_set": "t_null", "str_min": 40, "str_max": 100, "str_min_supported": 100, "bash_below": true }
   },
@@ -1660,7 +1712,7 @@
     "description": "A large area of malleable clay, suitable for kiln firing if it was extracted properly.",
     "symbol": ".",
     "color": "light_red",
-    "connect_groups": "CLAY",
+    "connect_groups": [ "CLAY", "INDOORFLOOR" ],
     "connects_to": "CLAY",
     "move_cost": 2,
     "roof": "t_rock_roof",
@@ -1675,7 +1727,7 @@
     "//": "for caverns and other natural underground formations.",
     "symbol": "#",
     "color": "brown",
-    "connect_groups": "CLAY",
+    "connect_groups": [ "CLAY", "INDOORFLOOR" ],
     "connects_to": "CLAY",
     "move_cost": 5,
     "roof": "t_rock_roof",
@@ -1699,6 +1751,7 @@
     "color": "white",
     "move_cost": 2,
     "roof": "t_roof_paper",
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
     "bash": {
       "str_min": 1,
@@ -1719,6 +1772,7 @@
     "looks_like": "t_dirt",
     "color": "white",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "INDOORS", "FLAT", "ROAD" ],
     "bash": {
       "str_min": 1,
@@ -1739,6 +1793,7 @@
     "looks_like": "t_floor_paper",
     "color": "light_gray",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "INDOORS", "FLAT" ],
     "bash": {
       "str_min": 15,
@@ -1760,6 +1815,7 @@
     "symbol": ".",
     "color": "white",
     "move_cost": 2,
+    "connect_groups": "INDOORFLOOR",
     "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "INDOORS", "NO_FLOOR" ],
     "bash": {
       "str_min": 1,

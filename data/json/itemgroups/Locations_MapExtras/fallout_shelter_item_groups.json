@@ -30,8 +30,7 @@
           { "collection": [ { "item": "plastic_fork" }, { "item": "plastic_spoon" } ], "prob": 100 }
         ]
       },
-      { "item": "plastic_knife" },
-      { "item": "can_opener", "prob": 75 }
+      { "item": "plastic_knife" }
     ]
   },
   {
@@ -81,7 +80,8 @@
         "distribution": [ { "item": "2lcanteen", "prob": 15 }, { "item": "canteen", "prob": 25 }, { "item": "tin_cup", "prob": 35 } ],
         "prob": 80
       },
-      { "item": "napkin", "count": [ 12, 20 ], "container-item": "bag_plastic_small", "prob": 75 }
+      { "item": "can_opener", "prob": 75 },
+      { "item": "napkin", "count": 28, "container-item": "bag_plastic_small", "prob": 75 }
     ]
   },
   {
@@ -150,7 +150,7 @@
     "type": "item_group",
     "subtype": "collection",
     "//": "A collection of basic living necessities for a single person living within a fallout shelter: sleeping aids, waste disposal, etc. No food or, most, medical supplies are included, as those are handled in dedicated provision boxes.",
-    "container-item": "box_medium",
+    "container-item": "box_large_plastic",
     "on_overflow": "spill",
     "entries": [
       { "distribution": [ { "item": "bucket", "prob": 50 }, { "item": "bucket_5gal", "prob": 25 } ] },
@@ -163,7 +163,7 @@
       },
       { "group": "fs_bedding", "prob": 95 },
       { "item": "bag_plastic", "contents-group": "fs_utensils", "prob": 85 },
-      { "item": "box_small_plastic", "contents-group": "fs_toiletries", "prob": 85 },
+      { "item": "box_plastic", "contents-group": "fs_toiletries", "prob": 85 },
       { "group": "fs_stored_lighting_selutions", "prob": 90 },
       { "group": "full_1st_aid", "prob": 20 }
     ]

@@ -5017,6 +5017,52 @@
     "flags": [ "COLLAPSE_CONTENTS" ]
   },
   {
+    "id": "box_plastic",
+    "type": "GENERIC",
+    "category": "container",
+    "copy-from": "box_small_plastic",
+    "name": { "str": "large plastic box" },
+    "description": "A respectably dimensioned plastic storage container with a hinged lid, silvery grey flanks, and a secure seal that denies pests, dust, and, in a pinch, the apocalypse, access to the goods within.",
+    "weight": "1520 g",
+    "volume": "22200 ml",
+    "longest_side": "40 cm",
+    "//": "40 x 30 x 18.5 cm external, 37 x 27 x 14.75 cm internal",
+    "//2": "https://www.auer-packaging.com/gb/en/Euro-containers-with-hinge-lid/ED-4317-HG.html?color=7001",
+    "price": "18 USD 59 cent",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "14735 ml",
+        "max_contains_weight": "36 kg",
+        "max_item_length": "37 cm"
+      }
+    ]
+  },
+  {
+    "id": "box_large_plastic",
+    "type": "GENERIC",
+    "category": "container",
+    "copy-from": "box_small_plastic",
+    "name": { "str": "plastic crate" },
+    "description": "An intimidatingly chunky plastic storage box with a hinge-secured lid, silvery opaque sides, and enough space to conveniently sleep within, should you be inclined to that persuasion.",
+    "weight": "3780 g",
+    "volume": "104400 ml",
+    "longest_side": "60 cm",
+    "//": "60 x 40 x 43.5 cm external, 57 x 37 x 40.7 cm internal",
+    "//2": "https://www.auer-packaging.com/gb/en/Euro-containers-with-hinge-lid/ED-6442.html",
+    "price": "44 USD 59 cent",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "85836 ml",
+        "max_contains_weight": "169 kg",
+        "max_item_length": "57 cm"
+      }
+    ]
+  },
+  {
     "id": "pillbox",
     "type": "GENERIC",
     "category": "container",

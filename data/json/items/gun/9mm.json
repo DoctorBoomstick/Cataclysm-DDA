@@ -1332,5 +1332,39 @@
       }
     ],
     "melee_damage": { "bash": 9 }
+  },
+  {
+    "id": "p210",
+    "copy-from": "pistol_base",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "name": { "str": "9mm target pistol" },
+    "description": "The Calico automatic carbine is a submachine gun with a unique circular magazine that allows for high capacities and reduced recoil.",
+    "variant_type": "gun",
+    "variants": [
+      {
+        "id": "p210",
+        "name": { "str": "SIG P210 Target handgun" },
+        "description": "A compact submachine gun designed evidently under the 'spray and pray' mentality, this Calico M960 automatic carbine is not notably powerful, or dependable, or even particularly accurate to shoot.  Intended for military and law enforcement use, it never saw any noteworthy service due to its poor reliability and overall performance, and would be an unremarkable weapon in all respects, save for its enormous magazine capacity.  Making use of uniquely designed 50 or 100 round circular magazines, the Calico might not be a particularly good gun, but will throw an overwhelming amount of lead down range for a long time providing that it doesn't choke, jam, and die."
+      }
+    ],
+    "weight": "1046 g",
+    "volume": "746 ml",
+    "longest_side": "214 mm",
+    "barrel_length": "127 mm",
+"//": "21.4x4x13.4 cm in dimensions, trimmed by 35% to account for empty spaces.",
+    "price": "125 USD",
+    "price_postapoc": "20 USD",
+    "to_hit": { "grip": "weapon", "length": "hand", "surface": "any", "balance": "neutral" },
+    "material": [ "plastic", "steel" ],
+    "color": "dark_gray",
+    "ammo": [ "9mm" ],
+    "dispersion": 480,
+    "durability": 8,
+    "min_cycle_recoil": 450,
+    "flags": [ "ALLOWS_BODY_BLOCK" ],
+    "weapon_category": [ "AUTOMATIC_PISTOLS" ],
+    "pocket_data": [ { "magazine_well": "176 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "ccpmag", "ccpmag_9rd" ] } ],
+    "melee_damage": { "bash": 8 }
   }
 ]

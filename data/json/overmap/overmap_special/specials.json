@@ -2197,7 +2197,7 @@
       { "point": [ 8, 12, 0 ], "overmap": "refctr_field" },
       { "point": [ 9, 12, 0 ], "overmap": "refctr_field" },
       { "point": [ 5, 13, 0 ], "overmap": "refctr_field" },
-      { "point": [ 6, 13, 0 ], "overmap": "refctr_field" },
+      { "point": [ 6, 13, 0 ], "overmap": "refctr_field_encampment_north" },
       { "point": [ 7, 13, 0 ], "overmap": "refctr_road_north" },
       { "point": [ 8, 13, 0 ], "overmap": "refctr_field" },
       { "point": [ 9, 13, 0 ], "overmap": "refctr_field" },

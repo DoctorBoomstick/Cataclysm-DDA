@@ -52,7 +52,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": "refctr_field",
+    "id": [ "refctr_field", "refctr_field_encampment" ],
     "see_cost": 2,
     "name": "field",
     "looks_like": "field",

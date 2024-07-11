@@ -85,5 +85,31 @@
       "|": [ [ "t_chainfence", 30 ], [ "t_chainfence_posts", 4 ], [ "t_region_groundcover_forest", 2 ], "t_region_shrub" ],
       "_": [ [ "t_pavement", 300 ], [ "t_region_groundcover_barren", 6 ], "t_region_groundcover_forest" ]
     }
+  },
+  {
+    "type": "palette",
+    "id": "vien_camp_pallet",
+    "parameters": {
+      "box_type": {
+        "type": "ter_str_id",
+        "default": { "distribution": [ [ "f_cardboard_box", 2 ], [ "f_cardboard_box_large_reinforced", 1 ], [ "f_crate_o", 2 ] ] }
+      }
+    },
+    "terrain": {
+      "r": "t_canvas_roof",
+      ".": "t_region_groundcover_barren",
+      "|": "t_region_groundcover_barren",
+      "#": "t_region_groundcover_barren",
+      "o": "t_region_groundcover_barren"
+    },
+    "furniture": {
+      "|": "f_large_groundsheet",
+      "#": "f_large_canvas_wall",
+      "o": [ [ "f_large_canvas_door", 1 ], [ "f_large_canvas_door_o", 1 ] ],
+      "a": [ [ "f_floor_mattress", 3 ], [ "f_down_mattress", 1 ], [ "f_makeshift_bed", 3 ] ],
+      "b": [ [ "f_stool", 2 ], [ "f_camp_chair", 3 ], [ "f_logstool", 1 ], [ "f_chair_folding", 3 ] ],
+      "c": "f_tourist_table",
+      "d": { "param": "box_type", "fallback": "f_crate_o" }
+    }
   }
 ]

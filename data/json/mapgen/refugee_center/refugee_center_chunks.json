@@ -1,0 +1,76 @@
+[
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "refugee_centre_camp_viên_roof",
+    "object": {
+      "faction_owner": [ { "id": "free_merchants", "x": [ 0, 14 ], "y": [ 0, 14 ] } ],
+      "mapgensize": [ 24, 24 ],
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "        rrrrrrr         ",
+        "        rrrrrrr         ",
+        "        rrrrrrr         ",
+        "        rrrrrrr         ",
+        "        rrrrrrr         ",
+        "                        "
+      ],
+      "palettes": [ "vien_camp_pallet" ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+    "nested_mapgen_id": "refugee_centre_camp_viên",
+    "object": {
+      "faction_owner": [ { "id": "free_merchants", "x": [ 0, 14 ], "y": [ 0, 14 ] } ],
+      "mapgensize": [ 24, 24 ],
+      "rows": [
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "                        ",
+        "       .###o###.        ",
+        "       .#bb||b#.        ",
+        "       .#|b||d#.        ",
+        "       .#cc||a#.        ",
+        "       .#######.        ",
+        "       .........        "
+      ],
+      "palettes": [ "vien_camp_pallet" ],
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
+      "place_nested": [ { "chunks": [ "refugee_centre_camp_viên_roof" ], "x": 0, "y": 0, "z": 1 } ]
+    }
+  }
+]

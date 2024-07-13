@@ -52,7 +52,16 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "refctr_field", "refctr_field_encampment" ],
+    "id": [ "refctr_hill_nw", "refctr_hill_nwt" ],
+    "see_cost": 2,
+    "name": "overgrown hillock",
+    "looks_like": "field",
+    "sym": ",",
+    "color": "brown"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "refctr_field" ],
     "see_cost": 2,
     "name": "field",
     "looks_like": "field",

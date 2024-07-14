@@ -52,7 +52,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "refctr_hill_nw", "refctr_hill_nwt" ],
+    "id": [ "refctr_hill_nw", "refctr_hill_ne", "refctr_hill_nwt", "refctr_hill_net" ],
     "see_cost": 2,
     "name": "overgrown hillock",
     "looks_like": "field",

@@ -31,7 +31,6 @@
 #include "gamemode.h"
 #include "get_version.h"
 #include "help.h"
-#include "loading_ui.h"
 #include "localized_comparator.h"
 #include "mapbuffer.h"
 #include "mapsharing.h"
@@ -578,9 +577,8 @@ void main_menu::init_strings()
         vSettingsHotkeys.push_back( get_hotkeys( item ) );
     }
 
-    loading_ui ui( false );
     try {
-        g->load_core_data( ui );
+        g->load_core_data();
     } catch( const std::exception &err ) {
         debugmsg( err.what() );
         std::exit( 1 );
@@ -708,6 +706,10 @@ bool main_menu::opening_screen()
 #endif
 
     while( !start ) {
+        if( g->uquit == QUIT_EXIT ) {
+            return false;
+        }
+
         ui_manager::redraw();
         std::string action = ctxt.handle_input();
         input_event sInput = ctxt.get_raw_input();
@@ -797,9 +799,12 @@ bool main_menu::opening_screen()
         // also check special keys
         if( action == "QUIT" ) {
 #if !defined(EMSCRIPTEN)
+            g->uquit = QUIT_EXIT_PENDING;
             if( query_yn( _( "Really quit?" ) ) ) {
+                g->uquit = QUIT_EXIT;
                 return false;
             }
+            g->uquit = QUIT_NO;
 #endif
         } else if( action == "LEFT" || action == "PREV_TAB" || action == "RIGHT" || action == "NEXT_TAB" ) {
             sel_line = 0;
@@ -1112,6 +1117,8 @@ bool main_menu::load_game( std::string const &worldname, save_t const &savegame 
 
     try {
         g->setup();
+    } catch( game::exit_exception const &/* ex */ ) {
+        return false;
     } catch( const std::exception &err ) {
         debugmsg( "Error: %s", err.what() );
         return false;
@@ -1169,17 +1176,17 @@ bool main_menu::load_character_tab( const std::string &worldname )
     for( const save_t &s : savegames ) {
         std::optional<std::chrono::seconds> playtime = get_playtime_from_save( cur_world, s );
         std::string save_str = s.decoded_name();
+        std::string playtime_str;
         if( playtime ) {
-            int padding = std::max( 16 - utf8_width( save_str ), 0 ) + 2;
             std::chrono::seconds::rep tmp_sec = playtime->count();
             int pt_sec = static_cast<int>( tmp_sec % 60 );
             int pt_min = static_cast<int>( tmp_sec % 3600 ) / 60;
             int pt_hrs = static_cast<int>( tmp_sec / 3600 );
-            save_str = string_format( "%s%s<color_c_light_blue>[%02d:%02d:%02d]</color>",
-                                      save_str, std::string( padding, ' ' ), pt_hrs, pt_min,
-                                      static_cast<int>( pt_sec ) );
+            playtime_str = string_format( "<color_c_light_blue>[%02d:%02d:%02d]</color>",
+                                          pt_hrs, pt_min, static_cast<int>( pt_sec ) );
         }
-        mmenu.entries.emplace_back( opt_val++, true, MENU_AUTOASSIGN, save_str );
+        // TODO: Replace this API to allow adding context without an empty description.
+        mmenu.entries.emplace_back( opt_val++, true, MENU_AUTOASSIGN, save_str, "", playtime_str );
     }
     mmenu.entries.emplace_back( opt_val, true, 'q', _( "<- Back to Main Menu" ), c_yellow, c_yellow );
     mmenu.query();

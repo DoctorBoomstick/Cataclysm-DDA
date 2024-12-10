@@ -877,6 +877,7 @@ Bulgarian
 Bullard
 bullpup
 bullseye
+bullshit
 Buluotuo
 Bulwer
 Bundahis
@@ -1100,6 +1101,8 @@ chk
 Chloe
 Cho
 chode
+chokeberry
+chokeberries
 chokepoints
 Chol
 chonker
@@ -2361,6 +2364,7 @@ gravesite
 Gravol
 GravyField
 Grayfield
+grayscale
 greatbow
 greatbows
 greatclub
@@ -2630,6 +2634,8 @@ HMS
 HMTD
 hnefatafl
 Hobbes
+hobblebush
+hobbleberries
 hoc
 Hockomock
 hodag
@@ -3462,6 +3468,7 @@ locs
 Locutus
 Loew
 Loki
+lokiceratops
 lolita
 London
 longarm
@@ -4128,6 +4135,8 @@ namele
 Namibian
 Nana
 Nani
+nannyberry
+nannyberries
 nano
 nanobots
 nanocompound
@@ -4193,6 +4202,7 @@ necrowolf
 nectivore
 Ned
 Nedarim
+nedcolbertia
 Needham
 needlelike
 Needletip
@@ -5600,6 +5610,7 @@ Sikorsky
 Silat
 siloed
 siloing
+silverberry
 Silvergram
 Silvergrams
 Silverhawk
@@ -5913,6 +5924,7 @@ streetwear
 stressfully
 striders
 strigoi
+strix
 strobing
 strobus
 Stromer
@@ -6407,6 +6419,7 @@ tumescences
 Tunguska
 Tunisian
 tuno
+tupelo
 tupperware
 tupperwares
 Turing

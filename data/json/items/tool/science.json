@@ -1317,25 +1317,10 @@
     ],
     "name": { "str_sp": "Mi-go Biotech" },
     "conditional_names": [
-      { "type": "VAR", "condition": "npctalk_var_mbt_f_function", "value": "morale", "name": { "str_sp": "%s (happy)" } },
-      {
-        "type": "VAR",
-        "condition": "npctalk_var_mbt_f_function",
-        "value": "focus",
-        "name": { "str_sp": "%s (focus)" }
-      },
-      {
-        "type": "VAR",
-        "condition": "npctalk_var_mbt_f_function",
-        "value": "pain",
-        "name": { "str_sp": "%s (pain relief)" }
-      },
-      {
-        "type": "VAR",
-        "condition": "npctalk_var_mbt_f_function",
-        "value": "sleepiness",
-        "name": { "str_sp": "%s (wake up)" }
-      }
+      { "type": "VAR", "condition": "mbt_f_function", "value": "morale", "name": { "str_sp": "%s (happy)" } },
+      { "type": "VAR", "condition": "mbt_f_function", "value": "focus", "name": { "str_sp": "%s (focus)" } },
+      { "type": "VAR", "condition": "mbt_f_function", "value": "pain", "name": { "str_sp": "%s (pain relief)" } },
+      { "type": "VAR", "condition": "mbt_f_function", "value": "sleepiness", "name": { "str_sp": "%s (wake up)" } }
     ],
     "description": "A piece of mi-go biotechnology.",
     "material": [ "alien_resin" ],
@@ -1354,7 +1339,7 @@
           "condition": { "not": { "one_in_chance": 3 } },
           "effect": [
             { "u_message": "You have a slight feeling of being watched." },
-            { "math": [ "u_migo_interest_interest_migo_interest", "++" ] }
+            { "math": [ "u_migo_interest_interest_migo_interest++" ] }
           ]
         },
         {

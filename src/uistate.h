@@ -10,6 +10,7 @@
 
 #include "enums.h"
 #include "flat_set.h"
+#include "item_location.h"
 #include "json.h"
 #include "omdata.h"
 #include "type_id.h"
@@ -161,7 +162,6 @@ class uistatedata
         bool distraction_withdrawal = true;
         bool distraction_all = true; // NOLINT(cata-serialize)
         bool numpad_navigation = false;
-        bool is_toggle = false; // NOLINT(cata-serialize)
 
         // V Menu Stuff
         int list_item_sort = 0;

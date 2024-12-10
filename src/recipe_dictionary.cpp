@@ -1,6 +1,7 @@
 #include "recipe_dictionary.h"
 
 #include <algorithm>
+#include <chrono>
 #include <iterator>
 #include <memory>
 #include <unordered_map>
@@ -166,6 +167,29 @@ std::vector<const recipe *> recipe_subset::recent() const
     return res;
 }
 
+// Cache for the search function
+static std::map<const itype_id, std::string> item_info_cache;
+static time_point cache_valid_turn;
+
+static std::string cached_item_info( const itype_id &item_type )
+{
+    if( cache_valid_turn != calendar::turn ) {
+        cache_valid_turn = calendar::turn;
+        item_info_cache.clear();
+    }
+    if( item_info_cache.count( item_type ) > 0 ) {
+        return item_info_cache.at( item_type );
+    }
+    const item result( item_type );
+    item_info_cache[item_type] = result.info( true );
+    return item_info_cache.at( item_type );
+}
+
+// keep data for one search cycle
+static std::unordered_set<bodypart_id> filtered_bodyparts;
+static std::unordered_set<sub_bodypart_id> filtered_sub_bodyparts;
+static std::unordered_set<layer_level> filtered_layers;
+
 std::vector<const recipe *> recipe_subset::search(
     const std::string_view txt, const search_type key,
     const std::function<void( size_t, size_t )> &progress_callback ) const
@@ -207,12 +231,31 @@ std::vector<const recipe *> recipe_subset::search(
                 return item::find_type( r->result() )->has_any_quality( txt );
             }
 
+            case search_type::covers: {
+                const item result_item( r->result() );
+                return std::any_of( filtered_bodyparts.begin(), filtered_bodyparts.end(),
+                [&result_item]( const bodypart_id & bp ) {
+                    return result_item.covers( bp );
+                } )
+                || std::any_of( filtered_sub_bodyparts.begin(), filtered_sub_bodyparts.end(),
+                [&result_item]( const sub_bodypart_id & sbp ) {
+                    return result_item.covers( sbp );
+                } );
+            }
+
+            case search_type::layer: {
+                const std::vector<layer_level> layers = item( r->result() ).get_layer();
+                return std::any_of( layers.begin(), layers.end(), []( layer_level l ) {
+                    return filtered_layers.count( l );
+                } );
+            }
+
             case search_type::description_result: {
                 if( r->is_practice() ) {
                     return lcmatch( r->description.translated(), txt );
                 } else {
-                    const item result( r->result() );
-                    return lcmatch( remove_color_tags( result.info( true ) ), txt );
+                    // Info is always rendered for avatar anyway, no need to cache per Character then.
+                    return lcmatch( remove_color_tags( cached_item_info( r->result() ) ), txt );
                 }
             }
 
@@ -283,9 +326,51 @@ std::vector<const recipe *> recipe_subset::search(
         }
     };
 
+    // prepare search
+    switch( key ) {
+        case search_type::covers: {
+            filtered_bodyparts.clear();
+            filtered_sub_bodyparts.clear();
+            for( const body_part &bp : all_body_parts ) {
+                const bodypart_str_id &bp_str_id = convert_bp( bp );
+                if( lcmatch( body_part_name( bp_str_id, 1 ), txt )
+                    || lcmatch( body_part_name( bp_str_id, 2 ), txt ) ) {
+                    filtered_bodyparts.insert( bp_str_id->id );
+                }
+                for( const sub_bodypart_str_id &sbp : bp_str_id->sub_parts ) {
+                    if( lcmatch( sbp->name.translated(), txt )
+                        || lcmatch( sbp->name_multiple.translated(), txt ) ) {
+                        filtered_sub_bodyparts.insert( sbp->id );
+                    }
+                }
+            }
+            break;
+        }
+        case search_type::layer: {
+            filtered_layers.clear();
+            for( layer_level layer = layer_level( 0 ); layer != layer_level::NUM_LAYER_LEVELS; ++layer ) {
+                if( lcmatch( item::layer_to_string( layer ), txt ) ) {
+                    filtered_layers.insert( layer );
+                }
+            }
+            break;
+        }
+        default:
+            break;
+    }
+
+    // search
     std::vector<const recipe *> res;
     size_t i = 0;
+    ctxt.register_action( "QUIT" );
+    std::chrono::steady_clock::time_point next_input_check = std::chrono::steady_clock::now();
     for( const recipe *r : recipes ) {
+        if( std::chrono::steady_clock::now() > next_input_check ) {
+            next_input_check = std::chrono::steady_clock::now() + std::chrono::milliseconds( 250 );
+            if( ctxt.handle_input( 1 ) == "QUIT" ) {
+                return res;
+            }
+        }
         if( progress_callback ) {
             progress_callback( i, recipes.size() );
         }

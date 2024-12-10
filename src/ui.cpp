@@ -18,7 +18,7 @@
 #include "memory_fast.h"
 #include "output.h"
 #include "sdltiles.h"
-#include "string_input_popup.h"
+#include "input_popup.h"
 #include "translations.h"
 #include "ui_manager.h"
 #include "cata_imgui.h"
@@ -56,13 +56,7 @@ class uilist_impl : cataimgui::window
             return parent.desired_bounds.value_or( parent.calculated_bounds );
         }
         void draw_controls() override;
-        void on_resized() override;
 };
-
-void uilist_impl::on_resized()
-{
-    parent.setup();
-}
 
 void uilist_impl::draw_controls()
 {
@@ -530,41 +524,6 @@ input_context uilist::create_main_input_context() const
     return ctxt;
 }
 
-input_context uilist::create_filter_input_context() const
-{
-    input_context ctxt( input_category, keyboard_mode::keychar );
-    // string input popup actions
-    ctxt.register_action( "TEXT.LEFT" );
-    ctxt.register_action( "TEXT.RIGHT" );
-    ctxt.register_action( "TEXT.QUIT" );
-    ctxt.register_action( "TEXT.CONFIRM" );
-    ctxt.register_action( "TEXT.CLEAR" );
-    ctxt.register_action( "TEXT.BACKSPACE" );
-    ctxt.register_action( "TEXT.HOME" );
-    ctxt.register_action( "TEXT.END" );
-    ctxt.register_action( "TEXT.DELETE" );
-#if defined( TILES )
-    ctxt.register_action( "TEXT.PASTE" );
-#endif
-    ctxt.register_action( "TEXT.INPUT_FROM_FILE" );
-    ctxt.register_action( "HELP_KEYBINDINGS" );
-    ctxt.register_action( "ANY_INPUT" );
-    // uilist actions
-    ctxt.register_action( "UILIST.UP" );
-    ctxt.register_action( "UILIST.DOWN" );
-    ctxt.register_action( "PAGE_UP", to_translation( "Fast scroll up" ) );
-    ctxt.register_action( "PAGE_DOWN", to_translation( "Fast scroll down" ) );
-    ctxt.register_action( "HOME", to_translation( "Go to first entry" ) );
-    ctxt.register_action( "END", to_translation( "Go to last entry" ) );
-    ctxt.register_action( "SCROLL_UP" );
-    ctxt.register_action( "SCROLL_DOWN" );
-    if( allow_confirm ) {
-        ctxt.register_action( "SELECT" );
-    }
-    ctxt.register_action( "MOUSE_MOVE" );
-    return ctxt;
-}
-
 /**
  * repopulate filtered entries list (fentries) and set fselected accordingly
  */
@@ -624,25 +583,13 @@ void uilist::filterlist()
 
 void uilist::inputfilter()
 {
-    input_context ctxt = create_filter_input_context();
-    filter_popup = std::make_unique<string_input_popup>();
-    filter_popup->context( ctxt ).text( filter ).max_length( 256 );
-    bool loop = true;
-    do {
-        ui_manager::redraw();
-        filter = filter_popup->query_string( false );
-        recalc_start = false;
-        if( !filter_popup->confirmed() ) {
-            const std::string action = ctxt.input_to_action( ctxt.get_raw_input() );
-            if( filter_popup->handled() ) {
-                filterlist();
-                recalc_start = true;
-            } else if( scrollby( scroll_amount_from_action( action ) ) ) {
-                recalc_start = true;
-            }
-        }
-    } while( loop && !filter_popup->confirmed() && !filter_popup->canceled() );
-
+    filter_popup = std::make_unique<string_input_popup_imgui>( 0, filter );
+    filter_popup->set_max_input_length( 256 );
+    filter = filter_popup->query();
+    if( filter_popup->cancelled() ) {
+        filter.clear();
+    }
+    filterlist();
     filter_popup.reset();
 }
 
@@ -689,7 +636,7 @@ void uilist::calc_data()
 
     vmax = entries.size();
 
-    ImVec2 title_size = {};
+    ImVec2 title_size = ImVec2();
     bool has_titlebar = !title.empty();
     if( has_titlebar ) {
         title_size = calc_size( title );
@@ -697,19 +644,19 @@ void uilist::calc_data()
         title_size.y += ( s.ItemSpacing.y * expected_num_lines ) + ( s.ItemSpacing.y * 2.0 );
     }
 
-    ImVec2 text_size = {};
+    ImVec2 text_size = ImVec2();
     if( !text.empty() ) {
         text_size = calc_size( text );
         float expected_num_lines = text_size.y / ImGui::GetTextLineHeight();
         text_size.y += ( s.ItemSpacing.y * expected_num_lines ) + ( s.ItemSpacing.y * 2.0 );
     }
 
-    ImVec2 tabs_size = {};
+    ImVec2 tabs_size = ImVec2();
     if( !categories.empty() ) {
         tabs_size.y = ImGui::GetTextLineHeightWithSpacing() + ( 2.0 * s.FramePadding.y );
     }
 
-    ImVec2 desc_size = {};
+    ImVec2 desc_size = ImVec2();
     if( desc_enabled ) {
         desc_size = calc_size( footer_text );
         for( const uilist_entry &ent : entries ) {
@@ -753,9 +700,9 @@ void uilist::calc_data()
             max_avail_height = std::min( max_avail_height, desired_height );
         }
     }
-    calculated_menu_size.y = std::min( max_avail_height - additional_height +
-                                       ( s.FramePadding.y * 2.0 ),
-                                       vmax * ImGui::GetTextLineHeightWithSpacing() + ( s.FramePadding.y * 2.0 ) );
+    calculated_menu_size.y = std::min(
+                                 max_avail_height - additional_height + ( s.FramePadding.y * 2.0 ),
+                                 vmax * ImGui::GetTextLineHeightWithSpacing() + ( s.FramePadding.y * 2.0 ) );
 
     extra_space_left = 0.0;
     extra_space_right = 0.0;
@@ -897,7 +844,6 @@ shared_ptr_fast<uilist_impl> uilist::create_or_get_ui()
         } else {
             ui = current_ui = make_shared_fast<uilist_impl>( *this, title );
         }
-        current_ui->on_resized();
     }
     return current_ui;
 }
@@ -1044,7 +990,7 @@ void uilist::query( bool loop, int timeout, bool allow_unfiltered_hotkeys )
                 ret = entries[selected].retval;
             }
         } else if( ( allow_cancel && ret_act == "UILIST.QUIT" ) ||
-                   ( g->uquit == QUIT_EXIT && ret_act == "QUIT" ) ) {
+                   ( are_we_quitting() && ret_act == "QUIT" ) ) {
             ret = UILIST_CANCEL;
         } else if( ret_act == "TIMEOUT" ) {
             ret = UILIST_WAIT_INPUT;
@@ -1233,7 +1179,7 @@ pointmenu_cb::impl_t::impl_t( const std::vector<tripoint> &pts ) : points( pts )
     last_view = player_character.view_offset;
     terrain_draw_cb = make_shared_fast<game::draw_callback_t>( [this, &player_character]() {
         if( last >= 0 && static_cast<size_t>( last ) < points.size() ) {
-            g->draw_trail_to_square( player_character.view_offset.raw(), true );
+            g->draw_trail_to_square( player_character.view_offset, true );
         }
     } );
     g->add_draw_callback( terrain_draw_cb );
@@ -1252,7 +1198,7 @@ void pointmenu_cb::impl_t::select( uilist *const menu )
     last = menu->selected;
     avatar &player_character = get_avatar();
     if( menu->selected < 0 || menu->selected >= static_cast<int>( points.size() ) ) {
-        player_character.view_offset = tripoint_rel_ms_zero;
+        player_character.view_offset = tripoint_rel_ms::zero;
     } else {
         const tripoint &center = points[menu->selected];
         player_character.view_offset = tripoint_rel_ms( center - player_character.pos() );

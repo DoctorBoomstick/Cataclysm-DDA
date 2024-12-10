@@ -54,14 +54,17 @@
     "color": "light_gray",
     "ammo": [ "battery" ],
     "charges_per_use": 1,
-    "use_action": {
-      "target": "cell_phone_flashlight",
-      "msg": "You light up the screen.",
-      "active": true,
-      "need_charges": 1,
-      "need_charges_msg": "The cellphone's batteries need more charge.",
-      "type": "transform"
-    },
+    "use_action": [
+      {
+        "target": "cell_phone_flashlight",
+        "msg": "You light up the screen.",
+        "active": true,
+        "need_charges": 1,
+        "need_charges_msg": "The cellphone's batteries need more charge.",
+        "type": "transform"
+      },
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
+    ],
     "flags": [ "NO_UNLOAD", "NO_RELOAD", "WATCH", "ALARMCLOCK", "WATER_BREAK", "ELECTRONIC" ],
     "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 17 } } ]
   },
@@ -587,7 +590,7 @@
     "volume": "111 ml",
     "longest_side": "15 cm",
     "price": "1299 USD",
-    "price_postapoc": "2 USD",
+    "price_postapoc": "1 USD",
     "material": [ { "type": "aluminum", "portion": 75 }, { "type": "plastic", "portion": 25 } ],
     "looks_like": "cell_phone",
     "symbol": ";",
@@ -916,7 +919,7 @@
         {
           "id": "EOC_toolweapon_running__supernoisemaker",
           "effect": {
-            "run_eoc_with": "EOC_toolweapon_running",
+            "run_eocs": "EOC_toolweapon_running",
             "variables": {
               "sound_chance": "0",
               "sound_message": { "i18n": true, "str": "Your super noise emitter produces an unholy blast of sonic chaos." },

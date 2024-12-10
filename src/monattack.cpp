@@ -141,6 +141,8 @@ static const efftype_id effect_slimed( "slimed" );
 static const efftype_id effect_social_dissatisfied( "social_dissatisfied" );
 static const efftype_id effect_stunned( "stunned" );
 
+static const flag_id json_flag_CANNOT_MOVE( "CANNOT_MOVE" );
+
 static const itype_id itype_anesthetic( "anesthetic" );
 static const itype_id itype_badge_deputy( "badge_deputy" );
 static const itype_id itype_badge_detective( "badge_detective" );
@@ -342,12 +344,12 @@ bool mattack::eat_crop( monster *z )
                 //been given a stomach size yet.
                 int consumed = 1;
                 if( item.count_by_charges() ) {
-                    int kcal = item.get_comestible()->default_nutrition.kcal();
+                    int kcal = default_character_compute_effective_nutrients( item ).kcal();
                     z->mod_amount_eaten( kcal );
                     add_msg_if_player_sees( *z, _( "The %1s eats the %2s." ), z->name(), item.display_name() );
                     here.use_charges( p, 1, item.type->get_id(), consumed );
                 } else {
-                    int kcal = item.get_comestible()->default_nutrition.kcal();
+                    int kcal = default_character_compute_effective_nutrients( item ).kcal();
                     z->mod_amount_eaten( kcal );
                     add_msg_if_player_sees( *z, _( "The %1s gobbles up the %2s." ), z->name(), item.display_name() );
                     here.use_amount( p, 1, item.type->get_id(), consumed );
@@ -464,7 +466,7 @@ bool mattack::absorb_items( monster *z )
         // check if the item being removed is a corpse so that the items are dropped.
         // only do this if the monster is selectively eating flesh
         if( it->is_container() && !absorb_material.empty() ) {
-            it->spill_contents( z->pos() );
+            it->spill_contents( z->pos_bub() );
         }
         here.i_rem( z->pos_bub(), it );
     }
@@ -495,12 +497,12 @@ bool mattack::eat_food( monster *z )
             if( z->type->baby_type.baby_egg != item.type->get_id() && ( !z->has_fully_eaten() ) ) {
                 int consumed = 1;
                 if( item.count_by_charges() ) {
-                    int kcal = item.get_comestible()->default_nutrition.kcal();
+                    int kcal = default_character_compute_effective_nutrients( item ).kcal();
                     z->mod_amount_eaten( kcal );
                     add_msg_if_player_sees( *z, _( "The %1s eats the %2s." ), z->name(), item.display_name() );
                     here.use_charges( p, 1, item.type->get_id(), consumed );
                 } else {
-                    int kcal = item.get_comestible()->default_nutrition.kcal();
+                    int kcal = default_character_compute_effective_nutrients( item ).kcal();
                     z->mod_amount_eaten( kcal );
                     add_msg_if_player_sees( *z, _( "The %1s gobbles up the %2s." ), z->name(), item.display_name() );
                     here.use_amount( p, 1, item.type->get_id(), consumed );
@@ -1411,7 +1413,7 @@ bool mattack::growplants( monster *z )
         return true;
     }
     for( const tripoint_bub_ms &p : here.points_in_radius( z->pos_bub(), 5 ) ) {
-        const ter_id ter = here.ter( p );
+        const ter_id &ter = here.ter( p );
         if( ter != ter_t_tree_young && ter != ter_t_underbrush ) {
             // Skip as soon as possible to avoid all the checks
             continue;
@@ -3869,7 +3871,8 @@ bool mattack::leech_spawner( monster *z )
     const bool u_see = get_player_view().sees( *z );
     std::list<monster *> allies;
     for( monster &candidate : g->all_monsters() ) {
-        if( candidate.in_species( species_LEECH_PLANT ) && !candidate.has_flag( mon_flag_IMMOBILE ) ) {
+        if( candidate.in_species( species_LEECH_PLANT ) && !( candidate.has_flag( mon_flag_IMMOBILE ) ||
+                candidate.has_flag( json_flag_CANNOT_MOVE ) ) ) {
             allies.push_back( &candidate );
         }
     }
@@ -4297,7 +4300,10 @@ bool mattack::bio_op_disarm( monster *z )
 
     if( my_roll >= their_roll && !it->has_flag( flag_NO_UNWIELD ) ) {
         target->add_msg_if_player( m_bad, _( "and throws it to the ground!" ) );
-        const tripoint_bub_ms tp = foe->pos_bub() + tripoint( rng( -1, 1 ), rng( -1, 1 ), 0 );
+        tripoint_bub_ms tp = foe->pos_bub() + tripoint( rng( -1, 1 ), rng( -1, 1 ), 0 );
+        if( !get_map().can_put_items( tp ) ) {
+            tp = foe->pos_bub();
+        }
         get_map().add_item_or_charges( tp, foe->i_rem( &*it ) );
     } else {
         target->add_msg_if_player( m_good, _( "but you break its grip!" ) );
@@ -4364,7 +4370,7 @@ bool mattack::kamikaze( monster *z )
             item i_explodes( act_bomb_type, calendar::turn );
             i_explodes.active = true;
             i_explodes.countdown_point = calendar::turn_zero;
-            i_explodes.process( get_map(), nullptr, z->pos() );
+            i_explodes.process( get_map(), nullptr, z->pos_bub() );
             return false;
         }
         return false;

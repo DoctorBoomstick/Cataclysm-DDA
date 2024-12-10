@@ -41,7 +41,7 @@ const int UILIST_TIMEOUT = -1028;
 const int UILIST_ADDITIONAL = -1029;
 const int MENU_AUTOASSIGN = -1;
 
-class string_input_popup;
+class string_input_popup_imgui;
 class uilist_impl;
 
 catacurses::window new_centered_win( int nlines, int ncols );
@@ -170,6 +170,9 @@ struct uilist_entry {
                                          explicit uilist_entry( Enum e, Args && ... args ) :
                                              uilist_entry( static_cast<int>( e ), std::forward<Args>( args )... )
     {}
+
+    std::string _txt_nocolor;   // what it says on the tin
+    std::string _ctxt_nocolor;  // second column text
 };
 
 /**
@@ -184,8 +187,8 @@ struct uilist_entry {
  *     }
  *   }
  *   void refresh( uilist *menu ) {
- *       if( menu->hovered >= 0 && static_cast<size_t>( menu->hovered ) < game_z.size() ) {
- *           ImGui::TextColored( c_red, "( %s )", game_z[menu->hovered]->name() );
+ *       if( menu->previewing >= 0 && static_cast<size_t>( menu->previewing ) < game_z.size() ) {
+ *           ImGui::TextColored( c_red, "( %s )", game_z[menu->previewing]->name() );
  *       }
  *   }
  * }
@@ -450,8 +453,6 @@ class uilist // NOLINT(cata-xy)
     public:
         // Iternal states
         // TODO make private
-        std::vector<std::string> textformatted;
-
         catacurses::window window;
 
         int vshift = 0;
@@ -471,7 +472,7 @@ class uilist // NOLINT(cata-xy)
 
         weak_ptr_fast<uilist_impl> ui;
 
-        std::unique_ptr<string_input_popup> filter_popup;
+        std::unique_ptr<string_input_popup_imgui> filter_popup;
         std::string filter;
 
         int max_entry_len = 0;
@@ -485,7 +486,8 @@ class uilist // NOLINT(cata-xy)
         bool need_to_scroll = false;
         std::vector<std::pair<std::string, std::string>> categories;
         std::function<bool( const uilist_entry &, const std::string & )> category_filter;
-        int current_category = 0;
+        size_t current_category = 0;
+        size_t switch_to_category = 0;
 
     public:
         // Results
@@ -494,7 +496,7 @@ class uilist // NOLINT(cata-xy)
         input_event ret_evt;
         int ret = 0;
         int selected = 0;
-        int hovered = 0;
+        int previewing = 0;
 
         void set_selected( int index );
 };
@@ -555,7 +557,6 @@ class pointmenu_cb : public uilist_callback
         void select( uilist *menu ) override;
 };
 
-void kill_advanced_inv();
 void temp_hide_advanced_inv();
 
 /**

@@ -34,7 +34,7 @@
 static const ammotype ammo_battery( "battery" );
 
 static const itype_id itype_bot_manhack( "bot_manhack" );
-static const itype_id itype_light_battery_cell( "light_battery_cell" );
+static const itype_id itype_medium_battery_cell( "medium_battery_cell" );
 
 static const mtype_id mon_manhack( "mon_manhack" );
 
@@ -89,8 +89,8 @@ TEST_CASE( "tool_transform_when_activated", "[iuse][tool][transform]" )
 
     GIVEN( "flashlight with a charged battery installed" ) {
         item flashlight( "flashlight" );
-        item bat_cell( "light_battery_cell" );
-        REQUIRE( flashlight.can_reload_with( item( itype_light_battery_cell ), true ) );
+        item bat_cell( "medium_battery_cell" );
+        REQUIRE( flashlight.can_reload_with( item( itype_medium_battery_cell ), true ) );
 
         // Charge the battery
         const int bat_charges = bat_cell.ammo_capacity( ammo_battery );
@@ -108,7 +108,7 @@ TEST_CASE( "tool_transform_when_activated", "[iuse][tool][transform]" )
             const use_function *use = flashlight.type->get_use( "transform" );
             REQUIRE( use != nullptr );
             const iuse_transform *actor = dynamic_cast<const iuse_transform *>( use->get_actor_ptr() );
-            actor->use( dummy, flashlight, dummy->pos() );
+            actor->use( dummy, flashlight, dummy->pos_bub() );
 
             THEN( "it becomes active" ) {
                 CHECK( flashlight.active );
@@ -131,7 +131,7 @@ static void cut_up_yields( const std::string &target )
     // Nominal dex to avoid yield penalty.
     guy.dex_cur = 12;
     //guy.set_skill_level( skill_id( "fabrication" ), 10 );
-    here.i_at( guy.pos() ).clear();
+    here.i_at( guy.pos_bub() ).clear();
 
     CAPTURE( target );
     salvage_actor test_actor;

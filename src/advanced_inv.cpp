@@ -2,9 +2,10 @@
 
 #include <algorithm>
 #include <climits>
-#include <cmath>
 #include <cstddef>
+#include <cstdint>
 #include <cstdlib>
+#include <functional>
 #include <initializer_list>
 #include <iterator>
 #include <list>
@@ -12,12 +13,12 @@
 #include <optional>
 #include <string>
 #include <tuple>
+#include <type_traits>
 #include <unordered_set>
 #include <utility>
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "advanced_inv_listitem.h"
 #include "advanced_inv_pagination.h"
 #include "auto_pickup.h"
@@ -37,13 +38,13 @@
 #include "imgui/imgui.h"
 #include "input.h"
 #include "input_context.h"
-#include "input_enums.h"
 #include "inventory.h"
 #include "inventory_ui.h"
 #include "item.h"
 #include "item_category.h"
 #include "item_contents.h"
 #include "item_location.h"
+#include "itype.h"
 #include "localized_comparator.h"
 #include "map.h"
 #include "messages.h"
@@ -53,7 +54,6 @@
 #include "pimpl.h"
 #include "player_activity.h"
 #include "point.h"
-#include "popup.h"
 #include "ret_val.h"
 #include "string_formatter.h"
 #include "string_input_popup.h"
@@ -234,6 +234,8 @@ std::string advanced_inventory::get_sortname( advanced_inv_sortby sortby )
             return _( "barter value" );
         case SORTBY_PRICEPERVOLUME:
             return _( "barter value / volume" );
+        case SORTBY_PRICEPERWEIGHT:
+            return _( "barter value / weight" );
         case SORTBY_STACKS:
             return _( "amount" );
     }
@@ -287,6 +289,7 @@ void advanced_inventory::init()
 
 void advanced_inventory::print_items( side p, bool active )
 {
+    map &here = get_map();
     advanced_inventory_pane &pane = panes[p];
     const auto &items = pane.items;
     const catacurses::window &window = pane.window;
@@ -359,7 +362,7 @@ void advanced_inventory::print_items( side p, bool active )
             } else if( pane.in_vehicle() ) {
                 maxvolume = s.get_vehicle_stack().max_volume();
             } else {
-                maxvolume = get_map().max_volume( s.pos );
+                maxvolume = here.max_volume( s.pos );
             }
             formatted_head = string_format( "%3.1f %s  %s/%s %s",
                                             convert_weight( pane.in_vehicle() ? s.weight_veh : s.weight ),
@@ -471,7 +474,7 @@ void advanced_inventory::print_items( side p, bool active )
             // TODO: transition to the item_location system used for the normal inventory
             unsigned int charges_total = 0;
             for( const item_location &item : sitem.items ) {
-                charges_total += item->ammo_remaining();
+                charges_total += item->ammo_remaining( );
             }
             if( stolen ) {
                 item_name = string_format( "%s %s", stolen_string, it.display_money( sitem.items.size(),
@@ -655,9 +658,19 @@ struct advanced_inv_sorter {
                 break;
             case SORTBY_PRICEPERVOLUME: {
                 const double price_density1 = static_cast<double>( d1.items.front()->price( true ) ) /
-                                              static_cast<double>( std::max( 1, d1.volume.value() ) );
+                                              static_cast<double>( std::max( 1, d1.items.front()->volume().value() ) );
                 const double price_density2 = static_cast<double>( d2.items.front()->price( true ) ) /
-                                              static_cast<double>( std::max( 1, d2.volume.value() ) );
+                                              static_cast<double>( std::max( 1, d2.items.front()->volume().value() ) );
+                if( price_density1 != price_density2 ) {
+                    return price_density1 > price_density2;
+                }
+                break;
+            }
+            case SORTBY_PRICEPERWEIGHT: {
+                const double price_density1 = static_cast<double>( d1.items.front()->price( true ) ) /
+                                              static_cast<double>( std::max<std::int64_t>( 1, d1.items.front()->weight().value() ) );
+                const double price_density2 = static_cast<double>( d2.items.front()->price( true ) ) /
+                                              static_cast<double>( std::max<std::int64_t>( 1, d2.items.front()->weight().value() ) );
                 if( price_density1 != price_density2 ) {
                     return price_density1 > price_density2;
                 }
@@ -735,11 +748,11 @@ void advanced_inventory::recalc_pane( side p )
     if( pane.container &&
         pane.container_base_loc >= AIM_SOUTHWEST && pane.container_base_loc <= AIM_ALL ) {
 
-        const tripoint_rel_ms offset = player_character.pos_bub() - pane.container.pos_bub();
+        const tripoint_rel_ms offset = player_character.pos_abs() - pane.container.pos_abs();
 
         // If container is no longer adjacent or on the player's z-level, nullify it.
         if( std::abs( offset.x() ) > 1 || std::abs( offset.y() ) > 1 ||
-            player_character.pos_bub().z() != pane.container.pos_bub().z() ) {
+            player_character.posz() != pane.container.pos_abs().z() ) {
 
             pane.container = item_location::nowhere;
             pane.container_base_loc = NUM_AIM_LOCATIONS;
@@ -866,9 +879,10 @@ void advanced_inventory::redraw_pane( side p )
     }
 
     std::string fprefix = string_format( _( "[%s] Filter" ), ctxt.get_desc( "FILTER" ) );
+    const std::string &filter = pane.get_filter();
     if( !filter_edit ) {
-        if( !pane.filter.empty() ) {
-            mvwprintw( w, point( 2, getmaxy( w ) - 1 ), "< %s: %s >", fprefix, pane.filter );
+        if( !filter.empty() ) {
+            mvwprintw( w, point( 2, getmaxy( w ) - 1 ), "< %s: %s >", fprefix, filter );
         } else {
             mvwprintw( w, point( 2, getmaxy( w ) - 1 ), "< %s >", fprefix );
         }
@@ -876,10 +890,9 @@ void advanced_inventory::redraw_pane( side p )
     if( active ) {
         wattroff( w, c_white );
     }
-    if( !filter_edit && !pane.filter.empty() ) {
+    if( !filter_edit && !filter.empty() ) {
         std::string fsuffix = string_format( _( "[%s] Reset" ), ctxt.get_desc( "RESET_FILTER" ) );
-        mvwprintz( w, point( 6 + utf8_width( fprefix ), getmaxy( w ) - 1 ), c_white,
-                   pane.filter );
+        mvwprintz( w, point( 6 + utf8_width( fprefix ), getmaxy( w ) - 1 ), c_white, filter );
         mvwprintz( w, point( getmaxx( w ) - utf8_width( fsuffix ) - 2, getmaxy( w ) - 1 ), c_white, "%s",
                    fsuffix );
     }
@@ -901,11 +914,14 @@ bool advanced_inventory::fill_lists_with_pane_items( Character &player_character
             continue;
         }
         for( const item_location &it : listit.items ) {
+
+            // do not move liquids or gases
+            if( ( it->made_of_from_type( phase_id::LIQUID ) && !it->is_frozen_liquid() ) ||
+                it->made_of_from_type( phase_id::GAS ) ) {
+                continue;
+            }
             if( dpane.get_area() == AIM_INVENTORY ) {
-                if( ( it->made_of_from_type( phase_id::LIQUID ) && !it->is_frozen_liquid() ) ||
-                    it->made_of_from_type( phase_id::GAS ) ) {
-                    continue;
-                }
+
                 if( !player_character.can_stash_partial( *it ) ) {
                     continue;
                 }
@@ -1243,6 +1259,7 @@ bool advanced_inventory::show_sort_menu( advanced_inventory_pane &pane )
     sm.addentry( SORTBY_SPOILAGE,       true, 's', get_sortname( SORTBY_SPOILAGE ) );
     sm.addentry( SORTBY_PRICE,          true, 'b', get_sortname( SORTBY_PRICE ) );
     sm.addentry( SORTBY_PRICEPERVOLUME, true, 'r', get_sortname( SORTBY_PRICEPERVOLUME ) );
+    sm.addentry( SORTBY_PRICEPERWEIGHT, true, 'g', get_sortname( SORTBY_PRICEPERWEIGHT ) );
     sm.addentry( SORTBY_STACKS,         true, 't', get_sortname( SORTBY_STACKS ) );
     // Pre-select current sort.
     sm.selected = pane.sortby - SORTBY_NONE;
@@ -1275,6 +1292,7 @@ input_context advanced_inventory::register_ctxt() const
     ctxt.register_action( "RESET_FILTER" );
     ctxt.register_action( "EXAMINE" );
     ctxt.register_action( "EXAMINE_CONTENTS" );
+    ctxt.register_action( "UNLOAD_CONTAINER" );
     ctxt.register_action( "SORT" );
     ctxt.register_action( "TOGGLE_AUTO_PICKUP" );
     ctxt.register_action( "TOGGLE_FAVORITE" );
@@ -1622,6 +1640,10 @@ bool advanced_inventory::action_move_item( advanced_inv_listitem *sitem,
     if( !query_charges( destarea, *sitem, action, amount_to_move ) ) {
         return false;
     }
+    item it_copy = *sitem->items.front();
+    if( it_copy.count_by_charges() ) {
+        it_copy.charges = std::min( amount_to_move, sitem->items.front()->charges );
+    }
     if( spane.get_area() == AIM_CONTAINER &&
         spane.container.get_item()->has_flag( json_flag_NO_UNLOAD ) ) {
         popup_getkey( _( "Source container can't be unloaded." ) );
@@ -1632,9 +1654,9 @@ bool advanced_inventory::action_move_item( advanced_inv_listitem *sitem,
             popup_getkey( _( "Destination container can't be reloaded." ) );
             return false;
         }
-        ret_val<void> can_contain = dpane.container->can_contain( *sitem->items.front() );
+        ret_val<void> can_contain = dpane.container->can_contain( it_copy );
         if( can_contain.success() ) {
-            can_contain = dpane.container.parents_can_contain_recursive( &*sitem->items.front() );
+            can_contain = dpane.container.parents_can_contain_recursive( &it_copy );
         }
         if( !can_contain.success() ) {
             popup_getkey( can_contain.str().empty() ?
@@ -1656,7 +1678,8 @@ bool advanced_inventory::action_move_item( advanced_inv_listitem *sitem,
 
     if( srcarea == AIM_CONTAINER && destarea == AIM_INVENTORY &&
         spane.container.held_by( player_character ) ) {
-        popup_getkey( _( "The %s is already in your inventory." ), sitem->items.front()->tname() );
+        popup_getkey( _( "The %s is already in your inventory.  You may want to (U)nload" ),
+                      sitem->items.front()->tname() );
 
     } else if( srcarea == AIM_INVENTORY && destarea == AIM_WORN ) {
 
@@ -1685,7 +1708,7 @@ bool advanced_inventory::action_move_item( advanced_inv_listitem *sitem,
             player_character.takeoff( Character::worn_position_to_index( sitem->idx ) + 1 );
         } else {
             // important if item is worn
-            if( player_character.can_drop( *sitem->items.front() ).success() ) {
+            if( player_character.can_drop( it_copy ).success() ) {
                 if( destarea == AIM_CONTAINER ) {
                     do_return_entry();
                     start_activity( destarea, srcarea, sitem, amount_to_move, from_vehicle, to_vehicle );
@@ -1716,14 +1739,7 @@ bool advanced_inventory::action_move_item( advanced_inv_listitem *sitem,
         exit = true;
     } else {
         if( destarea == AIM_INVENTORY ) {
-            bool can_stash = false;
-            if( sitem->items.front()->count_by_charges() ) {
-                item dummy = *sitem->items.front();
-                dummy.charges = amount_to_move;
-                can_stash = player_character.can_stash( dummy );
-            } else {
-                can_stash = player_character.can_stash( *sitem->items.front() );
-            }
+            bool can_stash = player_character.can_stash( it_copy );
             if( !can_stash ) {
                 popup_getkey( _( "You have no space for the %s." ), sitem->items.front()->tname() );
                 return false;
@@ -1798,6 +1814,26 @@ void advanced_inventory::action_examine( advanced_inv_listitem *sitem,
     } else if( ret == KEY_PPAGE || ret == KEY_UP ) {
         spane.scroll_by( -1 );
     }
+}
+
+bool advanced_inventory::action_unload( advanced_inv_listitem *sitem,
+                                        advanced_inventory_pane &spane, advanced_inventory_pane &dpane )
+{
+    avatar &u = get_avatar();
+    item_location src = spane.container;
+    item_location dest = dpane.container;
+
+    if( !src && sitem ) {
+        src = sitem->items.front();
+    } else {
+        add_msg( m_info, _( "Nothing to unload." ) );
+        return false;
+    }
+
+    do_return_entry();
+    // always exit to proc do_return_entry, even when no activity was assigned
+    exit = true;
+    return u.unload( src, false, dest );
 }
 
 void advanced_inventory::display()
@@ -1956,7 +1992,7 @@ void advanced_inventory::display()
                 recalc = true;
             }
         } else if( action == "FILTER" ) {
-            std::string filter = spane.filter;
+            const std::string &filter = spane.get_filter();
             filter_edit = true;
             if( ui ) {
                 spopup = std::make_unique<string_input_popup>();
@@ -2009,6 +2045,8 @@ void advanced_inventory::display()
             if( examine_result == NO_CONTENTS_TO_EXAMINE ) {
                 action_examine( sitem, spane );
             }
+        } else if( action == "UNLOAD_CONTAINER" ) {
+            recalc = action_unload( sitem, spane, dpane );
         } else if( action == "QUIT" ) {
             exit = true;
         } else if( action == "PAGE_DOWN" ) {
@@ -2205,7 +2243,9 @@ bool advanced_inventory::query_charges( aim_location destarea, const advanced_in
     // Check volume, this should work the same for inventory, map and vehicles, but not for worn
     if( destarea != AIM_WORN && destarea != AIM_WIELD ) {
         const units::volume free_volume = panes[dest].free_volume( squares[destarea] );
-        const int room_for = it.charges_per_volume( free_volume );
+        const units::mass free_mass = panes[dest].free_weight_capacity();
+        const int room_for = std::min( it.charges_per_volume( free_volume ),
+                                       it.charges_per_weight( free_mass ) );
         if( room_for <= 0 ) {
             if( destarea == AIM_INVENTORY ) {
                 popup_getkey( _( "You have no space for the %s." ), it.tname() );
@@ -2258,7 +2298,7 @@ bool advanced_inventory::query_charges( aim_location destarea, const advanced_in
     if( destarea == AIM_WORN ) {
         const itype_id &id = sitem.items.front()->typeId();
         // how many slots are available for the item?
-        const int slots_available = MAX_WORN_PER_TYPE - player_character.amount_worn( id );
+        const int slots_available = id->max_worn - player_character.amount_worn( id );
         // base the amount to equip on amount of slots available
         amount = std::min( slots_available, input_amount );
     }
@@ -2350,7 +2390,7 @@ void advanced_inventory::draw_minimap()
     }
 
     if( !invert_left || !invert_right ) {
-        player_character.draw( minimap, player_character.pos(), invert_left || invert_right );
+        player_character.draw( minimap, player_character.pos_bub(), invert_left || invert_right );
     }
 }
 

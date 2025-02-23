@@ -64,10 +64,8 @@
       "e": "f_rack_wood",
       "f": "f_sink",
       "G": "f_locker",
-      "H": "f_autodoc",
       "h": "f_chair",
       "I": "f_locker",
-      "i": "f_autodoc_couch",
       "j": "f_curtain",
       "k": "f_curtain_open",
       "L": "f_locker",
@@ -231,7 +229,7 @@
         { "item": "magazines", "chance": 5, "repeat": [ 0, 1 ] },
         { "item": "literature", "chance": 5, "repeat": [ 0, 1 ] },
         { "item": "novels", "chance": 5, "repeat": [ 0, 1 ] },
-        { "item": "phones", "chance": 5, "repeat": [ 0, 1 ] }
+        { "item": "civilian_phones", "chance": 5, "repeat": [ 0, 1 ] }
       ],
       "ж": [ { "item": "milspec_arsenal_only_guns_or_ammo_or_armor", "chance": 100 } ],
       "Ж": [

@@ -3,8 +3,15 @@
 #include <cmath>
 #include <cstddef>
 #include <cstdlib>
+#include <functional>
+#include <limits>
+#include <map>
 #include <memory>
+#include <optional>
 #include <string>
+#include <tuple>
+#include <utility>
+#include <vector>
 
 #include "addiction.h"
 #include "avatar.h"
@@ -17,28 +24,36 @@
 #include "character.h"
 #include "character_modifier.h"
 #include "color.h"
+#include "coordinates.h"
+#include "creature.h"
 #include "cursesdef.h"
 #include "debug.h"
 #include "display.h"
 #include "effect.h"
-#include "flag.h"
 #include "enum_conversions.h"
+#include "flag.h"
 #include "game.h"
+#include "game_constants.h"
 #include "game_inventory.h"
 #include "input_context.h"
+#include "item.h"
+#include "item_location.h"
 #include "itype.h"
+#include "magic_enchantment.h"
 #include "mutation.h"
 #include "options.h"
 #include "output.h"
 #include "pimpl.h"
-#include "profession.h"
+#include "point.h"
 #include "proficiency.h"
 #include "sdltiles.h"
 #include "skill.h"
 #include "skill_ui.h"
 #include "string_formatter.h"
 #include "string_input_popup.h"
+#include "translation.h"
 #include "translations.h"
+#include "type_id.h"
 #include "ui.h"
 #include "ui_manager.h"
 #include "units.h"
@@ -1585,12 +1600,12 @@ void Character::disp_info( bool customize_character )
         effect_name_and_text.emplace_back( starvation_name, starvation_text );
     }
 
-    if( has_trait( trait_TROGLO3 ) && g->is_in_sunlight( pos() ) ) {
+    if( has_trait( trait_TROGLO3 ) && g->is_in_sunlight( pos_bub() ) ) {
         effect_name_and_text.emplace_back( _( "In Sunlight" ),
                                            _( "The sunlight irritates you terribly.\n"
                                               "Strength - 4;    Dexterity - 4;    Intelligence - 4;    Perception - 4" )
                                          );
-    } else  if( has_trait( trait_TROGLO2 ) && g->is_in_sunlight( pos() ) ) {
+    } else  if( has_trait( trait_TROGLO2 ) && g->is_in_sunlight( pos_bub() ) ) {
         if( incident_sun_irradiance( get_weather().weather_id, calendar::turn ) > irradiance::moderate ) {
             effect_name_and_text.emplace_back( _( "In Sunlight" ),
                                                _( "The sunlight irritates you badly.\n"
@@ -1601,7 +1616,7 @@ void Character::disp_info( bool customize_character )
                                                   "Strength - 1;    Dexterity - 1;    Intelligence - 1;    Perception - 1" ) );
         }
 
-    } else if( has_trait( trait_TROGLO ) && g->is_in_sunlight( pos() ) &&
+    } else if( has_trait( trait_TROGLO ) && g->is_in_sunlight( pos_bub() ) &&
                incident_sun_irradiance( get_weather().weather_id, calendar::turn ) > irradiance::moderate ) {
         effect_name_and_text.emplace_back( _( "In Sunlight" ),
                                            _( "The sunlight irritates you.\n"

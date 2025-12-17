@@ -38,7 +38,7 @@
 #include "help.h"
 #include "input.h"
 #include "input_context.h"
-#include "make_static.h"
+#include "magic_enchantment.h"
 #include "map.h"
 #include "map_iterator.h"
 #include "map_scale_constants.h"
@@ -69,7 +69,7 @@
 #include "timed_event.h"
 #include "translations.h"
 #include "type_id.h"
-#include "ui.h"
+#include "uilist.h"
 #include "ui_manager.h"
 #include "units.h"
 #include "vehicle.h"
@@ -90,6 +90,8 @@ static const efftype_id effect_ridden( "ridden" );
 static const efftype_id effect_sleep( "sleep" );
 
 static const event_statistic_id event_statistic_last_words( "last_words" );
+
+static const json_character_flag json_flag_NO_SCENT( "NO_SCENT" );
 
 static const trait_id trait_HAS_NEMESIS( "HAS_NEMESIS" );
 
@@ -242,6 +244,12 @@ void handle_key_blocking_activity()
             if( u.activity.is_interruptible_with_kb() ) {
                 g->cancel_activity_query( _( "Confirm:" ) );
             }
+        } else if( action == "zoom_in" ) {
+            g->zoom_in();
+            g->mark_main_ui_adaptor_resize();
+        } else if( action == "zoom_out" ) {
+            g->zoom_out();
+            g->mark_main_ui_adaptor_resize();
         } else if( action == "player_data" ) {
             u.disp_info( true );
         } else if( action == "messages" ) {
@@ -273,19 +281,21 @@ void monmove()
         if( !m.inbounds( critter.pos_abs() ) ) {
             continue;
         }
+        const tripoint_bub_ms critter_pos = critter.pos_bub( m );
+
         // Critters in impassable tiles get pushed away, unless it's not impassable for them
-        if( !critter.is_dead() && ( m.impassable( critter.pos_bub() ) &&
-                                    !m.get_impassable_field_at( critter.pos_bub() ).has_value() ) &&
-            !critter.can_move_to( critter.pos_bub() ) ) {
+        if( !critter.is_dead() && ( m.impassable( critter_pos ) &&
+                                    !m.get_impassable_field_at( critter_pos ).has_value() ) &&
+            !critter.can_move_to( critter_pos ) ) {
             dbg( D_ERROR ) << "game:monmove: " << critter.name()
-                           << " can't move to its location!  (" << critter.posx()
-                           << ":" << critter.posy() << ":" << critter.posz() << "), "
-                           << m.tername( critter.pos_bub() );
+                           << " can't move to its location!  (" << critter_pos.x()
+                           << ":" << critter_pos.y() << ":" << critter_pos.z() << "), "
+                           << m.tername( critter_pos );
             add_msg_debug( debugmode::DF_MONSTER, "%s can't move to its location!  (%d,%d,%d), %s",
                            critter.name(),
-                           critter.posx(), critter.posy(), critter.posz(), m.tername( critter.pos_bub() ) );
+                           critter_pos.x(), critter_pos.y(), critter_pos.z(), m.tername( critter_pos ) );
             bool okay = false;
-            for( const tripoint_bub_ms &dest : m.points_in_radius( critter.pos_bub( m ), 3 ) ) {
+            for( const tripoint_bub_ms &dest : m.points_in_radius( critter_pos, 3 ) ) {
                 if( critter.can_move_to( dest ) && g->is_empty( dest ) ) {
                     critter.setpos( m, dest );
                     okay = true;
@@ -309,7 +319,6 @@ void monmove()
             }
             critter.try_biosignature();
             critter.try_reproduce();
-            critter.digest_food();
         }
         while( critter.get_moves() > 0 && !critter.is_dead() && !critter.has_effect( effect_ridden ) ) {
             critter.made_footstep = false;
@@ -326,15 +335,19 @@ void monmove()
             m.creature_in_field( critter );
         }
 
-        if( !critter.is_dead() &&
-            u.has_active_bionic( bio_alarm ) &&
-            u.get_power_level() >= bio_alarm->power_trigger &&
-            rl_dist( u.pos_bub(), critter.pos_bub() ) <= 5 &&
-            !critter.is_hallucination() ) {
-            u.mod_power_level( -bio_alarm->power_trigger );
-            add_msg( m_warning, _( "Your motion alarm goes off!" ) );
-            g->cancel_activity_or_ignore_query( distraction_type::motion_alarm,
-                                                _( "Your motion alarm goes off!" ) );
+        if( !critter.is_dead() && !critter.is_hallucination() &&
+            rl_dist( u.pos_abs(), critter.pos_abs() ) < u.enchantment_cache->modify_value(
+                enchant_vals::mod::MOTION_ALARM, 0 ) ) {
+            if( u.has_active_bionic( bio_alarm ) ) {
+                u.mod_power_level( -bio_alarm->power_trigger );
+                add_msg( m_warning, _( "Your motion alarm goes off!" ) );
+                g->cancel_activity_or_ignore_query( distraction_type::motion_alarm,
+                                                    _( "Your motion alarm goes off!" ) );
+            } else {
+                add_msg( m_warning, _( "You suddenly feel alerted!" ) );
+                g->cancel_activity_or_ignore_query( distraction_type::motion_alarm,
+                                                    _( "Your instincts warn you for danger!" ) );
+            }
             if( u.has_effect( effect_sleep ) ) {
                 u.wake_up();
             }
@@ -468,7 +481,10 @@ bool do_turn()
         g->gamemode->per_turn();
         calendar::turn += 1_turns;
     }
-
+    //used for dimension swapping
+    if( g->swapping_dimensions ) {
+        g->swapping_dimensions = false;
+    }
     play_music( music::get_music_id_string() );
 
     // starting a new turn, clear out temperature cache
@@ -505,18 +521,12 @@ bool do_turn()
         overmap_buffer.process_mongroups();
     }
 
-    // Move hordes every 2.5 min
+    // Move hordes every turn, move_hordes has its own rate limiting
+    overmap_buffer.move_hordes();
     if( calendar::once_every( time_duration::from_minutes( 2.5 ) ) ) {
-
-        if( get_option<bool>( "WANDER_SPAWNS" ) ) {
-            overmap_buffer.move_hordes();
-        }
         if( u.has_trait( trait_HAS_NEMESIS ) ) {
             overmap_buffer.move_nemesis();
         }
-        // Hordes that reached the reality bubble need to spawn,
-        // make them spawn in invisible areas only.
-        m.spawn_monsters( false );
     }
 
     g->debug_hour_timer.print_time();
@@ -635,7 +645,7 @@ bool do_turn()
 
     scent_map &scent = get_scent();
     // No-scent debug mutation has to be processed here or else it takes time to start working
-    if( !u.has_flag( STATIC( json_character_flag( "NO_SCENT" ) ) ) ) {
+    if( !u.has_flag( json_flag_NO_SCENT ) ) {
         scent.set( u.pos_bub(), u.scent, u.get_type_of_scent() );
         overmap_buffer.set_scent( u.pos_abs_omt(),  u.scent );
     }

@@ -40,10 +40,10 @@ class talker_character_const: virtual public const_talker
         character_id getID() const override;
         bool is_male() const override;
         std::vector<std::string> get_grammatical_genders() const override;
-        int posx() const override;
-        int posy() const override;
+        int posx( const map &here ) const override;
+        int posy( const map &here ) const override;
         int posz() const override;
-        tripoint_bub_ms pos_bub() const override;
+        tripoint_bub_ms pos_bub( const map &here ) const override;
         tripoint_abs_ms pos_abs() const override;
         tripoint_abs_omt pos_abs_omt() const override;
         int get_cur_hp( const bodypart_id &bp ) const override;
@@ -51,6 +51,7 @@ class talker_character_const: virtual public const_talker
         units::temperature get_cur_part_temp( const bodypart_id &bp ) const override;
 
         // stats, skills, traits, bionics, and magic
+        int get_artifact_resonance() const override;
         int str_cur() const override;
         int dex_cur() const override;
         int int_cur() const override;
@@ -96,7 +97,7 @@ class talker_character_const: virtual public const_talker
         int get_spell_level( const trait_id & ) const override;
         int get_spell_level( const spell_id & ) const override;
         int get_spell_exp( const spell_id & ) const override;
-        int get_spell_difficulty( const spell_id & ) const override;
+        int get_spell_difficulty( const spell_id &, bool ) const override;
         int get_highest_spell_level() const override;
         int get_spell_count( const trait_id & ) const override;
         int get_spell_sum( const trait_id &school, int min_level ) const override;
@@ -108,7 +109,7 @@ class talker_character_const: virtual public const_talker
         effect get_effect( const efftype_id &effect_id, const bodypart_id &bp ) const override;
         bool is_deaf() const override;
         bool is_mute() const override;
-        std::optional<std::string> maybe_get_value( const std::string &var_name ) const override;
+        diag_value const *maybe_get_value( const std::string &var_name ) const override;
 
         // stats, skills, traits, bionics, magic, and proficiencies
         std::vector<skill_id> skills_teacheable() const override;
@@ -142,6 +143,8 @@ class talker_character_const: virtual public const_talker
         bool unarmed_attack() const override;
         bool can_stash_weapon() const override;
         bool has_stolen_item( const_talker const &guy ) const override;
+        bool has_software( const itype_id &software_id, int min_charges = 0,
+                           const itype_id &device_id = itype_id::NULL_ID() ) const override;
 
         // factions and alliances
         faction *get_faction() const override;
@@ -234,6 +237,7 @@ class talker_character: virtual public talker
         }
 
         void set_pos( tripoint_bub_ms new_pos ) override;
+        void set_pos( tripoint_abs_ms new_pos ) override;
 
         // stats, skills, traits, bionics, and magic
         void set_str_max( int value ) override;
@@ -252,7 +256,8 @@ class talker_character: virtual public talker
         void set_proficiency_practiced_time( const proficiency_id &prof, int turns ) override;
         void train_proficiency_for( const proficiency_id &prof, int turns ) override;
         void mutate( const int &highest_cat_chance, const bool &use_vitamins ) override;
-        void mutate_category( const mutation_category_id &mut_cat, const bool &use_vitamins ) override;
+        void mutate_category( const mutation_category_id &mut_cat, const bool &use_vitamins,
+                              const bool &true_random ) override;
         void mutate_towards( const trait_id &trait, const mutation_category_id &mut_cat,
                              const bool &use_vitamins ) override;
         void set_trait_purifiability( const trait_id &trait, const bool &purifiable ) override;
@@ -268,7 +273,7 @@ class talker_character: virtual public talker
                          const std::string &bp, bool permanent, bool force, int intensity
                        ) override;
         void remove_effect( const efftype_id &old_effect, const std::string &bp ) override;
-        void set_value( const std::string &var_name, const std::string &value ) override;
+        void set_value( const std::string &var_name, diag_value const &value ) override;
         void remove_value( const std::string &var_name ) override;
 
         // inventory, buying, and selling

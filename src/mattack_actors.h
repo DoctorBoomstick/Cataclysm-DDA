@@ -22,6 +22,13 @@ class Creature;
 class JsonObject;
 class monster;
 
+class invalid_mattack_actor : public mattack_actor
+{
+        bool call( monster & ) const override;
+        std::unique_ptr<mattack_actor> clone() const override;
+        void load_internal( const JsonObject &, const std::string & ) override {}
+};
+
 class leap_actor : public mattack_actor
 {
     public:
@@ -175,7 +182,7 @@ class melee_actor : public mattack_actor
         /** Message for throwing a non-player. */
         translation throw_msg_npc;
 
-        melee_actor();
+        melee_actor() = default;
         ~melee_actor() override = default;
 
         virtual Creature *find_target( monster &z ) const;

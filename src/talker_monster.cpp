@@ -1,6 +1,5 @@
 #include "talker_monster.h"
 
-#include <optional>
 #include <vector>
 
 #include "character.h"
@@ -10,6 +9,7 @@
 #include "debug.h"
 #include "effect.h"
 #include "map.h"
+#include "math_parser_diag_value.h"
 #include "messages.h"
 #include "monster.h"
 #include "mtype.h"
@@ -25,14 +25,14 @@ std::string talker_monster_const::get_name() const
     return me_mon_const->get_name();
 }
 
-int talker_monster_const::posx() const
+int talker_monster_const::posx( const map &here ) const
 {
-    return me_mon_const->posx();
+    return me_mon_const->posx( here );
 }
 
-int talker_monster_const::posy() const
+int talker_monster_const::posy( const map &here ) const
 {
-    return me_mon_const->posy();
+    return me_mon_const->posy( here );
 }
 
 int talker_monster_const::posz() const
@@ -40,9 +40,9 @@ int talker_monster_const::posz() const
     return me_mon_const->posz();
 }
 
-tripoint_bub_ms talker_monster_const::pos_bub() const
+tripoint_bub_ms talker_monster_const::pos_bub( const map &here ) const
 {
-    return me_mon_const->pos_bub();
+    return me_mon_const->pos_bub( here );
 }
 
 tripoint_abs_ms talker_monster_const::pos_abs() const
@@ -98,8 +98,7 @@ void talker_monster::mod_pain( int amount )
     me_mon->mod_pain( amount );
 }
 
-std::optional<std::string> talker_monster_const::maybe_get_value( const std::string &var_name )
-const
+diag_value const *talker_monster_const::maybe_get_value( const std::string &var_name ) const
 {
     return me_mon_const->maybe_get_value( var_name );
 }
@@ -125,7 +124,7 @@ bool talker_monster_const::bodytype( const bodytype_id &bt ) const
     return me_mon_const->type->bodytype == bt;
 }
 
-void talker_monster::set_value( const std::string &var_name, const std::string &value )
+void talker_monster::set_value( const std::string &var_name, diag_value const &value )
 {
     me_mon->set_value( var_name, value );
 }
@@ -167,7 +166,7 @@ int talker_monster_const::get_friendly() const
 
 int talker_monster_const::get_difficulty() const
 {
-    return me_mon_const->type->difficulty;
+    return me_mon_const->type->get_total_difficulty();
 }
 
 int talker_monster_const::get_size() const

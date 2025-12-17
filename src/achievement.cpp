@@ -404,11 +404,14 @@ void achievement::load_achievement( const JsonObject &jo, const std::string &src
 
 void achievement::finalize()
 {
-    for( achievement &a : const_cast<std::vector<achievement>&>( achievement::get_all() ) ) {
-        for( achievement_requirement &req : a.requirements_ ) {
-            req.finalize();
-        }
+    for( achievement_requirement &req : requirements_ ) {
+        req.finalize();
     }
+}
+
+void achievement::finalize_all()
+{
+    achievement_factory.finalize();
 }
 
 void achievement::check_consistency()
@@ -426,7 +429,7 @@ void achievement::reset()
     achievement_factory.reset();
 }
 
-void achievement::load( const JsonObject &jo, const std::string_view )
+void achievement::load( const JsonObject &jo, std::string_view )
 {
     mandatory( jo, was_loaded, "name", name_ );
     is_conduct_ = jo.get_string( "type" ) == "conduct";

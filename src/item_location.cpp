@@ -305,7 +305,7 @@ class item_location::impl::item_on_map : public item_location::impl
         }
 
         units::mass weight_capacity() const override {
-            return units::mass_max;
+            return units::mass::max();
         }
 
         bool check_parent_capacity_recursive() const override {
@@ -468,11 +468,11 @@ class item_location::impl::item_on_person : public item_location::impl
         }
 
         units::volume volume_capacity() const override {
-            return units::volume_max;
+            return units::volume::max();
         }
 
         units::mass weight_capacity() const override {
-            return units::mass_max;
+            return units::mass::max();
         }
 
         bool check_parent_capacity_recursive() const override {
@@ -595,7 +595,7 @@ class item_location::impl::item_on_vehicle : public item_location::impl
         }
 
         units::mass weight_capacity() const override {
-            return units::mass_max;
+            return units::mass::max();
         }
 
         bool check_parent_capacity_recursive() const override {
@@ -634,7 +634,7 @@ class item_location::impl::item_in_container : public item_location::impl
 
         item_pocket *parent_pocket() const override {
             if( container_pkt == nullptr ) {
-                std::vector<item_pocket *> const pkts = parent_item()->get_all_standard_pockets();
+                std::vector<item_pocket *> const pkts = parent_item()->get_standard_pockets();
                 if( pkts.size() == 1 ) {
                     container_pkt = pkts.front();
                 } else {
@@ -933,6 +933,28 @@ bool item_location::has_parent() const
     return false;
 }
 
+bool item_location::is_efile() const
+{
+    return parent_item() && parent_item()->is_estorage();
+}
+
+pocket_constraint item_location::get_pocket_constraints_recursive( const item_pocket *pocket ) const
+{
+    pocket_constraint ret = pocket_constraint( pocket );
+
+    item_pocket *parent_pocket;
+    item_location current_location = *this;
+
+    while( current_location.has_parent() ) {
+        parent_pocket = current_location.parent_pocket();
+        ret.constrain_by( parent_pocket );
+
+        current_location = current_location.parent_item();
+    }
+
+    return ret;
+}
+
 ret_val<void> item_location::parents_can_contain_recursive( item *it ) const
 {
     item_pocket *parent_pocket;
@@ -942,7 +964,7 @@ ret_val<void> item_location::parents_can_contain_recursive( item *it ) const
     item_location current_location = *this;
     //item_location class cannot return current pocket so use first pocket for innermost container
     //Only used for weight and volume multipliers
-    const item_pocket *current_pocket = get_item()->get_all_standard_pockets().front();
+    const item_pocket *current_pocket = get_item()->get_standard_pockets().front();
     const pocket_data *current_pocket_data = current_pocket->get_pocket_data();
 
     //Repeat until top-most container reached
@@ -989,7 +1011,7 @@ ret_val<int> item_location::max_charges_by_parent_recursive( const item &it ) co
     item_location current_location = *this;
     //item_location class cannot return current pocket so use first pocket for innermost container
     //Only used for weight and volume multipliers
-    const item_pocket *current_pocket = get_item()->get_all_standard_pockets().front();
+    const item_pocket *current_pocket = get_item()->get_standard_pockets().front();
     const pocket_data *current_pocket_data = current_pocket->get_pocket_data();
 
     //Repeat until top-most container reached
@@ -1228,9 +1250,9 @@ bool item_location::can_reload_with( const item_location &ammo, bool now ) const
     return reloadable->can_reload_with( *ammo, now );
 }
 
-int item_location::get_quality( const std::string &quality, bool strict ) const
+int item_location::get_quality( const std::string &quality, bool strict_boiling ) const
 {
     const item_location tool = *this;
     quality_id qualityid( quality );
-    return tool->get_quality_nonrecursive( qualityid, strict );
+    return tool->get_quality_nonrecursive( qualityid, strict_boiling );
 }

@@ -98,6 +98,7 @@ class map;
 enum class ter_furn_flag : int;
 struct pathfinding_cache;
 struct pathfinding_settings;
+struct pathfinding_target;
 template<typename T>
 struct weighted_int_list;
 struct field_proc_data;
@@ -137,7 +138,7 @@ struct visibility_variables {
 
 struct bash_params {
     // Initial strength
-    int strength = 0;
+    const std::map<damage_type_id, int> &strength;
     // Make a sound?
     bool silent = false;
     // Essentially infinite bash strength + some
@@ -153,6 +154,8 @@ struct bash_params {
     float roll = 0.0f;
     // Was anything hit?
     bool did_bash = false;
+    // can we keep damaging this tile (if not destroyed)
+    bool can_bash = false;
     // Was anything destroyed?
     bool success = false;
     // Did we bash furniture, terrain or vehicle
@@ -365,6 +368,7 @@ struct tile_render_info {
  */
 class map
 {
+        friend class teleport;
         friend class editmap;
         friend std::list<item> map_cursor::remove_items_with( const std::function<bool( const item & )> &,
                 int );
@@ -382,6 +386,7 @@ class map
                 field_proc_data & );
 
         // for testing
+        friend class map_meddler;
         friend void clear_fields( int zlevel );
 
     protected:
@@ -586,6 +591,12 @@ class map
         bool passable( const point_bub_ms &p ) const {
             return passable( tripoint_bub_ms( p, abs_sub.z() ) );
         }
+        // Doesn't only check if it's possible to move to the tile as "passable" does, but also
+        // that it has a floor or other support, so it's possible to remain there without extra effort,
+        // and thus is a reasonable target for normal movement. Note that effortless levitation,
+        // swimming, etc. by a particular creature is not checked for.
+        bool passable_through( const tripoint_bub_ms &p ) const;
+
         bool passable_skip_fields( const tripoint_bub_ms &p ) const;
         bool is_wall_adjacent( const tripoint_bub_ms &center ) const;
 
@@ -708,15 +719,23 @@ class map
          * Calculate the best path using A*
          *
          * @param f The source location from which to path.
-         * @param t The destination to which to path.
+         * @param target The destination to which to path.
          * @param settings Structure describing pathfinding parameters.
          * @param pre_closed Never path through those points. They can still be the source or the destination.
          */
-        std::vector<tripoint_bub_ms> route( const tripoint_bub_ms &f, const tripoint_bub_ms &t,
+        std::vector<tripoint_bub_ms> route( const tripoint_bub_ms &f, const pathfinding_target &target,
                                             const pathfinding_settings &settings,
         const std::function<bool( const tripoint_bub_ms & )> &avoid = []( const tripoint_bub_ms & ) {
             return false;
         } ) const;
+
+        /**
+         * Calculate the best path using A*
+         *
+         * @param who The creature to find a path for.
+         * @param target The destination to which to path.
+         */
+        std::vector<tripoint_bub_ms> route( const Creature &who, const pathfinding_target &target ) const;
 
         // Get a straight route from f to t, only along non-rough terrain. Returns an empty vector
         // if that is not possible.
@@ -742,6 +761,7 @@ class map
 
         // Vehicles: Common to 2D and 3D
         VehicleList get_vehicles();
+        bool place_vehicle( std::unique_ptr<vehicle> &&new_vehicle );
         void add_vehicle_to_cache( vehicle * );
         void clear_vehicle_point_from_cache( vehicle *veh, const tripoint_bub_ms &pt );
         // clears all vehicle level caches
@@ -795,6 +815,7 @@ class map
         // optionally: include a list of parts to displace instead of the entire vehicle
         bool displace_vehicle( vehicle &veh, const tripoint_rel_ms &dp, bool adjust_pos = true,
                                const std::set<int> &parts_to_move = {} );
+
         // make sure a vehicle that is split across z-levels is properly supported
         // calls displace_vehicle() and shouldn't be called from displace_vehicle
         void level_vehicle( vehicle &veh );
@@ -1028,7 +1049,8 @@ class map
         int bash_resistance( const tripoint_bub_ms &p, bool allow_floor = false ) const;
         /** Returns a success rating from -1 to 10 for a given tile based on a set strength, used for AI movement planning
         *  Values roughly correspond to 10% increment chances of success on a given bash, rounded down. -1 means the square is not bashable */
-        int bash_rating( int str, const tripoint_bub_ms &p, bool allow_floor = false ) const;
+        int bash_rating( const std::map<damage_type_id, int> &str, const tripoint_bub_ms &p,
+                         bool allow_floor = false ) const;
 
         // Rubble
         /** Generates rubble at the given location, if overwrite is true it just writes on top of what currently exists
@@ -1133,8 +1155,10 @@ class map
         /** Causes a collapse at p, such as from destroying a wall */
         void collapse_at( const tripoint_bub_ms &p, bool silent, bool was_supporting = false,
                           bool destroy_pos = true );
-        /** Tries to smash the items at the given tripoint. Used by the explosion code */
-        void smash_items( const tripoint_bub_ms &p, int power, const std::string &cause_message );
+        /** Tries to smash the items at the given tripoint. Used by the explosion code. vp_wheel and veh are
+        used when running over items, and are assumed to either both be nullptr or be valid pointers */
+        void smash_items( const tripoint_bub_ms &p, int power, const std::string &cause_message,
+                          vehicle_part *vp_wheel = nullptr, vehicle *veh = nullptr );
         /**
          * Returns a pair where first is whether anything was smashed and second is if it was destroyed.
          *
@@ -1145,9 +1169,14 @@ class map
          * @param bash_floor Allow bashing the floor and the tile that supports it
          * @param bashing_vehicle Vehicle that should NOT be bashed (because it is doing the bashing)
          */
-        bash_params bash( const tripoint_bub_ms &p, int str, bool silent = false,
-                          bool destroy = false, bool bash_floor = false,
-                          const vehicle *bashing_vehicle = nullptr );
+        bash_params bash( const tripoint_bub_ms &p, const std::map<damage_type_id, int> &str,
+                          bool silent = false, bool destroy = false, bool bash_floor = false,
+                          const vehicle *bashing_vehicle = nullptr,
+                          bool repair_missing_ground = true );
+        bash_params bash( const tripoint_bub_ms &p, int str,
+                          bool silent = false, bool destroy = false, bool bash_floor = false,
+                          const vehicle *bashing_vehicle = nullptr,
+                          bool repair_missing_ground = true );
 
         // Effects of attacks/items
         bool hit_with_acid( const tripoint_bub_ms &p );
@@ -1254,7 +1283,8 @@ class map
          *  @return reference to dropped (and possibly stacked) item or null item on failure
          *  @warning function is relatively expensive and meant for user initiated actions, not mapgen
          */
-        item_location add_item_ret_loc( const tripoint_bub_ms &pos, item obj, bool overflow = true );
+        item_location add_item_or_charges_ret_loc( const tripoint_bub_ms &pos, item obj,
+                bool overflow = true );
         item &add_item_or_charges( const tripoint_bub_ms &pos, item obj, bool overflow = true );
         item &add_item_or_charges( const tripoint_bub_ms &pos, item obj, int &copies_remaining,
                                    bool overflow = true );
@@ -1590,7 +1620,6 @@ class map
                        bool need_validate = true );
         void remove_submap_camp( const tripoint_bub_ms & );
         basecamp hoist_submap_camp( const tripoint_bub_ms &p );
-        bool point_within_camp( const tripoint_abs_ms &point_check ) const;
         // Graffiti
         bool has_graffiti_at( const tripoint_bub_ms &p ) const;
         const std::string &graffiti_at( const tripoint_bub_ms &p ) const;
@@ -1644,7 +1673,8 @@ class map
         // mapgen.cpp functions
         // The code relies on the submap coordinate falling on omt boundaries, so taking a
         // tripoint_abs_omt coordinate guarantees this will be fulfilled.
-        void generate( const tripoint_abs_omt &p, const time_point &when, bool save_results );
+        void generate( const tripoint_abs_omt &p, const time_point &when, bool save_results,
+                       bool run_post_process = true );
         // Used when contents has been generated by 'generate' with save_results = false to dispose of
         // submaps that aren't present in the map buffer. This is done to avoid memory leaks.
         void delete_unmerged_submaps();
@@ -1871,6 +1901,7 @@ class map
          */
         void shift_traps( const point_rel_sm &shift );
 
+        void on_unload( const tripoint_rel_sm &loc );
         void copy_grid( const tripoint_rel_sm &to, const tripoint_rel_sm &from );
         void draw_map( mapgendata &dat );
 
@@ -1923,7 +1954,6 @@ class map
          */
         void set_abs_sub( const tripoint_abs_sm &p );
 
-    private:
         field &get_field( const tripoint_bub_ms &p );
 
         /**
@@ -1975,7 +2005,6 @@ class map
         }
         submap *get_submap_at_grid( const tripoint_rel_sm &gridp );
         const submap *get_submap_at_grid( const tripoint_rel_sm &gridp ) const;
-    protected:
         /**
          * Get the index of a submap pointer in the grid given by grid coordinates. The grid
          * coordinates must be valid: 0 <= x < my_MAPSIZE, same for y.
@@ -2010,9 +2039,9 @@ class map
          */
         int move_cost_internal( const furn_t &furniture, const ter_t &terrain, const field &field,
                                 const vehicle *veh, int vpart ) const;
-        int bash_rating_internal( int str, const furn_t &furniture,
-                                  const ter_t &terrain, bool allow_floor,
-                                  const vehicle *veh, int part ) const;
+        int bash_rating_internal( const std::map<damage_type_id, int> &str,
+                                  const furn_t &furniture, const ter_t &terrain,
+                                  bool allow_floor, const vehicle *veh, int part ) const;
 
         /**
          * Internal version of the drawsq. Keeps a cached maptile for less re-getting.
@@ -2044,7 +2073,8 @@ class map
 
         // Internal methods used to bash just the selected features
         // Information on what to bash/what was bashed is read from/written to the bash_params struct
-        void bash_ter_furn( const tripoint_bub_ms &p, bash_params &params );
+        void bash_ter_furn( const tripoint_bub_ms &p, bash_params &params,
+                            bool repair_missing_ground = true );
         void bash_items( const tripoint_bub_ms &p, bash_params &params );
         void bash_vehicle( const tripoint_bub_ms &p, bash_params &params );
         void bash_field( const tripoint_bub_ms &p, bash_params &params );
@@ -2055,6 +2085,10 @@ class map
         ter_str_id get_roof( const tripoint_bub_ms &p, bool allow_air ) const;
 
     public:
+
+        // handles all the bash results of specific terrain or furniture
+        void drop_bash_results( const map_data_common_t &ter_furn, const tripoint_bub_ms &p );
+
         void process_items();
         // All active items connected to the power_grid with their connection points.
         std::vector<item_reference> item_network_connections( vehicle *power_grid );
@@ -2146,6 +2180,7 @@ class map
         // !value || value->first != map::abs_sub means cache is invalid
         std::optional<std::pair<tripoint_abs_sm, int>> max_populated_zlev = std::nullopt;
 
+        bool mapgen_in_progress = false;
         // this is set for maps loaded in bounds of the main map (g->m)
         bool _main_requires_cleanup = false;
         std::optional<bool> _main_cleanup_override = std::nullopt;
@@ -2227,7 +2262,21 @@ class map
 #endif
 };
 
+// The map the code is currently processing. It is currently (incorrectly) fixed at the
+// reality bubble, but will will have to be constantly adjusted to match the map that's
+// actually processed (so reality bubble coordinates on a mapgen map are actually referring
+// to that map rather than the reality bubble).
 map &get_map();
+
+// The reality bubble map, for when you need it to e.g. determine whether the map
+// you're operating on is the reality bubble. This can be to process things differently
+// between mapgen and the reality bubble, determine whether to carry over map cache info,
+// determine whether to produce a sound, etc.
+// Note that if the game will support more than one reality bubble map for a longer period
+// than a single tick, this operation will have to be split into one for the active bubble
+// for sound etc. processing, and another one for accessing all bubbles for cache
+// synchronization purposes.
+map &reality_bubble();
 
 template<int SIZE, int MULTIPLIER>
 void shift_bitset_cache( std::bitset<SIZE *SIZE> &cache, const point_rel_sm &s );

@@ -208,6 +208,7 @@ bool debug_has_error_been_observed()
     return error_observed;
 }
 
+// saved in game::serialize
 bool debug_mode = false;
 
 namespace debugmode
@@ -240,6 +241,7 @@ std::string filter_name( debug_filter value )
         case DF_EXPLOSION: return "DF_EXPLOSION";
         case DF_FOOD: return "DF_FOOD";
         case DF_GAME: return "DF_GAME";
+        case DF_HIGHWAY: return "DF_HIGHWAY";
         case DF_IEXAMINE: return "DF_IEXAMINE";
         case DF_IUSE: return "DF_IUSE";
         case DF_MAP: return "DF_MAP";
@@ -317,11 +319,11 @@ static void debug_error_prompt(
 
     std::string formatted_report =
         string_format( // developer-facing error report. INTENTIONALLY UNTRANSLATED!
-            " DEBUG    : %s\n\n"
-            " FUNCTION : %s\n"
-            " FILE     : %s\n"
-            " LINE     : %s\n"
-            " VERSION  : %s\n",
+            " DEBUG : %s\n\n"
+            " REPORTING FUNCTION : %s\n"
+            " C++ SOURCE FILE    : %s\n"
+            " LINE               : %s\n"
+            " VERSION            : %s\n",
             text, funcname, filename, line, getVersionString()
         );
 
@@ -342,31 +344,34 @@ static void debug_error_prompt(
     };
     init_window( ui );
     ui.on_screen_resize( init_window );
-    const std::string message = string_format(
-                                    "\n\n" // Looks nicer with some space
-                                    " %s\n" // translated user string: error notification
-                                    " -----------------------------------------------------------\n"
-                                    "%s"
-                                    " -----------------------------------------------------------\n"
+    const std::string error_message = string_format(
+                                          "\n\n" // Looks nicer with some space
+                                          " %s\n" // translated user string: error notification
+                                          " -----------------------------------------------------------\n"
+                                          "%s"
+                                          " -----------------------------------------------------------\n"
 #if defined(BACKTRACE)
-                                    " %s\n" // translated user string: where to find backtrace
+                                          " %s\n" // translated user string: where to find backtrace
 #endif
-                                    " %s\n" // translated user string: space to continue
-                                    " %s\n" // translated user string: ignore key
-#if defined(TILES)
-                                    " %s\n" // translated user string: copy
-#endif // TILES
-                                    , _( "An error has occurred!  Written below is the error report:" ),
-                                    formatted_report,
+                                          , _( "An error has occurred!  Written below is the error report:" ),
+                                          formatted_report
 #if defined(BACKTRACE)
-                                    backtrace_instructions,
+                                          , backtrace_instructions
 #endif
-                                    _( "Press <color_white>space bar</color> to continue the game." ),
-                                    _( "Press <color_white>I</color> (or <color_white>i</color>) to also ignore this particular message in the future." )
+                                      );
+    const std::string instructions = string_format(
+                                         " %s\n" // translated user string: space to continue
+                                         " %s\n" // translated user string: ignore key
 #if defined(TILES)
-                                    , _( "Press <color_white>C</color> (or <color_white>c</color>) to copy this message to the clipboard." )
+                                         " %s\n" // translated user string: copy
 #endif // TILES
-                                );
+                                         , _( "Press <color_white>space bar</color> to continue the game." )
+                                         , _( "Press <color_white>I</color> (or <color_white>i</color>) to also ignore this particular message in the future." )
+#if defined(TILES)
+                                         , _( "Press <color_white>C</color> (or <color_white>c</color>) to copy this message to the clipboard." )
+#endif // TILES
+                                     );
+    std::string message = error_message + instructions;
     ui.on_redraw( [&]( const ui_adaptor & ) {
         catacurses::erase();
         fold_and_print( catacurses::stdscr, point::zero, getmaxx( catacurses::stdscr ), c_light_red,
@@ -395,6 +400,8 @@ static void debug_error_prompt(
                 [[fallthrough]];
             case ' ':
                 stop = true;
+                message = error_message;
+                ui_manager::redraw();
                 break;
         }
     }
@@ -665,7 +672,7 @@ struct OutputDebugStreamA : public std::ostream {
             virtual std::streamsize xsputn( const char *s, std::streamsize n ) override {
                 std::streamsize rc = buf->sputn( s, n ), last = 0, i = 0;
                 for( ; i < n; ++i ) {
-                    if( std::iscntrl( s[i] ) ) {
+                    if( std::iscntrl( static_cast<unsigned char>( s[i] ) ) ) {
                         if( i == last + 1 ) { // Skip multiple empty lines
                             last = i;
                             continue;
@@ -677,7 +684,7 @@ struct OutputDebugStreamA : public std::ostream {
                 }
                 std::string append( s + last, n - last );
                 // Skip if only made of multiple newlines
-                if( none_of( append.begin(), append.end(), []( int c ) {
+                if( none_of( append.begin(), append.end(), []( unsigned char c ) {
                 return std::iscntrl( c );
                 } ) ) {
                     output_string.append( s + last, n - last );

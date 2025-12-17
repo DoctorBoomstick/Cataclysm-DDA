@@ -4,6 +4,8 @@ AAC
 AAR
 AB
 Abanaderly
+abaya
+abayas
 Abbie
 Abby
 ABC
@@ -635,6 +637,7 @@ bioblaster
 bioblasters
 biocompatibility
 biodiesel
+bioelectric
 bioelectricity
 bioforms
 biofuel
@@ -703,6 +706,7 @@ bloodhunting
 bloodletter
 bloodlust
 bloodthirst
+Bloodthorne
 bloomeries
 blowback
 BLR
@@ -1072,6 +1076,8 @@ Chelmsford
 Chelsea
 chemtrails
 Chen
+cheongsam
+cheongsams
 Cherokee
 Cheshire
 Chester
@@ -1494,6 +1500,8 @@ devs
 dex
 Dhamma
 Dhammapada
+dhampir
+dhampirs
 dharmachakra
 diaspora
 dichloroisocyanurate
@@ -1574,6 +1582,7 @@ dokie
 Dolichovespula
 dollkin
 dolm
+dolmas
 domestica
 Donatello
 donburi
@@ -2050,6 +2059,8 @@ FLDSMDFR
 flechette
 flechettes
 flensing
+fleshborg
+fleshborgs
 Fleshmender
 fleshmonger
 fleshwarp
@@ -2066,6 +2077,7 @@ Florida
 Florunner
 fluffernutter
 fluffies
+Fluffycats
 fluidic
 fluorescents
 fluoxetine
@@ -2554,6 +2566,9 @@ Heartfires
 heartlike
 Heartseed
 Heartseeds
+heartvine
+heartvines
+heartwhip
 Heathrow
 heatsink
 heatsinks
@@ -2618,6 +2633,7 @@ Hiep
 Higgins
 highschool
 hijab
+hijabs
 Himalayan
 Hindu
 Hinduism
@@ -2644,6 +2660,7 @@ hnefatafl
 Hobbes
 hobblebush
 hobbleberries
+hobbleberry
 hoc
 Hockomock
 hodag
@@ -3065,6 +3082,7 @@ Justo
 Justus
 Kabura
 kabuto
+kabutos
 Kaczynski
 Kadambawa
 Kafka
@@ -4158,11 +4176,13 @@ nanomesh
 nanoprinted
 nanoribbon
 nanoribbons
+nanos
 nanosaurus
 nanoskirt
 nanoskirts
 nanotech
 nanotubes
+nanotyrannus
 nanowire
 Nantucket
 nanuqsaurus
@@ -4309,6 +4329,8 @@ Ninhursag
 ninjutsu
 niño
 Nipâta
+niqab
+niqabs
 Nishan
 Niten
 Nitron
@@ -4475,6 +4497,7 @@ Orleans
 Orley
 ornithomimid
 ornithomimus
+ouroboros
 Orpheus
 Orphic
 Orson
@@ -4785,6 +4808,7 @@ Plympton
 PM
 pm
 PMC
+pocketless
 podling
 podlings
 pokeball
@@ -4852,6 +4876,7 @@ precombined
 predatorially
 premade
 premeasured
+premotion
 preoptic
 prepended
 PrepNet
@@ -4929,6 +4954,7 @@ Qatari
 QDSS
 qiang
 qianzhousaurus
+qipao
 QOL
 Qolastā
 QR
@@ -5303,6 +5329,7 @@ Samoyed
 Samoyeds
 Samuel
 Samuels
+Samurais
 Sanatsugâtîya
 Sanchez
 sanctacaris
@@ -5502,6 +5529,7 @@ shantak
 Shaolin
 shapechangers
 shapeshift
+shapeshifted
 shapeshifting
 shapeshifts
 shapeshifter
@@ -5877,6 +5905,8 @@ Steyr
 STI
 Stig
 Stillwater
+stiltwalker
+stiltwalkers
 stim
 stimpack
 stims
@@ -6364,6 +6394,7 @@ travelpack
 travelpacks
 Travers
 travois
+treaded
 treecutting
 treefrog
 treefrogs
@@ -6536,6 +6567,7 @@ Unicode
 unitard
 unitards
 unjacketed
+unknowable
 unlife
 unlively
 unlockable
@@ -6636,6 +6668,7 @@ valhallists
 valknut
 valkyries
 Valzain
+vampiric
 VanBuren
 Vancian
 Vaneigem
@@ -6816,6 +6849,7 @@ weaponized
 weaponizing
 weaponsmith
 weaponsmiths
+wearables
 Weatherby
 Webber
 WebbStar

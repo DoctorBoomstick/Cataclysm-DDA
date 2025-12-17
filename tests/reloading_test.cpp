@@ -927,11 +927,12 @@ static void reload_a_revolver( Character &dummy, item &gun, item &ammo )
 {
     if( !dummy.is_wielding( gun ) ) {
         if( dummy.has_weapon() ) {
-            // to avoid dispose_option in player::unwield()
+            // to avoid dispose_option in avatar::unwield()
             dummy.i_add( *dummy.get_wielded_item() );
             dummy.remove_weapon();
         }
-        dummy.wield( gun );
+        bool success = dummy.wield( gun );
+        REQUIRE( success );
     }
     while( dummy.get_wielded_item()->remaining_ammo_capacity() > 0 ) {
         g->reload_weapon( false );
@@ -939,8 +940,8 @@ static void reload_a_revolver( Character &dummy, item &gun, item &ammo )
         process_activity( dummy );
         CAPTURE( dummy.get_wielded_item()->typeId() );
         CAPTURE( ammo.typeId() );
-        CHECK( !dummy.get_wielded_item()->empty() );
-        CHECK( dummy.get_wielded_item()->ammo_current() == ammo.type->get_id() );
+        REQUIRE( !dummy.get_wielded_item()->empty() );
+        REQUIRE( dummy.get_wielded_item()->ammo_current() == ammo.type->get_id() );
     }
 }
 
@@ -972,6 +973,7 @@ TEST_CASE( "automatic_reloading_action", "[reload],[gun]" )
 
         WHEN( "the player triggers auto reload until the revolver is full" ) {
             reload_a_revolver( dummy, *dummy.get_wielded_item(), *ammo );
+            REQUIRE( dummy.find_reloadables().empty() );
             WHEN( "the player triggers auto reload again" ) {
                 g->reload_weapon( false );
                 THEN( "no activity is generated" ) {
@@ -982,14 +984,44 @@ TEST_CASE( "automatic_reloading_action", "[reload],[gun]" )
         GIVEN( "the player has another gun with ammo" ) {
             item_location gun2 = dummy.i_add( item( itype_sw_610, calendar::turn_zero, 0 ) );
             REQUIRE( gun2->ammo_remaining( ) == 0 );
-            REQUIRE( gun2.can_reload_with( ammo, false ) );
+            REQUIRE( ammo->charges >= gun2->ammo_capacity( ammo->ammo_type() ) );
+            REQUIRE( dummy.find_reloadables().size() == 2 );
             WHEN( "the player triggers auto reload until the first revolver is full" ) {
                 reload_a_revolver( dummy, *dummy.get_wielded_item(), *ammo );
+
+                THEN( "the first (wielded) revolver is full" ) {
+                    CHECK( dummy.get_wielded_item()->is_container_full() );
+                }
+                THEN( "one unloaded revolver remains" ) {
+                    CHECK( dummy.find_reloadables().size() == 1 );
+                }
+                THEN( "no activity is generated" ) {
+                    CHECK( !dummy.activity );
+                }
                 WHEN( "the player triggers auto reload until the second revolver is full" ) {
                     reload_a_revolver( dummy, *gun2, *ammo );
-                    WHEN( "the player triggers auto reload again" ) {
+
+                    THEN( "the second revolver is full" ) {
+                        CHECK( dummy.get_wielded_item()->is_container_full() );
+
+                    }
+                    THEN( "there are no more reloadables" ) {
+                        for( const item_location &it : dummy.find_reloadables() ) {
+                            CAPTURE( it.where() );
+                        }
+                        CHECK( dummy.find_reloadables().empty() );
+                    }
+                    THEN( "no activity is generated" ) {
+                        CAPTURE( dummy.activity.id() );
+                        CHECK( !dummy.activity );
+                    }
+                    WHEN( "the player triggers auto reload again with no reloadables" ) {
+                        CAPTURE( dummy.get_wielded_item()->ammo_remaining( ) );
+                        REQUIRE( dummy.find_reloadables().empty() );
+
                         g->reload_weapon( false );
                         THEN( "no activity is generated" ) {
+                            CAPTURE( dummy.activity.id() );
                             CHECK( !dummy.activity );
                         }
                     }
@@ -1111,14 +1143,14 @@ TEST_CASE( "reload_liquid_container", "[reload],[liquid]" )
     item_location ammo_jug = dummy.i_add( item( itype_jug_plastic ) );
     ammo_jug->put_in( item( itype_water_clean, calendar::turn_zero, 2 ),
                       pocket_type::CONTAINER );
-    units::volume ammo_volume = ammo_jug->total_contained_volume();
+    units::volume ammo_volume = ammo_jug->get_contents_volume();
 
     SECTION( "reload liquid into empty container" ) {
         g->reload_wielded();
         REQUIRE( dummy.activity );
         process_activity( dummy );
-        CHECK( dummy.get_wielded_item()->total_contained_volume() == ammo_volume );
-        CHECK( ammo_jug->total_contained_volume() == units::volume() );
+        CHECK( dummy.get_wielded_item()->get_contents_volume() == ammo_volume );
+        CHECK( ammo_jug->get_contents_volume() == units::volume() );
     }
 
     SECTION( "reload liquid into partially filled container with same type liquid" ) {
@@ -1128,8 +1160,8 @@ TEST_CASE( "reload_liquid_container", "[reload],[liquid]" )
         g->reload_wielded();
         REQUIRE( dummy.activity );
         process_activity( dummy );
-        CHECK( dummy.get_wielded_item()->total_contained_volume() == ammo_volume + initial_volume );
-        CHECK( ammo_jug->total_contained_volume() == units::volume() );
+        CHECK( dummy.get_wielded_item()->get_contents_volume() == ammo_volume + initial_volume );
+        CHECK( ammo_jug->get_contents_volume() == units::volume() );
     }
 
     SECTION( "reload liquid into partially filled container with different type liquid" ) {
@@ -1140,8 +1172,8 @@ TEST_CASE( "reload_liquid_container", "[reload],[liquid]" )
         if( !!dummy.activity ) {
             process_activity( dummy );
         }
-        CHECK( dummy.get_wielded_item()->total_contained_volume() == initial_volume );
-        CHECK( ammo_jug->total_contained_volume() == ammo_volume );
+        CHECK( dummy.get_wielded_item()->get_contents_volume() == initial_volume );
+        CHECK( ammo_jug->get_contents_volume() == ammo_volume );
     }
 
     SECTION( "reload liquid into container containing a non-liquid" ) {
@@ -1152,20 +1184,20 @@ TEST_CASE( "reload_liquid_container", "[reload],[liquid]" )
         if( !!dummy.activity ) {
             process_activity( dummy );
         }
-        CHECK( dummy.get_wielded_item()->total_contained_volume() == initial_volume );
-        CHECK( ammo_jug->total_contained_volume() == ammo_volume );
+        CHECK( dummy.get_wielded_item()->get_contents_volume() == initial_volume );
+        CHECK( ammo_jug->get_contents_volume() == ammo_volume );
     }
 
     SECTION( "reload liquid container with more liquid than it can hold" ) {
         ammo_jug->fill_with( item( itype_water_clean, calendar::turn_zero, 1 ) );
-        ammo_volume = ammo_jug->total_contained_volume();
+        ammo_volume = ammo_jug->get_contents_volume();
         g->reload_wielded();
         REQUIRE( dummy.activity );
         process_activity( dummy );
-        CHECK( dummy.get_wielded_item()->get_total_capacity() ==
-               dummy.get_wielded_item()->total_contained_volume() );
-        CHECK( ammo_jug->total_contained_volume() +
-               dummy.get_wielded_item()->total_contained_volume() == ammo_volume );
+        CHECK( dummy.get_wielded_item()->get_volume_capacity() ==
+               dummy.get_wielded_item()->get_contents_volume() );
+        CHECK( ammo_jug->get_contents_volume() +
+               dummy.get_wielded_item()->get_contents_volume() == ammo_volume );
     }
 
     SECTION( "liquid reload from map" ) {
@@ -1179,12 +1211,12 @@ TEST_CASE( "reload_liquid_container", "[reload],[liquid]" )
             ammo_jug = item_location( map_cursor( near_point ), &here.add_item( near_point,
                                       item( itype_bottle_plastic ) ) );
             ammo_jug->fill_with( item( itype_water_clean ) );
-            ammo_volume = ammo_jug->total_contained_volume();
+            ammo_volume = ammo_jug->get_contents_volume();
             g->reload_wielded();
             REQUIRE( dummy.activity );
             process_activity( dummy );
-            CHECK( dummy.get_wielded_item()->total_contained_volume() == ammo_volume );
-            CHECK( ammo_jug->total_contained_volume() == units::volume() );
+            CHECK( dummy.get_wielded_item()->get_contents_volume() == ammo_volume );
+            CHECK( ammo_jug->get_contents_volume() == units::volume() );
         }
 
         SECTION( "liquid spill on floor" ) {
@@ -1193,8 +1225,8 @@ TEST_CASE( "reload_liquid_container", "[reload],[liquid]" )
             if( !!dummy.activity ) {
                 process_activity( dummy );
             }
-            CHECK( ammo_jug->total_contained_volume() == units::volume() );
-            CHECK( dummy.get_wielded_item()->total_contained_volume() == units::volume() );
+            CHECK( ammo_jug->get_contents_volume() == units::volume() );
+            CHECK( dummy.get_wielded_item()->get_contents_volume() == units::volume() );
         }
     }
 }

@@ -13,7 +13,6 @@
 #include <set>
 #include <string>
 #include <type_traits>
-#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -26,6 +25,8 @@
 #include "debug.h"
 #include "effect_source.h"
 #include "enums.h"
+#include "global_vars.h"
+#include "math_parser_diag_value.h"
 #include "pimpl.h"
 #include "string_formatter.h"
 #include "type_id.h"
@@ -311,11 +312,11 @@ class Creature : public viewer
         virtual void set_fake( bool fake_value );
         tripoint_bub_ms pos_bub() const;
         tripoint_bub_ms pos_bub( const map &here ) const;
-        inline int posx() const {
-            return pos_bub().x();
+        inline int posx( const map &here ) const {
+            return pos_bub( here ).x();
         }
-        inline int posy() const {
-            return pos_bub().y();
+        inline int posy( const map &here ) const {
+            return pos_bub( here ).y();
         }
         inline int posz() const {
             return pos_abs().z();
@@ -332,6 +333,10 @@ class Creature : public viewer
 
         /** Recreates the Creature from scratch. */
         virtual void normalize();
+    protected:
+        /** Processes effects and bonuses. */
+        void process_turn_no_moves();
+    public:
         /** Processes effects and bonuses and allocates move points based on speed. */
         virtual void process_turn();
         /** Resets the value of all bonus fields to 0. */
@@ -557,6 +562,7 @@ class Creature : public viewer
 
         virtual bool has_weapon() const = 0;
         virtual bool is_hallucination() const = 0;
+        bool hallucination_die( map *here, Creature *killer );
 
         // returns true if the creature has an electric field
         virtual bool is_electrical() const = 0;
@@ -693,10 +699,14 @@ class Creature : public viewer
         bool resists_effect( const effect &e ) const;
 
         // Methods for setting/getting misc key/value pairs.
-        void set_value( const std::string &key, const std::string &value );
+        void set_value( const std::string &key, diag_value value );
+        template <typename... Args>
+        void set_value( const std::string &key, Args... args ) {
+            set_value( key, diag_value{ std::forward<Args>( args )... } );
+        }
         void remove_value( const std::string &key );
-        std::string get_value( const std::string &key ) const;
-        std::optional<std::string> maybe_get_value( const std::string &key ) const;
+        diag_value const &get_value( const std::string &key ) const;
+        diag_value const *maybe_get_value( const std::string &key ) const;
         void clear_values();
 
         virtual units::mass get_weight() const = 0;
@@ -732,6 +742,7 @@ class Creature : public viewer
          */
         virtual int get_num_blocks() const;
         virtual int get_num_dodges() const;
+        virtual int get_num_free_dodges() const;
         virtual int get_num_blocks_bonus() const;
         virtual int get_num_dodges_bonus() const;
         virtual int get_num_dodges_base() const;
@@ -799,8 +810,11 @@ class Creature : public viewer
     protected:
         // Sets the creature's position without any side-effects.
         void set_pos_bub_only( const map &here, const tripoint_bub_ms &p );
+
+    public:
         // Sets the creature's position without any side-effects.
         void set_pos_abs_only( const tripoint_abs_ms &loc );
+    protected:
         // Invoked when the creature's position changes.
         virtual void on_move( const tripoint_abs_ms &old_pos );
         /**anatomy is the plan of the creature's body*/
@@ -814,14 +828,13 @@ class Creature : public viewer
         bodypart_id get_random_body_part( bool main = false ) const;
         /**
          * Returns body parts this creature have.
-         * @param only_main If true, only displays parts that can have hit points
          */
         std::vector<bodypart_id> get_all_body_parts(
             get_body_part_flags = get_body_part_flags::none ) const;
         std::vector<bodypart_id> get_all_body_parts_of_type(
-            body_part_type::type part_type,
+            bp_type part_type,
             get_body_part_flags flags = get_body_part_flags::none ) const;
-        bodypart_id get_random_body_part_of_type( body_part_type::type part_type ) const;
+        bodypart_id get_random_body_part_of_type( bp_type part_type ) const;
         bodypart_id get_root_body_part() const;
         /* Returns all body parts with the given flag */
         std::vector<bodypart_id> get_all_body_parts_with_flag( const json_character_flag &flag ) const;
@@ -835,10 +848,10 @@ class Creature : public viewer
         std::string string_for_ground_contact_bodyparts( const std::vector<bodypart_id> &bps ) const;
 
         /* Returns the number of bodyparts of a given type*/
-        int get_num_body_parts_of_type( body_part_type::type part_type ) const;
+        int get_num_body_parts_of_type( bp_type part_type ) const;
 
         /* Returns the number of broken bodyparts of a given type */
-        int get_num_broken_body_parts_of_type( body_part_type::type part_type ) const;
+        int get_num_broken_body_parts_of_type( bp_type part_type ) const;
 
         const std::map<bodypart_str_id, bodypart> &get_body() const;
         void set_body();
@@ -869,7 +882,9 @@ class Creature : public viewer
 
         float get_part_wetness_percentage( const bodypart_id &id ) const;
 
-        const encumbrance_data &get_part_encumbrance_data( const bodypart_id &id )const;
+        bool compare_encumbrance_data( const bodypart_id &id_a, const bodypart_id &id_b ) const;
+        int get_part_encumbrance( const bodypart_id &id ) const;
+        int get_part_layer_penalty( const bodypart_id &id ) const;
 
         virtual void set_part_hp_cur( const bodypart_id &id, int set );
         void set_part_hp_max( const bodypart_id &id, int set );
@@ -1201,7 +1216,7 @@ class Creature : public viewer
         virtual const std::string &symbol() const = 0;
         virtual bool is_symbol_highlighted() const;
 
-        std::unordered_map<std::string, std::string> &get_values();
+        global_variables::impl_t &get_values();
         void clear_killer();
         // summoned creatures via spells
         void set_summon_time( const time_duration &length );
@@ -1211,6 +1226,8 @@ class Creature : public viewer
         void set_summoner( Creature *summoner );
         void set_summoner( character_id summoner );
         Creature *get_summoner() const;
+
+        void migrate_effects();
     protected:
         // How many moves do we have to work with
         int moves;
@@ -1231,13 +1248,15 @@ class Creature : public viewer
         std::vector<damage_over_time_data> damage_over_time_map;
 
         // Miscellaneous key/value pairs.
-        std::unordered_map<std::string, std::string> values;
+        global_variables::impl_t values;
 
         // used for innate bonuses like effects. weapon bonuses will be
         // handled separately
 
         int num_blocks = 0; // base number of blocks/dodges per turn
         int num_dodges = 0;
+        // Total number of free dodges available per turn. Only available as "bonus".
+        int num_free_dodges = 0;
         int num_blocks_bonus = 0; // bonus ""
         int num_dodges_bonus = 0;
 
@@ -1276,6 +1295,9 @@ class Creature : public viewer
         // Keep a count of moves passed in which resets every 100 turns as a result of practicing archery proficiency
         // This is done this way in order to not destroy focus since `do_aim` is on a per-move basis.
         int archery_aim_counter = 0;
+
+        // This tracks how many times the creature has trained any opponent's skill in melee/weapon skill/dodging in combat.
+        short times_combatted_player = 0;
 
         // Find the body part with the biggest hitsize - we will treat this as the center of mass for targeting
         bodypart_id get_max_hitsize_bodypart() const;

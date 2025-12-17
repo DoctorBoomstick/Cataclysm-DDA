@@ -135,8 +135,7 @@ message(STATUS "${PROJECT_NAME} build options --")
 
 # Preset variables
 if (NOT LANGUAGES)
-    set(LANGUAGES ar cs da de el es_AR es_ES fil_PH fr ga_IE hu id is it_IT ja ko nb nl pl pt_BR ro
-    ru sr tr uk_UA zh_CN zh_TW)
+    set(LANGUAGES "")
 endif ()
 
 if (GIT_BINARY)
@@ -372,6 +371,9 @@ endif ()
 if (SOUND)
     # Sound requires SDL_mixer library
     message(STATUS "Searching for SDL2_mixer library --")
+    if (VCPKG_MANIFEST_MODE)
+        find_package(Vorbis CONFIG REQUIRED)
+    endif()
     find_package(SDL2_mixer)
     if (NOT (SDL2_MIXER_FOUND OR TARGET SDL2_mixer::SDL2_mixer
                               OR TARGET SDL2_mixer::SDL2_mixer-static))
@@ -419,10 +421,10 @@ endif ()
 
 find_program(CCACHE_FOUND ccache)
 if (CCACHE_FOUND AND CATA_CCACHE)
-    set(CMAKE_C_COMPILER_LAUNCHER ccache)
-    set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
-    set(CMAKE_C_LINKER_LAUNCHER ccache)
-    set(CMAKE_CXX_LINKER_LAUNCHER ccache)
+    set(CMAKE_C_COMPILER_LAUNCHER ${CCACHE_FOUND})
+    set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE_FOUND})
+    set(CMAKE_C_LINKER_LAUNCHER ${CCACHE_FOUND})
+    set(CMAKE_CXX_LINKER_LAUNCHER ${CCACHE_FOUND})
 endif ()
 
 add_subdirectory(src)
@@ -432,6 +434,8 @@ if (NOT MSVC)
 endif()
 
 if(TESTS)
+    list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/tests/catch/contrib)
+    include(Catch)
     add_subdirectory(tests)
 endif()
 

@@ -725,6 +725,7 @@
       [ "s_gardening", 200 ],
       [ "s_dive_shop", 300 ],
       [ "museum", 100 ],
+      [ "townhouse_museum01", 1000 ],
       [ "s_music", 200 ],
       [ "s_laundromat", 100 ],
       [ "s_laundromat_1", 100 ],

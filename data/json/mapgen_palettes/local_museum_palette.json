@@ -1,0 +1,31 @@
+[
+  {
+    "type": "palette",
+    "id": "local_museum_palette_common",
+    "parameters": {
+      "wall_type": {
+        "type": "ter_str_id",
+        "default": { "distribution": [ [ "t_brick_wall", 3 ], [ "t_adobe_brick_wall", 2 ], [ "t_rock_wall", 1 ], [ "t_wall_wood", 1 ] ] }
+      },
+      "carpet_type": {
+        "type": "ter_str_id",
+        "default": { "distribution": [ [ "t_carpet_red", 1 ], [ "t_carpet_green", 1 ], [ "t_carpet_purple", 1 ] ] }
+      }
+    },
+    "terrain": {
+      "#": { "param": "wall_type", "fallback": "t_brick_wall" },
+      "^": { "param": "carpet_type", "fallback": "t_carpet_red" },
+      "|": "t_floor",
+      "-": "t_floor_noroof",
+      "$": "t_railing",
+      "<": "t_wood_stairs_down",
+      ">": "t_wood_stairs_up",
+      "o": [ [ "t_door_c", 2 ], [ "t_door_locked", 6 ] ],
+      "i": [ [ "t_door_o", 1 ], [ "t_door_c", 2 ] ],
+      "t": [ [ "t_window_frame", 2 ], [ "t_curtains_alarm", 8 ], [ "t_window_domestic_alarm", 6 ] ],
+      ".": "t_region_groundcover",
+      "+": "t_shingle_flat_roof",
+      " ": "t_open_air"
+    }
+  }
+]

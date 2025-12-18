@@ -999,6 +999,15 @@
   },
   {
     "type": "overmap_terrain",
+    "id": [ "townhouse_museum01_west", "townhouse_museum01_east" ],
+    "name": "local history museum",
+    "copy-from": "generic_city_building",
+    "sym": "M",
+    "color": "white",
+    "extend": { "flags": [ "SOURCE_LUXURY" ] }
+  },
+  {
+    "type": "overmap_terrain",
     "id": "bowling_alley",
     "name": "bowling alley",
     "copy-from": "generic_city_building",

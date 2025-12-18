@@ -1629,6 +1629,15 @@
   },
   {
     "type": "city_building",
+    "id": "townhouse_museum01",
+    "locations": [ "land" ],
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "townhouse_museum01_g_west_north" },
+      { "point": [ 1, 0, 0 ], "overmap": "townhouse_museum01_g_east_north" }
+    ]
+  },
+  {
+    "type": "city_building",
     "id": "s_butcher",
     "locations": [ "land" ],
     "overmaps": [

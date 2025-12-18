@@ -1,7 +1,7 @@
 [
   {
     "type": "mapgen",
-    "om_terrain": [ "townhouse_museum01_g_west", "townhouse_museum01_g_east" ],
+    "om_terrain": [ [ "townhouse_museum01_g_west", "townhouse_museum01_g_east" ] ],
     "//": "Intended to be a former colonial townhouse, refurbished into a volunteer-run history museum.",
     "weight": 500,
     "object": {

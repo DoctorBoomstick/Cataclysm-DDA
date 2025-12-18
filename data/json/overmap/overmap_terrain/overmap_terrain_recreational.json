@@ -999,7 +999,7 @@
   },
   {
     "type": "overmap_terrain",
-    "id": [ "townhouse_museum01_west", "townhouse_museum01_east" ],
+    "id": [ "townhouse_museum01_g_west", "townhouse_museum01_g_east" ],
     "name": "local history museum",
     "copy-from": "generic_city_building",
     "sym": "M",

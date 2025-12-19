@@ -20,11 +20,12 @@
       "$": "t_railing",
       "<": "t_wood_stairs_down",
       ">": "t_wood_stairs_up",
-      "o": [ [ "t_door_c", 2 ], [ "t_door_locked", 6 ] ],
-      "i": [ [ "t_door_o", 1 ], [ "t_door_c", 2 ] ],
+      "D": [ [ "t_door_c", 3 ], [ "t_door_locked", 6 ] ],
+      "d": [ [ "t_door_o", 3 ], [ "t_door_c", 1 ] ],
       "t": [ [ "t_window_frame", 2 ], [ "t_curtains_alarm", 8 ], [ "t_window_domestic_alarm", 6 ] ],
       ".": "t_region_groundcover",
       "+": "t_shingle_flat_roof",
+      "o": "t_column",
       " ": "t_open_air"
     }
   }

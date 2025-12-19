@@ -3,9 +3,13 @@
     "type": "palette",
     "id": "local_museum_palette_common",
     "parameters": {
-      "wall_type": {
+      "original_wall_type": {
         "type": "ter_str_id",
         "default": { "distribution": [ [ "t_brick_wall", 3 ], [ "t_adobe_brick_wall", 2 ], [ "t_rock_wall", 1 ], [ "t_wall_wood", 1 ] ] }
+      },
+      "refurb_wall_type": {
+        "type": "ter_str_id",
+        "default": { "distribution": [ [ "t_wall", 2 ], [ "t_wall_r", 1 ], [ "t_wall_w", 1 ], [ "t_wall_brown", 1 ] ] }
       },
       "carpet_type": {
         "type": "ter_str_id",
@@ -13,9 +17,11 @@
       }
     },
     "terrain": {
-      "#": { "param": "wall_type", "fallback": "t_brick_wall" },
+      "#": { "param": "original_wall_type", "fallback": "t_brick_wall" },
+      "'": { "param": "refurb_wall_type", "fallback": "t_brick_wall" },
       "^": { "param": "carpet_type", "fallback": "t_carpet_red" },
       "|": "t_floor",
+      "/": "t_linoleum_white",
       "-": "t_floor_noroof",
       "$": "t_railing",
       "<": "t_wood_stairs_down",
@@ -26,7 +32,7 @@
       ".": "t_region_groundcover",
       "+": "t_shingle_flat_roof",
       "o": "t_column",
-      " ": "t_open_air"
+      "!": "t_open_air"
     }
   }
 ]

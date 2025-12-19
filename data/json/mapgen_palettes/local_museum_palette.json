@@ -26,15 +26,15 @@
       "$": "t_railing",
       ",": "t_privacy_fence",
       "s": "t_gutter_downspout",
-      "<": "t_wood_stairs_down",
-      ">": "t_wood_stairs_up",
+      ">": "t_wood_stairs_down",
+      "<": "t_wood_stairs_up",
       "D": [ [ "t_door_c", 3 ], [ "t_door_locked", 6 ] ],
       "d": [ [ "t_door_o", 3 ], [ "t_door_c", 1 ] ],
       "t": [ [ "t_window_frame", 2 ], [ "t_curtains_alarm", 8 ], [ "t_window_domestic_alarm", 6 ] ],
       ".": "t_region_groundcover",
       "+": "t_shingle_flat_roof",
-      "o": "t_column",
-      "!": "t_open_air"
+      "=": "t_wood_roof",
+      "o": "t_column"
     }
   }
 ]

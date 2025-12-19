@@ -5,7 +5,7 @@
     "parameters": {
       "original_wall_type": {
         "type": "ter_str_id",
-        "default": { "distribution": [ [ "t_brick_wall", 3 ], [ "t_adobe_brick_wall", 2 ], [ "t_rock_wall", 1 ], [ "t_wall_wood", 1 ] ] }
+        "default": { "distribution": [ [ "t_brick_wall", 2 ], [ "t_rock_wall", 1 ], [ "t_wall_wood", 1 ] ] }
       },
       "refurb_wall_type": {
         "type": "ter_str_id",
@@ -24,6 +24,8 @@
       "/": "t_linoleum_white",
       "-": "t_floor_noroof",
       "$": "t_railing",
+      ",": "t_privacy_fence",
+      "s": "t_gutter_downspout",
       "<": "t_wood_stairs_down",
       ">": "t_wood_stairs_up",
       "D": [ [ "t_door_c", 3 ], [ "t_door_locked", 6 ] ],

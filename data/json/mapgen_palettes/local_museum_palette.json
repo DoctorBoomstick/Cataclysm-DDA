@@ -26,6 +26,8 @@
       "$": "t_railing",
       ",": "t_privacy_fence",
       "s": "t_gutter_downspout",
+      "S": "t_gutter_drop",
+      "_": "t_gutter",
       ">": "t_wood_stairs_down",
       "<": "t_wood_stairs_up",
       "D": [ [ "t_door_c", 3 ], [ "t_door_locked", 6 ] ],

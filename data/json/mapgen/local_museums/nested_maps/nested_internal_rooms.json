@@ -13,7 +13,7 @@
       ],
       "terrain": { "1": "t_floor", "s": "t_floor" },
       "furniture": { "1": "f_indoor_flagpole", "s": "f_statue" },
-      "place_items": [
+      "place_loot": [
         { "item": "historical_flag", "variant": "republican_spain_flag", "x": 1, "y": 3, "chance": 85 },
         { "item": "historical_flag", "variant": "international_brigade_flag", "x": 3, "y": 3, "chance": 85 }
       ]
@@ -26,14 +26,14 @@
       "mapgensize": [ 5, 5 ],
       "rows": [
         "  1  ",
-        "    ",
+        "     ",
         "     ",
         "     ",
         "     "
       ],
       "terrain": { "1": "t_floor" },
       "furniture": { "1": "f_indoor_flagpole" },
-      "place_items": [ { "item": "historical_flag", "variant": "abraham_lincoln_international_brigade_flag", "x": 3, "y": 0, "chance": 85 } ]
+      "place_loot": [ { "item": "historical_flag", "variant": "abraham_lincoln_international_brigade_flag", "x": 3, "y": 0, "chance": 85 } ]
     }
   },
   {

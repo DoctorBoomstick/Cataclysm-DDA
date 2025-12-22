@@ -1,13 +1,12 @@
 [
   {
     "type": "mapgen",
-    "method": "json",
     "nested_mapgen_id": "5x5_townhouse01_g_flags_scw",
     "object": {
       "mapgensize": [ 5, 5 ],
       "rows": [
         "     ",
-        "    ",
+        "     ",
         "s1 1s",
         "     ",
         "     "
@@ -22,7 +21,6 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
     "nested_mapgen_id": "5x5_townhouse01_f2_flags_scw",
     "object": {
       "mapgensize": [ 5, 5 ],
@@ -40,7 +38,6 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
     "nested_mapgen_id": "1x1_placard_scw_1",
     "object": {
       "mapgensize": [ 1, 1 ],

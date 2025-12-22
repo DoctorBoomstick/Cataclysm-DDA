@@ -38,5 +38,22 @@
       "=": "t_wood_roof",
       "o": "t_column"
     }
+  },
+  {
+    "type": "palette",
+    "id": "local_museum_palette_scw",
+    "palettes": [ "local_museum_palette" ],
+    "terrain": {
+      "0": "t_region_groundcover",
+      "1": "t_floor",
+      "2": { "param": "carpet_type", "fallback": "t_carpet_red" },
+      "3": "t_floor"
+    },
+    "signs": { "0": { "signage": "<welcome_scw>" } },
+    "nested": {
+      "1": { "chunks": [ [ "5x5_townhouse01_g_flags_scw", 99 ], [ "null", 1 ] ] },
+      "2": { "chunks": [ [ "5x5_townhouse01_f2_flags_scw", 100 ] ] },
+      "3": { "chunks": [ [ "1x1_placard_scw_1", 100 ] ] }
+    }
   }
 ]

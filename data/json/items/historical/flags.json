@@ -1,0 +1,33 @@
+[
+  {
+    "id": "historical_flag",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "copy-from": "american_flag",
+    "looks_like": "sheet",
+    "name": { "str": "historical flag" },
+    "description": "A large flag, made to fly in even the worst conditions.",
+    "symbol": "[",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "republican_spain_flag",
+        "name": { "str": "Republican Spain flag", "str_pl": "flags of Republican Spain" },
+        "description": "A large flag with three horizontal stripes of equal size: red, yellow, and deep purple from top to bottom.  The national flag of the Second Spanish Republic, the national arms is situated in the yellow stripe’s middle: a shield divided into quarters representing Castile, Leon, Aragon and Navarre.  Granada is represented at the shield’s point, with the whole surmounted by a mural crown and flanked by the twin pillars of Hercules interlaced with a ribbon bearing the legend 'Plus Ultra'."
+      },
+      {
+        "id": "international_brigade_flag",
+        "name": { "str": "battle standard of the International Brigades", "str_pl": "battle standards of the International Brigades" },
+        "description": "A large, high-contrast flag featuring three equal sized horizontal stripes of red, yellow and deep purple.  In the middle, a red, 3-pointed star stands out against the yellow, marking the banner as the catch-all flag for international brigades fighting on behalf of Republican Spain."
+      },
+      {
+        "id": "abraham_lincoln_international_brigade_flag",
+        "name": {
+          "str": "battle standard of the Abraham Lincoln Battalion",
+          "str_pl": "battle standards of the Abraham Lincoln Battalion"
+        },
+        "description": "A large and unassuming flag of deep blue, with three generously spaced lines of bold white text printed across its face:\n'1er. BATALLÓN AMERICANO'\n'ABRAHAM LINCOLN'\n'BRIGADA INTERNACIONAL'"
+      }
+    ]
+  }
+]

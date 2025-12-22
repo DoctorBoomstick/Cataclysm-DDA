@@ -1,0 +1,92 @@
+[
+  {
+    "type": "snippet",
+    "category": "society_name",
+    "text": [
+      { "id": "society_name_1", "text": "<city> Historical Society" },
+      { "id": "society_name_2", "text": "<city> Museum of Local Military History" },
+      { "id": "society_name_3", "text": "<city> Veteran’s Association" },
+      { "id": "society_name_4", "text": "Massachusetts Remembrance Fund: <city> Branch" },
+      { "id": "society_name_5", "text": "New England Arms and Militaria Society: <city> Branch" },
+      { "id": "society_name_6", "text": "<full_name> Institute of Regional History" },
+      { "id": "society_name_7", "text": "<full_name> Memorial Society" },
+      { "id": "society_name_8", "text": "<family_name> Institute to the Fallen" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "museum_welcome_sign_appendix",
+    "text": [
+      { "id": "appendix_1", "text": "Administered by the volunteers of the <society_name>." },
+      {
+        "id": "appendix_2",
+        "text": "Administered and maintained by the volunteers of <society_name>, with generous contributions by the <city> Regional Council."
+      },
+      {
+        "id": "appendix_3",
+        "text": "Administered by the volunteers of <society_name>, sponsored by the generous patronage of <full_name>."
+      },
+      {
+        "id": "appendix_4",
+        "text": "Managed by the voluntary staff of the <society_name>, with special thanks to the <family_name> family."
+      },
+      {
+        "id": "appendix_5",
+        "text": "Caretaken by the volunteers of <society_name>, in loving memory of <full_name>."
+      },
+      {
+        "id": "appendix_6",
+        "text": "Caretaken by the volunteers of <society_name>, in loving memory of <full_name>, <full_name>, and <full_name>."
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "museum_welcome_sign_title_scw",
+    "text": [
+      { "id": "title_1", "text": "<city> Museum of the Spanish Civil War." },
+      { "id": "title_2", "text": "Museum of the Abraham Lincoln Battalion: 1936-1938." },
+      { "id": "title_3", "text": "No Pasarán: American Volunteers in the Spanish Civil War." },
+      { "id": "title_4", "text": "Regional Museum of the 15th International Brigade." },
+      { "id": "title_5", "text": "Jarama to Ebro: Museum of the Abraham Lincoln Brigade." },
+      { "id": "title_6", "text": "15th Brigade Memorial Museum." }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "museum_welcome_sign_quote_scw",
+    "text": [
+      { "id": "quote_1", "text": "'No Pasarán!' - Dolores Ibárruri, 1936." },
+      {
+        "id": "quote_2",
+        "text": "'No men entered earth more honorably than those who died in Spain.' - Ernest Hemingway, 1939."
+      },
+      {
+        "id": "quote_3",
+        "text": "'War is your comrade, struck dead beside you, his shared cigarette still alive in your lips.' - Edwin Rolfe, 1938."
+      },
+      {
+        "id": "quote_4",
+        "text": "'I was born a rebel, a champion of the underdog. May I die that way when my time comes.' - Barney Baley, 1938."
+      },
+      {
+        "id": "quote_5",
+        "text": "'The war has ripped all illusions from even the youngest of volunteers, leaving only the reality... Yet the men of the Lincoln Brigade, knowing it well, chose to fight for Spain’s free existence.' - Edwin Rolfe, 1938."
+      },
+      {
+        "id": "quote_6",
+        "text": "'They gave up everything... fathers, mothers, wives, brothers, sisters and children... You can go proudly, you are history. You are legend.' - Dolores Ibárruri, 1938."
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "museum_welcome_sign_military",
+    "text": [
+      {
+        "id": "welcome_scw",
+        "text": "<museum_welcome_sign_title_scw>\n<museum_welcome_sign_quote_scw>\n<museum_welcome_sign_appendix>"
+      }
+    ]
+  }
+]

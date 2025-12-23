@@ -1,0 +1,140 @@
+[
+  {
+    "id": "antique_army_jacket_4p_wool",
+    "type": "ARMOR",
+    "copy-from": "peacoat",
+    "looks_like": "greatcoat",
+    "//": "This is a catch all item for antique military uniform tunics that follow a traditional button-up, 4-pocket, wool design.",
+    "name": { "str": "antique military tunic" },
+    "description": "A heavy, full-length wool coat.  Cumbersome, but warm and with deep pockets.",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 11, 20 ] },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95, "encumbrance": [ 0, 0 ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "coverage": 25,
+        "encumbrance": [ 11, 13 ],
+        "specifically_covers": [ "leg_draped_l", "leg_draped_r" ],
+        "layers": [ "BELTED" ]
+      },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 11, 11 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "24 cm",
+        "moves": 80,
+        "description": "Hip pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "24 cm",
+        "moves": 80,
+        "description": "Hip pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "13 cm",
+        "moves": 120,
+        "description": "Chest pocket."
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "13 cm",
+        "moves": 120,
+        "description": "Chest pocket."
+      }
+    ],
+    "flags": [ "POCKETS", "COLLAR", "OUTER" ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "coat_m26",
+        "//2": "https://en.topwar.ru/172098-berety-pilotki-i-tjurbany-uniforma-grazhdanskoj-vojny-v-ispanii.html",
+        "//3": "https://en.topwar.ru/172155-pilotki-bez-kistochek-i-kombinezony-mono-uniforma-grazhdanskoj-vojny-v-ispanii.html",
+        "//4": "https://www.militarytrader.com/militaria-collectibles/spanish-pride",
+        "name": { "str": "antique military tunic" },
+        "description": "An original, or reproduction, example of the Spanish army’s M26 standard service tunic: formed from wool and with pressed wooden buttons.   Olive green in color with yellowish undertones, the jacket possesses two hip and pleated chest pockets, with a rolled collar fitted with brass insignia and a diamond shaped patch on the left breast denoting branch of service.",
+        "color": "brown"
+      },
+      {
+        "id": "coat_ag",
+        "//5": "https://en.topwar.ru/172155-pilotki-bez-kistochek-i-kombinezony-mono-uniforma-grazhdanskoj-vojny-v-ispanii.html",
+        "//6": "https://balagan.info/spanish-civil-war-painting-guide-paramilitary",
+        "name": { "str": "antique paramilitary tunic" },
+        "description": "A royal blue tunic with 4 patch pockets and silver buttons, with a branch badge pinned to the collar: a Silver crown over a shield bearing the letters 'GS'.",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "id": "hat_forage",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "copy-from": "hat_field",
+    "looks_like": "hat_field",
+    "name": { "str": "forage cap" },
+    "description": "A soft, somewhat wedge-shaped hat with a flat top and leather trimmings: the headwear of choice of 20th-century military personnel when bullets aren’t imminently flying, and, sometimes, even when they are.",
+    "flags": [ "VARSIZE" ],
+    "//": "For sources on Spanish army colors, piping and insignia, see, https://balagan.info/spanish-civil-war-painting-guide-republican, https://balagan.info/spanish-civil-war-painting-guide-nationalist-and-pre-war, and https://balagan.info/spanish-civil-war-painting-guide-paramilitary",
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "spanish_infantry",
+        "name": { "str": "khaki forage cap" },
+        "description": "This particular example is predominantly khaki, being both piped and tasseled in red.  A bugle-horn, crossed muskets and sword insignia is pinned to the front, identifying the wearer as serving with the pre-1936 or Nationalist Spanish infantry.",
+        "color": "brown"
+      },
+      {
+        "id": "spanish_cavalry",
+        "name": { "str": "khaki forage cap" },
+        "description": "This particular example is predominantly khaki, being both piped and tasseled in light blue.  Two crossed silver lances identify the wearer as serving with the pre-1936 or Nationalist Spanish cavalry.",
+        "color": "brown"
+      },
+      {
+        "id": "spanish_armoured",
+        "name": { "str": "khaki forage cap" },
+        "description": "This particular example is predominantly khaki, being both piped and tasseled in black.  A little silver Renault tank is pinned to the front, identifying the wearer as serving with the pre-1936 or Nationalist Spanish tank corps.",
+        "color": "brown"
+      },
+      {
+        "id": "spanish_medical",
+        "name": { "str": "khaki forage cap" },
+        "description": "This particular example is predominantly khaki, being both piped and tasseled in yellow.  A silver caduceus insignia is pinned to the front, identifying the wearer as serving with the pre-1936 or Nationalist Spanish medical corps.",
+        "color": "brown"
+      },
+      {
+        "id": "spanish_legion",
+        "name": { "str": "khaki forage cap" },
+        "description": "This particular example is predominantly khaki, being both piped and tasseled in red.  Golden crossed muskets, halberd and crossbow identify the wearer as serving with the Nationalist Spanish Foreign Legion.  Bad news.",
+        "color": "brown"
+      },
+      {
+        "id": "spanish_republican",
+        "name": { "str": "khaki forage cap" },
+        "description": "This particular example is predominantly khaki, being piped in red.  A small red star is pinned to the front, identifying the wearer as a fighter of the Spanish Republican government.",
+        "color": "brown"
+      },
+      {
+        "id": "spanish_anarchist",
+        "name": { "str": "black and red forage cap" },
+        "description": "This particular example is made from a base layer of red, crossed diagonally on either side with black, marking the wearer as a member of the anarchist movement in Spanish Republican forces.  Wearing it has an equal chance of either attracting señoritas, or bullets.",
+        "color": "red"
+      },
+      {
+        "id": "spanish_assault_guard",
+        "name": { "str": "blue forage cap" },
+        "description": "This particular example is predominantly royal blue, being both piped and tasseled in white.  A silver crown over a shield bearing the letters 'GS' identify the wearer as serving with the Spanish Assault Guards.",
+        "color": "blue"
+      }
+    ]
+  }
+]

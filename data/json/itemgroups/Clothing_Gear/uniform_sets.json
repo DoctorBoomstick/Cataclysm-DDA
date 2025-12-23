@@ -1,0 +1,63 @@
+[
+  {
+    "id": "mannequin_spanish_soldier",
+    "type": "item_group",
+    "//": "A set of clothing to represent a national soldier of Spain prior to the civil war.",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [
+          { "item": "helmet_army_outdated", "variant": "helmet_m26", "prob": 20 },
+          { "item": "hat_forage", "variant": "spanish_infantry", "prob": 120 },
+          { "item": "hat_forage", "variant": "spanish_cavalry", "prob": 30 },
+          { "item": "hat_forage", "variant": "spanish_armoured", "prob": 45 },
+          { "item": "hat_forage", "variant": "spanish_medical", "prob": 45 },
+          { "item": "hat_forage", "variant": "spanish_legion", "prob": 30 }
+        ]
+      },
+      { "item": "antique_army_jacket_4p_wool", "variant": "coat_m26" },
+      { "item": "dress_shirt", "variant": "khaki" },
+      { "distribution": [ { "item": "suspenders_cloth", "prob": 50 }, { "item": "suspenders_leather", "prob": 50 } ] },
+      {
+        "distribution": [
+          { "item": "breeches", "prob": 30 },
+          { "item": "pants", "variant": "generic_pants", "prob": 40 },
+          { "item": "pants", "variant": "pants_british_khaki", "prob": 30 }
+        ]
+      },
+      {
+        "distribution": [
+          { "collection": [ { "item": "boots" }, { "item": "leg_wraps", "variant": "khaki" } ], "prob": 40 },
+          { "item": "knee_high_boots", "variant": "generic_knee_high_boots", "prob": 60 }
+        ]
+      },
+      { "item": "leather_belt" },
+      { "item": "ammo_pouch" },
+      { "item": "ammo_pouch", "prob": 75 },
+      { "item": "poncho", "prob": 25 },
+      { "item": "rucksack", "prob": 10 }
+    ]
+  },
+  {
+    "id": "mannequin_assault_guard",
+    "type": "item_group",
+    "//": "A set of clothing to represent a Spanish paramilitary assault guardsman prior to the civil war.",
+    "subtype": "collection",
+    "entries": [
+      { "item": "hat_forage", "variant": "spanish_assault_guard" },
+      { "item": "antique_army_jacket_4p_wool", "variant": "coat_ag" },
+      { "item": "dress_shirt", "variant": "blue" },
+      { "distribution": [ { "item": "suspenders_cloth", "prob": 50 }, { "item": "suspenders_leather", "prob": 50 } ] },
+      { "item": "pants", "variant": "pants_blue" },
+      {
+        "distribution": [
+          { "item": "dress_shoes", "prob": 40 },
+          { "item": "boots", "prob": 40 },
+          { "item": "knee_high_boots", "variant": "generic_knee_high_boots", "prob": 30 }
+        ]
+      },
+      { "item": "leather_belt" },
+      { "item": "ammo_pouch" }
+    ]
+  }
+]

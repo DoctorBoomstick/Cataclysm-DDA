@@ -351,6 +351,13 @@
         "description": "An old SSh-68 combat helmet from the Soviet Union, likely brought to The States by a collector or migrant.  It is designed to protect against shrapnel and some small arms and will do little to stop a rifle round.",
         "color": "light_red",
         "weight": 5
+      },
+      {
+        "id": "helmet_m26",
+        "name": { "str": "M26 helmet" },
+        "description": "An old-world helmet from before World War II, the M26 was the standard combat helmet of national Spanish forces before the civil war.  Possessing flared sides leading up to a rounded dome, the helmet is visually reminiscent of older German Stahl helms, though its interior is fitted with a simple 3-tongued liner of pig leather.  Considering the magnanimous steps mankind had taken in inventing new and creative ways of launching lead past the speed of sound, this helmet is probably best left as an antique against any ballistic threats.",
+        "color": "dark_gray",
+        "weight": 1
       }
     ],
     "melee_damage": { "bash": 2 }

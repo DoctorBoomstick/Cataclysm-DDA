@@ -42,6 +42,12 @@
   {
     "type": "palette",
     "id": "local_museum_palette_scw",
+    "parameters": {
+      "carpet_type": {
+        "type": "ter_str_id",
+        "default": { "distribution": [ [ "t_carpet_red", 1 ], [ "t_carpet_green", 1 ], [ "t_carpet_purple", 1 ] ] }
+      }
+    },
     "palettes": [ "local_museum_palette_common" ],
     "terrain": {
       "0": "t_region_groundcover",
@@ -49,11 +55,11 @@
       "2": { "param": "carpet_type", "fallback": "t_carpet_red" },
       "3": "t_floor"
     },
-    "signs": { "0": { "signage": "<welcome_scw>" } },
+    "signs": { "0": { "snippet": "welcome_scw" } },
     "nested": {
-      "1": { "chunks": [ [ "5x5_townhouse01_g_flags_scw", 99 ], [ "null", 1 ] ] },
-      "2": { "chunks": [ [ "5x5_townhouse01_f2_flags_scw", 100 ] ] },
-      "3": { "chunks": [ [ "1x1_placard_scw_1", 100 ] ] }
+      "1": { "chunks": [ [ "5x5_townhouse01_g_flags_scw" ] ] },
+      "2": { "chunks": [ [ "5x5_townhouse01_f2_flags_scw" ] ] },
+      "3": { "chunks": [ [ "9x9_hallway_scw_1", 10 ], [ "9x9_hallway_scw_2", 10 ], [ "9x9_hallway_scw_3", 10 ] ] }
     }
   }
 ]

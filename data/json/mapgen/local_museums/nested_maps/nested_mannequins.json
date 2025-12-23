@@ -1,0 +1,24 @@
+[
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "1x1_spanish_soldier",
+    "object": {
+      "mapgensize": [ 1, 1 ],
+      "rows": [ "1" ],
+      "terrain": { "1": "t_floor" },
+      "furniture": { "1": "f_mannequin" },
+      "items": { "1": { "item": "mannequin_spanish_soldier" } }
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "1x1_assault_guard",
+    "object": {
+      "mapgensize": [ 1, 1 ],
+      "rows": [ "1" ],
+      "terrain": { "1": "t_floor" },
+      "furniture": { "1": "f_mannequin" },
+      "items": { "1": { "item": "mannequin_assault_guard" } }
+    }
+  }
+]

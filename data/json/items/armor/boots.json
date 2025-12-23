@@ -1564,6 +1564,42 @@
     "armor": [ { "encumbrance": 5, "coverage": 65, "covers": [ "foot_l", "foot_r" ] } ]
   },
   {
+    "id": "leg_wraps",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "looks_like": "leg_warmers",
+    "name": { "str_sp": "leg wraps (pair)" },
+    "description": "Leg wraps, gaiters, puttees, portyanki... much like Jehovah, these unassuming strips of wool have many names, yet all perform the same function.  Standard garments for most militaries in the early 20th century, they are designed to be wrapped about the lower leg when wearing ankle boots to protect against the ingress of dirt, water, and debris.",
+    "weight": "256 g",
+    "volume": "512 ml",
+    "//": "Weight calculated based on 96x4 inch 480gsm wool serge with 32 inch tapes.",
+    "price": "16 USD",
+    "price_postapoc": "75 cent",
+    "material": [ "wool" ],
+    "symbol": "[",
+    "color": "green",
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 100,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ]
+      }
+    ],
+    "warmth": 15,
+    "material_thickness": 1.5,
+    "flags": [ "SKINTIGHT", "OVERSIZE" ],
+    "variant_type": "generic",
+    "variants": [
+      {
+        "id": "khaki",
+        "name": { "str_sp": "khaki leg wraps (pair)" },
+        "description": "These ones are a shade of military-regulation khaki.",
+        "append": true
+      }
+    ]
+  },
+  {
     "id": "geta",
     "type": "ITEM",
     "subtypes": [ "ARMOR" ],

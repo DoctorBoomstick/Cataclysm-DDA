@@ -1030,7 +1030,16 @@
         "color": "light_gray",
         "append": true,
         "description": "This one is gray."
+      },
+      {
+        "id": "khaki",
+        "name": { "str": "khaki dress shirt" },
+        "color": "dark_gray",
+        "append": true,
+        "description": "This one is black."
       }
+
+
     ],
     "pocket_data": [
       {

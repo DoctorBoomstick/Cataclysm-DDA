@@ -5,9 +5,8 @@
     "object": {
       "mapgensize": [ 1, 1 ],
       "rows": [ "1" ],
-      "terrain": { "1": "t_floor" },
       "furniture": { "1": "f_mannequin" },
-      "items": { "1": { "item": "mannequin_spanish_soldier" } }
+      "items": { "1": { "item": "mannequin_spanish_soldier", "chance": 100 } }
     }
   },
   {
@@ -16,9 +15,8 @@
     "object": {
       "mapgensize": [ 1, 1 ],
       "rows": [ "1" ],
-      "terrain": { "1": "t_floor" },
       "furniture": { "1": "f_mannequin" },
-      "items": { "1": { "item": "mannequin_assault_guard" } }
+      "items": { "1": { "item": "mannequin_assault_guard", "chance": 100 } }
     }
   }
 ]

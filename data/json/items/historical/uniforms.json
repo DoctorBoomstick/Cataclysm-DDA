@@ -1,7 +1,8 @@
 [
   {
     "id": "antique_army_jacket_4p_wool",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "copy-from": "peacoat",
     "looks_like": "greatcoat",
     "//": "This is a catch all item for antique military uniform tunics that follow a traditional button-up, 4-pocket, wool design.",

@@ -57,8 +57,8 @@
     },
     "signs": { "0": { "snippet": "welcome_scw" } },
     "nested": {
-      "1": { "chunks": [ [ "5x5_townhouse01_g_flags_scw" ] ] },
-      "2": { "chunks": [ [ "5x5_townhouse01_f2_flags_scw" ] ] },
+      "1": { "chunks": "5x5_townhouse01_g_flags_scw" },
+      "2": { "chunks": "5x5_townhouse01_f2_flags_scw" },
       "3": { "chunks": [ [ "9x9_hallway_scw_1", 10 ], [ "9x9_hallway_scw_2", 10 ], [ "9x9_hallway_scw_3", 10 ] ] }
     }
   }

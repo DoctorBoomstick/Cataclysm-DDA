@@ -36,7 +36,7 @@
   },
   {
     "type": "mapgen",
-    "nested_mapgen_id": "9x9_hallway_scw_1",
+    "nested_mapgen_id": "9x9_hallway_scw",
     "object": {
       "mapgensize": [ 9, 9 ],
       "rows": [
@@ -59,7 +59,7 @@
   },
   {
     "type": "mapgen",
-    "nested_mapgen_id": "9x9_hallway_scw_2",
+    "nested_mapgen_id": "9x9_hallway_scw",
     "object": {
       "mapgensize": [ 9, 9 ],
       "rows": [
@@ -82,7 +82,7 @@
   },
   {
     "type": "mapgen",
-    "nested_mapgen_id": "9x9_hallway_scw_3",
+    "nested_mapgen_id": "9x9_hallway_scw",
     "object": {
       "mapgensize": [ 9, 9 ],
       "rows": [

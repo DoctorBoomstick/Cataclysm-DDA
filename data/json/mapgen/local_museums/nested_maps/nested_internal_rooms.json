@@ -53,7 +53,7 @@
       "furniture": { "c": "f_displaycase", "o": "f_indoor_plant" },
       "nested": {
         "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 10 ] ] },
-        "1": { "chunks": [ [ "1x1_placard_scw_1" ] ] }
+        "1": { "chunks": [ "1x1_placard_scw_1" ] }
       }
     }
   },
@@ -76,7 +76,7 @@
       "furniture": { "c": "f_displaycase", "o": "f_indoor_plant" },
       "nested": {
         "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 10 ] ] },
-        "1": { "chunks": [ [ "1x1_placard_scw_1" ] ] }
+        "1": { "chunks": [ "1x1_placard_scw_1" ] }
       }
     }
   },
@@ -99,7 +99,7 @@
       "furniture": { "c": "f_displaycase", "o": "f_indoor_plant" },
       "nested": {
         "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 10 ] ] },
-        "1": { "chunks": [ [ "1x1_placard_scw_1" ] ] }
+        "1": { "chunks": [ "1x1_placard_scw_1" ] }
       }
     }
   }

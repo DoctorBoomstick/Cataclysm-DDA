@@ -640,5 +640,67 @@
         "weight": 40
       }
     ]
+  },
+  {
+    "type": "ITEM",
+    "id": "historical_doc_political_scw",
+    "category": "other",
+    "conditional_names": [
+      {
+        "type": "SNIPPET_ID",
+        "condition": "documents_political_scw",
+        "value": "document_1",
+        "name": { "str_sp": "bundle of old letters" }
+      },
+      {
+        "type": "SNIPPET_ID",
+        "condition": "documents_political_scw",
+        "value": "document_2",
+        "name": { "str_sp": "crumpled letter" }
+      },
+      {
+        "type": "SNIPPET_ID",
+        "condition": "documents_political_scw",
+        "value": "document_3",
+        "name": { "str_sp": "antique letter" }
+      },
+      {
+        "type": "SNIPPET_ID",
+        "condition": "documents_political_scw",
+        "value": "document_4",
+        "name": { "str_sp": "bundle of old letters" }
+      },
+      {
+        "type": "SNIPPET_ID",
+        "condition": "documents_political_scw",
+        "value": "document_5",
+        "name": { "str_sp": "bundle of old letters" }
+      }
+    ],
+    "description": "An antique document regarding political events during and shortly before the Spanish Civil War.",
+    "weight": "3 g",
+    "volume": "5 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "symbol": ",",
+    "color": "white",
+    "material": [ "paper" ],
+    "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ],
+    "variants": [
+      {
+        "id": "tag_original",
+        "//": "inherit name from item",
+        "description": "Item:\nHistorical document.\n\nAccession Date:\n<donation_date>\n\nProvidence:\n<donor_documents>",
+        "expand_snippets": true,
+        "weight": 1
+      },
+      {
+        "id": "tag_saa",
+        "//": "inherit name from item",
+        "description": { "str": "<tag_saa_scw>", "//~": "NO_I18N" },
+        "expand_snippets": true,
+        "weight": 0
+      }
+    ]
   }
 ]

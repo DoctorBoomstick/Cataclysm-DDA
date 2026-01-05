@@ -92,48 +92,56 @@
         "id": "spanish_infantry",
         "name": { "str": "khaki forage cap" },
         "description": "This particular example is predominantly khaki, being both piped and tasseled in red.  A bugle-horn, crossed muskets and sword insignia is pinned to the front, identifying the wearer as serving with the pre-1936 or Nationalist Spanish infantry.",
+        "expand_snippets": true,
         "color": "brown"
       },
       {
         "id": "spanish_cavalry",
         "name": { "str": "khaki forage cap" },
         "description": "This particular example is predominantly khaki, being both piped and tasseled in light blue.  Two crossed silver lances identify the wearer as serving with the pre-1936 or Nationalist Spanish cavalry.",
+        "expand_snippets": true,
         "color": "brown"
       },
       {
         "id": "spanish_armoured",
         "name": { "str": "khaki forage cap" },
         "description": "This particular example is predominantly khaki, being both piped and tasseled in black.  A little silver Renault tank is pinned to the front, identifying the wearer as serving with the pre-1936 or Nationalist Spanish tank corps.",
+        "expand_snippets": true,
         "color": "brown"
       },
       {
         "id": "spanish_medical",
         "name": { "str": "khaki forage cap" },
         "description": "This particular example is predominantly khaki, being both piped and tasseled in yellow.  A silver caduceus insignia is pinned to the front, identifying the wearer as serving with the pre-1936 or Nationalist Spanish medical corps.",
+        "expand_snippets": true,
         "color": "brown"
       },
       {
         "id": "spanish_legion",
         "name": { "str": "khaki forage cap" },
         "description": "This particular example is predominantly khaki, being both piped and tasseled in red.  Golden crossed muskets, halberd and crossbow identify the wearer as serving with the Nationalist Spanish Foreign Legion.  Bad news.",
+        "expand_snippets": true,
         "color": "brown"
       },
       {
         "id": "spanish_republican",
         "name": { "str": "khaki forage cap" },
         "description": "This particular example is predominantly khaki, being piped in red.  A small red star is pinned to the front, identifying the wearer as a fighter of the Spanish Republican government.",
+        "expand_snippets": true,
         "color": "brown"
       },
       {
         "id": "spanish_anarchist",
         "name": { "str": "black and red forage cap" },
         "description": "This particular example is made from a base layer of red, crossed diagonally on either side with black, marking the wearer as a member of the anarchist movement in Spanish Republican forces.  Wearing it has an equal chance of either attracting señoritas, or bullets.",
+        "expand_snippets": true,
         "color": "red"
       },
       {
         "id": "spanish_assault_guard",
         "name": { "str": "blue forage cap" },
         "description": "This particular example is predominantly royal blue, being both piped and tasseled in white.  A silver crown over a shield bearing the letters 'GS' identify the wearer as serving with the Spanish Assault Guards.",
+        "expand_snippets": true,
         "color": "blue"
       }
     ]

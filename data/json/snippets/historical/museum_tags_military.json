@@ -1,0 +1,86 @@
+[
+  {
+    "type": "snippet",
+    "category": "donation_date",
+    "text": [
+      { "id": "year_1995", "text": "1995" },
+      { "id": "year_1996", "text": "1996" },
+      { "id": "year_1997", "text": "1997" },
+      { "id": "year_1998", "text": "1998" },
+      { "id": "year_1999", "text": "1999" },
+      { "id": "year_2000", "text": "2000" },
+      { "id": "year_2001", "text": "2001" },
+      { "id": "year_2002", "text": "2002" },
+      { "id": "year_2003", "text": "2003" },
+      { "id": "year_2004", "text": "2004" },
+      { "id": "year_2005", "text": "2005" },
+      { "id": "year_2006", "text": "2006" },
+      { "id": "year_2007", "text": "2007" },
+      { "id": "year_2008", "text": "2008" },
+      { "id": "year_2009", "text": "2009" },
+      { "id": "year_2010", "text": "2010" },
+      { "id": "year_2011", "text": "2011" },
+      { "id": "year_2012", "text": "2012" },
+      { "id": "year_2013", "text": "2013" },
+      { "id": "year_2014", "text": "2014" },
+      { "id": "year_2015", "text": "2015" },
+      { "id": "year_2016", "text": "2016" },
+      { "id": "year_2017", "text": "2017" },
+      { "id": "year_2018", "text": "2018" },
+      { "id": "year_2019", "text": "2019" },
+      { "id": "year_2020", "text": "2020" },
+      { "id": "year_2021", "text": "2021" },
+      { "id": "year_2022", "text": "2022" },
+      { "id": "year_2023", "text": "2023" },
+      { "id": "year_2024", "text": "2024" },
+      { "id": "year_2025", "text": "2025" }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "donor_documents",
+    "text": [
+      { "id": "donor_1", "text": "Donated from the familial archives of the <family_name> family." },
+      {
+        "id": "donor_2",
+        "text": "Recovered from the residence of the late <full_name>—a former veteran—after their passing."
+      },
+      {
+        "id": "donor_3",
+        "text": "Recovered from the holdings of a local public library after the building’s closing. The documents were found stored within molded cardboard boxes crusted with rat droppings in the building’s basement, which itself was suffering from extensive flood damage. Painstaking measures have been taken to restore the documents to readable condition by our staff."
+      },
+      {
+        "id": "donor_4",
+        "text": "Rescued from a consignment of garbage which had been thrown out of the late <full_name>’s home by their next of kin. The heap contained several other boxes of primary source artifacts similar to that displayed here; however, unfortunately, before volunteers could return to pick up the rest it was carted away by public waste disposal. Kindly avoid following the above example."
+      },
+      { "id": "donor_5", "text": "Provided into the museum’s trust by the local Veteran’s Association." },
+      { "id": "donor_6", "text": "Entrusted to the museum’s care by <city> City Council’s archival holdings." },
+      {
+        "id": "donor_7",
+        "text": "Provided as a donation to the museum’s collection by foreign visitors who wished to remain anonymous."
+      },
+      {
+        "id": "donor_8",
+        "text": "Provided as a donation to the museum’s collection by local visitors who wished to remain anonymous."
+      },
+      {
+        "id": "donor_9",
+        "text": "Donated to the museum’s holdings by the next of kin of the late <full_name>: a former professor of social history at Boston University who had been in the process of collecting research materials for a book publication at the time of their death."
+      },
+      {
+        "id": "donor_10",
+        "text": "Provided to the museum’s care by members of the local National Guard who had deployed to Iraq in 1991, and found the displayed documents hidden in a bricked-up room within a former private residence while on campaign. How the documents came to be there is still unknown."
+      }
+    ]
+  },
+  {
+    "type": "snippet",
+    "category": "tag_saa_scw",
+    "text": [
+      {
+        "id": "tag_1",
+        "text": "Item:\nColt Single Action Army, .45 Colt.\nSerial Number: 164,<random_number><random_number><random_number>.\n\nAccession Date:\n<donation_date>\n\nDescription:\nThis revolver bears the 'U.S.' mark of government ownership. Privately carried by <full_name>, Military Chaplain to the 26th 'Yankee' Division during World War I, it was originally inherited from his father, a veteran of the Spanish-American War. This weapon saw action during the Meuse-Argonne Offensive. Three notches are carved into the walnut grips, corresponding to three German soldiers who fell before the Chaplain as he advanced into no-man's-land to rescue wounded men pinned down by machine gun fire. Diary entries from the Chaplain’s war journal recount that he would recite the Rosary three times each night over the pistol.\n\nIn 1936, following the Nationalist uprising in Spain, the Chaplain mailed the weapon to a former army friend, <full_name>, who was working in Córdoba. When the Nationalists took the city, this revolver was found next to the man’s body, with one round fired into his head. The weapon spent the remainder of the century as the war trophy of a Nationalist Lieutenant, before being sold to a Massachusetts collector by the Lieutenant’s children. It has been repatriated to New England, exactly where it began."
+      }
+    ]
+  }
+]

@@ -166,6 +166,7 @@
         "Ẅ": "t_pavement",
         "R": "t_pavement",
         "n": "t_pavement",
+        "M": "t_pavement",
         "*": "t_pavement_y",
         "=": "t_zebra",
         "+": "t_sidewalk",
@@ -177,7 +178,6 @@
         "f": "t_linoleum_gray",
         "T": "t_linoleum_gray",
         "J": "t_linoleum_gray",
-        "M": "t_linoleum_gray",
         "m": "t_linoleum_gray",
         "P": "t_linoleum_gray",
         "p": "t_linoleum_gray",
@@ -293,7 +293,18 @@
         "$": { "vehicle": "shopping_cart" },
         "£": { "vehicle": "shopping_cart" },
         "¢": { "vehicle": "shopping_cart", "rotation": 90 }
-      }
+      },
+      "place_monsters": [
+        { "monster": "GROUP_ZOMBIE", "x": [ 0, 23 ], "y": [ 0, 23 ], "density": 0.1 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 24, 47 ], "y": [ 0, 23 ], "density": 0.1 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 48, 71 ], "y": [ 0, 23 ], "density": 0.5 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 0, 23 ], "y": [ 24, 47 ], "density": 0.5 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 24, 47 ], "y": [ 24, 47 ], "density": 0.5 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 48, 71 ], "y": [ 24, 47 ], "density": 0.5 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 0, 23 ], "y": [ 48, 71 ], "density": 0.5 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 24, 47 ], "y": [ 48, 71 ], "density": 0.5 },
+        { "monster": "GROUP_ZOMBIE", "x": [ 48, 71 ], "y": [ 48, 71 ], "density": 0.5 }
+      ]
     }
   },
   {

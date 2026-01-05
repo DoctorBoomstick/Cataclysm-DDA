@@ -31,6 +31,7 @@
       [ "thermometer", 3 ],
       [ "hygrometer", 3 ],
       [ "barometer", 3 ],
+      { "item": "mobile_weather_station", "prob": 1, "charges": [ 0, 1000 ] },
       { "item": "electrohack", "prob": 3, "charges": [ 0, 100 ] },
       [ "RAM", 22 ],
       [ "screwdriver", 40 ],
@@ -458,7 +459,8 @@
       [ "jumpsuit", 20 ],
       [ "mask_dust", 65 ],
       [ "wrapped_rad_badge", 15 ],
-      [ "glasses_safety", 40 ],
+      [ "glasses_safety", 5 ],
+      [ "goggles_chem", 35 ],
       [ "goggles_welding", 70 ],
       [ "textbook_atomic_lab", 7 ],
       [ "recipe_lab_elec", 15 ],
@@ -479,7 +481,8 @@
       [ "gloves_rubber", 20 ],
       [ "apron_plastic", 20 ],
       { "item": "mask_filter", "prob": 30, "charges": [ 0, 100 ] },
-      [ "glasses_safety", 40 ],
+      [ "goggles_chem", 35 ],
+      [ "glasses_safety", 5 ],
       { "item": "lighter", "prob": 60, "charges": [ 0, 100 ] },
       [ "boots_rubber", 20 ],
       [ "recipe_medicalmut", 2 ],
@@ -637,5 +640,11 @@
     "//": "This group was created automatically and may contain errors.",
     "container-item": "bottle_glass",
     "entries": [ { "item": "chem_citric_acid", "container-item": "null", "count": [ 100, -1 ] } ]
+  },
+  {
+    "type": "item_group",
+    "id": "any_centrifuge",
+    "subtype": "distribution",
+    "items": [ [ "microcentrifuge", 1 ], [ "centrifuge", 1 ] ]
   }
 ]

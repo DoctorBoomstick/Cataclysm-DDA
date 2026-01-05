@@ -75,7 +75,7 @@ extern std::map<std::string, std::list<input_event>> quick_shortcuts_map;
  * Changes that break backwards compatibility should bump this number, so the game can
  * load a legacy format loader.
  */
-const int savegame_version = 38;
+const int savegame_version = 39;
 
 /*
  * This is a global set by detected version header in .sav, maps.txt, or overmap.
@@ -674,10 +674,18 @@ void overmap::unserialize( const JsonObject &jsobj )
                     result = hordes.spawn_entity( monster_location, new_monster );
                 }
 
-                result->second.destination.deserialize( monster_map_json.next_value() );
-                result->second.tracking_intensity = monster_map_json.next_int();
-                result->second.last_processed.deserialize( monster_map_json.next_value() );
-                result->second.moves = monster_map_json.next_int();
+                if( result != std::unordered_map<tripoint_abs_ms, horde_entity>::iterator() ) {
+                    result->second.destination.deserialize( monster_map_json.next_value() );
+                    result->second.tracking_intensity = monster_map_json.next_int();
+                    result->second.last_processed.deserialize( monster_map_json.next_value() );
+                    result->second.moves = monster_map_json.next_int();
+                } else {
+                    // We deserialized something nasty, skip the rest of the stored values
+                    monster_map_json.next_value();
+                    monster_map_json.next_int();
+                    monster_map_json.next_value();
+                    monster_map_json.next_int();
+                }
             }
         } else if( name == "map_data" ) {
             JsonArray map_data_json = om_member;

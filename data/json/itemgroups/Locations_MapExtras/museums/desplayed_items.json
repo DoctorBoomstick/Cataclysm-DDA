@@ -1,0 +1,22 @@
+[
+  {
+    "type": "item_group",
+    "id": "display_scw_political",
+    "//": "these are items regarding or reinforcing the general political situation of the Spanish Civil War from an American Perspective, intended to spawn within suitably themed rooms.",
+    "items": [
+      {
+        "item": "museum_tag",
+        "variant": "tag_document",
+        "contents-item": [ "historical_document_political_scw" ],
+        "prob": 15
+      },
+      {
+        "collection": [
+          { "item": "museum_tag", "variant": "tag_scw_saa", "contents-item": [ "colt_saa", "variant", "colt_saa" ] },
+          { "item": "historical_document_political_scw", "snippets": "document_3" }
+        ],
+        "prob": 1
+      }
+    ]
+  }
+]

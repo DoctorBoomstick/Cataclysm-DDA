@@ -643,7 +643,7 @@
   },
   {
     "type": "ITEM",
-    "id": "historical_doc_political_scw",
+    "id": "historical_document_political_scw",
     "category": "other",
     "conditional_names": [
       {
@@ -685,21 +685,45 @@
     "symbol": ",",
     "color": "white",
     "material": [ "paper" ],
+    "snippet_category": "documents_political_scw",
+    "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ]
+  },
+  {
+    "type": "ITEM",
+    "id": "museum_tag",
+    "category": "other",
+    "name": { "str": "information tag" },
+    "description": "A small laminated tag on an elastic lanyard, intended to contain various information pertaining to an item to which it is affixed.",
+    "weight": "12 mg",
+    "volume": "1 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "symbol": ",",
+    "color": "white",
+    "material": [ "paper" ],
     "flags": [ "TRADER_AVOID", "PAPER_SHAPED" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "max_item_length": "200 cm",
+        "moves": 80
+      }
+    ],
     "variants": [
       {
-        "id": "tag_original",
+        "id": "tag_document",
         "//": "inherit name from item",
         "description": "Item:\nHistorical document.\n\nAccession Date:\n<donation_date>\n\nProvidence:\n<donor_documents>",
-        "expand_snippets": true,
-        "weight": 1
+        "expand_snippets": true
       },
       {
-        "id": "tag_saa",
+        "id": "tag_scw_saa",
         "//": "inherit name from item",
         "description": { "str": "<tag_saa_scw>", "//~": "NO_I18N" },
-        "expand_snippets": true,
-        "weight": 0
+        "expand_snippets": true
       }
     ]
   }

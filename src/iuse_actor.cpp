@@ -37,6 +37,7 @@
 #include "dialogue_helpers.h"
 #include "effect.h"
 #include "effect_on_condition.h"
+#include "effect_source.h"
 #include "enum_conversions.h"
 #include "enums.h"
 #include "explosion.h"
@@ -641,14 +642,6 @@ void sound_iuse::load( const JsonObject &obj, const std::string & )
     optional( obj, false, "sound_volume", sound_volume, 0 );
     optional( obj, false, "sound_id", sound_id, "misc" );
     optional( obj, false, "sound_variant", sound_variant, "default" );
-}
-
-std::optional<int> sound_iuse::use( Character *, item &,
-                                    const tripoint_bub_ms &pos ) const
-{
-    sounds::sound( pos, sound_volume, sounds::sound_t::alarm, sound_message.translated(), true,
-                   sound_id, sound_variant );
-    return 0;
 }
 
 std::optional<int> sound_iuse::use( Character *, item &,
@@ -1516,7 +1509,7 @@ bool firestarter_actor::resolve_start( Character *p, map *here,
 {
     switch( type ) {
         case start_type::FIRE:
-            return here->add_field( pos, fd_fire, 1, 10_minutes );
+            return here->add_field( pos, fd_fire, 1, 10_minutes, true, effect_source( p ) );
         case start_type::SMOKER:
             return iexamine::smoker_fire( *p, pos );
         case start_type::KILN:
@@ -1641,35 +1634,6 @@ void salvage_actor::load( const JsonObject &obj, const std::string & )
 std::unique_ptr<iuse_actor> salvage_actor::clone() const
 {
     return std::make_unique<salvage_actor>( *this );
-}
-
-std::optional<int> salvage_actor::use( Character *p, item &cutter, const tripoint_bub_ms & ) const
-{
-    if( !p ) {
-        debugmsg( "%s called action salvage that requires character but no character is present",
-                  cutter.typeId().str() );
-        return std::nullopt;
-    }
-
-    item_location item_loc = game_menus::inv::salvage( *p, this );
-    if( !item_loc ) {
-        add_msg( _( "Never mind." ) );
-        return std::nullopt;
-    }
-
-    const item &to_cut = *item_loc;
-    if( !to_cut.is_owned_by( *p, true ) ) {
-        if( !query_yn( _( "Cutting the %s may anger the people who own it, continue?" ),
-                       to_cut.tname() ) ) {
-            return false;
-        } else {
-            if( to_cut.get_owner() ) {
-                g->on_witness_theft( to_cut );
-            }
-        }
-    }
-
-    return salvage_actor::try_to_cut_up( *p, cutter, item_loc );
 }
 
 std::optional<int> salvage_actor::use( Character *p, item &cutter, map *,

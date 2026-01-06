@@ -13,7 +13,8 @@
           { "item": "hat_forage", "variant": "spanish_armoured", "prob": 45 },
           { "item": "hat_forage", "variant": "spanish_medical", "prob": 45 },
           { "item": "hat_forage", "variant": "spanish_legion", "prob": 30 }
-        ]
+        ],
+        "prob": 50
       },
       { "item": "antique_army_jacket_4p_wool", "variant": "coat_m26" },
       { "item": "dress_shirt", "variant": "khaki" },
@@ -44,7 +45,7 @@
     "//": "A set of clothing to represent a Spanish paramilitary assault guardsman prior to the civil war.",
     "subtype": "collection",
     "entries": [
-      { "item": "hat_forage", "variant": "spanish_assault_guard" },
+      { "item": "hat_forage", "variant": "spanish_assault_guard", "prob": 50 },
       { "item": "antique_army_jacket_4p_wool", "variant": "coat_ag" },
       { "item": "dress_shirt", "variant": "blue" },
       { "distribution": [ { "item": "suspenders_cloth", "prob": 50 }, { "item": "suspenders_leather", "prob": 50 } ] },
@@ -54,6 +55,31 @@
           { "item": "dress_shoes", "prob": 40 },
           { "item": "boots", "prob": 40 },
           { "item": "knee_high_boots", "variant": "generic_knee_high_boots", "prob": 30 }
+        ]
+      },
+      { "item": "leather_belt" },
+      { "item": "ammo_pouch" }
+    ]
+  },
+  {
+    "id": "mannequin_civil_guard",
+    "type": "item_group",
+    "//": "A set of clothing to represent a Spanish paramilitary civil guardsman prior to the civil war.",
+    "subtype": "collection",
+    "entries": [
+      {
+        "distribution": [ { "item": "tricorne", "prob": 50 }, { "item": "hat_forage", "variant": "spanish_civil_guard", "prob": 50 } ],
+        "prob": 50
+      },
+      { "item": "antique_army_jacket_4p_wool", "variant": "coat_cg" },
+      { "item": "dress_shirt", "variant": "khaki" },
+      { "distribution": [ { "item": "suspenders_cloth", "prob": 50 }, { "item": "suspenders_leather", "prob": 50 } ] },
+      { "item": "pants", "variant": "generic_pants" },
+      {
+        "distribution": [
+          { "item": "dress_shoes", "prob": 20 },
+          { "item": "boots", "prob": 30 },
+          { "item": "knee_high_boots", "variant": "generic_knee_high_boots", "prob": 50 }
         ]
       },
       { "item": "leather_belt" },

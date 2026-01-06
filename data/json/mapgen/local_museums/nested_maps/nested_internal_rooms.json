@@ -52,9 +52,10 @@
       ],
       "furniture": { "c": "f_displaycase", "o": "f_indoor_plant" },
       "nested": {
-        "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 10 ] ] },
+        "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 5 ], [ "1x1_civil_guard", 5 ] ] },
         "1": { "chunks": [ "1x1_placard_scw_1" ] }
-      }
+      },
+      "items": { "c": { "item": "display_scw_political", "chance": 100 } }
     }
   },
   {
@@ -75,9 +76,10 @@
       ],
       "furniture": { "c": "f_displaycase", "o": "f_indoor_plant" },
       "nested": {
-        "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 10 ] ] },
+        "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 5 ], [ "1x1_civil_guard", 5 ] ] },
         "1": { "chunks": [ "1x1_placard_scw_1" ] }
-      }
+      },
+      "items": { "c": { "item": "display_scw_political", "chance": 100 } }
     }
   },
   {
@@ -98,9 +100,10 @@
       ],
       "furniture": { "c": "f_displaycase", "o": "f_indoor_plant" },
       "nested": {
-        "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 10 ] ] },
+        "m": { "chunks": [ [ "1x1_spanish_soldier", 10 ], [ "1x1_assault_guard", 5 ], [ "1x1_civil_guard", 5 ] ] },
         "1": { "chunks": [ "1x1_placard_scw_1" ] }
-      }
+      },
+      "items": { "c": { "item": "display_scw_political", "chance": 100 } }
     }
   }
 ]
